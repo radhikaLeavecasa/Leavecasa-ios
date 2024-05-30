@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BoardingXIB" rowHeight="85" id="KGk-i7-Jjw" customClass="BoardingXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rlc-TX-Q5E">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="85"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="Ld5-zV-s7V">
+                                <rect key="frame" x="20" y="21.666666666666671" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="sIe-tB-hVa"/>
+                                    <constraint firstAttribute="width" constant="42" id="uF2-Xd-f1G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector 22" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bcp-0D-zRm">
+                                <rect key="frame" x="82" y="29.666666666666671" width="258" height="14"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aroma Lights" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPP-fc-9iB">
+                                <rect key="frame" x="82" y="43.666666666666664" width="258" height="12"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="12"/>
+                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EPP-fc-9iB" firstAttribute="trailing" secondItem="Bcp-0D-zRm" secondAttribute="trailing" id="4e1-nC-upJ"/>
+                            <constraint firstItem="Bcp-0D-zRm" firstAttribute="leading" secondItem="Ld5-zV-s7V" secondAttribute="trailing" constant="20" id="B1U-0E-oaD"/>
+                            <constraint firstItem="Ld5-zV-s7V" firstAttribute="leading" secondItem="Rlc-TX-Q5E" secondAttribute="leading" constant="20" id="HWv-6O-5nI"/>
+                            <constraint firstItem="EPP-fc-9iB" firstAttribute="top" secondItem="Bcp-0D-zRm" secondAttribute="bottom" id="WXj-xp-fmH"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EPP-fc-9iB" secondAttribute="bottom" constant="10" id="hXj-i6-9kc"/>
+                            <constraint firstItem="Ld5-zV-s7V" firstAttribute="centerY" secondItem="Rlc-TX-Q5E" secondAttribute="centerY" id="hfK-zk-ROv"/>
+                            <constraint firstItem="EPP-fc-9iB" firstAttribute="leading" secondItem="Bcp-0D-zRm" secondAttribute="leading" id="nGd-Mn-7Hm"/>
+                            <constraint firstItem="Ld5-zV-s7V" firstAttribute="top" secondItem="Bcp-0D-zRm" secondAttribute="top" constant="-8" id="uE4-7F-cha"/>
+                            <constraint firstAttribute="trailing" secondItem="Bcp-0D-zRm" secondAttribute="trailing" constant="20" id="xgw-6A-308"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rlc-TX-Q5E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Mw-HE-cas"/>
+                    <constraint firstItem="Rlc-TX-Q5E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ekf-7h-jeb"/>
+                    <constraint firstAttribute="trailing" secondItem="Rlc-TX-Q5E" secondAttribute="trailing" id="bTD-Wp-Rfy"/>
+                    <constraint firstAttribute="bottom" secondItem="Rlc-TX-Q5E" secondAttribute="bottom" id="zEY-n4-6C4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgCheck" destination="Ld5-zV-s7V" id="y2A-3f-NSu"/>
+                <outlet property="lblAddress" destination="Bcp-0D-zRm" id="M5i-0Q-2fB"/>
+                <outlet property="lblLandmark" destination="EPP-fc-9iB" id="5g2-iF-bie"/>
+            </connections>
+            <point key="canvasLocation" x="12.307692307692307" y="-18.838862559241704"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_uncheck" width="42" height="42"/>
+        <namedColor name="GARK_GRAY_COLOR">
+            <color red="0.3880000114440918" green="0.41600000858306885" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TEXT_BLACK_COLOR">
+            <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

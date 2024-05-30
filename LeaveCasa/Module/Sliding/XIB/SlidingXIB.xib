@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SlidingXIB" id="gTV-IL-0wX" customClass="SlidingXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8b-sU-SUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="660"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fdsf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRX-fB-LEj">
+                        <rect key="frame" x="20" y="50" width="374" height="30"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="30"/>
+                        <color key="textColor" name="APP_WHITE_COLOR"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sad" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qac-Wc-xV7">
+                        <rect key="frame" x="20" y="96" width="374" height="20"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="20"/>
+                        <color key="textColor" name="APP_WHITE_COLOR"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="qac-Wc-xV7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="1v9-aH-Ia9"/>
+                <constraint firstAttribute="trailing" secondItem="kRX-fB-LEj" secondAttribute="trailing" constant="20" id="6pb-Pq-y0n"/>
+                <constraint firstItem="w8b-sU-SUJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Qdq-fO-Rgi"/>
+                <constraint firstAttribute="trailing" secondItem="qac-Wc-xV7" secondAttribute="trailing" constant="20" id="Xev-Q2-2os"/>
+                <constraint firstItem="qac-Wc-xV7" firstAttribute="top" secondItem="kRX-fB-LEj" secondAttribute="bottom" constant="16" id="fhi-wo-PX7"/>
+                <constraint firstItem="w8b-sU-SUJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="it2-N9-fbE"/>
+                <constraint firstItem="kRX-fB-LEj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="50" id="khw-MN-ad9"/>
+                <constraint firstItem="kRX-fB-LEj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="ocb-Q7-gzJ"/>
+                <constraint firstAttribute="bottom" secondItem="w8b-sU-SUJ" secondAttribute="bottom" id="p2s-4y-vaJ"/>
+                <constraint firstAttribute="trailing" secondItem="w8b-sU-SUJ" secondAttribute="trailing" id="sIM-aq-dnw"/>
+            </constraints>
+            <connections>
+                <outlet property="imgBackground" destination="w8b-sU-SUJ" id="dba-mN-EFN"/>
+                <outlet property="lblSlidingDescription" destination="qac-Wc-xV7" id="Uy2-uU-CHZ"/>
+                <outlet property="lblSlidingTitle" destination="kRX-fB-LEj" id="ptq-Sb-yRB"/>
+            </connections>
+            <point key="canvasLocation" x="131.29770992366412" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="APP_WHITE_COLOR">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

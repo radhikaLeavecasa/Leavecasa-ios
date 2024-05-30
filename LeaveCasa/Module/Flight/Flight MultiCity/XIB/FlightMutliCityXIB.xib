@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlightMutliCityXIB" id="gTV-IL-0wX" customClass="FlightMutliCityXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="169" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="169" height="133"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-Wg-6G2">
+                        <rect key="frame" x="5" y="5" width="159" height="123"/>
+                        <subviews>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncW-XA-dHt">
+                                <rect key="frame" x="0.0" y="122" width="159" height="1"/>
+                                <color key="backgroundColor" name="GRADIENT_RED"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ieG-II-wh3"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFI-Se-t7x" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="122"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="IXC - DEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQw-0k-BRs">
+                                        <rect key="frame" x="47.333333333333336" y="7" width="64.666666666666657" height="20"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
+                                        <color key="textColor" name="APP_WHITE_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sep 21, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erl-Wx-lfw">
+                                        <rect key="frame" x="35.333333333333336" y="95" width="88.333333333333314" height="20"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
+                                        <color key="textColor" name="APP_WHITE_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="GRADIENT_RED"/>
+                                <constraints>
+                                    <constraint firstItem="RQw-0k-BRs" firstAttribute="centerX" secondItem="gFI-Se-t7x" secondAttribute="centerX" id="K8a-5j-jfi"/>
+                                    <constraint firstItem="Erl-Wx-lfw" firstAttribute="top" secondItem="RQw-0k-BRs" secondAttribute="bottom" id="L8Q-hL-hfs"/>
+                                    <constraint firstItem="Erl-Wx-lfw" firstAttribute="centerX" secondItem="gFI-Se-t7x" secondAttribute="centerX" id="VYf-LQ-TO2"/>
+                                    <constraint firstItem="RQw-0k-BRs" firstAttribute="top" secondItem="gFI-Se-t7x" secondAttribute="top" constant="7" id="kYj-w8-xbg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Erl-Wx-lfw" secondAttribute="bottom" constant="7" id="sLg-i5-75d"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ncW-XA-dHt" firstAttribute="leading" secondItem="3c8-Wg-6G2" secondAttribute="leading" id="Djb-wE-w0f"/>
+                            <constraint firstAttribute="bottom" secondItem="ncW-XA-dHt" secondAttribute="bottom" id="FiC-VN-Z2J"/>
+                            <constraint firstItem="ncW-XA-dHt" firstAttribute="top" secondItem="gFI-Se-t7x" secondAttribute="bottom" id="Prw-IZ-Hst"/>
+                            <constraint firstAttribute="trailing" secondItem="gFI-Se-t7x" secondAttribute="trailing" id="PzI-x5-eI5"/>
+                            <constraint firstItem="gFI-Se-t7x" firstAttribute="leading" secondItem="3c8-Wg-6G2" secondAttribute="leading" id="UWd-LJ-DIU"/>
+                            <constraint firstAttribute="trailing" secondItem="ncW-XA-dHt" secondAttribute="trailing" id="Vqf-wM-V6Q"/>
+                            <constraint firstItem="gFI-Se-t7x" firstAttribute="top" secondItem="3c8-Wg-6G2" secondAttribute="top" id="m2x-As-D5b"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3c8-Wg-6G2" secondAttribute="bottom" constant="5" id="BPk-ns-A7W"/>
+                <constraint firstItem="3c8-Wg-6G2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="T6d-VG-Gom"/>
+                <constraint firstAttribute="trailing" secondItem="3c8-Wg-6G2" secondAttribute="trailing" constant="5" id="rMJ-0H-neo"/>
+                <constraint firstItem="3c8-Wg-6G2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="zXf-vD-ysb"/>
+            </constraints>
+            <size key="customSize" width="169" height="133"/>
+            <connections>
+                <outlet property="backView" destination="gFI-Se-t7x" id="DjN-pp-tfO"/>
+                <outlet property="lblDate" destination="Erl-Wx-lfw" id="30M-I9-UfO"/>
+                <outlet property="lblFromAndTo" destination="RQw-0k-BRs" id="t3q-01-YIE"/>
+                <outlet property="lineView" destination="ncW-XA-dHt" id="wOH-Qt-iUJ"/>
+            </connections>
+            <point key="canvasLocation" x="222.30769230769229" y="-3.9099526066350707"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="APP_WHITE_COLOR">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GRADIENT_RED">
+            <color red="1" green="0.17599999904632568" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

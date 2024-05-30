@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OfferCouponNotificationXIB" rowHeight="260" id="KGk-i7-Jjw" customClass="OfferCouponNotificationXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="466" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="466" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-54-dvQ">
+                        <rect key="frame" x="20" y="10" width="426" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
+                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tky-jf-whb" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="20" y="20" width="426" height="180"/>
+                        <subviews>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXq-Fr-raN" customClass="AnimatableView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="180" width="426" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% off on BUS booking with Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-A7-fQI">
+                                        <rect key="frame" x="20" y="10" width="391" height="14"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
+                                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coupon code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa6-rs-dly">
+                                        <rect key="frame" x="19.999999999999993" y="29" width="90.333333333333314" height="14"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
+                                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUS10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZM-uF-DuQ">
+                                        <rect key="frame" x="120.33333333333334" y="29" width="45" height="14"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
+                                        <color key="textColor" name="GRADIENT_RED"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_blue_next" translatesAutoresizingMaskIntoConstraints="NO" id="WCJ-ij-ult">
+                                        <rect key="frame" x="390" y="-8" width="16" height="16"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xa6-rs-dly" firstAttribute="top" secondItem="CvF-A7-fQI" secondAttribute="bottom" constant="5" id="0zl-va-oSg"/>
+                                    <constraint firstItem="CvF-A7-fQI" firstAttribute="leading" secondItem="kXq-Fr-raN" secondAttribute="leading" constant="20" id="1If-K6-mJa"/>
+                                    <constraint firstAttribute="trailing" secondItem="WCJ-ij-ult" secondAttribute="trailing" constant="20" id="Fn7-bu-xKp"/>
+                                    <constraint firstItem="xa6-rs-dly" firstAttribute="leading" secondItem="CvF-A7-fQI" secondAttribute="leading" id="V5Q-i8-eDU"/>
+                                    <constraint firstAttribute="height" id="fRn-CO-dW6"/>
+                                    <constraint firstItem="WCJ-ij-ult" firstAttribute="centerY" secondItem="kXq-Fr-raN" secondAttribute="centerY" id="fsO-Ck-4hd"/>
+                                    <constraint firstAttribute="bottom" secondItem="xa6-rs-dly" secondAttribute="bottom" constant="18" id="gm3-6w-B8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="CvF-A7-fQI" secondAttribute="trailing" constant="15" id="lml-Ax-MTl"/>
+                                    <constraint firstItem="CvF-A7-fQI" firstAttribute="top" secondItem="kXq-Fr-raN" secondAttribute="top" constant="10" id="m4l-eY-ShI"/>
+                                    <constraint firstItem="WCJ-ij-ult" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pZM-uF-DuQ" secondAttribute="trailing" constant="20" id="vNj-I2-bVU"/>
+                                    <constraint firstItem="pZM-uF-DuQ" firstAttribute="leading" secondItem="xa6-rs-dly" secondAttribute="trailing" constant="10" id="xNw-yj-bej"/>
+                                    <constraint firstItem="xa6-rs-dly" firstAttribute="centerY" secondItem="pZM-uF-DuQ" secondAttribute="centerY" id="yny-g3-ILp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="GARK_GRAY_COLOR"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="bottomLeft,bottomRight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="gTA-9e-HTw" customClass="AnimatableImageView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="0.0" width="426" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="wnf-yY-DJu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_cornerSides" value="all"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8901960784313725" green="0.89411764705882346" blue="0.91764705882352937" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gTA-9e-HTw" firstAttribute="leading" secondItem="Tky-jf-whb" secondAttribute="leading" id="Gpk-Wa-Xtx"/>
+                            <constraint firstItem="kXq-Fr-raN" firstAttribute="leading" secondItem="Tky-jf-whb" secondAttribute="leading" id="Hco-Om-1Rj"/>
+                            <constraint firstAttribute="bottom" secondItem="kXq-Fr-raN" secondAttribute="bottom" id="YzF-JA-gdQ"/>
+                            <constraint firstAttribute="trailing" secondItem="kXq-Fr-raN" secondAttribute="trailing" id="aAa-YK-c89"/>
+                            <constraint firstAttribute="trailing" secondItem="gTA-9e-HTw" secondAttribute="trailing" id="rbr-sN-Nc1"/>
+                            <constraint firstItem="gTA-9e-HTw" firstAttribute="top" secondItem="Tky-jf-whb" secondAttribute="top" id="ulS-j6-CWj"/>
+                            <constraint firstItem="kXq-Fr-raN" firstAttribute="top" secondItem="gTA-9e-HTw" secondAttribute="bottom" id="y6x-39-vuq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="GARK_GRAY_COLOR"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Tky-jf-whb" secondAttribute="bottom" constant="10" id="9Fb-Iu-MjI"/>
+                    <constraint firstItem="Hqa-54-dvQ" firstAttribute="leading" secondItem="gTA-9e-HTw" secondAttribute="leading" id="NPS-2n-5Oj"/>
+                    <constraint firstAttribute="trailing" secondItem="Tky-jf-whb" secondAttribute="trailing" constant="20" id="OND-Xj-RDY"/>
+                    <constraint firstItem="Tky-jf-whb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Rfp-v0-3Az"/>
+                    <constraint firstItem="Hqa-54-dvQ" firstAttribute="trailing" secondItem="gTA-9e-HTw" secondAttribute="trailing" id="Y9p-mG-J0l"/>
+                    <constraint firstItem="Tky-jf-whb" firstAttribute="top" secondItem="Hqa-54-dvQ" secondAttribute="bottom" constant="10" id="YAI-rs-QzB"/>
+                    <constraint firstItem="Hqa-54-dvQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="y1E-Lv-s44"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgVwOffer" destination="gTA-9e-HTw" id="uIt-bA-rxc"/>
+            </connections>
+            <point key="canvasLocation" x="243.07692307692307" y="43.009478672985779"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="gTA-9e-HTw">
+            <size key="intrinsicContentSize" width="265" height="185"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="dummy_hotel" width="265" height="185"/>
+        <image name="ic_blue_next" width="16" height="16"/>
+        <namedColor name="GARK_GRAY_COLOR">
+            <color red="0.3880000114440918" green="0.41600000858306885" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GRADIENT_RED">
+            <color red="1" green="0.17254901960784313" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TEXT_BLACK_COLOR">
+            <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

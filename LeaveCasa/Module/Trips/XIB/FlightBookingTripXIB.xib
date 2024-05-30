@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FlightBookingTripXIB" rowHeight="235" id="KGk-i7-Jjw" customClass="FlightBookingTripXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="506" height="235"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="506" height="235"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmC-97-fjv" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="20" y="5" width="466" height="225"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-2I-JlT">
+                                <rect key="frame" x="10" y="10" width="446" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="P5I-qt-mtH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laxmi travels" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjY-xY-ums">
+                                <rect key="frame" x="10" y="130" width="104.66666666666667" height="16"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
+                                <color key="textColor" name="LIGHT_BLUE"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05 Aug - 04 Aug" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnM-pp-NBs">
+                                <rect key="frame" x="341" y="131.66666666666666" width="115" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="jqV-0J-b7q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Chandigarh - Delhi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYg-4X-hgv">
+                                <rect key="frame" x="10" y="146" width="442" height="13"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2X-bU-1ra">
+                                <rect key="frame" x="344" y="169" width="112" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-j5-el7" customClass="AnimatableButton" customModule="IBAnimatable">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="34"/>
+                                        <color key="backgroundColor" name="CUSTOM_PINK"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="  Cancel Booking  "/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Eb3-yu-4Ll"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="BG_COLOR"/>
+                        <constraints>
+                            <constraint firstItem="BYg-4X-hgv" firstAttribute="top" secondItem="FjY-xY-ums" secondAttribute="bottom" id="3BL-sl-jrn"/>
+                            <constraint firstAttribute="trailing" secondItem="bKV-2I-JlT" secondAttribute="trailing" constant="10" id="5kd-oP-ZcO"/>
+                            <constraint firstItem="r2X-bU-1ra" firstAttribute="top" secondItem="BYg-4X-hgv" secondAttribute="bottom" constant="10" id="NfX-V5-9zG"/>
+                            <constraint firstAttribute="trailing" secondItem="r2X-bU-1ra" secondAttribute="trailing" constant="10" id="RMd-Y0-4lP"/>
+                            <constraint firstAttribute="trailing" secondItem="BYg-4X-hgv" secondAttribute="trailing" constant="14" id="TVR-Xk-b6r"/>
+                            <constraint firstItem="bKV-2I-JlT" firstAttribute="top" secondItem="HmC-97-fjv" secondAttribute="top" constant="10" id="ThT-m8-jX4"/>
+                            <constraint firstAttribute="trailing" secondItem="WnM-pp-NBs" secondAttribute="trailing" constant="10" id="e0s-db-D3O"/>
+                            <constraint firstItem="FjY-xY-ums" firstAttribute="centerY" secondItem="WnM-pp-NBs" secondAttribute="centerY" id="hMc-sb-9tv"/>
+                            <constraint firstItem="FjY-xY-ums" firstAttribute="leading" secondItem="HmC-97-fjv" secondAttribute="leading" constant="10" id="m6G-ou-69z"/>
+                            <constraint firstItem="FjY-xY-ums" firstAttribute="top" secondItem="bKV-2I-JlT" secondAttribute="bottom" constant="10" id="mfu-6o-ric"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r2X-bU-1ra" secondAttribute="bottom" constant="10" id="u9z-6c-dx3"/>
+                            <constraint firstItem="WnM-pp-NBs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FjY-xY-ums" secondAttribute="trailing" constant="10" id="xf9-S3-nHr"/>
+                            <constraint firstItem="bKV-2I-JlT" firstAttribute="leading" secondItem="HmC-97-fjv" secondAttribute="leading" constant="10" id="yIh-Hv-eWb"/>
+                            <constraint firstItem="BYg-4X-hgv" firstAttribute="leading" secondItem="HmC-97-fjv" secondAttribute="leading" constant="10" id="zEf-c1-FFd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="GARK_GRAY_COLOR"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.0" y="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="BG_COLOR"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="HmC-97-fjv" secondAttribute="bottom" constant="5" id="M50-ZY-ktV"/>
+                    <constraint firstItem="HmC-97-fjv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="bFu-sd-iKh"/>
+                    <constraint firstAttribute="trailing" secondItem="HmC-97-fjv" secondAttribute="trailing" constant="20" id="iCE-Tx-I2k"/>
+                    <constraint firstItem="HmC-97-fjv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="seK-ke-wUS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnCancel" destination="EPQ-j5-el7" id="yDb-mb-2VJ"/>
+                <outlet property="imgHotel" destination="bKV-2I-JlT" id="upH-CH-bdB"/>
+                <outlet property="lblDate" destination="WnM-pp-NBs" id="czY-Uf-hW4"/>
+                <outlet property="lblHotelName" destination="FjY-xY-ums" id="Yxj-0o-GGN"/>
+                <outlet property="lblLocation" destination="BYg-4X-hgv" id="cnf-Af-GP1"/>
+                <outlet property="stackViewHeightConstraint" destination="Eb3-yu-4Ll" id="2fx-qN-PCe"/>
+            </connections>
+            <point key="canvasLocation" x="126.71755725190839" y="51.760563380281695"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="EPQ-j5-el7">
+            <size key="intrinsicContentSize" width="112" height="25"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="dummy_hotel" width="265" height="185"/>
+        <namedColor name="BG_COLOR">
+            <color red="0.98000001907348633" green="0.98799997568130493" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CUSTOM_PINK">
+            <color red="0.8901960784313725" green="0.0039215686274509803" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GARK_GRAY_COLOR">
+            <color red="0.3880000114440918" green="0.41600000858306885" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LIGHT_BLUE">
+            <color red="0.078431372549019607" green="0.53725490196078429" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

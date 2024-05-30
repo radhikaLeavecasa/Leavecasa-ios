@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeLeaveCasaTVC" rowHeight="60" id="KGk-i7-Jjw" customClass="HomeLeaveCasaTVC" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="352" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="352" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24/7 Customer Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iup-oL-zcW">
+                        <rect key="frame" x="75" y="19.666666666666668" width="257" height="14.000000000000004"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h11-Y2-GZI">
+                        <rect key="frame" x="75" y="38.666666666666664" width="257" height="13"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_blue_user" translatesAutoresizingMaskIntoConstraints="NO" id="pqr-kQ-Hd5">
+                        <rect key="frame" x="20" y="14.666666666666664" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="0JG-4g-aI6"/>
+                            <constraint firstAttribute="width" constant="40" id="k7U-xP-mJg"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iup-oL-zcW" secondAttribute="trailing" constant="20" id="Ded-zk-ffQ"/>
+                    <constraint firstItem="h11-Y2-GZI" firstAttribute="trailing" secondItem="iup-oL-zcW" secondAttribute="trailing" id="OQc-I0-QYV"/>
+                    <constraint firstItem="h11-Y2-GZI" firstAttribute="leading" secondItem="iup-oL-zcW" secondAttribute="leading" id="R72-Yg-ny1"/>
+                    <constraint firstItem="pqr-kQ-Hd5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="V2e-UU-Rhz"/>
+                    <constraint firstItem="h11-Y2-GZI" firstAttribute="top" secondItem="iup-oL-zcW" secondAttribute="bottom" constant="5" id="XLJ-lq-yEq"/>
+                    <constraint firstItem="iup-oL-zcW" firstAttribute="top" secondItem="pqr-kQ-Hd5" secondAttribute="top" constant="5" id="XSY-6Z-YZN"/>
+                    <constraint firstItem="iup-oL-zcW" firstAttribute="leading" secondItem="pqr-kQ-Hd5" secondAttribute="trailing" constant="15" id="gbk-S8-Tge"/>
+                    <constraint firstItem="pqr-kQ-Hd5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zMj-k1-GWQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgVwLeaveCasa" destination="pqr-kQ-Hd5" id="UFc-Ny-mIn"/>
+                <outlet property="lblDescription" destination="h11-Y2-GZI" id="hE7-hx-b0l"/>
+                <outlet property="lblTitle" destination="iup-oL-zcW" id="B9p-Lq-Vin"/>
+            </connections>
+            <point key="canvasLocation" x="73.282442748091597" y="-16.549295774647888"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_blue_user" width="44" height="44"/>
+    </resources>
+</document>

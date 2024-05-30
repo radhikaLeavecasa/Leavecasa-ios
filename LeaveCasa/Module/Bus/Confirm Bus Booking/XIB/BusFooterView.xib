@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BusFooterView" id="U6b-Vx-4bR" customClass="BusFooterView" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="307" height="81"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_avlable_landscape_sleeper" translatesAutoresizingMaskIntoConstraints="NO" id="T7g-2y-y9s">
+                    <rect key="frame" x="15" y="10" width="140" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="6pf-Vg-6N2"/>
+                        <constraint firstAttribute="height" constant="35" id="W4D-TL-DuL"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WiM-Aq-Cb7">
+                    <rect key="frame" x="73" y="50" width="24" height="11"/>
+                    <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="WiM-Aq-Cb7" firstAttribute="top" secondItem="T7g-2y-y9s" secondAttribute="bottom" constant="5" id="JQb-wg-0V3"/>
+                <constraint firstItem="T7g-2y-y9s" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="15" id="RPs-hO-Jtv"/>
+                <constraint firstItem="WiM-Aq-Cb7" firstAttribute="centerX" secondItem="T7g-2y-y9s" secondAttribute="centerX" id="tf1-t7-Y1L"/>
+                <constraint firstItem="T7g-2y-y9s" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="tns-gU-64X"/>
+            </constraints>
+            <point key="canvasLocation" x="-57.251908396946561" y="-21.47887323943662"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="ic_green_avlable_landscape_sleeper" width="88" height="47"/>
+    </resources>
+</document>

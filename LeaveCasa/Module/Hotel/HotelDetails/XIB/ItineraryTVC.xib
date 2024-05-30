@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="67" id="KGk-i7-Jjw" customClass="ItineraryTVC" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbl-ZI-y99">
+                        <rect key="frame" x="0.0" y="44" width="331" height="13"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klg-G2-RH9" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="5" width="58.666666666666664" height="29"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 01" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-FY-nlf">
+                                <rect key="frame" x="8" y="8" width="42.666666666666664" height="13"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="LIGHT_BLUE"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YDK-FY-nlf" secondAttribute="trailing" constant="8" id="2n8-Ec-hks"/>
+                            <constraint firstItem="YDK-FY-nlf" firstAttribute="top" secondItem="klg-G2-RH9" secondAttribute="top" constant="8" id="EgB-Gb-nKu"/>
+                            <constraint firstAttribute="bottom" secondItem="YDK-FY-nlf" secondAttribute="bottom" constant="8" id="PDT-Br-ejR"/>
+                            <constraint firstItem="YDK-FY-nlf" firstAttribute="leading" secondItem="klg-G2-RH9" secondAttribute="leading" constant="8" id="ybM-Ua-k7v"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="klg-G2-RH9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="AhX-xK-nie"/>
+                    <constraint firstItem="xbl-ZI-y99" firstAttribute="leading" secondItem="klg-G2-RH9" secondAttribute="leading" id="E9M-Ht-WVC"/>
+                    <constraint firstItem="xbl-ZI-y99" firstAttribute="top" secondItem="klg-G2-RH9" secondAttribute="bottom" constant="10" id="J7m-HQ-raQ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xbl-ZI-y99" secondAttribute="bottom" constant="5" id="KGh-iD-4kv"/>
+                    <constraint firstAttribute="trailing" secondItem="xbl-ZI-y99" secondAttribute="trailing" constant="15" id="pLd-uu-aEW"/>
+                    <constraint firstItem="klg-G2-RH9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uSf-WE-sbp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDays" destination="YDK-FY-nlf" id="nSp-El-ADb"/>
+                <outlet property="lblText" destination="xbl-ZI-y99" id="sD3-nV-njm"/>
+            </connections>
+            <point key="canvasLocation" x="-62.595419847328245" y="-24.295774647887324"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="LIGHT_BLUE">
+            <color red="0.078431372549019607" green="0.53725490196078429" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

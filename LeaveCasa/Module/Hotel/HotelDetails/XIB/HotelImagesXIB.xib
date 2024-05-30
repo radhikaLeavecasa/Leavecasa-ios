@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HotelImagesXIB" id="gTV-IL-0wX" customClass="HotelImagesXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-HJ-a4X" customClass="AnimatableImageView" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="210"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_black_shade" translatesAutoresizingMaskIntoConstraints="NO" id="U48-Eh-xX7" customClass="AnimatableImageView" customModule="IBAnimatable">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="210"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="FuM-HJ-a4X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5cw-Ad-OWh"/>
+                <constraint firstAttribute="bottom" secondItem="FuM-HJ-a4X" secondAttribute="bottom" id="8vt-cZ-BHU"/>
+                <constraint firstItem="U48-Eh-xX7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EGm-Zv-Zdi"/>
+                <constraint firstAttribute="trailing" secondItem="U48-Eh-xX7" secondAttribute="trailing" id="ZEZ-qi-eo2"/>
+                <constraint firstItem="U48-Eh-xX7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="h7Q-IN-a6B"/>
+                <constraint firstAttribute="bottom" secondItem="U48-Eh-xX7" secondAttribute="bottom" id="hTQ-c2-MQR"/>
+                <constraint firstItem="FuM-HJ-a4X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hfq-Pi-uXO"/>
+                <constraint firstAttribute="trailing" secondItem="FuM-HJ-a4X" secondAttribute="trailing" id="xjb-MB-Fjz"/>
+            </constraints>
+            <size key="customSize" width="272" height="210"/>
+            <connections>
+                <outlet property="imgHotel" destination="FuM-HJ-a4X" id="sHO-4Y-uWn"/>
+                <outlet property="imgShadow" destination="U48-Eh-xX7" id="62R-iy-IJE"/>
+            </connections>
+            <point key="canvasLocation" x="292.75362318840581" y="120.53571428571428"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="FuM-HJ-a4X">
+            <size key="intrinsicContentSize" width="265" height="185"/>
+        </designable>
+        <designable name="U48-Eh-xX7">
+            <size key="intrinsicContentSize" width="338" height="94.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="dummy_hotel" width="265" height="185"/>
+        <image name="ic_home_black_shade" width="338" height="94.5"/>
+    </resources>
+</document>

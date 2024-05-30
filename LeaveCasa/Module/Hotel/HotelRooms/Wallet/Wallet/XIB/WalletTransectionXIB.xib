@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletTransectionXIB" rowHeight="90" id="KGk-i7-Jjw" customClass="WalletTransectionXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oRe-dD-1ma">
+                        <rect key="frame" x="20" y="5" width="383" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_credit" translatesAutoresizingMaskIntoConstraints="NO" id="C9D-Wd-aFf">
+                                <rect key="frame" x="0.0" y="20" width="40" height="40"/>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuE-ix-ovh">
+                                <rect key="frame" x="0.0" y="79" width="383" height="1"/>
+                                <color key="backgroundColor" name="GRAY_COLOR"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="27c-sW-PsL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking  Refund" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GwQ-IA-aXL">
+                                <rect key="frame" x="52.000000000000007" y="22" width="122.66666666666669" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 26, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFu-61-ajz">
+                                <rect key="frame" x="52.000000000000007" y="42" width="122.66666666666669" height="11"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
+                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_blue_next" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-Ou-jtx">
+                                <rect key="frame" x="367" y="32" width="16" height="16"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6U2-Vj-0Kd">
+                                <rect key="frame" x="285.66666666666669" y="32.666666666666664" width="61.333333333333314" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6U2-Vj-0Kd" firstAttribute="centerY" secondItem="gn3-Ou-jtx" secondAttribute="centerY" id="2Xx-gz-hPl"/>
+                            <constraint firstItem="IuE-ix-ovh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SFu-61-ajz" secondAttribute="bottom" constant="10" id="4eu-v0-vyB"/>
+                            <constraint firstItem="gn3-Ou-jtx" firstAttribute="leading" secondItem="6U2-Vj-0Kd" secondAttribute="trailing" constant="20" id="AYB-uM-Oed"/>
+                            <constraint firstItem="C9D-Wd-aFf" firstAttribute="top" secondItem="GwQ-IA-aXL" secondAttribute="top" constant="-2" id="AbF-eb-hIv"/>
+                            <constraint firstItem="GwQ-IA-aXL" firstAttribute="leading" secondItem="C9D-Wd-aFf" secondAttribute="trailing" constant="12" id="Aby-Od-g4a"/>
+                            <constraint firstItem="SFu-61-ajz" firstAttribute="leading" secondItem="GwQ-IA-aXL" secondAttribute="leading" id="CPE-Gi-vez"/>
+                            <constraint firstItem="C9D-Wd-aFf" firstAttribute="centerY" secondItem="oRe-dD-1ma" secondAttribute="centerY" id="Cc7-hX-4sE"/>
+                            <constraint firstItem="6U2-Vj-0Kd" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GwQ-IA-aXL" secondAttribute="trailing" constant="20" id="HEC-Ys-JIL"/>
+                            <constraint firstItem="C9D-Wd-aFf" firstAttribute="leading" secondItem="oRe-dD-1ma" secondAttribute="leading" id="JBk-2n-mSq"/>
+                            <constraint firstAttribute="trailing" secondItem="IuE-ix-ovh" secondAttribute="trailing" id="JSy-X6-QYm"/>
+                            <constraint firstItem="gn3-Ou-jtx" firstAttribute="centerY" secondItem="oRe-dD-1ma" secondAttribute="centerY" id="Jao-k7-vz2"/>
+                            <constraint firstAttribute="bottom" secondItem="IuE-ix-ovh" secondAttribute="bottom" id="RHq-76-A55"/>
+                            <constraint firstItem="SFu-61-ajz" firstAttribute="top" secondItem="GwQ-IA-aXL" secondAttribute="bottom" constant="5" id="T0v-bz-VL7"/>
+                            <constraint firstAttribute="trailing" secondItem="gn3-Ou-jtx" secondAttribute="trailing" id="Wcl-Rr-KFa"/>
+                            <constraint firstItem="SFu-61-ajz" firstAttribute="trailing" secondItem="GwQ-IA-aXL" secondAttribute="trailing" id="c8L-7f-yyB"/>
+                            <constraint firstItem="IuE-ix-ovh" firstAttribute="leading" secondItem="oRe-dD-1ma" secondAttribute="leading" id="p9J-zm-t13"/>
+                            <constraint firstAttribute="height" constant="80" id="zlK-Gk-zXn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oRe-dD-1ma" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FEn-Hq-8rj"/>
+                    <constraint firstAttribute="trailing" secondItem="oRe-dD-1ma" secondAttribute="trailing" constant="20" id="HxP-RI-Gh6"/>
+                    <constraint firstAttribute="bottom" secondItem="oRe-dD-1ma" secondAttribute="bottom" constant="5" id="gn2-Ub-saK"/>
+                    <constraint firstItem="oRe-dD-1ma" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="qBd-q6-sbJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgType" destination="C9D-Wd-aFf" id="JTw-Z7-vI9"/>
+                <outlet property="lblDate" destination="SFu-61-ajz" id="B2J-Rx-5X3"/>
+                <outlet property="lblPrice" destination="6U2-Vj-0Kd" id="W9R-Tb-oAg"/>
+                <outlet property="lblTitle" destination="GwQ-IA-aXL" id="gmg-vv-edp"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="-2.8436018957345972"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_blue_next" width="16" height="16"/>
+        <image name="ic_credit" width="40" height="40"/>
+        <namedColor name="GARK_GRAY_COLOR">
+            <color red="0.3880000114440918" green="0.41600000858306885" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GRAY_COLOR">
+            <color red="0.88999998569488525" green="0.89399999380111694" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TEXT_BLACK_COLOR">
+            <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
