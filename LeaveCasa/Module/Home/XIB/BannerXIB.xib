@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerXIB" id="gTV-IL-0wX" customClass="BannerXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="195"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="195"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="W0J-Rw-JSC" customClass="AnimatableImageView" customModule="IBAnimatable">
+                        <rect key="frame" x="15" y="10" width="351" height="175"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_black_shade" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-t2-YX7" customClass="AnimatableImageView" customModule="IBAnimatable">
+                        <rect key="frame" x="15" y="10" width="351" height="175"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-er-NjM">
+                        <rect key="frame" x="30" y="170" width="321" height="0.0"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dAi-t2-YX7" firstAttribute="trailing" secondItem="W0J-Rw-JSC" secondAttribute="trailing" id="1tT-I6-7vT"/>
+                <constraint firstItem="W0J-Rw-JSC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="3FN-ni-xb5"/>
+                <constraint firstItem="dAi-t2-YX7" firstAttribute="leading" secondItem="W0J-Rw-JSC" secondAttribute="leading" id="Dyj-vq-rrw"/>
+                <constraint firstItem="aoW-er-NjM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="Gta-cc-rXP"/>
+                <constraint firstItem="W0J-Rw-JSC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="H0F-I8-c8Z"/>
+                <constraint firstAttribute="trailing" secondItem="W0J-Rw-JSC" secondAttribute="trailing" constant="5" id="Rt3-sa-KpT"/>
+                <constraint firstItem="dAi-t2-YX7" firstAttribute="bottom" secondItem="W0J-Rw-JSC" secondAttribute="bottom" id="SQk-2L-2Dw"/>
+                <constraint firstItem="W0J-Rw-JSC" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VnU-vz-3b7"/>
+                <constraint firstItem="dAi-t2-YX7" firstAttribute="top" secondItem="W0J-Rw-JSC" secondAttribute="top" id="Wd6-81-zbE"/>
+                <constraint firstAttribute="trailing" secondItem="aoW-er-NjM" secondAttribute="trailing" constant="20" id="b0Q-Ww-C5c"/>
+                <constraint firstAttribute="bottom" secondItem="W0J-Rw-JSC" secondAttribute="bottom" constant="10" id="hn4-AT-rOI"/>
+                <constraint firstAttribute="bottom" secondItem="aoW-er-NjM" secondAttribute="bottom" constant="25" id="vXX-DE-3fF"/>
+            </constraints>
+            <size key="customSize" width="371" height="195"/>
+            <connections>
+                <outlet property="imgVwBanner" destination="W0J-Rw-JSC" id="4zV-sQ-HgD"/>
+                <outlet property="imgVwBlackShadow" destination="dAi-t2-YX7" id="fCR-Dy-Pii"/>
+                <outlet property="lblDestination" destination="aoW-er-NjM" id="N5f-VF-MFp"/>
+            </connections>
+            <point key="canvasLocation" x="364.49275362318843" y="116.18303571428571"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="W0J-Rw-JSC">
+            <size key="intrinsicContentSize" width="105" height="105"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_home_black_shade" width="338" height="94.5"/>
+        <image name="ic_placeholder" width="105" height="105"/>
+    </resources>
+</document>

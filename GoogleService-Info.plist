@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>379626776150-i72ibp3e5ii1e1kcgaabhjvg8k7e4b12.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.379626776150-i72ibp3e5ii1e1kcgaabhjvg8k7e4b12</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBoMPXhmlgkHX-4sqRWwHmv0aN3IcSF1Uw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>379626776150</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.leavecasa.app</string>
+	<key>PROJECT_ID</key>
+	<string>leave-casa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>leave-casa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<false/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:379626776150:ios:97ff9abcba2dc22b51bdf7</string>
+</dict>
+</plist>

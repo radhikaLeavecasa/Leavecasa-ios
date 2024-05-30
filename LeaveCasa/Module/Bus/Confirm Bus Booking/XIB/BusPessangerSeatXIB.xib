@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BusPessangerSeatXIB" rowHeight="517" id="KGk-i7-Jjw" customClass="BusPessangerSeatXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="562" height="517"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="562" height="517"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg7-Rm-Xjr">
+                        <rect key="frame" x="0.0" y="0.0" width="562" height="474"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_blue_user" translatesAutoresizingMaskIntoConstraints="NO" id="w5y-oH-wn3">
+                                <rect key="frame" x="20" y="20" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Ebz-Y7-0Ke"/>
+                                    <constraint firstAttribute="height" constant="35" id="GhA-JH-cyK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seat  2A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8b7-RG-FjL">
+                                <rect key="frame" x="75" y="30" width="467" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xae-Ly-TH4">
+                                <rect key="frame" x="160" y="73" width="382" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm8-zc-pju">
+                                        <rect key="frame" x="0.0" y="0.0" width="367" height="13"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                        <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-sG-fne">
+                                        <rect key="frame" x="0.0" y="18" width="382" height="32"/>
+                                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" name="GARK_GRAY_COLOR"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" name="CUSTOM_PINK"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jm8-zc-pju" secondAttribute="trailing" constant="15" id="FBR-Xb-b8n"/>
+                                    <constraint firstItem="NJS-sG-fne" firstAttribute="top" secondItem="Jm8-zc-pju" secondAttribute="bottom" constant="5" id="Gtk-bO-jpu"/>
+                                    <constraint firstAttribute="height" constant="50" id="JKm-R0-Tkd"/>
+                                    <constraint firstItem="Jm8-zc-pju" firstAttribute="leading" secondItem="xae-Ly-TH4" secondAttribute="leading" id="RV1-8y-775"/>
+                                    <constraint firstItem="Jm8-zc-pju" firstAttribute="top" secondItem="xae-Ly-TH4" secondAttribute="top" id="aQ2-d1-1Md"/>
+                                    <constraint firstAttribute="trailing" secondItem="NJS-sG-fne" secondAttribute="trailing" id="dkl-Ul-Y1H"/>
+                                    <constraint firstItem="NJS-sG-fne" firstAttribute="leading" secondItem="xae-Ly-TH4" secondAttribute="leading" id="fBw-pn-xkn"/>
+                                    <constraint firstAttribute="bottom" secondItem="NJS-sG-fne" secondAttribute="bottom" id="oJk-W5-uJW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1y-gi-Mi4">
+                                <rect key="frame" x="20" y="138" width="522" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poQ-B7-xoZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="522" height="13"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                        <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" tag="7" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wW8-Gu-HOn">
+                                        <rect key="frame" x="0.0" y="18" width="522" height="32"/>
+                                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="phonePad"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" name="GARK_GRAY_COLOR"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                <color key="value" name="CUSTOM_PINK"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wW8-Gu-HOn" firstAttribute="top" secondItem="poQ-B7-xoZ" secondAttribute="bottom" constant="5" id="Dz3-k6-BBR"/>
+                                    <constraint firstAttribute="trailing" secondItem="poQ-B7-xoZ" secondAttribute="trailing" id="HY8-Dr-B5E"/>
+                                    <constraint firstItem="poQ-B7-xoZ" firstAttribute="leading" secondItem="d1y-gi-Mi4" secondAttribute="leading" id="JKZ-9T-cZb"/>
+                                    <constraint firstItem="poQ-B7-xoZ" firstAttribute="top" secondItem="d1y-gi-Mi4" secondAttribute="top" id="RQ7-69-EHN"/>
+                                    <constraint firstAttribute="height" constant="50" id="UQg-jJ-VQL"/>
+                                    <constraint firstItem="wW8-Gu-HOn" firstAttribute="leading" secondItem="d1y-gi-Mi4" secondAttribute="leading" id="g3d-PU-DDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="wW8-Gu-HOn" secondAttribute="trailing" id="kfh-eE-vha"/>
+                                    <constraint firstAttribute="bottom" secondItem="wW8-Gu-HOn" secondAttribute="bottom" id="vSw-Rm-CEi"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dotted_line" translatesAutoresizingMaskIntoConstraints="NO" id="i4Z-7k-6Pc">
+                                <rect key="frame" x="20" y="463" width="522" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="mdD-sp-Ry3"/>
+                                </constraints>
+                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-mq-BjI">
+                                <rect key="frame" x="20" y="73" width="120" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hen-gu-tAw">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="13"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                        <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6D-I0-W58">
+                                        <rect key="frame" x="0.0" y="18" width="120" height="32"/>
+                                        <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="j6D-I0-W58" firstAttribute="leading" secondItem="Xve-mq-BjI" secondAttribute="leading" id="2id-gO-0Zk"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ad4-aN-e2e"/>
+                                    <constraint firstAttribute="trailing" secondItem="j6D-I0-W58" secondAttribute="trailing" id="Erv-9T-MYG"/>
+                                    <constraint firstAttribute="bottom" secondItem="j6D-I0-W58" secondAttribute="bottom" id="Exb-I5-LNb"/>
+                                    <constraint firstItem="hen-gu-tAw" firstAttribute="top" secondItem="Xve-mq-BjI" secondAttribute="top" id="H5V-g0-rbX"/>
+                                    <constraint firstItem="j6D-I0-W58" firstAttribute="top" secondItem="hen-gu-tAw" secondAttribute="bottom" constant="5" id="Jng-My-Qf3"/>
+                                    <constraint firstAttribute="width" constant="120" id="SiY-nK-VN4"/>
+                                    <constraint firstItem="hen-gu-tAw" firstAttribute="leading" secondItem="Xve-mq-BjI" secondAttribute="leading" id="xw8-Yd-edI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeF-aN-Aek">
+                                <rect key="frame" x="0.0" y="0.0" width="562" height="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yXO-HI-ERm">
+                                <rect key="frame" x="20" y="203" width="522" height="245"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-A2-rGP">
+                                        <rect key="frame" x="0.0" y="0.0" width="522" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone No.*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWW-Cg-6BG">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="13"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-aZ-Rn5">
+                                                <rect key="frame" x="0.0" y="18" width="522" height="32"/>
+                                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="phonePad"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" name="GARK_GRAY_COLOR"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" name="CUSTOM_PINK"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uJg-aZ-Rn5" firstAttribute="top" secondItem="yWW-Cg-6BG" secondAttribute="bottom" constant="5" id="4QL-Eu-ccC"/>
+                                            <constraint firstItem="yWW-Cg-6BG" firstAttribute="leading" secondItem="bMo-A2-rGP" secondAttribute="leading" id="7BQ-Rh-h6w"/>
+                                            <constraint firstAttribute="trailing" secondItem="yWW-Cg-6BG" secondAttribute="trailing" constant="15" id="EUo-ZY-obj"/>
+                                            <constraint firstItem="uJg-aZ-Rn5" firstAttribute="leading" secondItem="bMo-A2-rGP" secondAttribute="leading" id="I0z-Vh-d3j"/>
+                                            <constraint firstItem="yWW-Cg-6BG" firstAttribute="top" secondItem="bMo-A2-rGP" secondAttribute="top" id="SAV-ej-39H"/>
+                                            <constraint firstAttribute="trailing" secondItem="uJg-aZ-Rn5" secondAttribute="trailing" id="U7m-dv-9dZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="uJg-aZ-Rn5" secondAttribute="bottom" id="asw-aK-LPI"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1h-SN-gax">
+                                        <rect key="frame" x="0.0" y="65" width="522" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ID*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaR-5q-4nM">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="13"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cr1-5G-sAK">
+                                                <rect key="frame" x="0.0" y="18" width="522" height="32"/>
+                                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" name="GARK_GRAY_COLOR"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" name="CUSTOM_PINK"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="cr1-5G-sAK" secondAttribute="bottom" id="7ez-3O-2Bi"/>
+                                            <constraint firstItem="xaR-5q-4nM" firstAttribute="leading" secondItem="V1h-SN-gax" secondAttribute="leading" id="9L2-YY-kQJ"/>
+                                            <constraint firstItem="cr1-5G-sAK" firstAttribute="leading" secondItem="V1h-SN-gax" secondAttribute="leading" id="QDG-Uj-KjI"/>
+                                            <constraint firstAttribute="trailing" secondItem="xaR-5q-4nM" secondAttribute="trailing" constant="15" id="Zep-7v-O5h"/>
+                                            <constraint firstAttribute="trailing" secondItem="cr1-5G-sAK" secondAttribute="trailing" id="mg7-Fn-R2Q"/>
+                                            <constraint firstItem="xaR-5q-4nM" firstAttribute="top" secondItem="V1h-SN-gax" secondAttribute="top" id="o8f-Lk-5Ys"/>
+                                            <constraint firstItem="cr1-5G-sAK" firstAttribute="top" secondItem="xaR-5q-4nM" secondAttribute="bottom" constant="5" id="shn-2f-NPw"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEC-gO-a2v">
+                                        <rect key="frame" x="0.0" y="130" width="522" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGi-Z9-n0T">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="13"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9CQ-hb-pWg">
+                                                <rect key="frame" x="0.0" y="18" width="522" height="32"/>
+                                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" name="GARK_GRAY_COLOR"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" name="CUSTOM_PINK"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cGi-Z9-n0T" secondAttribute="trailing" constant="15" id="DqF-LT-Al9"/>
+                                            <constraint firstItem="9CQ-hb-pWg" firstAttribute="leading" secondItem="vEC-gO-a2v" secondAttribute="leading" id="Mtz-pD-BP6"/>
+                                            <constraint firstItem="9CQ-hb-pWg" firstAttribute="top" secondItem="cGi-Z9-n0T" secondAttribute="bottom" constant="5" id="bUh-Yg-hvP"/>
+                                            <constraint firstAttribute="height" constant="50" id="cnI-Gk-P73"/>
+                                            <constraint firstItem="cGi-Z9-n0T" firstAttribute="leading" secondItem="vEC-gO-a2v" secondAttribute="leading" id="fg2-8r-5eq"/>
+                                            <constraint firstAttribute="bottom" secondItem="9CQ-hb-pWg" secondAttribute="bottom" id="hcI-sp-0VN"/>
+                                            <constraint firstAttribute="trailing" secondItem="9CQ-hb-pWg" secondAttribute="trailing" id="rv0-M6-5MB"/>
+                                            <constraint firstItem="cGi-Z9-n0T" firstAttribute="top" secondItem="vEC-gO-a2v" secondAttribute="top" id="z9l-c4-2uy"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-ey-AFQ">
+                                        <rect key="frame" x="0.0" y="195" width="522" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zb1-Rc-Wub">
+                                                <rect key="frame" x="0.0" y="0.0" width="507" height="13"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="13"/>
+                                                <color key="textColor" name="GARK_GRAY_COLOR"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VBw-2P-0KT">
+                                                <rect key="frame" x="0.0" y="18" width="522" height="32"/>
+                                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                        <color key="value" name="GARK_GRAY_COLOR"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                                        <color key="value" name="CUSTOM_PINK"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="VBw-2P-0KT" secondAttribute="bottom" id="0me-6q-fpi"/>
+                                            <constraint firstItem="Zb1-Rc-Wub" firstAttribute="top" secondItem="D7e-ey-AFQ" secondAttribute="top" id="4JT-TH-4hc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zb1-Rc-Wub" secondAttribute="trailing" constant="15" id="4VB-za-Eds"/>
+                                            <constraint firstItem="VBw-2P-0KT" firstAttribute="leading" secondItem="D7e-ey-AFQ" secondAttribute="leading" id="Dil-YV-h4b"/>
+                                            <constraint firstItem="Zb1-Rc-Wub" firstAttribute="leading" secondItem="D7e-ey-AFQ" secondAttribute="leading" id="MaX-Wl-6eC"/>
+                                            <constraint firstAttribute="trailing" secondItem="VBw-2P-0KT" secondAttribute="trailing" id="TR9-vJ-Bj1"/>
+                                            <constraint firstItem="VBw-2P-0KT" firstAttribute="top" secondItem="Zb1-Rc-Wub" secondAttribute="bottom" constant="5" id="aPj-8l-DYb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SeF-aN-Aek" firstAttribute="bottom" secondItem="w5y-oH-wn3" secondAttribute="bottom" constant="5" id="17l-nj-AYD"/>
+                            <constraint firstItem="i4Z-7k-6Pc" firstAttribute="top" secondItem="yXO-HI-ERm" secondAttribute="bottom" constant="15" id="1y4-gw-aET"/>
+                            <constraint firstAttribute="trailing" secondItem="xae-Ly-TH4" secondAttribute="trailing" constant="20" id="5SU-AJ-MFa"/>
+                            <constraint firstItem="xae-Ly-TH4" firstAttribute="leading" secondItem="Xve-mq-BjI" secondAttribute="trailing" constant="20" id="6dH-jY-wt0"/>
+                            <constraint firstItem="SeF-aN-Aek" firstAttribute="leading" secondItem="eg7-Rm-Xjr" secondAttribute="leading" id="6h0-WG-RU6"/>
+                            <constraint firstItem="yXO-HI-ERm" firstAttribute="leading" secondItem="Xve-mq-BjI" secondAttribute="leading" id="7Wk-4M-K7E"/>
+                            <constraint firstAttribute="trailing" secondItem="d1y-gi-Mi4" secondAttribute="trailing" constant="20" id="7wE-yr-aqV"/>
+                            <constraint firstItem="Xve-mq-BjI" firstAttribute="centerY" secondItem="xae-Ly-TH4" secondAttribute="centerY" id="8yk-zJ-FkE"/>
+                            <constraint firstItem="yXO-HI-ERm" firstAttribute="trailing" secondItem="xae-Ly-TH4" secondAttribute="trailing" id="DrA-jV-aZD"/>
+                            <constraint firstItem="xae-Ly-TH4" firstAttribute="top" secondItem="w5y-oH-wn3" secondAttribute="bottom" constant="18" id="Hd3-XR-dqO"/>
+                            <constraint firstAttribute="trailing" secondItem="i4Z-7k-6Pc" secondAttribute="trailing" constant="20" id="Iir-et-lVv"/>
+                            <constraint firstItem="d1y-gi-Mi4" firstAttribute="top" secondItem="xae-Ly-TH4" secondAttribute="bottom" constant="15" id="K3X-My-08y"/>
+                            <constraint firstItem="SeF-aN-Aek" firstAttribute="top" secondItem="eg7-Rm-Xjr" secondAttribute="top" id="KT8-3L-5vM"/>
+                            <constraint firstItem="i4Z-7k-6Pc" firstAttribute="leading" secondItem="eg7-Rm-Xjr" secondAttribute="leading" constant="20" id="M4W-G5-c5m"/>
+                            <constraint firstItem="d1y-gi-Mi4" firstAttribute="leading" secondItem="eg7-Rm-Xjr" secondAttribute="leading" constant="20" id="NlE-KI-2HQ"/>
+                            <constraint firstAttribute="trailing" secondItem="8b7-RG-FjL" secondAttribute="trailing" constant="20" id="RJA-s8-twC"/>
+                            <constraint firstItem="8b7-RG-FjL" firstAttribute="leading" secondItem="w5y-oH-wn3" secondAttribute="trailing" constant="20" id="SeN-jR-R8u"/>
+                            <constraint firstItem="w5y-oH-wn3" firstAttribute="centerY" secondItem="8b7-RG-FjL" secondAttribute="centerY" id="biO-Zy-to7"/>
+                            <constraint firstItem="w5y-oH-wn3" firstAttribute="leading" secondItem="eg7-Rm-Xjr" secondAttribute="leading" constant="20" id="f4z-h4-6cF"/>
+                            <constraint firstAttribute="trailing" secondItem="SeF-aN-Aek" secondAttribute="trailing" id="iut-Ek-B4H"/>
+                            <constraint firstAttribute="bottom" secondItem="i4Z-7k-6Pc" secondAttribute="bottom" constant="10" id="ox0-bi-knU"/>
+                            <constraint firstItem="yXO-HI-ERm" firstAttribute="top" secondItem="d1y-gi-Mi4" secondAttribute="bottom" constant="15" id="pEw-Bk-A48"/>
+                            <constraint firstItem="w5y-oH-wn3" firstAttribute="top" secondItem="eg7-Rm-Xjr" secondAttribute="top" constant="20" id="qge-j3-hOh"/>
+                            <constraint firstItem="Xve-mq-BjI" firstAttribute="leading" secondItem="eg7-Rm-Xjr" secondAttribute="leading" constant="20" id="zsL-kM-pD3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eg7-Rm-Xjr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6Rh-vz-KS6"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eg7-Rm-Xjr" secondAttribute="bottom" id="S9F-Hm-r2q"/>
+                    <constraint firstAttribute="trailing" secondItem="eg7-Rm-Xjr" secondAttribute="trailing" id="TW0-Jj-ndv"/>
+                    <constraint firstItem="eg7-Rm-Xjr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ge7-8I-Pgj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnTap" destination="SeF-aN-Aek" id="v0H-ph-1FS"/>
+                <outlet property="lblSeatNo" destination="8b7-RG-FjL" id="drm-cO-O8U"/>
+                <outlet property="txtAge" destination="wW8-Gu-HOn" id="gmV-3h-AC6"/>
+                <outlet property="txtFldEmail" destination="cr1-5G-sAK" id="0Zc-F8-jdl"/>
+                <outlet property="txtFldIDNumber" destination="VBw-2P-0KT" id="PTA-mT-wa4"/>
+                <outlet property="txtFldIDType" destination="9CQ-hb-pWg" id="KAY-vV-4ef"/>
+                <outlet property="txtFldPhoneNumber" destination="uJg-aZ-Rn5" id="Mnl-XN-bol"/>
+                <outlet property="txtName" destination="NJS-sG-fne" id="r3L-HJ-g5y"/>
+                <outlet property="txtTitle" destination="j6D-I0-W58" id="W62-nw-9r8"/>
+                <outlet property="vwEmail" destination="V1h-SN-gax" id="fhi-hH-6lt"/>
+                <outlet property="vwPhoneNumber" destination="bMo-A2-rGP" id="c4J-Rh-QNZ"/>
+            </connections>
+            <point key="canvasLocation" x="243.07692307692307" y="165.28436018957345"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_blue_user" width="35" height="35"/>
+        <image name="ic_dotted_line" width="316" height="1"/>
+        <namedColor name="CUSTOM_PINK">
+            <color red="0.8901960784313725" green="0.0039215686274509803" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GARK_GRAY_COLOR">
+            <color red="0.3880000114440918" green="0.41600000858306885" blue="0.47499999403953552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TEXT_BLACK_COLOR">
+            <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

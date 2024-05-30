@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="PassangerDetailsXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCx-z8-FXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandeep Dogra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH0-Zm-Dgg">
+                                <rect key="frame" x="0.0" y="13.666666666666664" width="130" height="17"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tne-Dy-LnV">
+                                <rect key="frame" x="296.66666666666669" y="13.666666666666664" width="23.333333333333314" height="17"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
+                                <color key="textColor" name="TEXT_BLACK_COLOR"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dH0-Zm-Dgg" firstAttribute="centerY" secondItem="nCx-z8-FXQ" secondAttribute="centerY" id="Lno-y3-NOh"/>
+                            <constraint firstItem="Tne-Dy-LnV" firstAttribute="centerY" secondItem="nCx-z8-FXQ" secondAttribute="centerY" id="M3j-7Q-08J"/>
+                            <constraint firstItem="dH0-Zm-Dgg" firstAttribute="leading" secondItem="nCx-z8-FXQ" secondAttribute="leading" id="bhq-j0-CzY"/>
+                            <constraint firstItem="Tne-Dy-LnV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dH0-Zm-Dgg" secondAttribute="trailing" constant="10" id="gvT-2C-8Y9"/>
+                            <constraint firstAttribute="trailing" secondItem="Tne-Dy-LnV" secondAttribute="trailing" id="ylt-eJ-ADP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nCx-z8-FXQ" secondAttribute="bottom" id="5r7-v9-HGC"/>
+                    <constraint firstItem="nCx-z8-FXQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Cus-G6-KhC"/>
+                    <constraint firstItem="nCx-z8-FXQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YbS-ef-tuO"/>
+                    <constraint firstAttribute="trailing" secondItem="nCx-z8-FXQ" secondAttribute="trailing" id="fKZ-xd-4UI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblAge" destination="Tne-Dy-LnV" id="lmy-Lw-7yA"/>
+                <outlet property="lblName" destination="dH0-Zm-Dgg" id="lIN-JQ-eeb"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-33"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="TEXT_BLACK_COLOR">
+            <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SeatXIB" id="wLt-Km-3vG" customClass="SeatXIB" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="70" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_available" translatesAutoresizingMaskIntoConstraints="NO" id="pia-pd-ceb">
+                        <rect key="frame" x="15" y="10" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="EFA-fa-bgJ"/>
+                            <constraint firstAttribute="width" constant="35" id="UoM-Yn-9tc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-mR-JSl">
+                        <rect key="frame" x="20.666666666666671" y="50" width="24" height="22"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpu-zR-nYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="77"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="WIQ-KS-tUl"/>
+            <constraints>
+                <constraint firstItem="Gpu-zR-nYQ" firstAttribute="top" secondItem="wLt-Km-3vG" secondAttribute="top" id="4M9-S0-szN"/>
+                <constraint firstAttribute="trailing" secondItem="Gpu-zR-nYQ" secondAttribute="trailing" id="4zD-1A-z0j"/>
+                <constraint firstAttribute="bottom" secondItem="VHr-mR-JSl" secondAttribute="bottom" constant="5" id="5mg-Sl-qqC"/>
+                <constraint firstItem="VHr-mR-JSl" firstAttribute="top" secondItem="pia-pd-ceb" secondAttribute="bottom" constant="5" id="Jux-ft-Kvg"/>
+                <constraint firstItem="pia-pd-ceb" firstAttribute="leading" secondItem="wLt-Km-3vG" secondAttribute="leading" constant="15" id="Y2d-ya-TCy"/>
+                <constraint firstItem="VHr-mR-JSl" firstAttribute="centerX" secondItem="pia-pd-ceb" secondAttribute="centerX" id="YSe-Mc-xQ0"/>
+                <constraint firstAttribute="bottom" secondItem="Gpu-zR-nYQ" secondAttribute="bottom" id="bcj-Dz-9nw"/>
+                <constraint firstItem="Gpu-zR-nYQ" firstAttribute="leading" secondItem="wLt-Km-3vG" secondAttribute="leading" id="fU1-0W-61R"/>
+                <constraint firstItem="pia-pd-ceb" firstAttribute="top" secondItem="wLt-Km-3vG" secondAttribute="top" constant="10" id="szj-fH-L33"/>
+            </constraints>
+            <size key="customSize" width="85" height="107"/>
+            <connections>
+                <outlet property="height" destination="EFA-fa-bgJ" id="mpd-D7-L4y"/>
+                <outlet property="imgBusSeat" destination="pia-pd-ceb" id="xKa-dn-NxM"/>
+                <outlet property="lblSeatPrice" destination="VHr-mR-JSl" id="Ihs-Ld-NSZ"/>
+                <outlet property="vwTop" destination="Gpu-zR-nYQ" id="obA-by-j8z"/>
+            </connections>
+            <point key="canvasLocation" x="26.153846153846153" y="-70.023696682464447"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_available" width="33" height="31"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
