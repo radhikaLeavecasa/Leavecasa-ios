@@ -2439,7 +2439,7 @@ confirmed!</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:30PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hyh-ft-9fM">
-                                                                                <rect key="frame" x="254.66666666666674" y="11" width="65.333333333333314" height="16"/>
+                                                                                <rect key="frame" x="254.66666666666671" y="11" width="65.333333333333343" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2476,7 +2476,7 @@ confirmed!</string>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:30PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="uhM-k0-bog">
-                                                                                <rect key="frame" x="254.66666666666674" y="28" width="65.333333333333314" height="16"/>
+                                                                                <rect key="frame" x="254.66666666666671" y="28" width="65.333333333333343" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                                 <nil key="highlightedColor"/>
@@ -4612,9 +4612,9 @@ confirmed!</string>
                                     <action selector="backOnPress:" destination="Rfj-me-dYZ" eventType="touchUpInside" id="ncg-3T-0HA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsY-de-KDx">
-                                <rect key="frame" x="62" y="85.666666666666671" width="262" height="0.0"/>
-                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsY-de-KDx">
+                                <rect key="frame" x="62" y="74.666666666666671" width="262" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="21"/>
                                 <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -4654,25 +4654,25 @@ confirmed!</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugn-D0-Vjy">
-                                <rect key="frame" x="20" y="117" width="0.0" height="0.0"/>
+                                <rect key="frame" x="20" y="89.666666666666671" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mac-fj-vHk">
-                                <rect key="frame" x="20" y="123" width="0.0" height="0.0"/>
+                                <rect key="frame" x="20" y="95.666666666666671" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFu-tx-GDD">
-                                <rect key="frame" x="30" y="123" width="0.0" height="0.0"/>
+                                <rect key="frame" x="30" y="95.666666666666671" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Me-nW-aRk" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="0.0" y="133" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="105.66666666666667" width="390" height="1"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="bWI-21-KVt"/>
@@ -4693,7 +4693,7 @@ confirmed!</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_seat_rs" translatesAutoresizingMaskIntoConstraints="NO" id="Vb2-r5-g2g">
-                                <rect key="frame" x="20" y="134" width="22" height="0.0"/>
+                                <rect key="frame" x="20" y="106.66666666666667" width="22" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="CRX-yI-vjZ"/>
                                     <constraint firstAttribute="width" constant="22" id="dnd-QK-zkc"/>
@@ -4911,10 +4911,10 @@ confirmed!</string>
                                 <color key="backgroundColor" red="0.90222889179999999" green="0.93534642459999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IY-5n-W8a">
-                                <rect key="frame" x="0.0" y="134" width="390" height="606"/>
+                                <rect key="frame" x="0.0" y="106.66666666666669" width="390" height="633.33333333333326"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-KK-D4n">
-                                        <rect key="frame" x="20" y="50" width="350" height="556"/>
+                                        <rect key="frame" x="20" y="50" width="350" height="583.33333333333337"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="b4s-Cp-UYH">
                                             <size key="itemSize" width="128" height="128"/>
@@ -4924,7 +4924,7 @@ confirmed!</string>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LowerBerthCVC" id="EET-EC-Uwu" customClass="LowerBerthCVC" customModule="LeaveCasa" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="20.666666666666668" width="161" height="515"/>
+                                                <rect key="frame" x="0.0" y="34.333333333333336" width="161" height="515"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="161" height="515"/>
@@ -4937,7 +4937,7 @@ confirmed!</string>
                                                                     <rect key="frame" x="0.0" y="56" width="151" height="449"/>
                                                                     <subviews>
                                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SBQ-X3-LcF">
-                                                                            <rect key="frame" x="15" y="5" width="121" height="300"/>
+                                                                            <rect key="frame" x="10" y="5" width="131" height="300"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="300" id="uMJ-sG-nsg"/>
@@ -4951,23 +4951,23 @@ confirmed!</string>
                                                                             <cells/>
                                                                         </collectionView>
                                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXT-5P-ab5">
-                                                                            <rect key="frame" x="15" y="305" width="121" height="70"/>
+                                                                            <rect key="frame" x="10" y="305" width="131" height="70"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_avlable_landscape_sleeper" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-D4-ff9">
-                                                                                    <rect key="frame" x="5" y="5" width="100" height="35"/>
+                                                                                    <rect key="frame" x="10" y="5" width="100" height="35"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="JE1-BP-UZv"/>
                                                                                         <constraint firstAttribute="width" constant="100" id="mAx-Ch-eac"/>
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXa-lO-Wrd">
-                                                                                    <rect key="frame" x="5" y="45" width="100" height="11"/>
+                                                                                    <rect key="frame" x="10" y="45" width="100" height="11"/>
                                                                                     <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-De-PLh">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="121" height="70"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="70"/>
                                                                                     <state key="normal" title="Button"/>
                                                                                     <buttonConfiguration key="configuration" style="plain"/>
                                                                                 </button>
@@ -4979,7 +4979,7 @@ confirmed!</string>
                                                                                 <constraint firstItem="4AB-D4-ff9" firstAttribute="top" secondItem="VXT-5P-ab5" secondAttribute="top" constant="5" id="EpW-dw-suy"/>
                                                                                 <constraint firstItem="0Vl-De-PLh" firstAttribute="leading" secondItem="VXT-5P-ab5" secondAttribute="leading" id="JWj-DU-HbS"/>
                                                                                 <constraint firstItem="RXa-lO-Wrd" firstAttribute="top" secondItem="4AB-D4-ff9" secondAttribute="bottom" constant="5" id="YnH-8k-epI"/>
-                                                                                <constraint firstItem="4AB-D4-ff9" firstAttribute="leading" secondItem="VXT-5P-ab5" secondAttribute="leading" constant="5" id="bgw-Xr-3zy"/>
+                                                                                <constraint firstItem="4AB-D4-ff9" firstAttribute="leading" secondItem="VXT-5P-ab5" secondAttribute="leading" constant="10" id="bgw-Xr-3zy"/>
                                                                                 <constraint firstItem="0Vl-De-PLh" firstAttribute="top" secondItem="VXT-5P-ab5" secondAttribute="top" id="g5R-DG-0g4"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="0Vl-De-PLh" secondAttribute="bottom" id="lqd-2O-AUu"/>
                                                                                 <constraint firstItem="RXa-lO-Wrd" firstAttribute="trailing" secondItem="4AB-D4-ff9" secondAttribute="trailing" id="oUq-LX-aXJ"/>
@@ -4988,7 +4988,7 @@ confirmed!</string>
                                                                         </view>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="trailing" secondItem="SBQ-X3-LcF" secondAttribute="trailing" constant="15" id="6JZ-TS-OCh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="SBQ-X3-LcF" secondAttribute="trailing" constant="10" id="6JZ-TS-OCh"/>
                                                                         <constraint firstItem="SBQ-X3-LcF" firstAttribute="top" secondItem="aym-Be-efm" secondAttribute="top" constant="5" id="BEk-xK-XyX"/>
                                                                         <constraint firstAttribute="bottom" secondItem="VXT-5P-ab5" secondAttribute="bottom" constant="5" id="CQJ-rh-f1h"/>
                                                                         <constraint firstItem="VXT-5P-ab5" firstAttribute="leading" secondItem="SBQ-X3-LcF" secondAttribute="leading" id="GjP-ZR-g8n"/>
@@ -4996,7 +4996,7 @@ confirmed!</string>
                                                                         <constraint firstItem="SBQ-X3-LcF" firstAttribute="centerX" secondItem="aym-Be-efm" secondAttribute="centerX" id="RKn-PG-9VI"/>
                                                                         <constraint firstItem="SBQ-X3-LcF" firstAttribute="height" secondItem="aym-Be-efm" secondAttribute="height" multiplier="0.977728" priority="250" id="Ue8-lN-oyz"/>
                                                                         <constraint firstItem="VXT-5P-ab5" firstAttribute="top" secondItem="SBQ-X3-LcF" secondAttribute="bottom" id="W5E-Kg-YLX"/>
-                                                                        <constraint firstItem="SBQ-X3-LcF" firstAttribute="leading" secondItem="aym-Be-efm" secondAttribute="leading" constant="15" id="zAs-P1-a0z"/>
+                                                                        <constraint firstItem="SBQ-X3-LcF" firstAttribute="leading" secondItem="aym-Be-efm" secondAttribute="leading" constant="10" id="zAs-P1-a0z"/>
                                                                     </constraints>
                                                                 </scrollView>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_wheel" translatesAutoresizingMaskIntoConstraints="NO" id="pKq-el-Sfg">
@@ -5071,7 +5071,7 @@ confirmed!</string>
                                                 </connections>
                                             </collectionViewCell>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UpperBerthCVC" id="NmH-SI-yPO" customClass="UpperBerthCVC" customModule="LeaveCasa" customModuleProvider="target">
-                                                <rect key="frame" x="171" y="20.666666666666668" width="172" height="515"/>
+                                                <rect key="frame" x="171" y="34.333333333333336" width="172" height="515"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="172" height="515"/>
@@ -5084,7 +5084,7 @@ confirmed!</string>
                                                                     <rect key="frame" x="0.0" y="56" width="162" height="449"/>
                                                                     <subviews>
                                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-kr-uKG">
-                                                                            <rect key="frame" x="15" y="5" width="132" height="300"/>
+                                                                            <rect key="frame" x="10" y="5" width="142" height="300"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="300" id="o3V-LD-n2c"/>
@@ -5102,23 +5102,23 @@ confirmed!</string>
                                                                             </connections>
                                                                         </collectionView>
                                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7WN-jC-kyr">
-                                                                            <rect key="frame" x="15" y="305" width="132" height="70"/>
+                                                                            <rect key="frame" x="10" y="305" width="142" height="70"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_green_avlable_landscape_sleeper" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-KA-1tc">
-                                                                                    <rect key="frame" x="5" y="5" width="100" height="35"/>
+                                                                                    <rect key="frame" x="10" y="5" width="100" height="35"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="100" id="Gh9-e8-JLc"/>
                                                                                         <constraint firstAttribute="height" constant="35" id="KpI-dT-1MQ"/>
                                                                                     </constraints>
                                                                                 </imageView>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1i-1g-FjN">
-                                                                                    <rect key="frame" x="5" y="45" width="100" height="11"/>
+                                                                                    <rect key="frame" x="10" y="45" width="100" height="11"/>
                                                                                     <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRn-ln-Ix9">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="70"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="70"/>
                                                                                     <state key="normal" title="Button"/>
                                                                                     <buttonConfiguration key="configuration" style="plain"/>
                                                                                 </button>
@@ -5133,15 +5133,15 @@ confirmed!</string>
                                                                                 <constraint firstItem="CRn-ln-Ix9" firstAttribute="leading" secondItem="7WN-jC-kyr" secondAttribute="leading" id="WaZ-BE-9ak"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="CRn-ln-Ix9" secondAttribute="bottom" id="k08-tA-zqL"/>
                                                                                 <constraint firstItem="CRn-ln-Ix9" firstAttribute="top" secondItem="7WN-jC-kyr" secondAttribute="top" id="os6-w3-kCT"/>
-                                                                                <constraint firstItem="LkU-KA-1tc" firstAttribute="leading" secondItem="7WN-jC-kyr" secondAttribute="leading" constant="5" id="qkw-0W-ciK"/>
+                                                                                <constraint firstItem="LkU-KA-1tc" firstAttribute="leading" secondItem="7WN-jC-kyr" secondAttribute="leading" constant="10" id="qkw-0W-ciK"/>
                                                                                 <constraint firstItem="U1i-1g-FjN" firstAttribute="trailing" secondItem="LkU-KA-1tc" secondAttribute="trailing" id="yxj-zX-WBn"/>
                                                                             </constraints>
                                                                         </view>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="YbX-kr-uKG" firstAttribute="leading" secondItem="x12-SG-Jwz" secondAttribute="leading" constant="15" id="1He-me-4m3"/>
+                                                                        <constraint firstItem="YbX-kr-uKG" firstAttribute="leading" secondItem="x12-SG-Jwz" secondAttribute="leading" constant="10" id="1He-me-4m3"/>
                                                                         <constraint firstItem="7WN-jC-kyr" firstAttribute="leading" secondItem="YbX-kr-uKG" secondAttribute="leading" id="8rB-id-379"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="YbX-kr-uKG" secondAttribute="trailing" constant="15" id="CAc-mK-Wa8"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="YbX-kr-uKG" secondAttribute="trailing" constant="10" id="CAc-mK-Wa8"/>
                                                                         <constraint firstItem="7WN-jC-kyr" firstAttribute="top" secondItem="YbX-kr-uKG" secondAttribute="bottom" id="E4H-Wl-CyK"/>
                                                                         <constraint firstItem="YbX-kr-uKG" firstAttribute="top" secondItem="x12-SG-Jwz" secondAttribute="top" constant="5" id="UZ3-OY-SFo"/>
                                                                         <constraint firstItem="7WN-jC-kyr" firstAttribute="trailing" secondItem="YbX-kr-uKG" secondAttribute="trailing" id="blQ-8E-ttv"/>
@@ -5273,7 +5273,7 @@ confirmed!</string>
                                 </connections>
                             </button>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qi7-me-HVz">
-                                <rect key="frame" x="72" y="134" width="298" height="0.0"/>
+                                <rect key="frame" x="72" y="106.66666666666667" width="298" height="0.0"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="5bl-hj-qSZ"/>
@@ -5292,7 +5292,7 @@ confirmed!</string>
                         <constraints>
                             <constraint firstItem="Vb2-r5-g2g" firstAttribute="centerY" secondItem="qi7-me-HVz" secondAttribute="centerY" id="008-D2-v3h"/>
                             <constraint firstItem="POV-4G-jov" firstAttribute="top" secondItem="PdV-BC-HtH" secondAttribute="bottom" id="45u-IA-mA9"/>
-                            <constraint firstItem="zrC-Oq-P1p" firstAttribute="centerY" secondItem="RsY-de-KDx" secondAttribute="centerY" id="4ln-Pz-lfk"/>
+                            <constraint firstItem="Ugn-D0-Vjy" firstAttribute="top" secondItem="RsY-de-KDx" secondAttribute="bottom" constant="15" id="47i-jP-dQL"/>
                             <constraint firstItem="8ME-L4-Xi8" firstAttribute="trailing" secondItem="sLo-qh-P8P" secondAttribute="trailing" constant="20" id="6iF-aH-UTb"/>
                             <constraint firstItem="Vb2-r5-g2g" firstAttribute="leading" secondItem="8ME-L4-Xi8" secondAttribute="leading" constant="20" id="93X-wb-Z0z"/>
                             <constraint firstItem="1Me-nW-aRk" firstAttribute="top" secondItem="mac-fj-vHk" secondAttribute="bottom" constant="10" id="ARe-k3-Rny"/>
@@ -5303,6 +5303,7 @@ confirmed!</string>
                             <constraint firstItem="uB1-8G-Bhv" firstAttribute="bottom" secondItem="bIz-p5-AYv" secondAttribute="bottom" id="Gg0-LO-MIG"/>
                             <constraint firstItem="8ME-L4-Xi8" firstAttribute="trailing" secondItem="PdV-BC-HtH" secondAttribute="trailing" id="Ghc-5z-dKN"/>
                             <constraint firstItem="4IY-5n-W8a" firstAttribute="leading" secondItem="8ME-L4-Xi8" secondAttribute="leading" id="JMl-wf-C45"/>
+                            <constraint firstItem="RsY-de-KDx" firstAttribute="top" secondItem="zrC-Oq-P1p" secondAttribute="top" constant="5" id="MKV-uq-Yt6"/>
                             <constraint firstItem="uB1-8G-Bhv" firstAttribute="trailing" secondItem="bIz-p5-AYv" secondAttribute="trailing" id="MY8-tr-zk5"/>
                             <constraint firstItem="Vb2-r5-g2g" firstAttribute="top" secondItem="1Me-nW-aRk" secondAttribute="bottom" id="RG2-1X-ZYc"/>
                             <constraint firstItem="mac-fj-vHk" firstAttribute="centerY" secondItem="eFu-tx-GDD" secondAttribute="centerY" id="VWq-nV-D2x"/>
@@ -5318,7 +5319,6 @@ confirmed!</string>
                             <constraint firstItem="8ME-L4-Xi8" firstAttribute="trailing" secondItem="4IY-5n-W8a" secondAttribute="trailing" id="aiJ-jJ-84E"/>
                             <constraint firstItem="99f-R6-vEt" firstAttribute="leading" secondItem="ye9-qy-Ysj" secondAttribute="leading" id="avF-cJ-nUS"/>
                             <constraint firstItem="4IY-5n-W8a" firstAttribute="top" secondItem="qi7-me-HVz" secondAttribute="bottom" id="bG7-lO-eH6"/>
-                            <constraint firstItem="Ugn-D0-Vjy" firstAttribute="top" secondItem="F4p-wT-kkH" secondAttribute="bottom" constant="20" id="bsZ-b1-OH9"/>
                             <constraint firstItem="sLo-qh-P8P" firstAttribute="centerY" secondItem="F4p-wT-kkH" secondAttribute="centerY" id="cFd-He-3xc"/>
                             <constraint firstItem="uB1-8G-Bhv" firstAttribute="top" secondItem="bIz-p5-AYv" secondAttribute="top" id="d6d-Nt-7W9"/>
                             <constraint firstItem="RsY-de-KDx" firstAttribute="leading" secondItem="zrC-Oq-P1p" secondAttribute="trailing" constant="10" id="dHH-L5-1rC"/>

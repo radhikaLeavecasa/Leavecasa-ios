@@ -10,9 +10,8 @@ target 'LeaveCasa' do
   pod "SearchTextField"
   pod 'SDWebImage'
   pod 'NVActivityIndicatorView'
-  pod "TTGSnackbar"
+  pod 'TTGSnackbar'
   pod 'SKCountryPicker'
-  #pod 'Localize-Swift'
   pod 'IBAnimatable'
   pod 'AdvancedPageControl'
   pod 'OTPFieldView'
@@ -30,10 +29,7 @@ target 'LeaveCasa' do
   pod 'Firebase/Messaging'
   pod 'ReactiveKit'
   pod 'FSCalendar'
-  pod 'PinterestLayout', '~> 1.0'
-  #pod 'FSPopoverView'
   pod 'Popover'
-  #pod 'PhonePePayment'
   
 end
 

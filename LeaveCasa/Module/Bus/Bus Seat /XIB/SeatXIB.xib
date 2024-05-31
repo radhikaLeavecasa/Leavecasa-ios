@@ -30,8 +30,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-mR-JSl">
-                        <rect key="frame" x="20.666666666666671" y="50" width="24" height="22"/>
-                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
+                        <rect key="frame" x="21.666666666666671" y="50" width="22" height="22"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

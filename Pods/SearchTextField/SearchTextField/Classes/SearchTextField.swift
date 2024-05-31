@@ -465,7 +465,8 @@ open class SearchTextField: UITextField {
                         
                         filteredResults.append(item)
                     }
-                } else {
+                }
+                else {
                     item.attributedTitle = NSMutableAttributedString(string: item.title)
                     item.attributedSubtitle = NSMutableAttributedString(string: (item.subtitle != nil ? item.subtitle! : ""))
                     filteredResults.append(item)

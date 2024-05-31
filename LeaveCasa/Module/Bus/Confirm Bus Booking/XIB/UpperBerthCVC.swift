@@ -32,6 +32,9 @@ class UpperBerthCVC: UICollectionViewCell {
     var sortedRowDictionary = [Int: [BusSeat]]()
     var maxCount: Int = 0
     var missingNumbers = Int()
+    
+    var chairs = 0
+    var sleepers = 0
     //MARK: - Custom methods
     func reloadData(_ numberOfSection: Int, numberOfRows: Int, arrSeats: [BusSeat], seatPrice: Double, lowerSeats: Int, totalSeats: Int, selectedSeatsUpper: [BusSeat], view: UIViewController) {
         self.numberOfSection = numberOfSection
@@ -88,17 +91,16 @@ class UpperBerthCVC: UICollectionViewCell {
             for (_, seats) in self.sortedRowDictionary {
                 if seats.count > self.maxCount {
                     self.maxCount = seats.count
+                    
+                    let singleSeats = seats.filter { $0.sWidth == 1 && $0.sLength == 1 }
+                    let doubleSeats = seats.filter { $0.sWidth == 1 && $0.sLength == 2 }
+                    
+                    self.chairs = singleSeats.count
+                    self.sleepers = doubleSeats.count
+                    
                 }
             }
-            
-            let chairs = arrSeats.filter({$0.sWidth == 1 && $0.sLength == 1})
-            let sleepers = arrSeats.filter({$0.sWidth == 1 && $0.sLength == 2})
-            
-            if chairs.count > sleepers.count {
-                self.constCollVwHeight.constant = CGFloat(self.maxCount*72)
-            } else {
-                self.constCollVwHeight.constant = CGFloat(self.maxCount*160)
-            }
+            self.constCollVwHeight.constant = CGFloat(self.chairs*70) + CGFloat(self.sleepers*135)
             
             self.collvwUpperSeats.updateConstraintsIfNeeded()
             if let flowLayout = self.collvwUpperSeats.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -226,26 +228,6 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                     }
                     
                 }
-                //                    else if index.sLength == 1 && index.sWidth == 2 {
-                //                        if index.sAvailable == true{
-                //
-                //                            cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_sleeper_female_seats" : "ic_green_avlable_landscape_sleeper")
-                //
-                //
-                //                            for index in self.selectedSeats{
-                //                                if indexPath.section == index.sColumn && indexPath.row == index.sRow {
-                //                                    cell.imgBusSeat.image = UIImage.init(named: "ic_green_landscape_sleeper")
-                //                                }
-                //                            }
-                //
-                //                            //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                        }else{
-                //                            cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_selected_sleeper_female_seats" : "ic_gray_sleeper_landscape_seat")
-                //
-                //                            //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                        }
-                //                        //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                    }
             } else if sortedRowDictionary[reversedSection]?.count != 1 {
                 cell.imgBusSeat.isHidden = false
                 cell.height.constant = 35
@@ -281,22 +263,6 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                     }
                     
                 }
-                //                    else if index.sLength == 1 && index.sWidth == 2{
-                //                        if index.sAvailable == true{
-                //                            cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_sleeper_female_seats" : "ic_green_avlable_landscape_sleeper")
-                //
-                //                            for index in self.selectedSeats{
-                //                                if indexPath.section == index.sColumn && indexPath.row == index.sRow {
-                //                                    cell.imgBusSeat.image = UIImage.init(named: "ic_green_landscape_sleeper")
-                //                                }
-                //                            }
-                //                            //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                        }else{
-                //                            cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_selected_sleeper_female_seats" : "ic_gray_sleeper_landscape_seat")
-                //                            //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                        }
-                //                        //cell.lblSeatPrice.text = "₹\(index.sFare)"
-                //                    }
             }
         }
         

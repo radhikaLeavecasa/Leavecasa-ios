@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,8 +56,8 @@
                                     <constraint firstAttribute="width" id="yVW-U9-jbE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indo Canadian hfghfgh fgfg fhgf gfgh ghfghf gjhghj" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAM-Zk-k44">
-                                <rect key="frame" x="15" y="15" width="300" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indo Canadian " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAM-Zk-k44">
+                                <rect key="frame" x="15.000000000000007" y="15" width="117.66666666666669" height="30"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
@@ -286,6 +285,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hyH-v3-PSf" secondAttribute="trailing" constant="10" id="0Qu-Qn-DEU"/>
+                            <constraint firstItem="6Uu-Gc-zKm" firstAttribute="top" secondItem="YAM-Zk-k44" secondAttribute="bottom" constant="10" id="12G-1f-k9X"/>
                             <constraint firstItem="6Uu-Gc-zKm" firstAttribute="centerY" secondItem="8WP-DX-3y9" secondAttribute="centerY" id="2hQ-4t-Nvs"/>
                             <constraint firstItem="hyH-v3-PSf" firstAttribute="top" secondItem="cwW-9g-OcN" secondAttribute="bottom" constant="8" id="2n1-Eh-YqB"/>
                             <constraint firstItem="SCp-ga-GXA" firstAttribute="leading" secondItem="Ie0-K7-33A" secondAttribute="trailing" constant="5" id="3Nk-I9-hwK"/>
@@ -321,7 +321,7 @@
                             <constraint firstItem="YAM-Zk-k44" firstAttribute="leading" secondItem="Jel-Mh-lH6" secondAttribute="trailing" constant="15" id="aap-iU-WGr"/>
                             <constraint firstItem="8WP-DX-3y9" firstAttribute="leading" secondItem="34a-wE-08t" secondAttribute="trailing" constant="5" id="fqs-ap-O7o"/>
                             <constraint firstItem="42v-8s-Vxp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YAM-Zk-k44" secondAttribute="trailing" constant="20" id="iPr-Go-DrC"/>
-                            <constraint firstItem="oaz-p5-9cg" firstAttribute="top" secondItem="Nbi-wp-6eh" secondAttribute="bottom" constant="10" id="jJ3-1y-KdY"/>
+                            <constraint firstItem="oaz-p5-9cg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nbi-wp-6eh" secondAttribute="bottom" constant="10" id="jJ3-1y-KdY"/>
                             <constraint firstItem="xbb-XP-pnQ" firstAttribute="top" secondItem="YAM-Zk-k44" secondAttribute="top" id="jiL-1s-ogf"/>
                             <constraint firstItem="Jel-Mh-lH6" firstAttribute="top" secondItem="qcT-DY-lYt" secondAttribute="top" constant="20" id="js4-sA-Rdh"/>
                             <constraint firstItem="Nbi-wp-6eh" firstAttribute="top" secondItem="xbb-XP-pnQ" secondAttribute="bottom" constant="5" id="lou-yR-Znx"/>
@@ -408,7 +408,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

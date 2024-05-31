@@ -1098,7 +1098,7 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     
                     if cell.lblQuatity.text == "0" {
                         cell.vwOuter.borderColor = .clear
-                        selectedSectionBaggage.removeAll { $0 == sender.tag }
+                        //selectedSectionBaggage.removeAll { $0 == sender.tag }
                     }
                 }
             }

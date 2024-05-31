@@ -27,7 +27,7 @@ class EditProfileVC: UIViewController, UIImagePickerControllerDelegate & UINavig
     //MARK: - Variables
     var dropDown = DropDown()
     var isDOB = false
-    var imagePicker = UIImagePickerController()
+   // var imagePicker = UIImagePickerController()
     var isImageNew = false
     var viewModel = EditProfileViewModel()
     var selectedLineColor : UIColor = UIColor.darkGray

@@ -43,7 +43,7 @@ class SKUIDatePicker:UIView {
         let spaceButton = UIBarButtonItem(barButtonSystemItem:       UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
         
-        toolbar.setItems([doneButton,spaceButton,cancelButton], animated:       false)
+        toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
         
         txtDatePicker.inputAccessoryView = toolbar
         txtDatePicker.inputView = datePicker

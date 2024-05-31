@@ -186,6 +186,8 @@ extension PackageDetailVC: UICollectionViewDelegate, UICollectionViewDataSource,
                 cell.imgCheck.image = UIImage(named: "Transfers")
             } else if self.arrHighlights[indexPath.row].contains("Sightseeing") {
                 cell.imgCheck.image = UIImage(named: "Sightseeing")
+            } else if self.arrHighlights[indexPath.row].contains("Cruise") {
+                cell.imgCheck.image = UIImage(named: "Cruise")
             }
             cell.lblTitle.text = self.arrHighlights[indexPath.row].first == " " ? String(self.arrHighlights[indexPath.row].dropFirst()) : self.arrHighlights[indexPath.row]
             return cell

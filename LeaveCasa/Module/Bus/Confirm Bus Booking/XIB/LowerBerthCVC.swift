@@ -37,6 +37,9 @@ class LowerBerthCVC: UICollectionViewCell {
     var sortedRowDictionary = [Int: [BusSeat]]()
     var maxCount: Int = 0
     var missingNumbers = Int()
+    
+    var chairs = 0
+    var sleepers = 0
     //MARK: - Custom methods
     func reloadData(_ numberOfSection: Int, numberOfRows: Int, arrSeats: [BusSeat], seatPrice: Double, upperSeats: Int, totalSeats: Int, selectedSeats: [BusSeat], view: UIViewController) {
         self.numberOfSection = numberOfSection
@@ -85,6 +88,7 @@ class LowerBerthCVC: UICollectionViewCell {
         
         
         DispatchQueue.main.async {
+            
             for (key, seats) in sortedRowDictionary2 {
                 let sortedSeats = seats.sorted(by: { $0.sColumn < $1.sColumn })
                 self.sortedRowDictionary[key] = sortedSeats
@@ -93,17 +97,17 @@ class LowerBerthCVC: UICollectionViewCell {
             for (_, seats) in self.sortedRowDictionary {
                 if seats.count > self.maxCount {
                     self.maxCount = seats.count
+                    
+                    let singleSeats = seats.filter { $0.sWidth == 1 && $0.sLength == 1 }
+                    let doubleSeats = seats.filter { $0.sWidth == 1 && $0.sLength == 2 }
+                    
+                    self.chairs = singleSeats.count
+                    self.sleepers = doubleSeats.count
+                    
                 }
             }
+            self.constCollVwHeight.constant = CGFloat(self.chairs*70) + CGFloat(self.sleepers*140)
             
-            let chairs = arrSeats.filter({$0.sWidth == 1 && $0.sLength == 1})
-            let sleepers = arrSeats.filter({$0.sWidth == 1 && $0.sLength == 2})
-            
-            if chairs.count > sleepers.count {
-                self.constCollVwHeight.constant = CGFloat(self.maxCount*70)
-            } else {
-                self.constCollVwHeight.constant = CGFloat(self.maxCount*155)
-            }
             
             self.collvwUpperSeats.updateConstraintsIfNeeded()
             if let flowLayout = self.collvwUpperSeats.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -194,8 +198,8 @@ extension LowerBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         }
         
         if let index = rowDict[reversedSection]?[indexPath.row] {
-            cell.imgBusSeat.isHidden = false
-            cell.lblSeatPrice.text = "100"
+            cell.imgBusSeat.isHidden = true
+            cell.lblSeatPrice.text = ""
             cell.vwTop.isHidden = false
             if indexPath.row == index.sColumn && sortedRowDictionary[reversedSection]?.count == 1 {
                 cell.imgBusSeat.isHidden = false
@@ -233,6 +237,7 @@ extension LowerBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                     
                 }
             } else if sortedRowDictionary[reversedSection]?.count != 1 {
+                cell.lblSeatPrice.isHidden = false
                 cell.vwTop.isHidden = true
                 cell.imgBusSeat.isHidden = false
                 cell.height.constant = 35
@@ -287,33 +292,40 @@ extension LowerBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         if sortedRowDictionary[reversedSection]?.count == 1 {
             if let data = rowDict[reversedSection]?[indexPath.row] {
                 if data.sLength == 2 {
-                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 142)
-                } else {
-                    let height = Int(self.collvwUpperSeats.frame.height)/((rowDict[reversedSection]?.count ?? 0))
-                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: height)
+                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 140)
                 }
+//                else {
+//                    let height = Int(self.collvwUpperSeats.frame.height)/((rowDict[reversedSection]?.count ?? 0))
+//                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: height)
+//                }
             }
         } else {
             if let data = rowDict[reversedSection]?[indexPath.row] {
                 if missingNumbers != -1 {
                     if reversedSection == missingNumbers - 1 {
                         if data.sLength == 2 {
-                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 142)
-                        } else {
+                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 140)
+                        } else if data.sLength == 1 && data.sWidth == 1 {
                             return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 50)
+                        } else if data.sLength == 1 && data.sWidth == 2 {
+                            return .zero
                         }
                     } else {
                         if data.sLength == 2 {
-                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 142)
-                        } else {
+                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 140)
+                        } else if data.sLength == 1 && data.sWidth == 1 {
                             return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 50)
+                        } else if data.sLength == 1 && data.sWidth == 2 {
+                            return .zero
                         }
                     }
                 } else {
                     if data.sLength == 2 {
-                        return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 142)
-                    } else {
+                        return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 140)
+                    } else if data.sLength == 1 && data.sWidth == 1 {
                         return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 50)
+                    } else if data.sLength == 1 && data.sWidth == 2 {
+                        return .zero
                     }
                 }
             }

@@ -73,6 +73,8 @@ extension PackagesTVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             cell.imgVwHiglights.image = UIImage(named: "Transfers")
         } else if self.arrHighlights[indexPath.row].contains("Sightseeing") {
             cell.imgVwHiglights.image = UIImage(named: "Sightseeing")
+        } else if self.arrHighlights[indexPath.row].contains("Cruise") {
+            cell.imgVwHiglights.image = UIImage(named: "Cruise")
         }
         return cell
     }
