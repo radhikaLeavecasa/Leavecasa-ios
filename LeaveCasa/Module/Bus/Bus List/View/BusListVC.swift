@@ -121,7 +121,6 @@ class BusListVC: UIViewController {
         } else {
             self.popView()
         }
-        
     }
     
     @IBAction func filterOnPress(_ sender: UIButton) {

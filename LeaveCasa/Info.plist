@@ -4,24 +4,20 @@
 <dict>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
-    <key>UIFileSharingEnabled</key>
-    <true/>
-    <key>LSSupportsOpeningDocumentsInPlace</key>
-    <true/>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-        <string>razorpay</string>
-        <string>comgooglemaps</string>
-        <string>comgooglemaps-x-callback</string>
-        <string>tez</string>
-        <string>phonepe</string>
-        <string>paytmmp</string>
-    </array>
-    <key>UIAppFonts</key>
+		<string>razorpay</string>
+		<string>comgooglemaps</string>
+		<string>comgooglemaps-x-callback</string>
+		<string>tez</string>
+		<string>phonepe</string>
+		<string>paytmmp</string>
+	</array>
+	<key>UIAppFonts</key>
 	<array>
 		<string>metropolis.bold.otf</string>
 		<string>metropolis.regular.otf</string>
@@ -45,5 +41,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>

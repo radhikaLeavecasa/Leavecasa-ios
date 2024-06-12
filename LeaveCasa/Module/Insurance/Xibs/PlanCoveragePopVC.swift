@@ -9,7 +9,6 @@ import UIKit
 
 class PlanCoveragePopVC: UIViewController {
     //MARK: - @IBOutlets
-   
     @IBOutlet var lblOptions: [UILabel]!
     @IBOutlet var btnOptions: [UIButton]!
     @IBOutlet var vwOptions: [UIView]!

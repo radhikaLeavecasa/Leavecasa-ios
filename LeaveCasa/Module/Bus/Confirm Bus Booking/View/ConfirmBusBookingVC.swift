@@ -106,6 +106,9 @@ class ConfirmBusBookingVC: UIViewController {
 
         partOne.append(partTwo)
         lblTermsAndCondition.attributedText = partOne
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        lblTermsAndCondition.addGestureRecognizer(tapGesture)
+        lblTermsAndCondition.isUserInteractionEnabled = true
         confirmBusBookingVCDelegate = self
      //   constVwBottomHeight.constant = 0
         
@@ -136,18 +139,38 @@ class ConfirmBusBookingVC: UIViewController {
     }
     
     //MARK: - @IBActions
+    @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+       let tapLocation = gesture.location(in: lblTermsAndCondition)
+
+           let layoutManager = NSLayoutManager()
+           let textContainer = NSTextContainer(size: lblTermsAndCondition.bounds.size)
+
+           let range = NSRange(location: 15, length: 16)
+           let textBoundingRect = layoutManager.boundingRect(forGlyphRange: range, in: textContainer)
+
+           if textBoundingRect.contains(tapLocation) {
+               let characterIndex = layoutManager.characterIndex(for: tapLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+               if characterIndex >= 15 && characterIndex <= 31 {
+                   if let vc = ViewControllerHelper.getViewController(ofType: .TripDetailsVC, StoryboardName: .Main) as? TripDetailsVC {
+                       self.pushView(vc: vc,title: "Booking Policies")
+                   }
+                   print("Tapped on Booking Policies")
+               }
+           }
+      
+    }
     @IBAction func backOnPress(_ sender: UIButton) {
         self.popView()
     }
     @IBAction func actionCancellationPolicy(_ sender: Any) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .TripDetailsVC, StoryboardName: .Main) as? TripDetailsVC {
-            self.pushView(vc: vc,title: "Terms and Conditions")
-        }
-//        if let vc = ViewControllerHelper.getViewController(ofType: .BusCancellationPolicyVC, StoryboardName: .Bus) as? BusCancellationPolicyVC {
-//            vc.bus = bus
-//            vc.modalPresentationStyle = .overFullScreen
-//            self.present(vc, animated: true)
+//        if let vc = ViewControllerHelper.getViewController(ofType: .TripDetailsVC, StoryboardName: .Main) as? TripDetailsVC {
+//            self.pushView(vc: vc,title: "Terms and Conditions")
 //        }
+        if let vc = ViewControllerHelper.getViewController(ofType: .BusCancellationPolicyVC, StoryboardName: .Bus) as? BusCancellationPolicyVC {
+            vc.bus = bus
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: true)
+        }
     }
     @IBAction func actionChooseAnotherFare(_ sender: Any) {
         LoaderClass.shared.isFareScreen = true

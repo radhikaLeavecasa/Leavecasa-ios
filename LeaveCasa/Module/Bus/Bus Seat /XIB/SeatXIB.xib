@@ -29,9 +29,9 @@
                             <constraint firstAttribute="width" constant="35" id="UoM-Yn-9tc"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-mR-JSl">
-                        <rect key="frame" x="21.666666666666671" y="50" width="22" height="22"/>
-                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="10"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.40" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHr-mR-JSl">
+                        <rect key="frame" x="23.666666666666664" y="50" width="17.666666666666664" height="22"/>
+                        <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="8"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,10 +48,10 @@
                 <constraint firstAttribute="bottom" secondItem="VHr-mR-JSl" secondAttribute="bottom" constant="5" id="5mg-Sl-qqC"/>
                 <constraint firstItem="VHr-mR-JSl" firstAttribute="top" secondItem="pia-pd-ceb" secondAttribute="bottom" constant="5" id="Jux-ft-Kvg"/>
                 <constraint firstItem="pia-pd-ceb" firstAttribute="leading" secondItem="wLt-Km-3vG" secondAttribute="leading" constant="15" id="Y2d-ya-TCy"/>
-                <constraint firstItem="VHr-mR-JSl" firstAttribute="centerX" secondItem="pia-pd-ceb" secondAttribute="centerX" id="YSe-Mc-xQ0"/>
                 <constraint firstAttribute="bottom" secondItem="Gpu-zR-nYQ" secondAttribute="bottom" id="bcj-Dz-9nw"/>
                 <constraint firstItem="Gpu-zR-nYQ" firstAttribute="leading" secondItem="wLt-Km-3vG" secondAttribute="leading" id="fU1-0W-61R"/>
                 <constraint firstItem="pia-pd-ceb" firstAttribute="top" secondItem="wLt-Km-3vG" secondAttribute="top" constant="10" id="szj-fH-L33"/>
+                <constraint firstItem="VHr-mR-JSl" firstAttribute="centerX" secondItem="pia-pd-ceb" secondAttribute="centerX" id="uzy-uB-mQx"/>
             </constraints>
             <size key="customSize" width="85" height="107"/>
             <connections>

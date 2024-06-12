@@ -34,7 +34,12 @@ class TripDetailsVC: UIViewController {
                 let urlRequest = URLRequest(url: url)
                 webView.load(urlRequest)
             }
-        case "Terms and Conditions":
+        case "Terms and Conditions" :
+            if let url = URL(string: "https://leavecasa.com/terms-and-conditions") {
+                let urlRequest = URLRequest(url: url)
+                webView.load(urlRequest)
+            }
+        case "Booking Policies":
             if let url = URL(string: "https://leavecasa.com/terms-and-conditions") {
                 let urlRequest = URLRequest(url: url)
                 webView.load(urlRequest)

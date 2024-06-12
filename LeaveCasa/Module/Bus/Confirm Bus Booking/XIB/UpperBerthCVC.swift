@@ -100,7 +100,7 @@ class UpperBerthCVC: UICollectionViewCell {
                     
                 }
             }
-            self.constCollVwHeight.constant = CGFloat(self.chairs*70) + CGFloat(self.sleepers*135)
+            self.constCollVwHeight.constant = CGFloat(self.chairs*65) + CGFloat(self.sleepers*105)
             
             self.collvwUpperSeats.updateConstraintsIfNeeded()
             if let flowLayout = self.collvwUpperSeats.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -192,14 +192,14 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         
         if let index = rowDict[reversedSection]?[indexPath.row] {
             cell.imgBusSeat.isHidden = true
-            cell.lblSeatPrice.text = ""
+            cell.lblSeatPrice.text = "00"
+            cell.lblSeatPrice.isHidden = true
             if indexPath.row == index.sColumn && sortedRowDictionary[reversedSection]?.count == 1 {
-                cell.imgBusSeat.isHidden = false
-                cell.lblSeatPrice.isHidden = false
-                cell.height.constant = 35
                 if index.sLength == 1 && index.sWidth == 1 {
+                    cell.imgBusSeat.isHidden = false
+                    cell.lblSeatPrice.isHidden = false
+                    cell.height.constant = 35
                     if index.sAvailable == true {
-                        
                         cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_seat_female" : "ic_bus_seat_green")
                         for index2 in self.selectedSeatsUpper {
                             if reversedSection == index.sRow && index.sName == index2.sName {
@@ -213,7 +213,9 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                     }
                     
                 }else if index.sLength == 2 && index.sWidth == 1 {
-                    cell.height.constant = 90
+                    cell.height.constant = 85
+                    cell.imgBusSeat.isHidden = false
+                    cell.lblSeatPrice.isHidden = false
                     if index.sAvailable == true{
                         cell.imgBusSeat.image = UIImage.init(named: "ic_avlable_sleeper")
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
@@ -226,10 +228,10 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
                         cell.imgBusSeat.image = UIImage.init(named: "ic_gray_sleeper_seat")
                     }
-                    
                 }
             } else if sortedRowDictionary[reversedSection]?.count != 1 {
                 cell.imgBusSeat.isHidden = false
+                cell.lblSeatPrice.isHidden = false
                 cell.height.constant = 35
                 if index.sLength == 1 && index.sWidth == 1 {
                     if index.sAvailable == true {
@@ -241,13 +243,12 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                         }
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
                     }else{
-                        
                         cell.imgBusSeat.image = UIImage.init(named: index.sLadiesSeat == true ? "ic_female_seat_booked" : "ic_seat_booked")
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
                     }
                     
                 }else if index.sLength == 2 && index.sWidth == 1 {
-                    cell.height.constant = 90
+                    cell.height.constant = 85
                     if index.sAvailable == true{
                         cell.imgBusSeat.image = UIImage.init(named: "ic_avlable_sleeper")
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
@@ -256,7 +257,6 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                                 cell.imgBusSeat.image = UIImage.init(named: "ic_green_sleeper")
                             }
                         }
-                        
                     }else{
                         cell.lblSeatPrice.text = "₹\(index.sFare)"
                         cell.imgBusSeat.image = UIImage.init(named: "ic_gray_sleeper_seat")
@@ -265,7 +265,6 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                 }
             }
         }
-        
         return cell
     }
     
@@ -283,9 +282,9 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         if sortedRowDictionary[reversedSection]?.count == 1 {
             if let data = rowDict[reversedSection]?[indexPath.row] {
                 if data.sLength == 2 {
-                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 140)
+                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 105)
                 } else {
-                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 69)
+                    return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 70)
                 }
             }
         } else {
@@ -293,27 +292,26 @@ extension UpperBerthCVC: UICollectionViewDelegate, UICollectionViewDataSource, U
                 if missingNumbers != -1 {
                     if reversedSection == missingNumbers - 1 {
                         if data.sLength == 2 {
-                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 140)
+                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 105)
                         } else {
-                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 50)
+                            return CGSize(width: 2*(Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 50)
                         }
                     } else {
                         if data.sLength == 2 {
-                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 140)
+                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 105)
                         } else {
-                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 50)
+                            return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0)+1)), height: 50)
                         }
                     }
                 } else {
                     if data.sLength == 2 {
-                        return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 140)
+                        return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 105)
                     } else {
                         return CGSize(width: (Int(self.collvwUpperSeats.frame.width) / ((sortedRowDictionary.keys.max() ?? 0))), height: 50)
                     }
                 }
             }
         }
-        
         return .zero
     }
     

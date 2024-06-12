@@ -3621,7 +3621,7 @@
 				CODE_SIGN_ENTITLEMENTS = LeaveCasa/LeaveCasa.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29.8;
+				CURRENT_PROJECT_VERSION = 29.9;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = G96NGZCMGU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -3629,6 +3629,7 @@
 				INFOPLIST_FILE = LeaveCasa/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LeaveCasa;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Leavecasa would like to access your camera to upload profile picture";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
@@ -3644,7 +3645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.19;
+				MARKETING_VERSION = 1.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leavecasa.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3667,13 +3668,14 @@
 				CODE_SIGN_ENTITLEMENTS = LeaveCasa/LeaveCasa.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29.8;
+				CURRENT_PROJECT_VERSION = 29.9;
 				DEVELOPMENT_TEAM = G96NGZCMGU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeaveCasa/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LeaveCasa;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Leavecasa would like to access your camera to upload profile picture";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
@@ -3689,7 +3691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.19;
+				MARKETING_VERSION = 1.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leavecasa.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
