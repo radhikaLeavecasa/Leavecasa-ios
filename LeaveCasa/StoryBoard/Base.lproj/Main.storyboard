@@ -565,9 +565,41 @@ flights and much more...</string>
                                                     <constraint firstItem="caf-4L-HRa" firstAttribute="bottom" secondItem="uHU-Pk-a1k" secondAttribute="bottom" id="tz4-FF-Te1"/>
                                                 </constraints>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-8u-eUN">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5A-yh-B2V">
                                                 <rect key="frame" x="253.33333333333329" y="0.0" width="101.66666666666666" height="90"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_insurance1" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-7M-z2V">
+                                                        <rect key="frame" x="18.333333333333371" y="2" width="65" height="65"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="65" id="ZSq-OX-3i7"/>
+                                                            <constraint firstAttribute="width" constant="65" id="iz6-wx-FTm"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cId-oF-VlS">
+                                                        <rect key="frame" x="35" y="73" width="31.666666666666671" height="15"/>
+                                                        <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocL-Ys-Vew">
+                                                        <rect key="frame" x="18.333333333333371" y="2" width="65" height="86"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="actionInsurance:" destination="Ymw-J3-6o0" eventType="touchUpInside" id="v8T-dY-aNn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="ocL-Ys-Vew" firstAttribute="bottom" secondItem="cId-oF-VlS" secondAttribute="bottom" id="2eY-Ye-bNC"/>
+                                                    <constraint firstItem="ocL-Ys-Vew" firstAttribute="top" secondItem="1Pj-7M-z2V" secondAttribute="top" id="7bo-mo-qYB"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cId-oF-VlS" secondAttribute="bottom" constant="2" id="CYH-1t-GQ7"/>
+                                                    <constraint firstItem="ocL-Ys-Vew" firstAttribute="leading" secondItem="1Pj-7M-z2V" secondAttribute="leading" id="Pkp-UQ-GpO"/>
+                                                    <constraint firstItem="1Pj-7M-z2V" firstAttribute="top" secondItem="z5A-yh-B2V" secondAttribute="top" constant="2" id="d4p-y2-cOu"/>
+                                                    <constraint firstItem="1Pj-7M-z2V" firstAttribute="centerX" secondItem="z5A-yh-B2V" secondAttribute="centerX" id="iJb-Q1-Tjt"/>
+                                                    <constraint firstItem="cId-oF-VlS" firstAttribute="centerX" secondItem="z5A-yh-B2V" secondAttribute="centerX" id="sNe-rI-sn9"/>
+                                                    <constraint firstItem="ocL-Ys-Vew" firstAttribute="trailing" secondItem="1Pj-7M-z2V" secondAttribute="trailing" id="yTO-M5-TfF"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1196,7 +1228,7 @@ flights and much more...</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pos-JO-vbQ">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1234,7 +1266,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="25" y="13.666666666666687" width="25.333333333333329" height="22.666666666666671"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiG-PX-bv7">
-                                                                <rect key="frame" x="70.333333333333343" y="17" width="284.66666666666663" height="16"/>
+                                                                <rect key="frame" x="70.333333333333343" y="16.999999999999996" width="284.66666666666663" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1270,7 +1302,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="25" y="12.333333333333313" width="25.333333333333329" height="25.333333333333329"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7a-fk-BFR">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1309,7 +1341,7 @@ flights and much more...</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Zg-xTg">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1346,7 +1378,7 @@ flights and much more...</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYV-bX-3ZA">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1383,7 +1415,7 @@ flights and much more...</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-ib-UuE">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1456,7 +1488,7 @@ flights and much more...</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-hB-b7w">
-                                                                <rect key="frame" x="70" y="17" width="170" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="170" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1520,7 +1552,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="22" y="13" width="21" height="24"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17s-FJ-2IP">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1562,7 +1594,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="20.666666666666671" y="12.666666666666629" width="24" height="24"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W2-4Q-9qR">
-                                                                <rect key="frame" x="70" y="17" width="285" height="16"/>
+                                                                <rect key="frame" x="70" y="16.999999999999996" width="285" height="16.000000000000004"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>

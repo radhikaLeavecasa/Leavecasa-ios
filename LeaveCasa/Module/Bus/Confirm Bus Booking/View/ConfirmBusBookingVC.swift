@@ -570,7 +570,6 @@ extension ConfirmBusBookingVC: UITextFieldDelegate {
             } else {
                 return true
             }
-            
         } else {
             if textField == txtFldGstEmail || textField == txtFldGstPhone || textField == txtFldGST || textField == txtFldCompanyAddress || textField == txtFldGstCompanyName{
             } else {

@@ -45,6 +45,7 @@
 		72118AC52B872FF800B76345 /* FlightReviewDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72118AC42B872FF700B76345 /* FlightReviewDetailsVC.swift */; };
 		72118AC72B87348A00B76345 /* ReviewDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72118AC62B87348A00B76345 /* ReviewDetailTVC.swift */; };
 		721878F82959680300C8E2CC /* PassangerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721878F72959680300C8E2CC /* PassangerDetailsViewModel.swift */; };
+		7219E9732C294B94006F4938 /* Visa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7219E9722C294B94006F4938 /* Visa.storyboard */; };
 		721B1EAF28DC1CCF005A1802 /* Bus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721B1EAE28DC1CCF005A1802 /* Bus.storyboard */; };
 		721B1EB328DC2168005A1802 /* BusSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B1EB228DC2168005A1802 /* BusSearchVC.swift */; };
 		721B1EB628DC4A44005A1802 /* BusSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721B1EB528DC4A44005A1802 /* BusSearchViewModel.swift */; };
@@ -441,6 +442,7 @@
 		72118AC42B872FF700B76345 /* FlightReviewDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReviewDetailsVC.swift; sourceTree = "<group>"; };
 		72118AC62B87348A00B76345 /* ReviewDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetailTVC.swift; sourceTree = "<group>"; };
 		721878F72959680300C8E2CC /* PassangerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassangerDetailsViewModel.swift; sourceTree = "<group>"; };
+		7219E9722C294B94006F4938 /* Visa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Visa.storyboard; sourceTree = "<group>"; };
 		721B1EAE28DC1CCF005A1802 /* Bus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bus.storyboard; sourceTree = "<group>"; };
 		721B1EB228DC2168005A1802 /* BusSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSearchVC.swift; sourceTree = "<group>"; };
 		721B1EB528DC4A44005A1802 /* BusSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSearchViewModel.swift; sourceTree = "<group>"; };
@@ -2570,6 +2572,7 @@
 				72C7140128C9C7E3006908BC /* LaunchScreen.storyboard */,
 				728B182D28CB016600223C82 /* Hotels.storyboard */,
 				721B1EAE28DC1CCF005A1802 /* Bus.storyboard */,
+				7219E9722C294B94006F4938 /* Visa.storyboard */,
 				72843D9F290FC50200FC3C4A /* Flight.storyboard */,
 			);
 			path = StoryBoard;
@@ -3098,6 +3101,7 @@
 				72C7140028C9C7E3006908BC /* Assets.xcassets in Resources */,
 				72A6D1C628FE8DD900CCE7D1 /* BusSeatPessangerXIB.xib in Resources */,
 				7253823C2C05F10C00589829 /* search_flight.gif in Resources */,
+				7219E9732C294B94006F4938 /* Visa.storyboard in Resources */,
 				72B54C39291141810031B36F /* FlightMutliCityXIB.xib in Resources */,
 				721B1EAF28DC1CCF005A1802 /* Bus.storyboard in Resources */,
 				72A8FA832910F72000663356 /* FlightListCellXIB.xib in Resources */,
