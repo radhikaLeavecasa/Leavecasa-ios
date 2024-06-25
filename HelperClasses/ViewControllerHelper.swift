@@ -13,6 +13,7 @@ enum StoryboardName : String{
     case Hotels
     case Bus
     case Flight
+    case Visa
 }
 
 enum ViewControllerType : String{
@@ -100,6 +101,8 @@ enum ViewControllerType : String{
     case NoInternetVC
     
     case InsuranceDetailVC
+    case VisaDetailsVC
+    case CountryVisaDetailVC
 }
 
 class ViewControllerHelper: NSObject {

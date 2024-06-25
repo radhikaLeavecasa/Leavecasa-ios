@@ -109,6 +109,11 @@ class HomeVC: UIViewController {
             self.pushView(vc: vc)
         }
     }
+    @IBAction func actionVisa(_ sender: Any) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .VisaDetailsVC, StoryboardName: .Visa) as? VisaDetailsVC {
+            self.pushView(vc: vc)
+        }
+    }
 }
 
 extension HomeVC: UITableViewDelegate,UITableViewDataSource {

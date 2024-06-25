@@ -568,7 +568,7 @@ flights and much more...</string>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5A-yh-B2V">
                                                 <rect key="frame" x="253.33333333333329" y="0.0" width="101.66666666666666" height="90"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_insurance1" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-7M-z2V">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_visa" translatesAutoresizingMaskIntoConstraints="NO" id="1Pj-7M-z2V">
                                                         <rect key="frame" x="18.333333333333371" y="2" width="65" height="65"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="65" id="ZSq-OX-3i7"/>
@@ -585,7 +585,7 @@ flights and much more...</string>
                                                         <rect key="frame" x="18.333333333333371" y="2" width="65" height="86"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <connections>
-                                                            <action selector="actionInsurance:" destination="Ymw-J3-6o0" eventType="touchUpInside" id="v8T-dY-aNn"/>
+                                                            <action selector="actionVisa:" destination="Ymw-J3-6o0" eventType="touchUpInside" id="uGG-YU-vTS"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -9894,6 +9894,7 @@ flights and much more...</string>
         <image name="ic_tc" width="24" height="24.333333969116211"/>
         <image name="ic_uncheck" width="42" height="42"/>
         <image name="ic_user_blue" width="68" height="68"/>
+        <image name="ic_visa" width="65.333335876464844" height="65.333335876464844"/>
         <image name="ic_yellow_star" width="24" height="24"/>
         <image name="info_tax" width="150" height="150"/>
         <image name="package_dummy" width="1029" height="534"/>
@@ -9946,13 +9947,13 @@ flights and much more...</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
