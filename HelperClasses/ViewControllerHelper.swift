@@ -103,6 +103,7 @@ enum ViewControllerType : String{
     case InsuranceDetailVC
     case VisaDetailsVC
     case CountryVisaDetailVC
+    case UploadDocumentsVC
 }
 
 class ViewControllerHelper: NSObject {

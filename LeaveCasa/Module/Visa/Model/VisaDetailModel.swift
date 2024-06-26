@@ -13,8 +13,8 @@ struct VisaDetailModel: Mappable {
     var country: String?
     var images: String?
     var visaType: String?
-    var validity: String?
-    var stayPeriod: String?
+    var validity: [String]?
+    var stayPeriod: [String]?
     var documents: [Document]?
     var processingTime: String?
     var landingFees: String?

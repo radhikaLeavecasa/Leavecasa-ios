@@ -284,6 +284,9 @@
 		72AD83E628E5A8F10016E8AF /* HotelFilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD83E528E5A8F10016E8AF /* HotelFilterData.swift */; };
 		72AD83EE28E5AB830016E8AF /* PropertyTypeXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD83EC28E5AB830016E8AF /* PropertyTypeXIB.swift */; };
 		72AD83EF28E5AB830016E8AF /* PropertyTypeXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72AD83ED28E5AB830016E8AF /* PropertyTypeXIB.xib */; };
+		72AE8F422C2C2BFF001C4236 /* UploadDocumentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE8F412C2C2BFF001C4236 /* UploadDocumentsVC.swift */; };
+		72AE8F452C2C2C61001C4236 /* UploadDocumentsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE8F442C2C2C61001C4236 /* UploadDocumentsTVC.swift */; };
+		72AE8F472C2C5109001C4236 /* FillVisaDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE8F462C2C5109001C4236 /* FillVisaDetailsVC.swift */; };
 		72AE9A7228D060FF00CE0C0D /* PhoneLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE9A7128D060FF00CE0C0D /* PhoneLoginVC.swift */; };
 		72AE9A7528D06AEB00CE0C0D /* OtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE9A7428D06AEB00CE0C0D /* OtpVC.swift */; };
 		72AE9A7A28D0887800CE0C0D /* PhoneLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE9A7928D0887800CE0C0D /* PhoneLoginViewModel.swift */; };
@@ -686,6 +689,9 @@
 		72AD83E528E5A8F10016E8AF /* HotelFilterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelFilterData.swift; sourceTree = "<group>"; };
 		72AD83EC28E5AB830016E8AF /* PropertyTypeXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTypeXIB.swift; sourceTree = "<group>"; };
 		72AD83ED28E5AB830016E8AF /* PropertyTypeXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyTypeXIB.xib; sourceTree = "<group>"; };
+		72AE8F412C2C2BFF001C4236 /* UploadDocumentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsVC.swift; sourceTree = "<group>"; };
+		72AE8F442C2C2C61001C4236 /* UploadDocumentsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocumentsTVC.swift; sourceTree = "<group>"; };
+		72AE8F462C2C5109001C4236 /* FillVisaDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillVisaDetailsVC.swift; sourceTree = "<group>"; };
 		72AE9A7128D060FF00CE0C0D /* PhoneLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginVC.swift; sourceTree = "<group>"; };
 		72AE9A7428D06AEB00CE0C0D /* OtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVC.swift; sourceTree = "<group>"; };
 		72AE9A7928D0887800CE0C0D /* PhoneLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLoginViewModel.swift; sourceTree = "<group>"; };
@@ -1235,6 +1241,8 @@
 			isa = PBXGroup;
 			children = (
 				72463EBE2C2A99CE0093931F /* VisaDetailsVC.swift */,
+				72AE8F462C2C5109001C4236 /* FillVisaDetailsVC.swift */,
+				72AE8F412C2C2BFF001C4236 /* UploadDocumentsVC.swift */,
 				72463EC82C2AD9B40093931F /* CountryVisaDetailVC.swift */,
 			);
 			path = Views;
@@ -2432,6 +2440,14 @@
 			path = XIB;
 			sourceTree = "<group>";
 		};
+		72AE8F432C2C2C45001C4236 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				72AE8F442C2C2C61001C4236 /* UploadDocumentsTVC.swift */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		72AE9A6F28D060E000CE0C0D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -2633,6 +2649,7 @@
 		72C714D128C9CAC8006908BC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				72AE8F432C2C2C45001C4236 /* Xibs */,
 				72463EBD2C2A995E0093931F /* Visa */,
 				723CD5A92BE25BD100D4FA94 /* Insurance */,
 				72D6C43C2BBA8FC500921A03 /* Package */,
@@ -3261,6 +3278,7 @@
 				1994D2ED29F82B8000622BA9 /* SlidingXIB.swift in Sources */,
 				72463EBF2C2A99CE0093931F /* VisaDetailsVC.swift in Sources */,
 				72846F50294ADFE200921BF0 /* MealDynamic.swift in Sources */,
+				72AE8F422C2C2BFF001C4236 /* UploadDocumentsVC.swift in Sources */,
 				72882C7A2BBD5D4400A85129 /* PackagesTVC.swift in Sources */,
 				728B185428CB212000223C82 /* FIlterHeaderXIB.swift in Sources */,
 				72595A3928CF483A000C5FD7 /* HotelfacilityXIB.swift in Sources */,
@@ -3327,6 +3345,7 @@
 				98B6A5C129F7ABCB0095085A /* UIFont.swift in Sources */,
 				72AF025F2951984D007AB5C9 /* PassangerDetailsVC.swift in Sources */,
 				722F16D32A4D690F00A6DBA5 /* MoreInfoListTVC.swift in Sources */,
+				72AE8F452C2C2C61001C4236 /* UploadDocumentsTVC.swift in Sources */,
 				72AE9A7228D060FF00CE0C0D /* PhoneLoginVC.swift in Sources */,
 				728D4BFE28E1AC6F0004EC8E /* BusListXIB.swift in Sources */,
 				72118AC32B87245300B76345 /* MealsVC.swift in Sources */,
@@ -3514,6 +3533,7 @@
 				98B6A5BB29F7ABCB0095085A /* ApiCall.swift in Sources */,
 				72A8FA822910F72000663356 /* FlightListCellXIB.swift in Sources */,
 				72C2130029911FD6008FFA15 /* TripTicket.swift in Sources */,
+				72AE8F472C2C5109001C4236 /* FillVisaDetailsVC.swift in Sources */,
 				72988C672949FB6A008ADCE1 /* SelectSeatViewModel.swift in Sources */,
 				7256BDC32B91FB980042F1E6 /* HotelCancellationPolicyVC.swift in Sources */,
 				72C212F629911FD6008FFA15 /* TripInventoryItems.swift in Sources */,
@@ -3596,7 +3616,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -3653,7 +3673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -3684,7 +3704,9 @@
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Leavecasa would like to access your camera to upload profile picture";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Leavecasa would like to access your files/folder to upload the documents";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Leavecasa would like to access your gallery to upload the documents";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -3692,7 +3714,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3730,7 +3752,9 @@
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Leavecasa would like to access your camera to upload profile picture";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Leavecasa would like to access your files/folder to upload the documents";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Leavecasa would like to access your gallery to upload profile picture";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Leavecasa would like to access your gallery to upload the documents";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -3738,7 +3762,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

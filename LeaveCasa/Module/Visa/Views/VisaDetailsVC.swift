@@ -34,6 +34,14 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
         }
     }
     //MARK: - @IBActions
+    @IBAction func actionStayPeriod(_ sender: Any) {
+        txtFldStayPeroid.becomeFirstResponder()
+    }
+    
+    @IBAction func actionValidity(_ sender: Any) {
+        txtFldValidity.becomeFirstResponder()
+    }
+    
     @IBAction func actionPassengers(_ sender: Any) {
         txtFldPassenger.becomeFirstResponder()
     }
@@ -52,11 +60,17 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
             LoaderClass.shared.showSnackBar(message: "Please select the destination")
         } else if txtFldVisaType.text == "" {
             LoaderClass.shared.showSnackBar(message: "Please select the visa type")
+        } else if txtFldValidity.text == "" {
+            LoaderClass.shared.showSnackBar(message: "Please select the validity")
+        } else if txtFldStayPeroid.text == "" {
+            LoaderClass.shared.showSnackBar(message: "Please select the stay period")
         } else if txtFldPassenger.text == "" {
-            LoaderClass.shared.showSnackBar(message: "Please select the no.of passenger")
+            LoaderClass.shared.showSnackBar(message: "Please select the no. of passenger")
         } else {
             let param = ["Destination": txtFldDestination.text!,
                          "VisaType": txtFldVisaType.text!,
+                         "Validity": txtFldValidity.text!,
+                         "Stay Period": txtFldStayPeroid.text!,
                          "Passenger": txtFldPassenger.text!] as [String : Any]
             
             if let vc = ViewControllerHelper.getViewController(ofType: .CountryVisaDetailVC, StoryboardName: .Visa) as? CountryVisaDetailVC {
@@ -76,29 +90,47 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
 
 extension VisaDetailsVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-         if textField == self.txtFldDestination {
-             self.showShortDropDown(textFeild: self.txtFldDestination, data: viewModel.arrCountries, dropDown: dropDown) { val, index in
-                 self.txtFldDestination.text = val
-                 self.txtFldVisaType.text = ""
-                 LoaderClass.shared.loadAnimation()
-                 self.viewModel.getCountryDetails(self.txtFldDestination.text ?? "", view: self)
-             }
-         } else if textField == txtFldVisaType {
-             if self.txtFldDestination.text == "" {
-                 view.endEditing(true)
-                 LoaderClass.shared.showSnackBar(message: "Please select destination first")
-             } else {
-                 self.showShortDropDown(textFeild: txtFldVisaType, data: self.visaType, dropDown: dropDown) { val, index in
-                     self.txtFldVisaType.text = val
-                     self.selectedIndex = index
-                     self.txtFldValidity.text = self.viewModel.arrCountryDetails[index].validity
-                     self.txtFldStayPeroid.text = self.viewModel.arrCountryDetails[index].stayPeriod
-                 }
-             }
-         } else if textField == self.txtFldPassenger {
-             self.showShortDropDown(textFeild: txtFldPassenger, data: arrPassenger, dropDown: dropDown) { val, index in
-                 self.txtFldPassenger.text = val
-             }
-         }
+        view.endEditing(true)
+        if textField == self.txtFldDestination {
+            self.showShortDropDown(textFeild: self.txtFldDestination, data: viewModel.arrCountries, dropDown: dropDown) { val, index in
+                self.txtFldDestination.text = val
+                self.txtFldVisaType.text = ""
+                
+                LoaderClass.shared.loadAnimation()
+                self.viewModel.getCountryDetails(self.txtFldDestination.text ?? "", view: self)
+            }
+        } else if textField == txtFldVisaType {
+            if self.txtFldDestination.text == "" {
+                LoaderClass.shared.showSnackBar(message: "Please select destination first")
+            } else {
+                self.showShortDropDown(textFeild: txtFldVisaType, data: self.visaType, dropDown: dropDown) { val, index in
+                    self.txtFldVisaType.text = val
+                    self.selectedIndex = index
+                    
+                }
+            }
+        } else if textField == txtFldValidity {
+            if self.txtFldVisaType.text == "" {
+                view.endEditing(true)
+                LoaderClass.shared.showSnackBar(message: "Please select visa type first")
+            } else {
+                self.showShortDropDown(textFeild: txtFldValidity, data: viewModel.arrCountryDetails[selectedIndex].validity ?? [], dropDown: dropDown) { val, index in
+                    self.txtFldValidity.text = val
+                }
+            }
+        } else if textField == txtFldStayPeroid {
+            if self.txtFldVisaType.text == "" {
+                view.endEditing(true)
+                LoaderClass.shared.showSnackBar(message: "Please select visa type first")
+            } else {
+                self.showShortDropDown(textFeild: txtFldStayPeroid, data: viewModel.arrCountryDetails[selectedIndex].stayPeriod ?? [], dropDown: dropDown) { val, index in
+                    self.txtFldStayPeroid.text = val
+                }
+            }
+        } else if textField == self.txtFldPassenger {
+            self.showShortDropDown(textFeild: txtFldPassenger, data: arrPassenger, dropDown: dropDown) { val, index in
+                self.txtFldPassenger.text = val
+            }
+        }
     }
 }
