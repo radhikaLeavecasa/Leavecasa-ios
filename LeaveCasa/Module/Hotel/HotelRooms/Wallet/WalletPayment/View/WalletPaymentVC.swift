@@ -100,7 +100,7 @@ class WalletPaymentVC: UIViewController {
         self.objSelectFareVM.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.viewModelWallet.delegate = self
-        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Live, andDelegate: self)
+        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Test, andDelegate: self)
         self.viewModel.delegate = self
         if payblePayment == "" {
             payblePayment = "\(amount)"

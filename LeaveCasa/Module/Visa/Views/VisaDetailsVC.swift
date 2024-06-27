@@ -67,14 +67,15 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
         } else if txtFldPassenger.text == "" {
             LoaderClass.shared.showSnackBar(message: "Please select the no. of passenger")
         } else {
-            let param = ["Destination": txtFldDestination.text!,
-                         "VisaType": txtFldVisaType.text!,
-                         "Validity": txtFldValidity.text!,
-                         "Stay Period": txtFldStayPeroid.text!,
-                         "Passenger": txtFldPassenger.text!] as [String : Any]
+            let param = ["visa_id": viewModel.arrCountryDetails[selectedIndex].id ?? 0,
+                         "validity": txtFldValidity.text!,
+                         "stay_period": txtFldStayPeroid.text!,
+                         "pax": txtFldPassenger.text!,
+                         "user_id": UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == false ? "\(Cookies.userInfo()?.id ?? 0)" : ""] as [String : Any]
             
             if let vc = ViewControllerHelper.getViewController(ofType: .CountryVisaDetailVC, StoryboardName: .Visa) as? CountryVisaDetailVC {
                 vc.param = param
+                vc.termsText = viewModel.termsData
                 vc.visaDetails = viewModel.arrCountryDetails[selectedIndex]
                 self.pushView(vc: vc)
             }
@@ -89,13 +90,14 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
 }
 
 extension VisaDetailsVC: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        view.endEditing(true)
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == self.txtFldDestination {
             self.showShortDropDown(textFeild: self.txtFldDestination, data: viewModel.arrCountries, dropDown: dropDown) { val, index in
                 self.txtFldDestination.text = val
                 self.txtFldVisaType.text = ""
-                
+                self.txtFldValidity.text = ""
+                self.txtFldStayPeroid.text = ""
                 LoaderClass.shared.loadAnimation()
                 self.viewModel.getCountryDetails(self.txtFldDestination.text ?? "", view: self)
             }
@@ -106,12 +108,10 @@ extension VisaDetailsVC: UITextFieldDelegate {
                 self.showShortDropDown(textFeild: txtFldVisaType, data: self.visaType, dropDown: dropDown) { val, index in
                     self.txtFldVisaType.text = val
                     self.selectedIndex = index
-                    
                 }
             }
         } else if textField == txtFldValidity {
             if self.txtFldVisaType.text == "" {
-                view.endEditing(true)
                 LoaderClass.shared.showSnackBar(message: "Please select visa type first")
             } else {
                 self.showShortDropDown(textFeild: txtFldValidity, data: viewModel.arrCountryDetails[selectedIndex].validity ?? [], dropDown: dropDown) { val, index in
@@ -120,7 +120,6 @@ extension VisaDetailsVC: UITextFieldDelegate {
             }
         } else if textField == txtFldStayPeroid {
             if self.txtFldVisaType.text == "" {
-                view.endEditing(true)
                 LoaderClass.shared.showSnackBar(message: "Please select visa type first")
             } else {
                 self.showShortDropDown(textFeild: txtFldStayPeroid, data: viewModel.arrCountryDetails[selectedIndex].stayPeriod ?? [], dropDown: dropDown) { val, index in
@@ -132,5 +131,6 @@ extension VisaDetailsVC: UITextFieldDelegate {
                 self.txtFldPassenger.text = val
             }
         }
+        return false
     }
 }

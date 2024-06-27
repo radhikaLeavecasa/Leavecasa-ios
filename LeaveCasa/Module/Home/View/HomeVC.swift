@@ -288,7 +288,18 @@ extension HomeVC:ResponseProtocol{
         couponData = viewModel.couponData //?.filter({$0.category == "flight"})
         self.tableView.reloadData()
     }
-    
+    func apiReload() {
+        //MARK: GET PASSANGER LIST
+        DispatchQueue.background(background: {
+            self.viewModel.updateDeviceToken()
+        }, completion:{
+            
+        })
+        //MARK: GET COUPON LIST
+        self.viewModel.callHomeCoupons(view: self)
+        
+        self.viewModel.getHomeData(city: "", type: "", lat: "", long: "",view: self)
+    }
     func checkForUpdate() {
         let bundleInfo = Bundle.main.infoDictionary
         let identifier = bundleInfo?["CFBundleIdentifier"] as? String

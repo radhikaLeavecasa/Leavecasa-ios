@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import SearchTextField
+import UniformTypeIdentifiers
 
 typealias CompletionBlock = (Bool,String,Any) -> Void
 typealias FailureBlock = ([String : Any]) -> Void
@@ -209,6 +210,66 @@ struct WebService{
             }
         }else{
             completion(false,CommonError.INTERNET,[:])
+        }
+    }
+    
+    static func uploadFileWithURL(api: Api, files: [String: Data], parameters: [String: Any], header: Bool = false, completion: @escaping (CompletionBlock)) {
+        let urlString = api.baseURl()
+        debugPrint("******URL*****\(urlString) *****Parameters*****\(parameters)")
+        
+        var headers = HTTPHeaders()
+        
+        if header {
+            headers["Authorization"] = "Bearer \(GetData.share.getUserToken())"
+        }
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            for (fileName, fileData) in files {
+                let mimeType: String
+                var fileExtension = ""
+                
+                if let fileNameURL = URL(string: fileName) {
+                    let pathExtension = fileNameURL.pathExtension
+                    
+                    if let uti = UTType(filenameExtension: pathExtension) {
+                        mimeType = uti.preferredMIMEType ?? "application/octet-stream"
+                        fileExtension = uti.preferredFilenameExtension ?? ""
+                    } else {
+                        mimeType = "application/octet-stream"
+                    }
+                } else {
+                    mimeType = "application/octet-stream"
+                }
+                
+                multipartFormData.append(fileData, withName: fileName, fileName: "\(fileName).\(fileExtension)", mimeType: mimeType)
+            }
+            
+            for (key, value) in parameters {
+                if let stringValue = value as? String {
+                    multipartFormData.append(stringValue.data(using: .utf8)!, withName: key)
+                } else if let dataValue = "\(value)".data(using: .utf8) {
+                    multipartFormData.append(dataValue, withName: key)
+                }
+                // Add more types as needed (e.g., Int, Bool)
+            }
+            
+        }, to: urlString, method: .post, headers: headers)
+        .responseJSON { response in
+            debugPrint(response)
+            switch response.result {
+            case .success(let value):
+                if let responseValue = value as? [String: Any] {
+                    if let message = responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String, message == Strings.SUCCESSFULLY_UPLOAD_PROFILE_PIC {
+                        completion(true, "\(message)", [:])
+                    } else {
+                        completion(false, "Unexpected response from server", [:])
+                    }
+                } else {
+                    completion(false, "Unexpected response format", [:])
+                }
+            case .failure(let error):
+                completion(false, error.localizedDescription, [:])
+            }
         }
     }
 }

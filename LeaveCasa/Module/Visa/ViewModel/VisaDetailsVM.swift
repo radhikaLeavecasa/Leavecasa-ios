@@ -13,6 +13,7 @@ class VisaDetailsVM: NSObject {
     var arrCountries = [String]()
     var arrCountryDetails = [VisaDetailModel]()
     var delegate:ResponseProtocol?
+    var termsData = String()
     
     func getVisaCountries(_ view:UIViewController) {
         
@@ -25,6 +26,7 @@ class VisaDetailsVM: NSObject {
                 
                 let response = response as? [String:Any] ?? [:]
                 let codes = response["data"] as? [String] ?? []
+                
                 self.arrCountries = codes
                 
                
@@ -46,14 +48,13 @@ class VisaDetailsVM: NSObject {
             
             LoaderClass.shared.stopAnimation()
             if status == true {
-                self.arrCountries.removeAll()
-                
                 let response1 = response as? [String:Any] ?? [:]
                 if let visa = response1["data"] as? [[String:Any]] {
                     if let arr = Mapper<VisaDetailModel>().mapArray(JSONArray: visa) as [VisaDetailModel]? {
                         self.arrCountryDetails = arr
                     }
                 }
+                self.termsData = (response1["terms_and_condition"] as? String ?? "").htmlToString
                 self.delegate?.onSuccess()
                 
             }else{

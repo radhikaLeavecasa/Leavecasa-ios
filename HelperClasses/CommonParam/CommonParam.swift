@@ -228,7 +228,7 @@ struct CommonMessage {
    // static let INSURANCE_IMAGE = "insurance_image"
  //  static let INSURANCE_NUMBER = "insurance_number".localized()
     static let LOGOUT = "Are you sure want to logout?"
-    static let MOBILE = "Please Enter Phone Number"
+    static let MOBILE = "Please enter phone number"
     static let ACCEPT_TERMS = "Please accept terms and conditions"
     static let VALID_MOBILE = "Please enter valid phone number"
   //  static let USER_NAME = "enter_user_name".localized()

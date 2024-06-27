@@ -399,7 +399,7 @@ extension HotelDetailsVC:ResponseProtocol{
     
     func onFail(msg: String) {
         if msg == CommonError.INTERNET {
-            if let vc = ViewControllerHelper.getViewController(ofType: .NoInternetVC, StoryboardName: .Main ) as? NoInternetVC{
+            if let vc = ViewControllerHelper.getViewController(ofType: .NoInternetVC, StoryboardName: .Main ) as? NoInternetVC {
                 self.present(vc, animated: true)
             }
         } else if msg == "Something went wrong" {

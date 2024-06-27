@@ -11,6 +11,7 @@ import IBAnimatable
 
 class CountryVisaDetailVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var lblTerms: UILabel!
     @IBOutlet weak var tblVwHeight: NSLayoutConstraint!
     @IBOutlet var vwDocumentTC: [AnimatableView]!
     @IBOutlet weak var lblBottomPrice: UILabel!
@@ -28,6 +29,8 @@ class CountryVisaDetailVC: UIViewController {
     var visaDetails: VisaDetailModel?
     var selectedTab = Int()
     var arrDocuments = [String]()
+    var price = Double()
+    var termsText = String()
     //MARK: - Lifecycle method
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +47,20 @@ class CountryVisaDetailVC: UIViewController {
     }
     
     //MARK: - @IBActions
+    @IBAction func actionTermsCondition(_ sender: Any) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .VisaTermsConditionPopVC, StoryboardName: .Main) as? VisaTermsConditionPopVC {
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            vc.termsCondText = termsText
+            self.present(vc, animated: true)
+        }
+    }
     @IBAction func actionNext(_ sender: Any) {
         if let vc = ViewControllerHelper.getViewController(ofType: .UploadDocumentsVC, StoryboardName: .Visa) as? UploadDocumentsVC {
             vc.param = param
+            vc.amount = price
             vc.visaDetails = visaDetails
+            vc.termsText = termsText
             self.pushView(vc: vc)
         }
     }
@@ -68,6 +81,12 @@ class CountryVisaDetailVC: UIViewController {
     }
     //MARK: - Custom methods
     func setData() {
+        let label = UILabel()
+        label.frame = CGRect(x: 20, y: 20, width: 200, height: 30)
+        let attributedString = NSMutableAttributedString.init(string: "Terms & Conditions")
+        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: 2, range:
+                                        NSRange.init(location: 0, length: attributedString.length))
+        lblTerms.attributedText = attributedString
         
         self.tblVwDocumentsTC.ragisterNib(nibName: "HotelfacilityXIB")
         for i in visaDetails?.documents ?? [] {
@@ -77,10 +96,10 @@ class CountryVisaDetailVC: UIViewController {
         }
         self.imgVwCountry.sd_setImage(with: URL(string: visaDetails?.images ?? ""), placeholderImage: .hotelplaceHolder())
         lblCountryName.text = visaDetails?.country
-        lblDescription.text = "\(visaDetails?.visaType ?? "") | \(param["Validity"] as? String ?? "")"
-        lblVisaDetails.text = "Stay Period: \(param["Stay Period"] as? String ?? "")"
+        lblDescription.text = "\(visaDetails?.visaType ?? "") | \(param["validity"] as? String ?? "")"
+        lblVisaDetails.text = "Stay Period: \(param["stay_period"] as? String ?? "")"
         lblProcessingTime.text = visaDetails?.processingTime ?? ""
-        let price = (Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["Passenger"] as? String ?? "0") ?? 0)
+        price = Double((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))
         lblBottomPrice.text = "\(visaDetails?.currency ?? "") \(price)"
         lblPrice.text = "\(visaDetails?.currency ?? "") \(visaDetails?.landingFees ?? "")"
         self.tblVwDocumentsTC.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)

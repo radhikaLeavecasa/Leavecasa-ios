@@ -101,9 +101,12 @@ enum ViewControllerType : String{
     case NoInternetVC
     
     case InsuranceDetailVC
+    //Visa
     case VisaDetailsVC
     case CountryVisaDetailVC
     case UploadDocumentsVC
+    case FillVisaDetailsVC
+    case VisaTermsConditionPopVC
 }
 
 class ViewControllerHelper: NSObject {

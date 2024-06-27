@@ -95,6 +95,7 @@ enum Api: Equatable {
     //MARK: VISA
     case getVisaCountries
     case getCountryDetail(String)
+    case visaApplication
     
     //MARK: Check New Version
     case newVersion(String)
@@ -235,6 +236,8 @@ enum Api: Equatable {
             return "/getallcities"
         case .getVisaCountries:
             return "/visa/getCountries"
+        case .visaApplication:
+            return "/visa_application"
         }
     }
 }

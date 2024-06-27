@@ -22,6 +22,8 @@
 		7200E26B290BDB980032FA9A /* BusTicketDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200E26A290BDB980032FA9A /* BusTicketDetailsVC.swift */; };
 		7200E26F290BDD660032FA9A /* PassangerDetailsXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7200E26D290BDD660032FA9A /* PassangerDetailsXIB.swift */; };
 		7200E270290BDD660032FA9A /* PassangerDetailsXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7200E26E290BDD660032FA9A /* PassangerDetailsXIB.xib */; };
+		720289232C2D7EAD00652996 /* FillVisaDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720289222C2D7EAD00652996 /* FillVisaDetailsVM.swift */; };
+		720289252C2D902800652996 /* VisaTermsConditionPopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720289242C2D902800652996 /* VisaTermsConditionPopVC.swift */; };
 		720451B42BC3C6C7003D93C8 /* PackageHighCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720451B22BC3C6C7003D93C8 /* PackageHighCVC.swift */; };
 		720451B52BC3C6C7003D93C8 /* PackageHighCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720451B32BC3C6C7003D93C8 /* PackageHighCVC.xib */; };
 		7204BC5928D19E9200D9981C /* OtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204BC5828D19E9200D9981C /* OtpViewModel.swift */; };
@@ -426,6 +428,8 @@
 		7200E26A290BDB980032FA9A /* BusTicketDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTicketDetailsVC.swift; sourceTree = "<group>"; };
 		7200E26D290BDD660032FA9A /* PassangerDetailsXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassangerDetailsXIB.swift; sourceTree = "<group>"; };
 		7200E26E290BDD660032FA9A /* PassangerDetailsXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassangerDetailsXIB.xib; sourceTree = "<group>"; };
+		720289222C2D7EAD00652996 /* FillVisaDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillVisaDetailsVM.swift; sourceTree = "<group>"; };
+		720289242C2D902800652996 /* VisaTermsConditionPopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaTermsConditionPopVC.swift; sourceTree = "<group>"; };
 		720451B22BC3C6C7003D93C8 /* PackageHighCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageHighCVC.swift; sourceTree = "<group>"; };
 		720451B32BC3C6C7003D93C8 /* PackageHighCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackageHighCVC.xib; sourceTree = "<group>"; };
 		7204BC5828D19E9200D9981C /* OtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewModel.swift; sourceTree = "<group>"; };
@@ -1225,6 +1229,7 @@
 			isa = PBXGroup;
 			children = (
 				72463EC12C2AAC7B0093931F /* VisaDetailsVM.swift */,
+				720289222C2D7EAD00652996 /* FillVisaDetailsVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1241,6 +1246,7 @@
 			isa = PBXGroup;
 			children = (
 				72463EBE2C2A99CE0093931F /* VisaDetailsVC.swift */,
+				720289242C2D902800652996 /* VisaTermsConditionPopVC.swift */,
 				72AE8F462C2C5109001C4236 /* FillVisaDetailsVC.swift */,
 				72AE8F412C2C2BFF001C4236 /* UploadDocumentsVC.swift */,
 				72463EC82C2AD9B40093931F /* CountryVisaDetailVC.swift */,
@@ -3461,6 +3467,7 @@
 				72118AC12B8723E800B76345 /* MealsTVC.swift in Sources */,
 				72F4F8B92AC19EA3009F310C /* FlightTripDetailVC.swift in Sources */,
 				726067A628F423720020E267 /* SeatXIB.swift in Sources */,
+				720289232C2D7EAD00652996 /* FillVisaDetailsVM.swift in Sources */,
 				72595A3128CF3CDE000C5FD7 /* HotelRoomsVC.swift in Sources */,
 				98B6A5D729F7ABCB0095085A /* NoDataFoundXIB.swift in Sources */,
 				728B185028CB1B8900223C82 /* HotelListVC.swift in Sources */,
@@ -3488,6 +3495,7 @@
 				72AE9A7A28D0887800CE0C0D /* PhoneLoginViewModel.swift in Sources */,
 				7231967128EAE5B300090F86 /* HotelFilter.swift in Sources */,
 				72843DA5290FC81700FC3C4A /* SearchFlightVC.swift in Sources */,
+				720289252C2D902800652996 /* VisaTermsConditionPopVC.swift in Sources */,
 				723CD5AC2BE25CE700D4FA94 /* FillInsuranceDetailsVC.swift in Sources */,
 				72619F862BAC051F00819389 /* MoreInfoVC.swift in Sources */,
 				72D6C43F2BBA906200921A03 /* RequestCallBackVC.swift in Sources */,
