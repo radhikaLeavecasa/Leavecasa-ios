@@ -297,7 +297,7 @@ struct Strings {
     static let HOTEL_CANCEL                 = "hotel_cancel"
     static let FLIGHT_CANCEL                = "flight_cancel"
     static let BUS_CANCEL                   = "Bus_cancel"
-    static let MY_TRIPS                     = "My Trips"
+   // static let MY_TRIPS                     = "My Trips"
     static let PNR                          = "PNR"
     static let SAVE                         = "Save"
     static let SUCCESS_ON_UPDATE_PROFILE    = "successfully_update_profile"

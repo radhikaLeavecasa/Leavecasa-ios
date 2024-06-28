@@ -213,46 +213,53 @@ struct WebService{
         }
     }
     
-    static func uploadFileWithURL(api: Api, files: [String: Data], parameters: [String: Any], header: Bool = false, completion: @escaping (CompletionBlock)) {
+    static func uploadFilesWithURL(api: Api,
+                                   images: [String: UIImage?],
+                                   urls: [String: URL?],
+                                   parameters: [String: Any],
+                                   header: Bool = false,
+                                   completion: @escaping (Bool, String, [String: Any]) -> Void) {
+
         let urlString = api.baseURl()
         debugPrint("******URL*****\(urlString) *****Parameters*****\(parameters)")
-        
+
         var headers = HTTPHeaders()
-        
+
         if header {
             headers["Authorization"] = "Bearer \(GetData.share.getUserToken())"
         }
-        
+
         AF.upload(multipartFormData: { multipartFormData in
-            for (fileName, fileData) in files {
-                let mimeType: String
-                var fileExtension = ""
-                
-                if let fileNameURL = URL(string: fileName) {
-                    let pathExtension = fileNameURL.pathExtension
-                    
-                    if let uti = UTType(filenameExtension: pathExtension) {
-                        mimeType = uti.preferredMIMEType ?? "application/octet-stream"
-                        fileExtension = uti.preferredFilenameExtension ?? ""
-                    } else {
-                        mimeType = "application/octet-stream"
-                    }
-                } else {
-                    mimeType = "application/octet-stream"
+
+            // Upload images
+            for (key, image) in images {
+                if let imageData = image?.jpegData(compressionQuality: 0.5) {
+                    multipartFormData.append(imageData, withName: key, fileName: "\(Date().timeIntervalSince1970).jpg", mimeType: "image/jpeg")
                 }
-                
-                multipartFormData.append(fileData, withName: fileName, fileName: "\(fileName).\(fileExtension)", mimeType: mimeType)
             }
-            
+
+            // Upload URLs
+            for (key, url) in urls {
+                if let url = url {
+                    do {
+                        let fileData = try Data(contentsOf: url)
+                        multipartFormData.append(fileData, withName: key, fileName: url.lastPathComponent, mimeType: "application/octet-stream")
+                    } catch {
+                        debugPrint("Failed to read data from URL: \(url)")
+                    }
+                }
+            }
+
+            // Upload other parameters
             for (key, value) in parameters {
                 if let stringValue = value as? String {
                     multipartFormData.append(stringValue.data(using: .utf8)!, withName: key)
                 } else if let dataValue = "\(value)".data(using: .utf8) {
                     multipartFormData.append(dataValue, withName: key)
                 }
-                // Add more types as needed (e.g., Int, Bool)
+                // Handle more types as needed (e.g., Int, Bool)
             }
-            
+
         }, to: urlString, method: .post, headers: headers)
         .responseJSON { response in
             debugPrint(response)

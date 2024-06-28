@@ -7,175 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "23B69713-D602-4489-B7A8-D9B2E718474A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/FillVisaDetailsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "onPaymentSuccess(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "23B69713-D602-4489-B7A8-D9B2E718474A - 5fe5ffe130dc6721"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.FillVisaDetailsVC.onPaymentSuccess(Swift.String) -&gt; ()"
-                  moduleName = "LeaveCasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/FillVisaDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "151"
-                  endingLineNumber = "151"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "23B69713-D602-4489-B7A8-D9B2E718474A - 5fe5ffe130dc6721"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.FillVisaDetailsVC.onPaymentSuccess(Swift.String) -&gt; ()"
-                  moduleName = "LeaveCasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/FillVisaDetailsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "151"
-                  endingLineNumber = "151"
-                  offsetFromSymbolStart = "344">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C901E74E-8E05-4E26-9498-F750AF7AF324"
+            uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "actionNext(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "63F4E17D-BDB4-4AB1-A751-093513139158"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/ViewModel/FillVisaDetailsVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "applyVisaApi(param:paramData:view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88AE1B9D-2FE6-405A-9E25-B8126433C6D6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/ViewModel/FillVisaDetailsVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "applyVisaApi(param:paramData:view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C84EC63A-1A42-4804-979D-3A99BB3E3A92"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9097D54C-E9D4-473E-9B76-A84461C8B8F9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1EFC8CD2-A5CA-4FEC-8325-ED62EFDB56C6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1EFC8CD2-A5CA-4FEC-8325-ED62EFDB56C6 - b7503b472018fc54"
+                  uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933 - 972093f63c440ca7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static LeaveCasa.WebService.uploadFileWithURL(api: LeaveCasa.Api, files: Swift.Dictionary&lt;Swift.String, Foundation.Data&gt;, parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "524">
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "28920">
                </Location>
                <Location
-                  uuid = "1EFC8CD2-A5CA-4FEC-8325-ED62EFDB56C6 - b7503b472018fc54"
+                  uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933 - 972093f63c440ca7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in static LeaveCasa.WebService.uploadFileWithURL(api: LeaveCasa.Api, files: Swift.Dictionary&lt;Swift.String, Foundation.Data&gt;, parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "260"
-                  endingLineNumber = "260"
-                  offsetFromSymbolStart = "556">
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "28908">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -183,79 +55,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F6F9CD1F-8085-4B66-881E-7B9B95D77261"
+            uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "263A53FE-F8B5-4709-BCFA-1557E7ADD743"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "90F7DEEA-DCA1-46B9-BBD5-53A663D74BB9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "actionNext(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "90F7DEEA-DCA1-46B9-BBD5-53A663D74BB9 - 72ac337a83c923ed"
+                  uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E - 972093f63c440e14"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "static LeaveCasa.WebService.uploadFileWithURL(api: LeaveCasa.Api, files: Swift.Dictionary&lt;Swift.String, Foundation.Data&gt;, parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "226"
-                  endingLineNumber = "226"
-                  offsetFromSymbolStart = "988">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "27776">
                </Location>
                <Location
-                  uuid = "90F7DEEA-DCA1-46B9-BBD5-53A663D74BB9 - 491eddf725447b1a"
+                  uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E - 972093f63c440e14"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.MultipartFormData) -&gt; () in static LeaveCasa.WebService.uploadFileWithURL(api: LeaveCasa.Api, files: Swift.Dictionary&lt;Swift.String, Foundation.Data&gt;, parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, header: Swift.Bool, completion: (Swift.Bool, Swift.String, Any) -&gt; ()) -&gt; ()"
+                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "836">
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "27604">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -263,17 +103,129 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B7C1DAB7-8F00-49B1-9673-7B63992F9C04"
+            uuid = "673187E7-5C4A-4CD6-AF90-9B36E51037B9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HelperClasses/WebServices/AlamofireApiCalling/ApiCall.swift"
+            filePath = "LeaveCasa/Module/Flight/Fare Brakeup/View/TaxBifurcationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "uploadFileWithURL(api:files:parameters:header:completion:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3398D98-D36E-440F-90F6-8767A1E7A5ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Fare Brakeup/View/TaxBifurcationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC6CA203-275E-4777-950F-3B8187ABBAB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "getImageFileSize(asset:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04A1E70E-EAC3-4DC6-B5C1-59540C81BF0E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "getImageFileSize(asset:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE5F1787-58EE-41B8-9C56-134C4F6297EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "getImageFileSize(asset:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "addDocument(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5 - 49bddd4166d17c03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.UploadDocumentsVC.addDocument(__C.UIButton) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178"
+                  offsetFromSymbolStart = "1032">
+               </Location>
+               <Location
+                  uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5 - 17d356cc6a9f74f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIImage) -&gt; () in LeaveCasa.UploadDocumentsVC.addDocument(__C.UIButton) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -30,6 +30,7 @@ class CountryVisaDetailVC: UIViewController {
     var selectedTab = Int()
     var arrDocuments = [String]()
     var price = Double()
+    var platformFee = Int()
     var termsText = String()
     //MARK: - Lifecycle method
     override func viewDidLoad() {
@@ -62,6 +63,16 @@ class CountryVisaDetailVC: UIViewController {
             vc.visaDetails = visaDetails
             vc.termsText = termsText
             self.pushView(vc: vc)
+        }
+    }
+    
+    @IBAction func actionTax(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .TaxBifurcationVC, StoryboardName: .Flight) as? TaxBifurcationVC {
+            vc.otherChagerOrOT = "Total: \(visaDetails?.currency ?? "") \(price)"
+            vc.tax = "Platform Fee: \(visaDetails?.currency ?? "") \(platformFee)"
+            vc.titleStr = "Visa Fee: \(visaDetails?.currency ?? "") \((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))"
+            vc.title = "Visa"
+            LoaderClass.shared.presentPopover(self, vc, sender: sender, size: CGSize(width: 210, height: 80),arrowDirection: .any)
         }
     }
     
@@ -99,7 +110,8 @@ class CountryVisaDetailVC: UIViewController {
         lblDescription.text = "\(visaDetails?.visaType ?? "") | \(param["validity"] as? String ?? "")"
         lblVisaDetails.text = "Stay Period: \(param["stay_period"] as? String ?? "")"
         lblProcessingTime.text = visaDetails?.processingTime ?? ""
-        price = Double((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))
+        platformFee = Int((visaDetails?.platformFee ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))
+        price = Double(Int((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0)) + platformFee)
         lblBottomPrice.text = "\(visaDetails?.currency ?? "") \(price)"
         lblPrice.text = "\(visaDetails?.currency ?? "") \(visaDetails?.landingFees ?? "")"
         self.tblVwDocumentsTC.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)

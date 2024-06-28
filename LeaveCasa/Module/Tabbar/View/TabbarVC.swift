@@ -63,7 +63,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         home.tabBarItem = homeIcon
         
         let trips = ViewControllerHelper.getViewController(ofType: .TripsVC, StoryboardName: .Main) as! TripsVC
-        let tripsIcon = UITabBarItem(title: "My Trips", image: .tripUnselect(), selectedImage: .tripSelected())
+        let tripsIcon = UITabBarItem(title: "My Bookings", image: .tripUnselect(), selectedImage: .tripSelected())
         trips.tabBarItem = tripsIcon
         
         let notification = ViewControllerHelper.getViewController(ofType: .NotificationVC, StoryboardName: .Main) as! NotificationVC
@@ -83,7 +83,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         self.updateLocation()
     }
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "History" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "My Trips" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "Notification" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "Profile" {
+        if UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "History" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "My Bookings" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "Notification" || UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == true && item.title == "Profile" {
             let vc = ViewControllerHelper.getViewController(ofType: .GuestLoginVC, StoryboardName: .Main) as! GuestLoginVC
             vc.title = "tab"
             self.navigationController?.pushViewController(vc, animated: false)

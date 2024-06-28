@@ -18,12 +18,14 @@ struct VisaDetailModel: Mappable {
     var documents: [Document]?
     var processingTime: String?
     var landingFees: String?
+    var platformFee: Int?
     var guidelines: [String]?
     var currency: String?
     
     init?(map: Map) {}
     
     mutating func mapping(map: Map) {
+        platformFee <- map["platform_fee"]
         id <- map["id"]
         country <- map["country"]
         images <- map["images"]

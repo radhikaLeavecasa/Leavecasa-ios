@@ -83,6 +83,7 @@ class VisaDetailsVC: UIViewController, ResponseProtocol {
     }
     //MARK: - Custom methods
     func onSuccess() {
+        visaType = []
         for i in viewModel.arrCountryDetails {
             visaType.append(i.visaType ?? "")
         }

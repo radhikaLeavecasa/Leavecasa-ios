@@ -16,7 +16,8 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
     @IBOutlet weak var txtFldPhoneNumber: UITextField!
     @IBOutlet weak var txtFldFullName: UITextField!
     //MARK: - Variables
-    var paramData = [String: Data]()
+    var paramImg = [String: UIImage]()
+    var paramUrls = [String: URL]()
     var param = [String: Any]()
     var viewModel = FillVisaDetailsVM()
     var termsText = String()
@@ -148,7 +149,7 @@ extension FillVisaDetailsVC : RazorpayPaymentCompletionProtocol {
     func onPaymentSuccess(_ payment_id: String) {
         debugPrint("success: ", payment_id)
         LoaderClass.shared.loadAnimation()
-        viewModel.applyVisaApi(param: param, paramData: paramData, view: self)
+        viewModel.applyVisaApi(param: param, paramImg: paramImg, paramUrl: paramUrls, view: self)
     }
 }
 

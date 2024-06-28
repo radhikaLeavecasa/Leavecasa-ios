@@ -10,6 +10,7 @@ import IBAnimatable
 
 class UploadDocumentsTVC: UITableViewCell {
     
+    @IBOutlet weak var lblPdfSize: UILabel!
     @IBOutlet weak var lblDocCount: UILabel!
     @IBOutlet weak var lblDocType: UILabel!
     @IBOutlet weak var lblDocumentName: UILabel!

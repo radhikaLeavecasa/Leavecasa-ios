@@ -392,7 +392,7 @@ extension UIViewController{
             dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
             
             dropDown.dataSource = data
-            
+            dropDown.separatorColor = .gray
             dropDown.selectionAction = { (index: Int, item: String) in
                 completion(item, index)
             }

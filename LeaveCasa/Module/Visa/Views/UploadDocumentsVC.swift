@@ -9,6 +9,7 @@ import UIKit
 import UniformTypeIdentifiers
 import IBAnimatable
 import PDFKit
+import Photos
 
 class UploadDocumentsVC: UIViewController, UIDocumentPickerDelegate {
     //MARK: - @IBOutlets
@@ -16,20 +17,22 @@ class UploadDocumentsVC: UIViewController, UIDocumentPickerDelegate {
     @IBOutlet weak var lblPassengerCount: UILabel!
     //MARK: - Variables
     var param = [String: Any]()
-    var paramData = [String: Data]()
+    var paramImg = [String: UIImage]()
+    var paramUrls = [String: URL]()
     var visaDetails: VisaDetailModel?
     var selectedRow = Int()
-    var pdfFiles: [(String, URL?)] = []
-    var imageFiles: [(String,UIImage?)] = []
+    var pdfFiles: [(String, URL?,Int)] = []
+    var imageFiles: [(String,UIImage?,Int)] = []
     var paxCount = 1
     var amount = Double()
     var termsText = String()
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoaderClass.shared.stopAnimation()
         for _ in 0..<(visaDetails?.documents?.count ?? 0) {
-            pdfFiles.append(("", nil))
-            imageFiles.append(("", nil))
+            pdfFiles.append(("", nil, 0))
+            imageFiles.append(("", nil, 0))
         }
         lblPassengerCount.text = "Pax \(paxCount)/\(param["pax"] as? String ?? "")"
     }
@@ -108,15 +111,18 @@ class UploadDocumentsVC: UIViewController, UIDocumentPickerDelegate {
                 if let vc = ViewControllerHelper.getViewController(ofType: .FillVisaDetailsVC, StoryboardName: .Visa) as? FillVisaDetailsVC {
                     vc.param = param
                     vc.termsText = termsText
-                    vc.paramData = paramData
+                    vc.paramUrls = paramUrls
+                    vc.paramImg = paramImg
                     vc.amount = amount
                     vc.termsText = termsText
                     self.pushView(vc: vc)
                 }
             } else {
                 if let vc = ViewControllerHelper.getViewController(ofType: .UploadDocumentsVC, StoryboardName: .Visa) as? UploadDocumentsVC {
+                    LoaderClass.shared.loadAnimation()
                     vc.paxCount = paxCount + 1
-                    vc.paramData = paramData
+                    vc.paramUrls = paramUrls
+                    vc.paramImg = paramImg
                     vc.param = param
                     vc.amount = amount
                     vc.termsText = termsText
@@ -126,26 +132,12 @@ class UploadDocumentsVC: UIViewController, UIDocumentPickerDelegate {
             }
         }
     }
-    func addDoc(j: (String, URL?), iStr: String, paramStr: String, k: (String, UIImage?)) {
+    func addDoc(j: (String, URL?,Int), iStr: String, paramStr: String, k: (String, UIImage?,Int)) {
         if j.0 == iStr {
-            fetchData(from: j.1!) { fetchedData in
-                // Assign fetchedData to your Data? variable
-                self.paramData["\(paramStr)[\(self.paxCount-1)]"] = fetchedData
-                // Now you can use 'data' which contains the fetched data, or it may be nil if there was an error
-            }
+            self.paramUrls["\(paramStr)[\(self.paxCount-1)]"] = j.1
         } else if k.0 == iStr {
-            self.paramData["\(paramStr)[\(self.paxCount-1)]"] = k.1?.pngData()
+            self.paramImg["\(paramStr)[\(self.paxCount-1)]"] = k.1
         }
-    }
-    func fetchData(from url: URL, completion: @escaping (Data?) -> Void) {
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, error == nil else {
-                print("Error fetching data:", error?.localizedDescription ?? "Unknown error")
-                completion(nil)
-                return
-            }
-            completion(data)
-        }.resume()
     }
 }
 
@@ -164,9 +156,13 @@ extension UploadDocumentsVC: UITableViewDelegate, UITableViewDataSource {
         if ((visaDetails?.documents?[indexPath.row].type?.range(of: "PDF", options: .caseInsensitive)) != nil) {
             if let pdfFileURL = pdfFiles[indexPath.row].1 {
                 displayPDFPage(url: pdfFileURL, imgVw: cell.imgVwDocument)
+                cell.lblPdfSize.text = pdfFiles[indexPath.row].2 != 0 ? "PDF size: \(pdfFiles[indexPath.row].2) MB" : ""
+            } else {
+                cell.lblPdfSize.text = ""
             }
         } else {
             cell.imgVwDocument.image = imageFiles[indexPath.row].1
+            cell.lblPdfSize.text = imageFiles[indexPath.row].2 != 0 ? "Image size: \(imageFiles[indexPath.row].2) MB" : ""
         }
         cell.lblUpload.text = cell.imgVwDocument.image == nil ? "Upload" : "Re-Upload"
         return cell
@@ -179,41 +175,55 @@ extension UploadDocumentsVC: UITableViewDelegate, UITableViewDataSource {
             documentPicker.allowsMultipleSelection = false
             present(documentPicker, animated: true, completion: nil)
         } else {
-            ImagePickerManager().pickImage(self){ image in
-                self.imageFiles[self.selectedRow].1 = image
-                self.imageFiles[self.selectedRow].0 = self.visaDetails?.documents?[sender.tag].name ?? ""
-                self.tblVwDocuments.reloadData()
+            ImagePickerManager().pickImage(self) { [weak self] image in
+                guard let self = self else { return }
+                
+//                guard let pickedImage = image else {
+//                    return // Handle case where image is nil
+//                }
+                
+                // Get PHAsset from picked UIImage
+                self.getPHAsset(from: image) { asset in
+                    guard let asset = asset else {
+                        print("Failed to retrieve PHAsset from picked image.")
+                        return
+                    }
+                    
+                    // Request image data and calculate size
+                    self.getImageFileSize(asset: asset) { imageSizeBytes in
+                        guard let imageSizeBytes = imageSizeBytes else {
+                            print("Failed to get image size.")
+                            return
+                        }
+                        
+                        // Convert bytes to kilobytes (KB)
+                        let imageSizeKB = Double(imageSizeBytes) / 1024.0
+                        print("Actual size of image in KB: \(imageSizeKB)")
+                        
+                        // Update UI or handle image size as needed
+                    }
+                }
             }
         }
     }
+    
     
     // MARK: - UIDocumentPickerDelegate
     func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
         guard let selectedFileURL = urls.first else {
             return
         }
-        do {
-            let fileAttributes = try FileManager.default.attributesOfItem(atPath: selectedFileURL.path)
-            if let fileSize = fileAttributes[.size] as? Int64 {
-                let fileSizeMB = Double(fileSize) / (1024 * 1024)
-                
-                // Check if the file size is less than or equal to 5 MB
-                if fileSizeMB <= 5 {
-                    pdfFiles[selectedRow].1 = selectedFileURL
-                    self.pdfFiles[self.selectedRow].0 = self.visaDetails?.documents?[self.selectedRow].name ?? ""
-                } else {
-                    LoaderClass.shared.showSnackBar(message: "PDF size should be less than or equal to 5 MB")
-                }
-            } else {
-                print("File size attribute not found")
-            }
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
         
-        // Use the selected file URL here
-        print("Selected file URL: \(selectedFileURL)")
-        tblVwDocuments.reloadData()
+        let size = getPDFSize(url: selectedFileURL) ?? 0
+        // Check if the file size is less than or equal to 5 MB
+        if size <= 5 {
+            pdfFiles[selectedRow].1 = selectedFileURL
+            self.pdfFiles[self.selectedRow].0 = self.visaDetails?.documents?[self.selectedRow].name ?? ""
+            self.pdfFiles[self.selectedRow].2 = Int(size)
+            tblVwDocuments.reloadData()
+        } else {
+            LoaderClass.shared.showSnackBar(message: "PDF size should be less than or equal to 5 MB")
+        }
     }
     
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
@@ -237,4 +247,64 @@ extension UploadDocumentsVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    func getPDFSize(url: URL) -> Double? {
+        do {
+            let attribute = try FileManager.default.attributesOfItem(atPath: url.path)
+            if let size = attribute[FileAttributeKey.size] as? NSNumber {
+                return size.doubleValue / 1000000.0
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+        return nil
+    }
+    
+    // Function to get PHAsset from UIImage
+    func getPHAsset(from image: UIImage, completion: @escaping (PHAsset?) -> Void) {
+        guard let data = image.jpegData(compressionQuality: 1.0) else {
+            completion(nil)
+            return
+        }
+        
+        let temporaryFileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("tempImage.jpg")
+        
+        do {
+            try data.write(to: temporaryFileURL)
+            
+            let fetchResult = PHAsset.fetchAssets(withALAssetURLs: [temporaryFileURL], options: nil)
+            if let asset = fetchResult.firstObject {
+                completion(asset)
+            } else {
+                completion(nil)
+            }
+        } catch {
+            print("Error writing image data to file: \(error)")
+            completion(nil)
+        }
+    }
+
+    // Function to get image file size using PHAsset
+    func getImageFileSize(asset: PHAsset, completion: @escaping (Int?) -> Void) {
+        if #available(iOS 13.0, *) {
+            PHImageManager.default().requestImageDataAndOrientation(for: asset, options: nil) { data, _, _, _ in
+                guard let imageData = data else {
+                    completion(nil)
+                    return
+                }
+                let imageSize = imageData.count
+                completion(imageSize)
+            }
+        } else {
+            PHImageManager.default().requestImageData(for: asset, options: nil) { data, _, _, _ in
+                guard let imageData = data else {
+                    completion(nil)
+                    return
+                }
+                let imageSize = imageData.count
+                completion(imageSize)
+            }
+        }
+    }
+    
 }

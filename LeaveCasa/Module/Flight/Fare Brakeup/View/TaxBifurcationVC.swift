@@ -21,9 +21,10 @@ class TaxBifurcationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblOtAndGst.textColor = title == "FareFlight" ? .white : .black
-        cnstTop.constant = titleStr == "" ? 0 : 20
+        cnstTop.constant = titleStr == "" ? 0 : title == "Visa" ? 10  : 20
         lblOtAndGst.text = otherChagerOrOT
         lblTax.text = tax
         lblTitle.text = titleStr
+        lblTitle.font = UIFont.regularFont(size: 15)
     }
 }
