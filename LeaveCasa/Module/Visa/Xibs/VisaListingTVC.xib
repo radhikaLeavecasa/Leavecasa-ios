@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="metropolis.bold.otf">
+            <string>Metropolis-Bold</string>
+        </array>
+        <array key="metropolis.regular.otf">
+            <string>Metropolis-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VisaListingTVC" rowHeight="172" id="KGk-i7-Jjw" customClass="VisaListingTVC" customModule="LeaveCasa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="172"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-j7-T8L" customClass="AnimatableView" customModule="IBAnimatable">
+                        <rect key="frame" x="15" y="8" width="367" height="156"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_visa_list" translatesAutoresizingMaskIntoConstraints="NO" id="m0w-Xs-9No">
+                                <rect key="frame" x="0.0" y="10" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4HG-Jl-0dg"/>
+                                    <constraint firstAttribute="width" constant="50" id="P85-6w-NRZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="FIT Smart 50K Excluding" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTN-or-86z">
+                                <rect key="frame" x="50" y="10" width="307" height="15"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIT Smart 50K Excluding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afL-SR-Dv7">
+                                <rect key="frame" x="50" y="35" width="307" height="12"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIT Smart 50K Excluding" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3a-od-9jy">
+                                <rect key="frame" x="50" y="55" width="307" height="12"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 12,558.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxl-f2-nka">
+                                <rect key="frame" x="49.999999999999993" y="77" width="74.333333333333314" height="13"/>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="13"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Par-SQ-RiX" customClass="AnimatableButton" customModule="IBAnimatable">
+                                <rect key="frame" x="50" y="105" width="110" height="35"/>
+                                <color key="backgroundColor" name="LIGHT_BLUE"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="APq-DG-4eJ"/>
+                                    <constraint firstAttribute="height" constant="35" id="SRY-yQ-4ZX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="View Details">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Par-SQ-RiX" secondAttribute="bottom" constant="10" id="4PI-Fs-tE8"/>
+                            <constraint firstItem="PTN-or-86z" firstAttribute="top" secondItem="Uf9-j7-T8L" secondAttribute="top" constant="10" id="GEK-H6-N72"/>
+                            <constraint firstItem="PTN-or-86z" firstAttribute="leading" secondItem="m0w-Xs-9No" secondAttribute="trailing" id="MVb-tI-KTt"/>
+                            <constraint firstItem="m0w-Xs-9No" firstAttribute="top" secondItem="PTN-or-86z" secondAttribute="top" id="Ntl-UR-3xf"/>
+                            <constraint firstItem="mxl-f2-nka" firstAttribute="top" secondItem="r3a-od-9jy" secondAttribute="bottom" constant="10" id="T9B-Fd-I2z"/>
+                            <constraint firstItem="r3a-od-9jy" firstAttribute="trailing" secondItem="afL-SR-Dv7" secondAttribute="trailing" id="Trf-M5-yHS"/>
+                            <constraint firstItem="afL-SR-Dv7" firstAttribute="trailing" secondItem="PTN-or-86z" secondAttribute="trailing" id="U1v-aQ-wNi"/>
+                            <constraint firstAttribute="trailing" secondItem="PTN-or-86z" secondAttribute="trailing" constant="10" id="UOg-0C-7Xz"/>
+                            <constraint firstItem="r3a-od-9jy" firstAttribute="top" secondItem="afL-SR-Dv7" secondAttribute="bottom" constant="8" id="W1V-QC-dGH"/>
+                            <constraint firstItem="Par-SQ-RiX" firstAttribute="top" secondItem="mxl-f2-nka" secondAttribute="bottom" constant="15" id="XSN-TZ-4oT"/>
+                            <constraint firstItem="afL-SR-Dv7" firstAttribute="top" secondItem="PTN-or-86z" secondAttribute="bottom" constant="10" id="Z3e-x2-n07"/>
+                            <constraint firstItem="mxl-f2-nka" firstAttribute="leading" secondItem="afL-SR-Dv7" secondAttribute="leading" id="gMU-Zb-jIT"/>
+                            <constraint firstItem="r3a-od-9jy" firstAttribute="leading" secondItem="afL-SR-Dv7" secondAttribute="leading" id="iei-NK-ash"/>
+                            <constraint firstItem="Par-SQ-RiX" firstAttribute="leading" secondItem="mxl-f2-nka" secondAttribute="leading" id="m30-lw-IIY"/>
+                            <constraint firstItem="afL-SR-Dv7" firstAttribute="leading" secondItem="PTN-or-86z" secondAttribute="leading" id="wlK-53-WUr"/>
+                            <constraint firstItem="m0w-Xs-9No" firstAttribute="leading" secondItem="Uf9-j7-T8L" secondAttribute="leading" id="zps-Nc-4iY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                <point key="value" x="0.29999999999999999" y="0.29999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Uf9-j7-T8L" secondAttribute="trailing" constant="20" id="eDd-5u-8sc"/>
+                    <constraint firstItem="Uf9-j7-T8L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mKB-OO-8Fe"/>
+                    <constraint firstAttribute="bottom" secondItem="Uf9-j7-T8L" secondAttribute="bottom" constant="8" id="p6X-j1-ywq"/>
+                    <constraint firstItem="Uf9-j7-T8L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uzM-sr-PI0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnViewDetails" destination="Par-SQ-RiX" id="DLe-FU-ebO"/>
+                <outlet property="lblCountry" destination="PTN-or-86z" id="Z09-SL-yQ5"/>
+                <outlet property="lblPrice" destination="mxl-f2-nka" id="NEb-hX-qs7"/>
+                <outlet property="lblTraceId" destination="afL-SR-Dv7" id="SVi-cj-Ccw"/>
+                <outlet property="lblValidity" destination="r3a-od-9jy" id="GOW-gI-WaG"/>
+            </connections>
+            <point key="canvasLocation" x="18.320610687022899" y="7.746478873239437"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="Par-SQ-RiX">
+            <size key="intrinsicContentSize" width="80" height="25"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_visa_list" width="36" height="36"/>
+        <namedColor name="LIGHT_BLUE">
+            <color red="0.078431372549019607" green="0.53725490196078429" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

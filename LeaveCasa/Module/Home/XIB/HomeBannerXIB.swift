@@ -220,7 +220,7 @@ extension HomeBannerXIB: UICollectionViewDelegate, UICollectionViewDataSource, U
         } else if section == 3 {
             if let vc = ViewControllerHelper.getViewController(ofType: .SearchHotelVC, StoryboardName: .Hotels) as? SearchHotelVC {
                 vc.couponsData = allCouponData.filter({$0.category == "hotel"})
-                vc.cityCodeStr = Int((selectedTagTwo == 23 ? arrIntrnational?[indexPath.row].code : arrDomestic?[indexPath.row].code) ?? "0") ?? 0
+                vc.cityCodeStr = (selectedTagTwo == 23 ? arrIntrnational?[indexPath.row].code : arrDomestic?[indexPath.row].code) ?? ""
                 vc.previouslyAddedCity = (selectedTagTwo == 23 ? arrIntrnational?[indexPath.row].cityName?.capitalized : arrDomestic?[indexPath.row].cityName?.capitalized) ?? ""
                 self.viewController.pushView(vc: vc, title: "withCity")
             }

@@ -12,6 +12,7 @@ import DropDown
 class VisaDetailsVC: UIViewController, ResponseProtocol {
     
     //MARK: - @IBOutlets
+    @IBOutlet weak var vwStayPeriod: UIView!
     @IBOutlet weak var txtFldStayPeroid: UITextField!
     @IBOutlet weak var txtFldValidity: UITextField!
     @IBOutlet weak var txtFldVisaType: UITextField!
@@ -99,6 +100,8 @@ extension VisaDetailsVC: UITextFieldDelegate {
                 self.txtFldVisaType.text = ""
                 self.txtFldValidity.text = ""
                 self.txtFldStayPeroid.text = ""
+                self.vwStayPeriod.isHidden = self.txtFldDestination.text == "Dubai"
+                
                 LoaderClass.shared.loadAnimation()
                 self.viewModel.getCountryDetails(self.txtFldDestination.text ?? "", view: self)
             }
@@ -117,6 +120,9 @@ extension VisaDetailsVC: UITextFieldDelegate {
             } else {
                 self.showShortDropDown(textFeild: txtFldValidity, data: viewModel.arrCountryDetails[selectedIndex].validity ?? [], dropDown: dropDown) { val, index in
                     self.txtFldValidity.text = val
+                    if self.txtFldDestination.text == "Dubai" {
+                        self.txtFldStayPeroid.text = val
+                    }
                 }
             }
         } else if textField == txtFldStayPeroid {

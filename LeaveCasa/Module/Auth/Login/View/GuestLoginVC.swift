@@ -70,8 +70,6 @@ class GuestLoginVC: UIViewController {
         lblAgree.isUserInteractionEnabled = true
     }
     @objc func handleTap(_ gesture: UITapGestureRecognizer) {
-     
-        let text = (lblAgree.attributedText)?.string ?? ""
         let tapLocation = gesture.location(in: lblAgree)
         
         // Determine which range was tapped
@@ -146,11 +144,16 @@ extension GuestLoginVC: UITextFieldDelegate, ResponseProtocol {
                 vc.flightDetail = objGuestLoginVM.flightDetail
                 self.navigationController?.pushViewController(vc, animated: true)
             }
-        } else {
+        } else if txtFldType.text! == "Insurance" {
             if let vc = ViewControllerHelper.getViewController(ofType: .InsuranceDetailVC, StoryboardName: .Main) as? InsuranceDetailVC {
                 vc.bookingId = objGuestLoginVM.insurance?.details?.response?.itinerary?.bookingId ?? 0
                 vc.viewModel.insuranceDetailModel = objGuestLoginVM.insurance?.details?.response?.itinerary
                 vc.status = objGuestLoginVM.insurance?.status ?? ""
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            if let vc = ViewControllerHelper.getViewController(ofType: .VisaViewDetailVC, StoryboardName: .Visa) as? VisaViewDetailVC {
+                vc.visaDetail = objGuestLoginVM.visaDetail
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }

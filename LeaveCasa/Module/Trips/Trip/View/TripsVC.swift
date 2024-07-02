@@ -21,13 +21,15 @@ class TripsVC: UIViewController {
     var hotel: [TripHotel]?
     var bus: [TripBus]?
     var insurance: [InsuranceBookingResponse]?
+    var arrVisa: [VisaApplicationModel]?
+    var filteredVisa: [VisaApplicationModel]?
     var filteredFlight_booking: [TripFlightBooking]?
     var filteredHotel: [TripHotel]?
     var filteredBus: [TripBus]?
     let refreshControl = UIRefreshControl()
     var selectedIndex = Int()
     var selectedHeaderTab = 0
-    var arrHeader = ["Hotel", "Bus", "Flight", "Insurance"]
+    var arrHeader = ["Hotel", "Bus", "Flight", "Insurance", "Visa"]
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +70,7 @@ class TripsVC: UIViewController {
         self.tableVIew.ragisterNib(nibName: BusBookingTripXIB().identifire)
         self.tableVIew.ragisterNib(nibName: FlightBookingTripXIB().identifire)
         self.tableVIew.ragisterNib(nibName: "InsurancePurchasedListTVC")
+        self.tableVIew.ragisterNib(nibName: "VisaListingTVC")
         self.refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         self.tableVIew.addSubview(refreshControl) // not required when using UITableViewController
     }
@@ -253,12 +256,19 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
             else {
                 return flight_booking?.count ?? 0
             }
-        } else {
+        } else if self.indexCount == 4 {
             if insurance?.count ?? 0 == 0 || WebService.isConnectedToInternet() == false {
                 return 1
             }
             else {
                 return insurance?.count ?? 0
+            }
+        } else {
+            if arrVisa?.count ?? 0 == 0 || WebService.isConnectedToInternet() == false {
+                return 1
+            }
+            else {
+                return arrVisa?.count ?? 0
             }
         }
     }
@@ -377,11 +387,11 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
                     
                     return cell
                 }
-            } else {
+            } else if self.indexCount == 4 {
                 if insurance?.count ?? 0 == 0 {
                     let cell = tableView.dequeueReusableCell(withIdentifier: NoDataFoundXIB().identifire, for: indexPath) as! NoDataFoundXIB
                     cell.img.image = UIImage(named: ("ic_insurance_notfound"))
-                    cell.lblMsg.text = "No Insurance Found!"
+                    cell.lblMsg.text = AlertMessages.NO_BOOKINGS
                     cell.lblTitleMsg.text = ""
                     cell.lblSubTitleMsg.text = ""
                     return cell
@@ -397,6 +407,25 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
                     cell.btnViewDetails.tag = indexPath.row
                     return cell
                 }
+            } else {
+                if arrVisa?.count ?? 0 == 0 {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: NoDataFoundXIB().identifire, for: indexPath) as! NoDataFoundXIB
+                    cell.img.image = UIImage(named: ("ic_no_visa_found"))
+                    cell.lblMsg.text = AlertMessages.NO_BOOKINGS
+                    cell.lblTitleMsg.text = ""
+                    cell.lblSubTitleMsg.text = ""
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "VisaListingTVC", for: indexPath) as! VisaListingTVC
+                    cell.lblCountry.text = arrVisa?[indexPath.row].country
+                    cell.lblTraceId.text = "Trace ID:- \(arrVisa?[indexPath.row].traceId ?? 0)"
+                    cell.lblValidity.text = "\(arrVisa?[indexPath.row].visaType ?? "") Visa | \(arrVisa?[indexPath.row].validity ?? "") Validity | \(arrVisa?[indexPath.row].stayPeriod ?? "") Stay period"
+                    cell.btnViewDetails.addTarget(self, action: #selector(insuranceDetail), for: .touchUpInside)
+                    cell.lblPrice.text = "\(arrVisa?[indexPath.row].amountInfo?.currency ?? "") \(Int((arrVisa?[indexPath.row].amountInfo?.amount ?? 0) + (arrVisa?[indexPath.row].amountInfo?.leavecasaPrice ?? 0)))"
+                    cell.btnViewDetails.tag = indexPath.row
+                    cell.btnViewDetails.addTarget(self, action: #selector(viewVisa(_:)), for: .touchUpInside)
+                    return cell
+                }
             }
         }
     }
@@ -407,6 +436,14 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
             vc.viewModel.insuranceDetailModel = insurance?[sender.tag].details?.response?.itinerary
             vc.status = insurance?[sender.tag].status ?? ""
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    @objc func viewVisa(_ sender: UIButton) {
+        if let vc = ViewControllerHelper.getViewController(ofType: .VisaViewDetailVC, StoryboardName: .Visa) as? VisaViewDetailVC {
+            if arrVisa?.count ?? 0 > 0 {
+                vc.visaDetail = arrVisa?[sender.tag]
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
     
@@ -463,6 +500,13 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
+        } else {
+            if let vc = ViewControllerHelper.getViewController(ofType: .VisaViewDetailVC, StoryboardName: .Visa) as? VisaViewDetailVC {
+                if arrVisa?.count ?? 0 > 0 {
+                    vc.visaDetail = arrVisa?[indexPath.row]
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+            }
         }
     }
 }
@@ -476,12 +520,12 @@ extension TripsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         cell.btnHeader.setTitle(arrHeader[indexPath.row], for: .normal)
         cell.vwBackground.backgroundColor = selectedHeaderTab == indexPath.row ? .lightBlue() : .white
         cell.btnHeader.setTitleColor(selectedHeaderTab == indexPath.row ? .white : .theamColor(), for: .normal)
-        cell.btnHeader.titleLabel?.font = selectedHeaderTab == indexPath.row ? .boldFont(size: 16) : .regularFont(size: 14)
+        cell.btnHeader.titleLabel?.font = selectedHeaderTab == indexPath.row ? .boldFont(size: 15) : .regularFont(size: 14)
         
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! MyTripsCVC
+       // let cell = collectionView.cellForItem(at: indexPath) as! MyTripsCVC
         selectedHeaderTab = indexPath.row
         indexCount = indexPath.row + 1
         tableVIew.reloadData()
@@ -491,7 +535,7 @@ extension TripsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
 //        let label = UILabel(frame: CGRect.zero)
 //        label.text = arrHeader[indexPath.item]
 //        label.sizeToFit()
-        return CGSize(width: self.collvwHeader.frame.width/4, height: self.collvwHeader.frame.size.height)
+        return CGSize(width: 120, height: self.collvwHeader.frame.size.height)
     }
 }
 // MARK: - API RESPONSE METHODS
@@ -504,10 +548,12 @@ extension TripsVC: ResponseProtocol {
         flight_booking = self.viewModel.tripModel?.data?.flight_booking
         bus = self.viewModel.tripModel?.data?.bus
         insurance = self.viewModel.tripModel?.data?.insurance
+        arrVisa = self.viewModel.tripModel?.data?.visa
         
         filteredHotel = hotel
         filteredFlight_booking = flight_booking
         filteredBus = bus
+        filteredVisa = arrVisa
         
         self.tableVIew.reloadData()
     }

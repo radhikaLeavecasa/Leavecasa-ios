@@ -28,7 +28,7 @@ class SearchViewModel{
     var dict1 = [[String: Any]]()
     var dict2 = [[String: Any]]()
     
-    func fatchHotels(cityCodeStr:String,txtCheckIn:String,txtCheckOut:String,finalRooms:[[String: AnyObject]],view:UIViewController,numberOfRooms:Int,numberOfAdults:Int,ageOfChildren:[Int],cityName:String, hotelData: [HotelRoomDetail]){
+    func fatchHotels(cityCodeStr:String,txtCheckIn:String,txtCheckOut:String,finalRooms:[[String: AnyObject]],view:UIViewController,numberOfRooms:Int,numberOfAdults:Int,ageOfChildren:[Int],cityName:String){ //hotelData: [HotelRoomDetail]
         
         let params: [String: Any] = [WSRequestParams.WS_REQS_PARAM_CURRENT_REQUEST: 0 ,
                                      WSRequestParams.WS_REQS_PARAM_DESTINATION_CODE: cityCodeStr,
@@ -48,7 +48,7 @@ class SearchViewModel{
                         if let results = Mapper<Results>().mapArray(JSONArray: response) as [Results]?, let markupArr = Mapper<Markup>().mapArray(JSONArray: markup) as [Markup]? {
                             if results[0].hotels.count > 0 {
                                 if let vc = ViewControllerHelper.getViewController(ofType: .HotelListVC, StoryboardName: .Hotels) as? HotelListVC{
-                                    vc.hotelData = hotelData
+                                    //vc.hotelData = hotelData
                                     vc.days = LoaderClass.shared.calculateDaysBetweenDates(dateString1: txtCheckIn, dateString2: txtCheckOut) ?? 0
                                     vc.results = results
                                     vc.markups = markupArr
@@ -218,10 +218,50 @@ class SearchViewModel{
                 
             }else{
                 if msg == CommonError.INTERNET{
+                    view.pushNoInterConnection(view: view) {
+                        self.delegate?.onFail?(msg: "")
+                    }
+                }else{
+                    LoaderClass.shared.stopAnimation()
+                    view.pushNoInterConnection(view: view, titleMsg: "Alert", msg: msg) {
+                        self.delegate?.onFail?(msg: "")
+                    }
+                }
+            }
+        }
+    }
+    
+    func satchCity(city:String,view:UIViewController){
+        let string = city.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).replacingOccurrences(of: " ", with: "%20")
+        
+        if string.isEmpty{
+            self.cityName.removeAll()
+            self.cityCode.removeAll()
+            return
+        }
+        WebService.callApi(api: .citySearch(string),method: .get, param: [:]) { status, msg, response in
+            LoaderClass.shared.stopAnimation()
+            if status == true{
+                let responseData = response as? [[String:Any]] ?? []
+                if self.cityName.count > 0 {
+                    self.cityName.removeAll()
+                }
+                if self.cityCode.count > 0 {
+                    self.cityCode.removeAll()
+                }
+                for i in 0..<responseData.count {
+                    let dict = responseData[i]
+                    self.cityName.append(dict[WSRequestParams.WS_REQS_PARAM_NAME] as? String ?? "")
+                    self.cityCode.append(dict[WSResponseParams.WS_RESP_PARAM_CODE] as? String ?? "")
+                }
+                
+                self.delegate?.onSuccess()
+            }else{
+                if msg == CommonError.INTERNET{
                     view.pushNoInterConnection(view: view)
                 }else{
                     LoaderClass.shared.stopAnimation()
-                    view.pushNoInterConnection(view: view, titleMsg: "Alert", msg: msg)
+                    LoaderClass.shared.showSnackBar(message: msg)
                 }
             }
         }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QPr-QA-upv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -3551,6 +3552,9 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_hotel" translatesAutoresizingMaskIntoConstraints="NO" id="Vaa-gt-CD9">
                                 <rect key="frame" x="329" y="62" width="65" height="65.5"/>
                             </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-gf-aug">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NYq-a4-yLE"/>
                         <color key="backgroundColor" name="BG_COLOR"/>
@@ -3563,14 +3567,18 @@
                             <constraint firstItem="IRe-fK-gJM" firstAttribute="centerX" secondItem="Vaa-gt-CD9" secondAttribute="centerX" id="N3K-Pl-vv7"/>
                             <constraint firstItem="NYq-a4-yLE" firstAttribute="bottom" secondItem="eew-rp-zjR" secondAttribute="bottom" id="Pfb-99-0iq"/>
                             <constraint firstItem="eew-rp-zjR" firstAttribute="top" secondItem="IRe-fK-gJM" secondAttribute="bottom" constant="10" id="QBs-jP-wMZ"/>
+                            <constraint firstItem="Qyo-gf-aug" firstAttribute="top" secondItem="q8m-OE-X2z" secondAttribute="top" id="Sq0-hg-R2c"/>
                             <constraint firstItem="wps-Mr-rHe" firstAttribute="trailing" secondItem="NYq-a4-yLE" secondAttribute="trailing" id="TX7-jV-egj"/>
                             <constraint firstItem="8TR-9g-pRV" firstAttribute="top" secondItem="NYq-a4-yLE" secondAttribute="top" id="ZHd-58-igd"/>
                             <constraint firstItem="qqq-cn-QSO" firstAttribute="leading" secondItem="NYq-a4-yLE" secondAttribute="leading" constant="20" id="aUh-rw-BTr"/>
+                            <constraint firstItem="NYq-a4-yLE" firstAttribute="trailing" secondItem="Qyo-gf-aug" secondAttribute="trailing" id="ab4-wt-aKU"/>
                             <constraint firstItem="wps-Mr-rHe" firstAttribute="top" secondItem="q8m-OE-X2z" secondAttribute="top" id="acV-pF-wh3"/>
                             <constraint firstItem="NYq-a4-yLE" firstAttribute="trailing" secondItem="eew-rp-zjR" secondAttribute="trailing" id="eJH-tG-G8T"/>
                             <constraint firstAttribute="trailing" secondItem="8TR-9g-pRV" secondAttribute="trailing" id="jsC-eu-3aW"/>
+                            <constraint firstItem="Qyo-gf-aug" firstAttribute="leading" secondItem="NYq-a4-yLE" secondAttribute="leading" id="l8Z-M9-oHD"/>
                             <constraint firstItem="NYq-a4-yLE" firstAttribute="trailing" secondItem="Vaa-gt-CD9" secondAttribute="trailing" constant="20" id="lxG-zk-bfQ"/>
                             <constraint firstItem="qqq-cn-QSO" firstAttribute="centerY" secondItem="8TR-9g-pRV" secondAttribute="centerY" id="slp-Kb-IuE"/>
+                            <constraint firstAttribute="bottom" secondItem="Qyo-gf-aug" secondAttribute="bottom" id="wfJ-ua-2Jm"/>
                             <constraint firstItem="8TR-9g-pRV" firstAttribute="leading" secondItem="NYq-a4-yLE" secondAttribute="leading" id="xxb-dZ-oVi"/>
                         </constraints>
                     </view>
@@ -3581,6 +3589,7 @@
                         <outlet property="collectionView" destination="Zvj-1T-6D6" id="0Yb-I4-qIq"/>
                         <outlet property="hotelName" destination="JYM-ED-8Zy" id="vwE-hV-VxM"/>
                         <outlet property="imgTop" destination="8TR-9g-pRV" id="TVm-fn-H1P"/>
+                        <outlet property="imgVwLoading" destination="Qyo-gf-aug" id="O4w-ME-UT5"/>
                         <outlet property="pageControle" destination="ByB-Xq-YvV" id="3EK-5X-Af8"/>
                         <outlet property="scrollView" destination="Zvj-1T-6D6" id="mei-iB-IDV"/>
                         <outlet property="tblVwHeight" destination="YGc-PD-iGC" id="5wb-Gd-jHL"/>
@@ -5968,10 +5977,10 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BG_COLOR">
-            <color red="0.98000001907348633" green="0.98799997568130493" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97647058823529409" green="0.98431372549019602" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BG_GRAY_DATETIME">
-            <color red="0.94499999284744263" green="0.94900000095367432" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94117647058823528" green="0.94509803921568625" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BLUE_COLOR">
             <color red="0.0" green="0.32549019607843138" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -6010,13 +6019,13 @@
             <color red="0.11800000071525574" green="0.14100000262260437" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

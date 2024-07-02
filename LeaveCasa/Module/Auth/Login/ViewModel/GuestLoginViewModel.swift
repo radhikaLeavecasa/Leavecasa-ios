@@ -15,6 +15,7 @@ class GuestLoginViewModel: NSObject {
     var busDetail: TripBus?
     var flightDetail: TripFlightBooking?
     var insurance: InsuranceBookingResponse?
+    var visaDetail: VisaApplicationModel?
     
     func guestBookingDetail(type: String, bookingId: String, view: UIViewController) {
         LoaderClass.shared.loadAnimation()
@@ -35,10 +36,15 @@ class GuestLoginViewModel: NSObject {
                         let bookingDetail = data["flight"] as? [String:Any] {
                         self.flightDetail = TripFlightBooking(JSON: bookingDetail)
                     }
-                } else {
+                } else if type == "Insurance" {
                     if let data = response[WSResponseParams.WS_REPS_PARAM_DATA] as? [String:Any],
                         let bookingDetail = data["insurance"] as? [String:Any] {
                         self.insurance = InsuranceBookingResponse(JSON: bookingDetail)
+                    }
+                } else {
+                    if let data = response[WSResponseParams.WS_REPS_PARAM_DATA] as? [String:Any],
+                        let bookingDetail = data["visa"] as? [String:Any] {
+                        self.visaDetail = VisaApplicationModel(JSON: bookingDetail)
                     }
                 }
                 self.delegate?.onSuccess()

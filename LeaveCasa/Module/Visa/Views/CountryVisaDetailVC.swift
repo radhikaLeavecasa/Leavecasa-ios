@@ -68,11 +68,11 @@ class CountryVisaDetailVC: UIViewController {
     
     @IBAction func actionTax(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .TaxBifurcationVC, StoryboardName: .Flight) as? TaxBifurcationVC {
-            vc.otherChagerOrOT = "Total: \(visaDetails?.currency ?? "") \(price)"
-            vc.tax = "Platform Fee: \(visaDetails?.currency ?? "") \(platformFee)"
+            vc.otherChagerOrOT = "Total: \(visaDetails?.currency ?? "") \(price+Double((platformFee * 18)/100))"
+            vc.tax = "Platform Fee: \(visaDetails?.currency ?? "") \(platformFee)\n \nGST: \((platformFee * 18)/100)"
             vc.titleStr = "Visa Fee: \(visaDetails?.currency ?? "") \((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))"
             vc.title = "Visa"
-            LoaderClass.shared.presentPopover(self, vc, sender: sender, size: CGSize(width: 210, height: 80),arrowDirection: .any)
+            LoaderClass.shared.presentPopover(self, vc, sender: sender, size: CGSize(width: 210, height: 115),arrowDirection: .any)
         }
     }
     
@@ -112,7 +112,7 @@ class CountryVisaDetailVC: UIViewController {
         lblProcessingTime.text = visaDetails?.processingTime ?? ""
         platformFee = Int((visaDetails?.platformFee ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0))
         price = Double(Int((Int(visaDetails?.landingFees ?? "0") ?? 0) * (Int(param["pax"] as? String ?? "0") ?? 0)) + platformFee)
-        lblBottomPrice.text = "\(visaDetails?.currency ?? "") \(price)"
+        lblBottomPrice.text = "\(visaDetails?.currency ?? "") \(price + Double((platformFee * 18)/100))"
         lblPrice.text = "\(visaDetails?.currency ?? "") \(visaDetails?.landingFees ?? "")"
         self.tblVwDocumentsTC.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
 

@@ -107,6 +107,7 @@ enum ViewControllerType : String{
     case UploadDocumentsVC
     case FillVisaDetailsVC
     case VisaTermsConditionPopVC
+    case VisaViewDetailVC
 }
 
 class ViewControllerHelper: NSObject {

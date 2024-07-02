@@ -228,7 +228,7 @@ struct WebService{
         if header {
             headers["Authorization"] = "Bearer \(GetData.share.getUserToken())"
         }
-
+        LoaderClass.shared.loadAnimation()
         AF.upload(multipartFormData: { multipartFormData in
 
             // Upload images
@@ -263,11 +263,12 @@ struct WebService{
         }, to: urlString, method: .post, headers: headers)
         .responseJSON { response in
             debugPrint(response)
+            LoaderClass.shared.stopAnimation()
             switch response.result {
             case .success(let value):
                 if let responseValue = value as? [String: Any] {
-                    if let message = responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String, message == Strings.SUCCESSFULLY_UPLOAD_PROFILE_PIC {
-                        completion(true, "\(message)", [:])
+                    if let message = responseValue[WSResponseParams.WS_RESP_PARAM_MESSAGE] as? String, message == "Application Submitted Successfully" {
+                        completion(true, "\(message)", responseValue)
                     } else {
                         completion(false, "Unexpected response from server", [:])
                     }

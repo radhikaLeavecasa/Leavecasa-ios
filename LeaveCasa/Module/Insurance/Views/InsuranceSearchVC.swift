@@ -13,6 +13,7 @@ import IBAnimatable
 class InsuranceSearchVC: UIViewController {
    
     //MARK: - @IBOutlets
+    @IBOutlet weak var imgVwLoading: UIImageView!
     @IBOutlet weak var txtFldPlanCategory: SearchTextField!
     @IBOutlet weak var txtFldDepartureDate: UITextField!
     @IBOutlet weak var txtFldDestination: SearchTextField!
@@ -91,7 +92,9 @@ class InsuranceSearchVC: UIViewController {
                                  WSRequestParams.WS_REQS_PARAM_TRAVEL_END: selectedTab == 0 ? convertDateFormat(date: txtFldReturn.text ?? "", getFormat: "yyyy-MM-dd", dateFormat: "MMM dd, yyyy") : "",
                                  WSRequestParams.WS_REQS_PARAM_NO_OF_PAX: txtFldPassenger.text ?? "1",
                                  WSRequestParams.WS_REQS_PARAM_PAX_AGE: arrAge] as [String:AnyObject]
-                    LoaderClass.shared.loadAnimation()
+                    imgVwLoading.isHidden = false
+                    LoaderClass.shared.setupGIF("visa", imgVW: self.imgVwLoading)
+                   // LoaderClass.shared.loadAnimation()
                     paxCount = Int(txtFldPassenger.text ?? "1") ?? 1
                     viewModel.insuranceApi(param: param, view: self)
                 }
@@ -284,7 +287,10 @@ extension InsuranceSearchVC: UICollectionViewDelegate, UICollectionViewDataSourc
 
 extension InsuranceSearchVC: ResponseProtocol{
     func onSuccess() {
-        LoaderClass.shared.stopAnimation()
+        imgVwLoading.isHidden = true
+        
+        //LoaderClass.shared.setupGIF("travel-insurance", imgVW: self.imgVwLoading)
+//        LoaderClass.shared.stopAnimation()
         if viewModel.insuranceModel?.responseStatus != 1 {
             self.pushNoInterConnection(view: self,titleMsg: "Alert!", msg: viewModel.insuranceModel?.error?.errorMessage ?? "")
         } else {

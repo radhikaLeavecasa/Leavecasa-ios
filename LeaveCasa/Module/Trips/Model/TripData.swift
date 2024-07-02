@@ -28,6 +28,7 @@ struct TripData : Mappable {
 	var hotel : [TripHotel]?
 	var bus : [TripBus]?
     var insurance: [InsuranceBookingResponse]?
+    var visa : [VisaApplicationModel]?
 
 	init?(map: Map) {
           
@@ -48,6 +49,7 @@ struct TripData : Mappable {
         hotel <- map["hotel"]
 		bus <- map["bus"]
         insurance <- map["insurance"]
+        visa <- map["visa"]
 	}
 }
 

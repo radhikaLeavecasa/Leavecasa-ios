@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="628"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAx-Ut-xsQ">
-                                <rect key="frame" x="20" y="716" width="43" height="30"/>
+                                <rect key="frame" x="20" y="716" width="47" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hFu-N8-Fmd"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0m8-zp-KlA">
-                                <rect key="frame" x="312" y="716" width="43" height="30"/>
+                                <rect key="frame" x="308" y="716" width="47" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mdU-CW-YAI"/>
                                 </constraints>
@@ -157,7 +157,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your no.1 Travel Booking App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekI-X6-oE2">
-                                        <rect key="frame" x="50" y="305" width="275" height="18.666666666666686"/>
+                                        <rect key="frame" x="50" y="305" width="275" height="16"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                         <color key="textColor" red="0.90196078431372551" green="0.082352941176470587" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -221,13 +221,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIme remaining: 00:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crL-z4-hVG">
-                                <rect key="frame" x="20" y="752.33333333333337" width="149" height="17.666666666666629"/>
+                                <rect key="frame" x="20" y="752" width="162.33333333333334" height="15"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPO-KS-yM3">
-                                <rect key="frame" x="303" y="746" width="52" height="30"/>
+                                <rect key="frame" x="300" y="746" width="55" height="27"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Resend">
@@ -657,7 +657,7 @@ flights and much more...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPg-kA-FIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="164.77832512315271"/>
+            <point key="canvasLocation" x="105" y="163"/>
         </scene>
         <!--TripsVC-->
         <scene sceneID="yb2-vv-Xy8">
@@ -848,7 +848,7 @@ flights and much more...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XGt-hA-tkJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="164.77832512315271"/>
+            <point key="canvasLocation" x="822" y="163"/>
         </scene>
         <!--NotificationVC-->
         <scene sceneID="oAG-Si-voD">
@@ -5308,7 +5308,7 @@ flights and much more...</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJd-o3-w3O">
-                                                                <rect key="frame" x="50" y="14.666666666666629" width="0.0" height="21"/>
+                                                                <rect key="frame" x="50" y="16" width="0.0" height="18"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="18"/>
                                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -5537,42 +5537,42 @@ flights and much more...</string>
                                 <rect key="frame" x="0.0" y="110" width="375" height="668"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-91-HD3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="565"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View/Cancel/Reschedule your reservation (As a guest user)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnH-UV-USB">
-                                                <rect key="frame" x="20" y="19.999999999999996" width="335" height="32.666666666666657"/>
+                                                <rect key="frame" x="20" y="20" width="335" height="28"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcb-og-Vm1">
-                                                <rect key="frame" x="20" y="227.66666666666669" width="335" height="52.666666666666686"/>
+                                                <rect key="frame" x="20" y="223" width="335" height="45"/>
                                                 <string key="text">You only have to fill your EMT Booking ID/Reference ID/PNR with Email Address used at the timeof booking to retrieve the details</string>
                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By logging in, I agree to LeaveCasa Terms &amp; Conditions, Cancellation Policy and Privacy Policy." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwX-Ij-Gx0">
-                                                <rect key="frame" x="20" y="512.33333333333337" width="335" height="32.666666666666629"/>
+                                                <rect key="frame" x="20" y="496" width="335" height="42"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                 <nil key="highlightedColor"/>
                                                 <lineBreakStrategy key="lineBreakStrategy"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-CV-uBY">
-                                                <rect key="frame" x="20" y="82.666666666666657" width="335" height="125"/>
+                                                <rect key="frame" x="20" y="78" width="335" height="125"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="def-HR-uln">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="58.666666666666664"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference ID/Booking ID/PNR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDE-Hy-2SZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="16.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reference ID/Booking ID/PNR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qP-L7-vrd">
-                                                                <rect key="frame" x="0.0" y="21.333333333333346" width="335" height="32.333333333333343"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Reference ID/Booking ID/PNR/Trace ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8qP-L7-vrd">
+                                                                <rect key="frame" x="0.0" y="18.999999999999996" width="335" height="34.666666666666657"/>
                                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -5596,13 +5596,13 @@ flights and much more...</string>
                                                         <rect key="frame" x="0.0" y="66.666666666666657" width="335" height="58.333333333333343"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3m-39-DBz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="16.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Booking Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-5b-e1M">
-                                                                <rect key="frame" x="0.0" y="21.333333333333371" width="335" height="32"/>
+                                                                <rect key="frame" x="0.0" y="19.000000000000032" width="335" height="34.333333333333343"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
@@ -5612,7 +5612,7 @@ flights and much more...</string>
                                                                 </connections>
                                                             </textField>
                                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNa-fk-pDa">
-                                                                <rect key="frame" x="313" y="21.333333333333371" width="12" height="32"/>
+                                                                <rect key="frame" x="313" y="19.000000000000032" width="12" height="34.333333333333343"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="ic_dropDown"/>
                                                             </button>
@@ -5637,7 +5637,7 @@ flights and much more...</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-zu-b4O" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="300.33333333333331" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="288" width="335" height="50"/>
                                                 <color key="backgroundColor" name="LIGHT_BLUE"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="U7J-Uk-MYr"/>
@@ -5657,7 +5657,7 @@ flights and much more...</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ap-TC-snT" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="447.33333333333337" width="335" height="50"/>
+                                                <rect key="frame" x="20" y="431" width="335" height="50"/>
                                                 <color key="backgroundColor" name="LIGHT_BLUE"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fgI-Bn-y84"/>
@@ -5677,7 +5677,7 @@ flights and much more...</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-G4-JhM">
-                                                <rect key="frame" x="20" y="375.33333333333331" width="335" height="1"/>
+                                                <rect key="frame" x="20" y="363" width="335" height="1"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Nbk-aL-bQm"/>
@@ -5687,7 +5687,7 @@ flights and much more...</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un7-KG-1rF">
-                                                <rect key="frame" x="172.66666666666666" y="368.33333333333331" width="30" height="15.333333333333314"/>
+                                                <rect key="frame" x="172.66666666666666" y="357" width="30" height="13"/>
                                                 <color key="backgroundColor" name="BG_COLOR"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="iiL-S3-fOG"/>
@@ -5697,7 +5697,7 @@ flights and much more...</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login or Create an account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-ft-I0J">
-                                                <rect key="frame" x="20" y="408.66666666666663" width="335" height="18.666666666666686"/>
+                                                <rect key="frame" x="20" y="395" width="335" height="16"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -8867,28 +8867,36 @@ flights and much more...</string>
                                     <action selector="payOnPress:" destination="dcr-0b-elf" eventType="touchUpInside" id="6ba-Mx-qsb"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TBD-fQ-xSv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ju2-bb-CPW"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TBD-fQ-xSv" firstAttribute="leading" secondItem="Ju2-bb-CPW" secondAttribute="leading" id="20d-JV-3sD"/>
                             <constraint firstItem="pOV-De-gwx" firstAttribute="leading" secondItem="AxV-Ji-V7y" secondAttribute="leading" constant="15" id="2Uc-Qt-yNI"/>
+                            <constraint firstItem="TBD-fQ-xSv" firstAttribute="top" secondItem="AxV-Ji-V7y" secondAttribute="top" id="2m5-lb-v23"/>
                             <constraint firstItem="qKg-mc-Tp2" firstAttribute="leading" secondItem="Ju2-bb-CPW" secondAttribute="leading" constant="20" id="79r-lD-sAk"/>
                             <constraint firstItem="Ju2-bb-CPW" firstAttribute="bottom" secondItem="qKg-mc-Tp2" secondAttribute="bottom" constant="20" id="7Ga-82-mrt"/>
                             <constraint firstItem="oes-LW-B3a" firstAttribute="top" secondItem="Ju2-bb-CPW" secondAttribute="top" id="8rH-K1-hdb"/>
                             <constraint firstItem="vLR-CO-ymf" firstAttribute="leading" secondItem="Ju2-bb-CPW" secondAttribute="leading" id="BL8-dm-hK9"/>
                             <constraint firstAttribute="trailing" secondItem="qKg-mc-Tp2" secondAttribute="trailing" constant="20" id="QPr-IR-DcS"/>
                             <constraint firstAttribute="trailing" secondItem="oes-LW-B3a" secondAttribute="trailing" id="RdH-cL-fes"/>
+                            <constraint firstAttribute="bottom" secondItem="TBD-fQ-xSv" secondAttribute="bottom" id="VuW-k8-ZZs"/>
                             <constraint firstItem="Ju2-bb-CPW" firstAttribute="trailing" secondItem="vLR-CO-ymf" secondAttribute="trailing" id="ZYC-Pa-SP9"/>
                             <constraint firstItem="Ju2-bb-CPW" firstAttribute="trailing" secondItem="pOV-De-gwx" secondAttribute="trailing" constant="15" id="bPq-38-DmQ"/>
                             <constraint firstItem="vLR-CO-ymf" firstAttribute="top" secondItem="pOV-De-gwx" secondAttribute="bottom" constant="5" id="bfm-Dh-v5a"/>
                             <constraint firstItem="qKg-mc-Tp2" firstAttribute="top" secondItem="vLR-CO-ymf" secondAttribute="bottom" constant="10" id="mu1-WV-v4B"/>
                             <constraint firstItem="pOV-De-gwx" firstAttribute="top" secondItem="oes-LW-B3a" secondAttribute="bottom" constant="10" id="orI-3V-5RC"/>
                             <constraint firstItem="oes-LW-B3a" firstAttribute="leading" secondItem="Ju2-bb-CPW" secondAttribute="leading" id="vIk-i4-NFj"/>
+                            <constraint firstItem="Ju2-bb-CPW" firstAttribute="trailing" secondItem="TBD-fQ-xSv" secondAttribute="trailing" id="y9W-yt-Pwx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collVwPassengerAge" destination="poS-hr-Bas" id="7Qa-Te-wzQ"/>
                         <outlet property="constCollVwHeight" destination="zGQ-Oo-nuK" id="sEF-46-4DG"/>
+                        <outlet property="imgVwLoading" destination="TBD-fQ-xSv" id="TgD-Lg-rPB"/>
                         <outlet property="txtDuration" destination="YKW-Zz-XGF" id="x53-e9-3Tm"/>
                         <outlet property="txtFldDepartureDate" destination="Wug-Vd-j58" id="k0R-mo-Lwl"/>
                         <outlet property="txtFldDestination" destination="87O-Ft-xRZ" id="IVC-Uf-XOZ"/>
@@ -8903,7 +8911,7 @@ flights and much more...</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21e-LC-DrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1282" y="1640"/>
+            <point key="canvasLocation" x="-1282.4000000000001" y="1639.6551724137933"/>
         </scene>
         <!--Visa Terms Condition PopVC-->
         <scene sceneID="mTT-Cr-6L3">
@@ -9232,7 +9240,7 @@ flights and much more...</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Insurance Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SA-YJ-RoR">
-                                        <rect key="frame" x="62" y="13.333333333333334" width="298" height="23.333333333333329"/>
+                                        <rect key="frame" x="62" y="15" width="298" height="20"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="20"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -9292,7 +9300,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWR-qK-2pv">
-                                                                        <rect key="frame" x="5.0000000000000036" y="9.9999999999999982" width="63.333333333333343" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="10" width="68.666666666666671" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -9301,7 +9309,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13-Oct-2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppL-0c-HjU">
-                                                                        <rect key="frame" x="5" y="34.333333333333343" width="80.333333333333329" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="32" width="82" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -9310,7 +9318,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking ID" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-Wd-KKc">
-                                                                        <rect key="frame" x="240.66666666666671" y="9.9999999999999982" width="69.333333333333343" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="236.66666666666671" y="10" width="73.333333333333343" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -9319,7 +9327,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E46-4O-r4t">
-                                                                        <rect key="frame" x="275.66666666666669" y="34.333333333333343" width="34.333333333333314" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="270.66666666666669" y="32" width="39.333333333333314" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
@@ -9348,7 +9356,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="55" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SQ-5t-ptL">
-                                                                        <rect key="frame" x="4.9999999999999964" y="11.999999999999998" width="62.666666666666657" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="66.666666666666671" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -9356,7 +9364,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT3-8e-aeT">
-                                                                        <rect key="frame" x="72.666666666666671" y="11.999999999999998" width="38.666666666666671" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="76.666666666666671" y="13" width="39" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9378,7 +9386,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="95" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan Type:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnu-DV-WQC">
-                                                                        <rect key="frame" x="5" y="11.999999999999998" width="70.333333333333329" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="76" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -9386,7 +9394,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non US" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-Fu-2y4">
-                                                                        <rect key="frame" x="80.333333333333329" y="11.999999999999998" width="48.999999999999986" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="86" y="13" width="51" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9408,7 +9416,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="135" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Pax:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMo-mE-dTd">
-                                                                        <rect key="frame" x="5" y="11.999999999999998" width="72" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="72" height="14"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="72" id="AeO-dS-lUk"/>
                                                                         </constraints>
@@ -9419,7 +9427,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xry-Xo-67X">
-                                                                        <rect key="frame" x="82" y="11.999999999999998" width="8" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="82" y="13" width="5" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9428,7 +9436,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23, 45" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcN-I1-NAF">
-                                                                        <rect key="frame" x="271" y="5" width="39" height="30"/>
+                                                                        <rect key="frame" x="268.66666666666669" y="5" width="41.333333333333314" height="30"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9437,7 +9445,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ages:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPe-G5-mvA">
-                                                                        <rect key="frame" x="222" y="11.999999999999998" width="44" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="219.66666666666666" y="13" width="43.999999999999972" height="14"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="44" id="wp4-Bu-VkY"/>
                                                                         </constraints>
@@ -9465,7 +9473,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="175" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J5-kR-xhO">
-                                                                        <rect key="frame" x="5" y="11.999999999999998" width="80" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="85" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -9473,7 +9481,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLg-EX-ESv">
-                                                                        <rect key="frame" x="90" y="11.999999999999998" width="36.333333333333343" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="95" y="13" width="38.666666666666657" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9495,7 +9503,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="215" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coverage Type:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NP-xU-7FJ">
-                                                                        <rect key="frame" x="5" y="11.999999999999998" width="103" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="111.66666666666667" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -9503,7 +9511,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-KR-wke">
-                                                                        <rect key="frame" x="112.99999999999999" y="11.999999999999998" width="49.333333333333329" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="121.66666666666666" y="13" width="53" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -9525,7 +9533,7 @@ flights and much more...</string>
                                                                 <rect key="frame" x="0.0" y="255" width="315" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Premium:-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTo-9a-dYb">
-                                                                        <rect key="frame" x="5" y="11.999999999999998" width="98.666666666666671" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="5" y="13" width="106.33333333333333" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <nil key="highlightedColor"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -9533,7 +9541,7 @@ flights and much more...</string>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1617.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJI-Wp-RCX">
-                                                                        <rect key="frame" x="108.66666666666667" y="11.999999999999998" width="50.666666666666671" height="16.333333333333329"/>
+                                                                        <rect key="frame" x="116.33333333333334" y="13" width="53" height="14"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" red="0.2488346696" green="0.6855856776" blue="0.34154832359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -9964,13 +9972,13 @@ flights and much more...</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

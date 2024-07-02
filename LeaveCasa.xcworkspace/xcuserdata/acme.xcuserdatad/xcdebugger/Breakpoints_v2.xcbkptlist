@@ -7,47 +7,62 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933"
+            uuid = "939ED66E-CF91-4B62-AD9F-A90DEFFEB0C1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/Model/SearchViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "actionNext(_:)"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "satchCity(city:view:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933 - 972093f63c440ca7"
+                  uuid = "939ED66E-CF91-4B62-AD9F-A90DEFFEB0C1 - a897e980ed693855"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.SearchViewModel.satchCity(city: Swift.String, view: __C.UIViewController) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/Model/SearchViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "28920">
+                  startingLineNumber = "255"
+                  endingLineNumber = "255"
+                  offsetFromSymbolStart = "1204">
                </Location>
                <Location
-                  uuid = "F45BCC88-E242-41C8-B1A4-27FD81518933 - 972093f63c440ca7"
+                  uuid = "939ED66E-CF91-4B62-AD9F-A90DEFFEB0C1 - a897e980ed693874"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.SearchViewModel.satchCity(city: Swift.String, view: __C.UIViewController) -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/Model/SearchViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "28908">
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "1204">
+               </Location>
+               <Location
+                  uuid = "939ED66E-CF91-4B62-AD9F-A90DEFFEB0C1 - a897e980ed6939f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.SearchViewModel.satchCity(city: Swift.String, view: __C.UIViewController) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/Model/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "1204">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,47 +70,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E"
+            uuid = "47A1B088-6C84-4684-B213-AB50271ED491"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "actionNext(_:)"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
+            landmarkName = "onSuccess()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E - 972093f63c440e14"
+                  uuid = "47A1B088-6C84-4684-B213-AB50271ED491 - da50060d42fe5dbc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
+                  symbolName = "LeaveCasa.SearchHotelVC.onSuccess() -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "27776">
+                  startingLineNumber = "364"
+                  endingLineNumber = "364"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "C137AE37-5E96-4411-82C6-04BB38FC649E - 972093f63c440e14"
+                  uuid = "47A1B088-6C84-4684-B213-AB50271ED491 - da50060d42fe5d9d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.UploadDocumentsVC.actionNext(__C.UIButton) -&gt; ()"
+                  symbolName = "LeaveCasa.SearchHotelVC.onSuccess() -&gt; ()"
                   moduleName = "LeaveCasa"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "111"
-                  endingLineNumber = "111"
-                  offsetFromSymbolStart = "27604">
+                  startingLineNumber = "365"
+                  endingLineNumber = "365"
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,129 +118,304 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "673187E7-5C4A-4CD6-AF90-9B36E51037B9"
+            uuid = "5A1984B6-2A1B-40AF-81F5-C5DB75925C7D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Flight/Fare Brakeup/View/TaxBifurcationVC.swift"
+            filePath = "LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "onSuccess()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5A1984B6-2A1B-40AF-81F5-C5DB75925C7D - 5c0230245365fad0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.InsuranceSearchVC.onSuccess() -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "288"
+                  endingLineNumber = "288"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "5A1984B6-2A1B-40AF-81F5-C5DB75925C7D - 5c0230245365fa1a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.InsuranceSearchVC.onSuccess() -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "294"
+                  endingLineNumber = "294"
+                  offsetFromSymbolStart = "256">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31E57DE9-FCDC-4B0E-987B-E7D24B2A98DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "actionSubmit(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31E57DE9-FCDC-4B0E-987B-E7D24B2A98DD - 47897b9e7a6dd4c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.InsuranceSearchVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "6364">
+               </Location>
+               <Location
+                  uuid = "31E57DE9-FCDC-4B0E-987B-E7D24B2A98DD - 47897b9e7a6dd424"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.InsuranceSearchVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "6764">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C3CE391-1B90-4CA1-A555-919E18092C17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
+            landmarkName = "searchClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C3CE391-1B90-4CA1-A555-919E18092C17 - 8fa0c22489f01ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.SearchHotelVC.searchClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "326"
+                  endingLineNumber = "326"
+                  offsetFromSymbolStart = "5556">
+               </Location>
+               <Location
+                  uuid = "6C3CE391-1B90-4CA1-A555-919E18092C17 - 8fa0c22489f01ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.SearchHotelVC.searchClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "326"
+                  endingLineNumber = "326"
+                  offsetFromSymbolStart = "3952">
+               </Location>
+               <Location
+                  uuid = "6C3CE391-1B90-4CA1-A555-919E18092C17 - 8fa0c22489f018b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.SearchHotelVC.searchClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "327"
+                  endingLineNumber = "327"
+                  offsetFromSymbolStart = "3952">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04AFB3E9-A002-43B4-B4E0-B540925C6FD0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "searchCity(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "04AFB3E9-A002-43B4-B4E0-B540925C6FD0 - f0f6461bc22f3acf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.SearchHotelVC.searchCity(__C.UITextField) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "04AFB3E9-A002-43B4-B4E0-B540925C6FD0 - f0f6461bc22f3aec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.SearchHotelVC.searchCity(__C.UITextField) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "279"
+                  endingLineNumber = "279"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63409121-20D7-4785-9E4A-F1D861D9DB55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Auth/Login/ViewModel/GuestLoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "guestBookingDetail(type:bookingId:view:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "63409121-20D7-4785-9E4A-F1D861D9DB55 - 354c3cd323405dc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.GuestLoginViewModel.guestBookingDetail(type: Swift.String, bookingId: Swift.String, view: __C.UIViewController) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Auth/Login/ViewModel/GuestLoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "21232">
+               </Location>
+               <Location
+                  uuid = "63409121-20D7-4785-9E4A-F1D861D9DB55 - 354c3cd323405dc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.GuestLoginViewModel.guestBookingDetail(type: Swift.String, bookingId: Swift.String, view: __C.UIViewController) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Auth/Login/ViewModel/GuestLoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "21240">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF40F2CC-90A0-4C22-BF2C-5A6133195EA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
+            landmarkName = "searchCity(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3398D98-D36E-440F-90F6-8767A1E7A5ED"
+            uuid = "3393BC5C-0185-4647-B64D-56E087FB9B27"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Flight/Fare Brakeup/View/TaxBifurcationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC6CA203-275E-4777-950F-3B8187ABBAB1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "getImageFileSize(asset:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "04A1E70E-EAC3-4DC6-B5C1-59540C81BF0E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
             endingLineNumber = "219"
-            landmarkName = "getImageFileSize(asset:completion:)"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BE5F1787-58EE-41B8-9C56-134C4F6297EB"
+            uuid = "6191A03B-6072-452A-8828-343C5C224526"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
+            filePath = "LeaveCasa/Module/Hotel/SearchHotel/View/SearchHotelVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "getImageFileSize(asset:completion:)"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "addDocument(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5 - 49bddd4166d17c03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LeaveCasa.UploadDocumentsVC.addDocument(__C.UIButton) -&gt; ()"
-                  moduleName = "LeaveCasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "178"
-                  endingLineNumber = "178"
-                  offsetFromSymbolStart = "1032">
-               </Location>
-               <Location
-                  uuid = "75659016-232A-4DB5-87DE-59749DFAFDC5 - 17d356cc6a9f74f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIImage) -&gt; () in LeaveCasa.UploadDocumentsVC.addDocument(__C.UIButton) -&gt; ()"
-                  moduleName = "LeaveCasa"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/UploadDocumentsVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "156">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

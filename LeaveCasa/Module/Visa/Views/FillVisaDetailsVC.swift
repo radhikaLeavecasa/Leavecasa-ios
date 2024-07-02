@@ -8,7 +8,7 @@
 import UIKit
 import Razorpay
 
-class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
+class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
     
     //MARK: - @IBOutlets
     @IBOutlet weak var lblTermsCondition: UILabel!
@@ -24,10 +24,10 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
     var amount = Double()
     typealias Razorpay = RazorpayCheckout
     var razorpay: RazorpayCheckout!
+    var attributedString = NSMutableAttributedString()
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Test, andDelegate: self)
         
@@ -41,8 +41,10 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
 
         partOne.append(partTwo)
         lblTermsCondition.attributedText = partOne
+        attributedString = partOne
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         lblTermsCondition.addGestureRecognizer(tapGesture)
+        lblTermsCondition.isUserInteractionEnabled = true
     }
     //MARK: - @IBActions
     @IBAction func actionPayNow(_ sender: Any) {
@@ -78,25 +80,26 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
     }
     
     @objc func handleTap(_ gesture: UITapGestureRecognizer) {
-       let tapLocation = gesture.location(in: lblTermsCondition)
-
-           let layoutManager = NSLayoutManager()
-           let textContainer = NSTextContainer(size: lblTermsCondition.bounds.size)
-
-           let range = NSRange(location: 0, length: 19)
-           let textBoundingRect = layoutManager.boundingRect(forGlyphRange: range, in: textContainer)
-
-           if textBoundingRect.contains(tapLocation) {
-               let characterIndex = layoutManager.characterIndex(for: tapLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
-               if characterIndex >= 0 && characterIndex <= 19 {
-                   if let vc = ViewControllerHelper.getViewController(ofType: .VisaTermsConditionPopVC, StoryboardName: .Main) as? VisaTermsConditionPopVC {
-                       vc.modalPresentationStyle = .overFullScreen
-                       vc.modalTransitionStyle = .crossDissolve
-                       vc.termsCondText = termsText
-                       self.present(vc, animated: true)
-                   }
-               }
-           }
+        let tapLocation = gesture.location(in: lblTermsCondition)
+        
+        // Determine which range was tapped
+        let layoutManager = NSLayoutManager()
+        let textContainer = NSTextContainer(size: lblTermsCondition.frame.size)
+        let textStorage = NSTextStorage(attributedString: attributedString)
+        layoutManager.addTextContainer(textContainer)
+        textStorage.addLayoutManager(layoutManager)
+        
+        let characterIndex = layoutManager.characterIndex(for: tapLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        
+        // Handle the tap on the specific range
+        if characterIndex >= 0 && characterIndex <= 18 {
+            if let vc = ViewControllerHelper.getViewController(ofType: .VisaTermsConditionPopVC, StoryboardName: .Main) as? VisaTermsConditionPopVC {
+                vc.modalPresentationStyle = .overFullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                vc.termsCondText = termsText
+                self.present(vc, animated: true)
+            }
+        }
     }
     
     func isValidatePassanger() -> Bool {
@@ -117,14 +120,14 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol, ResponseProtocol {
         return true
     }
     
-    func onSuccess() {
-        LoaderClass.shared.pushNoInterConnection(view: self, image: "", titleMsg: "",  msg: "") {
-            if let vc = ViewControllerHelper.getViewController(ofType: .TabbarVC, StoryboardName: .Main) as? TabbarVC {
-                vc.Index = UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == false ? 2 : 1
-                self.pushView(vc: vc)
-            }
-        }
-    }
+//    func onSuccess() {
+//        view.pushNoInterConnection(view: self, image: "ic_success", titleMsg: "Visa Application Submitted!",  msg: "Dear Applicant,\nYour Token no.:- \(viewModel.traceId ?? 0)\nCongratulation!\nYour application has been successfully submitted. Track your visa status from My Bookings", completion: {
+//            if let vc = ViewControllerHelper.getViewController(ofType: .TabbarVC, StoryboardName: .Main) as? TabbarVC {
+//                vc.Index = UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == false ? 2 : 1
+//                self.setView(vc: vc, animation: false)
+//            }
+//        })
+//    }
 }
 
 extension FillVisaDetailsVC: UITextFieldDelegate {

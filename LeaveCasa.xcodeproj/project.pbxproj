@@ -111,6 +111,8 @@
 		72522DD42951CF8F0013FFA8 /* BaggageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72522DD32951CF8F0013FFA8 /* BaggageDetailsVC.swift */; };
 		7253823C2C05F10C00589829 /* search_flight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7253823B2C05F10B00589829 /* search_flight.gif */; };
 		7256BDC32B91FB980042F1E6 /* HotelCancellationPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256BDC22B91FB980042F1E6 /* HotelCancellationPolicyVC.swift */; };
+		7258FCF22C34104D00C74CFE /* travel-insurance.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7258FCF12C34104D00C74CFE /* travel-insurance.gif */; };
+		7258FCF42C34129C00C74CFE /* visa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7258FCF32C34129C00C74CFE /* visa.gif */; };
 		72595A2C28CF127C000C5FD7 /* HotelImagesXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72595A2A28CF127C000C5FD7 /* HotelImagesXIB.swift */; };
 		72595A2D28CF127C000C5FD7 /* HotelImagesXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72595A2B28CF127C000C5FD7 /* HotelImagesXIB.xib */; };
 		72595A3128CF3CDE000C5FD7 /* HotelRoomsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72595A3028CF3CDE000C5FD7 /* HotelRoomsVC.swift */; };
@@ -356,6 +358,11 @@
 		72D7A6332AB9CC3300B14AC4 /* TripDetailPassengerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D7A6322AB9CC3300B14AC4 /* TripDetailPassengerTVC.swift */; };
 		72D80931291B6792007D5FE3 /* FacilityCollectionXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D8092F291B6792007D5FE3 /* FacilityCollectionXIB.swift */; };
 		72D80932291B6792007D5FE3 /* FacilityCollectionXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D80930291B6792007D5FE3 /* FacilityCollectionXIB.xib */; };
+		72DA325D2C32AF5000917BD0 /* VisaApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA325C2C32AF5000917BD0 /* VisaApplicationModel.swift */; };
+		72DA32602C32B76F00917BD0 /* VisaListingTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72DA325E2C32B76E00917BD0 /* VisaListingTVC.xib */; };
+		72DA32612C32B76F00917BD0 /* VisaListingTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA325F2C32B76E00917BD0 /* VisaListingTVC.swift */; };
+		72DA32632C32CC8C00917BD0 /* VisaViewDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA32622C32CC8C00917BD0 /* VisaViewDetailVC.swift */; };
+		72DA32652C32D11800917BD0 /* VisaCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA32642C32D11800917BD0 /* VisaCVC.swift */; };
 		72DA52F02AD56108004DF3BC /* HotelfacilityXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72DA52E82AD56108004DF3BC /* HotelfacilityXIB.xib */; };
 		72DA52F22AD56108004DF3BC /* HotelRoomXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72DA52EA2AD56108004DF3BC /* HotelRoomXIB.xib */; };
 		72DBEDB22A6A674500E812D5 /* CouponAppliedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DBEDB12A6A674500E812D5 /* CouponAppliedVC.swift */; };
@@ -517,6 +524,8 @@
 		72522DD32951CF8F0013FFA8 /* BaggageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageDetailsVC.swift; sourceTree = "<group>"; };
 		7253823B2C05F10B00589829 /* search_flight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = search_flight.gif; sourceTree = "<group>"; };
 		7256BDC22B91FB980042F1E6 /* HotelCancellationPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCancellationPolicyVC.swift; sourceTree = "<group>"; };
+		7258FCF12C34104D00C74CFE /* travel-insurance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "travel-insurance.gif"; sourceTree = "<group>"; };
+		7258FCF32C34129C00C74CFE /* visa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = visa.gif; sourceTree = "<group>"; };
 		72595A2A28CF127C000C5FD7 /* HotelImagesXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImagesXIB.swift; sourceTree = "<group>"; };
 		72595A2B28CF127C000C5FD7 /* HotelImagesXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelImagesXIB.xib; sourceTree = "<group>"; };
 		72595A3028CF3CDE000C5FD7 /* HotelRoomsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelRoomsVC.swift; sourceTree = "<group>"; };
@@ -765,6 +774,11 @@
 		72D7A6322AB9CC3300B14AC4 /* TripDetailPassengerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailPassengerTVC.swift; sourceTree = "<group>"; };
 		72D8092F291B6792007D5FE3 /* FacilityCollectionXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityCollectionXIB.swift; sourceTree = "<group>"; };
 		72D80930291B6792007D5FE3 /* FacilityCollectionXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FacilityCollectionXIB.xib; sourceTree = "<group>"; };
+		72DA325C2C32AF5000917BD0 /* VisaApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaApplicationModel.swift; sourceTree = "<group>"; };
+		72DA325E2C32B76E00917BD0 /* VisaListingTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisaListingTVC.xib; sourceTree = "<group>"; };
+		72DA325F2C32B76E00917BD0 /* VisaListingTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisaListingTVC.swift; sourceTree = "<group>"; };
+		72DA32622C32CC8C00917BD0 /* VisaViewDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaViewDetailVC.swift; sourceTree = "<group>"; };
+		72DA32642C32D11800917BD0 /* VisaCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaCVC.swift; sourceTree = "<group>"; };
 		72DA52E72AD56108004DF3BC /* HotelRoomXIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelRoomXIB.swift; sourceTree = "<group>"; };
 		72DA52E82AD56108004DF3BC /* HotelfacilityXIB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelfacilityXIB.xib; sourceTree = "<group>"; };
 		72DA52EA2AD56108004DF3BC /* HotelRoomXIB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotelRoomXIB.xib; sourceTree = "<group>"; };
@@ -1218,6 +1232,7 @@
 		72463EBD2C2A995E0093931F /* Visa */ = {
 			isa = PBXGroup;
 			children = (
+				72AE8F432C2C2C45001C4236 /* Xibs */,
 				72463EC72C2AD9820093931F /* Views */,
 				72463EC32C2ABF940093931F /* Model */,
 				72463EC02C2AAC2B0093931F /* ViewModel */,
@@ -1238,6 +1253,7 @@
 			isa = PBXGroup;
 			children = (
 				72463EC42C2ABFA90093931F /* VisaDetailModel.swift */,
+				72DA325C2C32AF5000917BD0 /* VisaApplicationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1246,6 +1262,7 @@
 			isa = PBXGroup;
 			children = (
 				72463EBE2C2A99CE0093931F /* VisaDetailsVC.swift */,
+				72DA32622C32CC8C00917BD0 /* VisaViewDetailVC.swift */,
 				720289242C2D902800652996 /* VisaTermsConditionPopVC.swift */,
 				72AE8F462C2C5109001C4236 /* FillVisaDetailsVC.swift */,
 				72AE8F412C2C2BFF001C4236 /* UploadDocumentsVC.swift */,
@@ -2450,6 +2467,9 @@
 			isa = PBXGroup;
 			children = (
 				72AE8F442C2C2C61001C4236 /* UploadDocumentsTVC.swift */,
+				72DA32642C32D11800917BD0 /* VisaCVC.swift */,
+				72DA325F2C32B76E00917BD0 /* VisaListingTVC.swift */,
+				72DA325E2C32B76E00917BD0 /* VisaListingTVC.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -2655,7 +2675,6 @@
 		72C714D128C9CAC8006908BC /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				72AE8F432C2C2C45001C4236 /* Xibs */,
 				72463EBD2C2A995E0093931F /* Visa */,
 				723CD5A92BE25BD100D4FA94 /* Insurance */,
 				72D6C43C2BBA8FC500921A03 /* Package */,
@@ -2789,6 +2808,8 @@
 			children = (
 				72FE41922A9752DD0017C486 /* Airplane.gif */,
 				72FE41902A9752DA0017C486 /* Bus.gif */,
+				7258FCF32C34129C00C74CFE /* visa.gif */,
+				7258FCF12C34104D00C74CFE /* travel-insurance.gif */,
 				723FA1382AEBB66A00B9FDFE /* Logo-Animation.gif */,
 				72FE41912A9752DC0017C486 /* Hotel.gif */,
 				7253823B2C05F10B00589829 /* search_flight.gif */,
@@ -3104,6 +3125,7 @@
 				7200E270290BDD660032FA9A /* PassangerDetailsXIB.xib in Resources */,
 				98B6A5D829F7ABCB0095085A /* NoDataFoundXIB.xib in Resources */,
 				72C7140328C9C7E3006908BC /* LaunchScreen.storyboard in Resources */,
+				7258FCF42C34129C00C74CFE /* visa.gif in Resources */,
 				72916A6E2949963200F31065 /* FlightSeatXIB.xib in Resources */,
 				72522DD02951C7FD0013FFA8 /* OtherPassangerDetailsXIB.xib in Resources */,
 				72C716A128C9F11C006908BC /* HomeBannerXIB.xib in Resources */,
@@ -3163,6 +3185,7 @@
 				7263103328FD1E3700CD6FCA /* BoardingXIB.xib in Resources */,
 				721F43CA2B85D52C00C28D3A /* HCollectionReusableView.xib in Resources */,
 				728B184B28CB128600223C82 /* ChildrenAgeXIB.xib in Resources */,
+				72DA32602C32B76F00917BD0 /* VisaListingTVC.xib in Resources */,
 				726A357E2940B9780000FC1E /* BusOperatorXIB.xib in Resources */,
 				7200B18B298BA41600B70EA1 /* BusBookingTripXIB.xib in Resources */,
 				72C7140028C9C7E3006908BC /* Assets.xcassets in Resources */,
@@ -3176,6 +3199,7 @@
 				7288E3272AF8AAB000DC4C2F /* HomeHeaderNewXIB.xib in Resources */,
 				72C713FE28C9C7E1006908BC /* Main.storyboard in Resources */,
 				72FE41952A9752DD0017C486 /* Airplane.gif in Resources */,
+				7258FCF22C34104D00C74CFE /* travel-insurance.gif in Resources */,
 				72FE41932A9752DD0017C486 /* Bus.gif in Resources */,
 				72814044291226DF00C51ED3 /* MultiCityAddXIB.xib in Resources */,
 				729A4457292B81B3005509C3 /* FlighFoodXIB.xib in Resources */,
@@ -3403,7 +3427,9 @@
 				723A067E2BE39DB400CE347E /* InsuranceDetailsTVC.swift in Sources */,
 				72C212E429911FD6008FFA15 /* TripHotel.swift in Sources */,
 				728B184A28CB128600223C82 /* ChildrenAgeXIB.swift in Sources */,
+				72DA32652C32D11800917BD0 /* VisaCVC.swift in Sources */,
 				98B6A5CC29F7ABCB0095085A /* Int+Timepiece.swift in Sources */,
+				72DA325D2C32AF5000917BD0 /* VisaApplicationModel.swift in Sources */,
 				726D5769298CE08800350905 /* NotificationData.swift in Sources */,
 				7221156F292505C00091084C /* FlightReturnTripVC.swift in Sources */,
 				72846F52294ADFE200921BF0 /* FareClassification.swift in Sources */,
@@ -3417,6 +3443,7 @@
 				98B6A5B929F7ABCB0095085A /* AppNewVersionOnAppStore.swift in Sources */,
 				728770562980F94F009F2E62 /* PassangerModel.swift in Sources */,
 				722F16CC2A4D611D00A6DBA5 /* MoreinfoPopUpVC.swift in Sources */,
+				72DA32612C32B76F00917BD0 /* VisaListingTVC.swift in Sources */,
 				72C212FB29911FD6008FFA15 /* TripBaggage.swift in Sources */,
 				72923CF7291A16BF003DF40B /* FacilityXIB.swift in Sources */,
 				72C714D528C9CAEC006908BC /* TabbarVC.swift in Sources */,
@@ -3464,6 +3491,7 @@
 				72463EC92C2AD9B40093931F /* CountryVisaDetailVC.swift in Sources */,
 				7209988E2B7E31FE002E45BA /* TaxBifurcationVC.swift in Sources */,
 				72804886292368A200DA9F39 /* FlightCalenderListModel.swift in Sources */,
+				72DA32632C32CC8C00917BD0 /* VisaViewDetailVC.swift in Sources */,
 				72118AC12B8723E800B76345 /* MealsTVC.swift in Sources */,
 				72F4F8B92AC19EA3009F310C /* FlightTripDetailVC.swift in Sources */,
 				726067A628F423720020E267 /* SeatXIB.swift in Sources */,

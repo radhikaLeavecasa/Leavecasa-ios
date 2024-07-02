@@ -62,7 +62,7 @@ class GetData{
         return ["None","Aadhaar Card","Voter Card","Driving licence"]
     }
     func guestBookngType() -> [String]{
-        return ["Bus", "Flight", "Hotel", "Insurance"]
+        return ["Bus", "Flight", "Hotel", "Insurance", "Visa"]
     }
     func getGenderData(string:String) -> String{
         return string == "Mrs" || string == "Miss" ? "Female" : "Male"

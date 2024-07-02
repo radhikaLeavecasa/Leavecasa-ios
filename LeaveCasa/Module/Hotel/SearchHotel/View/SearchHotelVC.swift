@@ -11,8 +11,14 @@ import DropDown
 import AdvancedPageControl
 import SDWebImage
 
+protocol HotelDetails {
+    func getHotelDetails(checkIn:String,checkInDate:String,checkOut:String,finalRooms:[[String: AnyObject]],numberOfRooms:Int,numberOfAdults:Int,ageOfChildren:[Int],selectedIndex:Int,section:Int,paramCheckHotel:[[String:Any]])
+}
+
 class SearchHotelVC: UIViewController {
+   
     //MARK: - @IBOutlets
+    @IBOutlet weak var imgVwLoading: UIImageView!
     @IBOutlet weak var tblVwRooms: UITableView!
     @IBOutlet weak var imgTop: UIImageView!
     @IBOutlet weak var hotelName: UIView!
@@ -37,7 +43,8 @@ class SearchHotelVC: UIViewController {
     
     lazy var cityCode = [String]()
     lazy var cityName = [String]()
-    lazy var cityCodeStr = Int()
+   // lazy var cityCodeStr = Int()
+    lazy var cityCodeStr = ""
     var numberOfRooms = 1
     var numberOfAdults = 1
     var numberOfChildren = 0
@@ -45,7 +52,7 @@ class SearchHotelVC: UIViewController {
     var finalRooms = [[String: AnyObject]]()
     var isFromRecommended = false
     var selectedIndex = 0
-    //var delegate : HotelDetails?
+    var delegate : HotelDetails?
     var paramCheckHotel = [[String:Any]]()
     var section = 0
     
@@ -84,8 +91,9 @@ class SearchHotelVC: UIViewController {
         }
         
         self.setupView()
-        
-        self.viewModel.searchHotelCity(city: "",view: self)
+        //LoaderClass.shared.loadAnimation()
+       // self.viewModel.satchCity(city: self.txtCity.text ?? "",view: self)
+        //self.viewModel.searchHotelCity(city: "",view: self)
         
         
         var data = HotelRoomDetail()
@@ -208,12 +216,13 @@ extension SearchHotelVC: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
-//        if textField == txtCity && currentText?.count == 3 {
-//            self.viewModel.searchHotelCity(city: currentText ?? "",view: self)
-//        }
-         if textField == txtCity {
-            self.setupSearchTextField(self.viewModel.cityName)
+        if textField == txtCity && currentText?.count ?? 0 >= 3 {
+            self.viewModel.satchCity(city: currentText ?? "",view: self)
+           // self.viewModel.searchHotelCity(city: currentText ?? "",view: self)
         }
+//         if textField == txtCity {
+//            self.setupSearchTextField(self.viewModel.cityName)
+//        }
         return true
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -267,48 +276,100 @@ extension SearchHotelVC {
             self.cityCode.removeAll()
         }
         
-//        if isFirstTime { //!(sender.text?.isEmpty ?? true) &&
-//            self.viewModel.satchCity(city: "",view: self)
-//            isFirstTime = false
-//        }
+        //if isFirstTime {
+         //   self.viewModel.satchCity(city: self.txtCity.text ?? "",view: self)
+       // }
     }
     
     @IBAction func searchClicked(_ sender: UIButton) {
-        
-        if txtCity.text?.isEmpty ?? true || cityCodeStr == 0 {
-            pushNoInterConnection(view: self,titleMsg: "Alert", msg: CommonMessage.CITY)
-        } else {
-            self.finalRooms.removeAll()
-            self.ageOfChildren.removeAll()
-            var params: [String: AnyObject] = [:]
-            
-            for i in 0..<self.tblVwCount{
-                if self.hotelData[i].children == 1 {
-                    self.ageOfChildren.append(self.hotelData[i].childOne)
-                } else if self.hotelData[i].children == 2 {
-                    self.ageOfChildren.append(self.hotelData[i].childOne)
-                    self.ageOfChildren.append(self.hotelData[i].childTwo)
+            if self.isFromHotelDetails == true {
+                self.finalRooms.removeAll()
+                self.ageOfChildren.removeAll()
+                var params: [String: AnyObject] = [:]
+                if self.totalChild6 > 0 {
+                    self.ageOfChildren.append(self.totalChild6)
                 }
-                params[WSRequestParams.WS_REQS_PARAM_ADULTS] = self.hotelData[i].adults as AnyObject
-                params[WSRequestParams.WS_REQS_PARAM_CHILDREN_AGES] = self.ageOfChildren as AnyObject
-                self.finalRooms.append(params)
-                self.ageOfChildren = []
+                if self.totalChild12 > 0{
+                    self.ageOfChildren.append(self.totalChild12)
+                }
+                for _ in 0..<self.numberOfRooms{
+                    params[WSRequestParams.WS_REQS_PARAM_ADULTS] = numberOfAdults as AnyObject
+                    params[WSRequestParams.WS_REQS_PARAM_CHILDREN_AGES] = ageOfChildren as AnyObject
+                    self.finalRooms.append(params)
+                }
+                self.dismiss(animated: true) {
+                    if let del = self.delegate {
+                        del.getHotelDetails(checkIn: self.txtCheckIn.text ?? "", checkInDate: self.txtCheckIn.text ?? "", checkOut: self.txtCheckOut.text ?? "", finalRooms: self.finalRooms, numberOfRooms: self.numberOfRooms, numberOfAdults: self.numberOfAdults, ageOfChildren: self.ageOfChildren, selectedIndex: 0, section: 0, paramCheckHotel: [])
+                    }
+                }
+                
+            }else{
+                if txtCity.text?.isEmpty ?? true || cityCodeStr.isEmpty {
+                    
+                    LoaderClass.shared.showSnackBar(message: CommonMessage.CITY)
+                } else {
+                    self.finalRooms.removeAll()
+                    self.ageOfChildren.removeAll()
+                    var params: [String: AnyObject] = [:]
+                    if self.totalChild6 > 0 {
+                        self.ageOfChildren.append(self.totalChild6)
+                    }
+                    if self.totalChild12 > 0{
+                        self.ageOfChildren.append(self.totalChild12)
+                    }
+                    for _ in 0..<self.numberOfRooms{
+                        params[WSRequestParams.WS_REQS_PARAM_ADULTS] = numberOfAdults as AnyObject
+                        params[WSRequestParams.WS_REQS_PARAM_CHILDREN_AGES] = ageOfChildren as AnyObject
+                        self.finalRooms.append(params)
+                    }
+                    print(self.finalRooms)
+                   // LoaderClass.shared.loadAnimation()
+                    imgVwLoading.isHidden = false
+                    LoaderClass.shared.setupGIF("visa", imgVW: self.imgVwLoading)
+                    self.viewModel.fatchHotels(cityCodeStr: self.cityCodeStr, txtCheckIn: self.txtCheckIn.text ?? "", txtCheckOut: self.txtCheckOut.text ?? "", finalRooms: self.finalRooms, view: self,numberOfRooms: self.numberOfRooms,numberOfAdults: self.numberOfAdults,ageOfChildren: self.ageOfChildren,cityName:self.txtCity.text ?? "")
+                }
             }
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
-                LoaderClass.shared.loadAnimation()
-                self.viewModel.fetchHotelsByCity(cityCodeStr: "\(self.cityCodeStr)", txtCheckIn: self.txtCheckIn.text ?? "", txtCheckOut: self.txtCheckOut.text ?? "", finalRooms: self.finalRooms, view: self, numberOfRooms: self.tblVwCount, numberOfAdults: self.numberOfAdults, ageOfChildren: self.ageOfChildren, cityName:self.txtCity.text ?? "", hotelData: self.hotelData)
-            })
-        }
+        
+        
+        //        if txtCity.text?.isEmpty ?? true || cityCodeStr == 0 {
+        //            pushNoInterConnection(view: self,titleMsg: "Alert", msg: CommonMessage.CITY)
+        //        } else {
+        //            self.finalRooms.removeAll()
+        //            self.ageOfChildren.removeAll()
+        //            var params: [String: AnyObject] = [:]
+        //
+        //            for i in 0..<self.tblVwCount{
+        //                if self.hotelData[i].children == 1 {
+        //                    self.ageOfChildren.append(self.hotelData[i].childOne)
+        //                } else if self.hotelData[i].children == 2 {
+        //                    self.ageOfChildren.append(self.hotelData[i].childOne)
+        //                    self.ageOfChildren.append(self.hotelData[i].childTwo)
+        //                }
+        //                params[WSRequestParams.WS_REQS_PARAM_ADULTS] = self.hotelData[i].adults as AnyObject
+        //                params[WSRequestParams.WS_REQS_PARAM_CHILDREN_AGES] = self.ageOfChildren as AnyObject
+        //                self.finalRooms.append(params)
+        //                self.ageOfChildren = []
+        //            }
+        //            DispatchQueue.main.asyncAfter(deadline: .now()+0.3, execute: {
+        //                LoaderClass.shared.loadAnimation()
+        //                self.viewModel.fetchHotelsByCity(cityCodeStr: "\(self.cityCodeStr)", txtCheckIn: self.txtCheckIn.text ?? "", txtCheckOut: self.txtCheckOut.text ?? "", finalRooms: self.finalRooms, view: self, numberOfRooms: self.tblVwCount, numberOfAdults: self.numberOfAdults, ageOfChildren: self.ageOfChildren, cityName:self.txtCity.text ?? "", hotelData: self.hotelData)
+        //            })
+        //        }
     }
 }
 
-extension SearchHotelVC:ResponseProtocol{
+extension SearchHotelVC:ResponseProtocol {
     
     func onSuccess() {
+        isFirstTime = false
         self.setupSearchTextField(self.viewModel.cityName)
+        imgVwLoading.isHidden = true
     }
+    func onFail(msg: String) {
+        imgVwLoading.isHidden = true
+    }
+    //MARK: Setup Search Textfield
     
-    //MARK: Setup Search Textfeild
     func setupSearchTextField(_ searchedCities: [String]) {
         txtCity.theme = SearchTextFieldTheme.lightTheme()
         txtCity.theme.font = .systemFont(ofSize: 12)
@@ -316,21 +377,35 @@ extension SearchHotelVC:ResponseProtocol{
         txtCity.theme.fontColor = UIColor.black
         txtCity.theme.cellHeight = 40
         txtCity.filterStrings(searchedCities)
-        txtCity.isFilter = true
         txtCity.itemSelectionHandler = { filteredResults, itemPosition in
-            if filteredResults.count > 0 {
-                let item = filteredResults[itemPosition]
-                self.txtCity.text = item.title
-                self.viewModel.dict.forEach({ val in
-                    if val["City"] as! String == item.title {
-                        self.cityCodeStr = val["code"] as? Int ?? 0
-                        return
-                    }
-                })
-                self.txtCity.resignFirstResponder()
-            }
+            let item = filteredResults[itemPosition]
+            self.txtCity.text = item.title
+            self.cityCodeStr = self.viewModel.cityCode[itemPosition]
+            self.txtCity.resignFirstResponder()
         }
     }
+    //    func setupSearchTextField(_ searchedCities: [String]) {
+    //        txtCity.theme = SearchTextFieldTheme.lightTheme()
+    //        txtCity.theme.font = .systemFont(ofSize: 12)
+    //        txtCity.theme.bgColor = UIColor.white
+    //        txtCity.theme.fontColor = UIColor.black
+    //        txtCity.theme.cellHeight = 40
+    //        txtCity.filterStrings(searchedCities)
+    //        txtCity.isFilter = true
+    //        txtCity.itemSelectionHandler = { filteredResults, itemPosition in
+    //            if filteredResults.count > 0 {
+    //                let item = filteredResults[itemPosition]
+    //                self.txtCity.text = item.title
+    //                self.viewModel.dict.forEach({ val in
+    //                    if val["City"] as! String == item.title {
+    //                        self.cityCodeStr = val["code"] as? Int ?? 0
+    //                        return
+    //                    }
+    //                })
+    //                self.txtCity.resignFirstResponder()
+    //            }
+    //        }
+    //    }
 }
 
 extension SearchHotelVC: UITableViewDelegate, UITableViewDataSource {

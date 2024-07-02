@@ -20,7 +20,7 @@ class TripDetailsVC: UIViewController {
         lblHeader.text = title
         switch title {
         case AlertMessages.INVOICE :
-            if let url = URL(string: type == 2 ? "\(baseUrl)/bus/invoice/\(bookingId)" : type == 3 ? "\(baseUrl)/hotel/invoice/\(bookingId)" : type == 4 ? "\(baseUrl)/insurance/invoice/\(bookingId)" : "\(baseUrl)/flight/invoice/\(bookingId)") {
+            if let url = URL(string: type == 2 ? "\(baseUrl)/bus/invoice/\(bookingId)" : type == 3 ? "\(baseUrl)/hotel/invoice/\(bookingId)" : type == 4 ? "\(baseUrl)/insurance/invoice/\(bookingId)" : type == 5 ? "\(baseUrl)/visa/invoice/\(bookingId)" : "\(baseUrl)/flight/invoice/\(bookingId)") {
                 let urlRequest = URLRequest(url: url)
                 webView.load(urlRequest)
             }
