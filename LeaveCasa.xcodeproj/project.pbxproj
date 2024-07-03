@@ -111,7 +111,6 @@
 		72522DD42951CF8F0013FFA8 /* BaggageDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72522DD32951CF8F0013FFA8 /* BaggageDetailsVC.swift */; };
 		7253823C2C05F10C00589829 /* search_flight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7253823B2C05F10B00589829 /* search_flight.gif */; };
 		7256BDC32B91FB980042F1E6 /* HotelCancellationPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256BDC22B91FB980042F1E6 /* HotelCancellationPolicyVC.swift */; };
-		7258FCF22C34104D00C74CFE /* travel-insurance.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7258FCF12C34104D00C74CFE /* travel-insurance.gif */; };
 		7258FCF42C34129C00C74CFE /* visa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7258FCF32C34129C00C74CFE /* visa.gif */; };
 		72595A2C28CF127C000C5FD7 /* HotelImagesXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72595A2A28CF127C000C5FD7 /* HotelImagesXIB.swift */; };
 		72595A2D28CF127C000C5FD7 /* HotelImagesXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72595A2B28CF127C000C5FD7 /* HotelImagesXIB.xib */; };
@@ -264,6 +263,11 @@
 		729A4469292BA252005509C3 /* FareFlightXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 729A4467292BA252005509C3 /* FareFlightXIB.xib */; };
 		729B400A294877FA00075BB2 /* MealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B4009294877FA00075BB2 /* MealViewModel.swift */; };
 		729B400E2948A06000075BB2 /* SelectSeatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B400D2948A06000075BB2 /* SelectSeatVC.swift */; };
+		72A3825F2C35332000ECEA3F /* flight.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72A3825A2C35332000ECEA3F /* flight.gif */; };
+		72A382602C35332000ECEA3F /* travel-insurance.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72A3825B2C35332000ECEA3F /* travel-insurance.gif */; };
+		72A382612C35332000ECEA3F /* bus1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72A3825C2C35332000ECEA3F /* bus1.gif */; };
+		72A382622C35332000ECEA3F /* holiday.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72A3825D2C35332000ECEA3F /* holiday.gif */; };
+		72A382632C35332000ECEA3F /* hotel1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72A3825E2C35332000ECEA3F /* hotel1.gif */; };
 		72A5F98E28E2E6C800AA41C6 /* TripXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5F98C28E2E6C800AA41C6 /* TripXIB.swift */; };
 		72A5F98F28E2E6C800AA41C6 /* TripXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72A5F98D28E2E6C800AA41C6 /* TripXIB.xib */; };
 		72A5F99328E30D7400AA41C6 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A5F99228E30D7400AA41C6 /* NotificationVC.swift */; };
@@ -524,7 +528,6 @@
 		72522DD32951CF8F0013FFA8 /* BaggageDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaggageDetailsVC.swift; sourceTree = "<group>"; };
 		7253823B2C05F10B00589829 /* search_flight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = search_flight.gif; sourceTree = "<group>"; };
 		7256BDC22B91FB980042F1E6 /* HotelCancellationPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCancellationPolicyVC.swift; sourceTree = "<group>"; };
-		7258FCF12C34104D00C74CFE /* travel-insurance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "travel-insurance.gif"; sourceTree = "<group>"; };
 		7258FCF32C34129C00C74CFE /* visa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = visa.gif; sourceTree = "<group>"; };
 		72595A2A28CF127C000C5FD7 /* HotelImagesXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelImagesXIB.swift; sourceTree = "<group>"; };
 		72595A2B28CF127C000C5FD7 /* HotelImagesXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelImagesXIB.xib; sourceTree = "<group>"; };
@@ -678,6 +681,11 @@
 		729A4467292BA252005509C3 /* FareFlightXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FareFlightXIB.xib; sourceTree = "<group>"; };
 		729B4009294877FA00075BB2 /* MealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewModel.swift; sourceTree = "<group>"; };
 		729B400D2948A06000075BB2 /* SelectSeatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatVC.swift; sourceTree = "<group>"; };
+		72A3825A2C35332000ECEA3F /* flight.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = flight.gif; sourceTree = "<group>"; };
+		72A3825B2C35332000ECEA3F /* travel-insurance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "travel-insurance.gif"; sourceTree = "<group>"; };
+		72A3825C2C35332000ECEA3F /* bus1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bus1.gif; sourceTree = "<group>"; };
+		72A3825D2C35332000ECEA3F /* holiday.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = holiday.gif; sourceTree = "<group>"; };
+		72A3825E2C35332000ECEA3F /* hotel1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hotel1.gif; sourceTree = "<group>"; };
 		72A5F98C28E2E6C800AA41C6 /* TripXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripXIB.swift; sourceTree = "<group>"; };
 		72A5F98D28E2E6C800AA41C6 /* TripXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripXIB.xib; sourceTree = "<group>"; };
 		72A5F99228E30D7400AA41C6 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
@@ -2809,8 +2817,12 @@
 				72FE41922A9752DD0017C486 /* Airplane.gif */,
 				72FE41902A9752DA0017C486 /* Bus.gif */,
 				7258FCF32C34129C00C74CFE /* visa.gif */,
-				7258FCF12C34104D00C74CFE /* travel-insurance.gif */,
 				723FA1382AEBB66A00B9FDFE /* Logo-Animation.gif */,
+				72A3825C2C35332000ECEA3F /* bus1.gif */,
+				72A3825A2C35332000ECEA3F /* flight.gif */,
+				72A3825D2C35332000ECEA3F /* holiday.gif */,
+				72A3825E2C35332000ECEA3F /* hotel1.gif */,
+				72A3825B2C35332000ECEA3F /* travel-insurance.gif */,
 				72FE41912A9752DC0017C486 /* Hotel.gif */,
 				7253823B2C05F10B00589829 /* search_flight.gif */,
 			);
@@ -3137,6 +3149,7 @@
 				7241671D292CB89100B8889E /* AddOnXIB.xib in Resources */,
 				72A8FA7F2910EA9B00663356 /* DateCollectionXIB.xib in Resources */,
 				7200B18F298BBA1200B70EA1 /* FlightBookingTripXIB.xib in Resources */,
+				72A382632C35332000ECEA3F /* hotel1.gif in Resources */,
 				729A4469292BA252005509C3 /* FareFlightXIB.xib in Resources */,
 				72A5F99C28E3102100AA41C6 /* OfferCouponNotificationXIB.xib in Resources */,
 				72923CF8291A16BF003DF40B /* FacilityXIB.xib in Resources */,
@@ -3148,6 +3161,7 @@
 				728770522980E7A3009F2E62 /* ExistingPassangerXIB.xib in Resources */,
 				723008362941BB94009DF504 /* FareListXIB.xib in Resources */,
 				72EEFA242ACD354300F2F563 /* HotelGuestInfo.xib in Resources */,
+				72A382602C35332000ECEA3F /* travel-insurance.gif in Resources */,
 				722B4C37298A687E00891FD6 /* ReturnTripHeaderXIB.xib in Resources */,
 				720BD4702BFB7B47008DE298 /* InsurancePurchasedListTVC.xib in Resources */,
 				72AD83EF28E5AB830016E8AF /* PropertyTypeXIB.xib in Resources */,
@@ -3176,6 +3190,7 @@
 				724E9DBB28EFE65900C0CDC5 /* WalletTransectionXIB.xib in Resources */,
 				72FE41942A9752DD0017C486 /* Hotel.gif in Resources */,
 				728D4BFF28E1AC6F0004EC8E /* BusListXIB.xib in Resources */,
+				72A382612C35332000ECEA3F /* bus1.gif in Resources */,
 				728F1838293871C100C12CCE /* FareXIB.xib in Resources */,
 				7221156B292504550091084C /* FlightRoundTripXIB.xib in Resources */,
 				728B182E28CB016600223C82 /* Hotels.storyboard in Resources */,
@@ -3192,14 +3207,15 @@
 				72A6D1C628FE8DD900CCE7D1 /* BusSeatPessangerXIB.xib in Resources */,
 				7253823C2C05F10C00589829 /* search_flight.gif in Resources */,
 				7219E9732C294B94006F4938 /* Visa.storyboard in Resources */,
+				72A3825F2C35332000ECEA3F /* flight.gif in Resources */,
 				72B54C39291141810031B36F /* FlightMutliCityXIB.xib in Resources */,
 				721B1EAF28DC1CCF005A1802 /* Bus.storyboard in Resources */,
 				72A8FA832910F72000663356 /* FlightListCellXIB.xib in Resources */,
+				72A382622C35332000ECEA3F /* holiday.gif in Resources */,
 				72C7169D28C9F00C006908BC /* HomeHeaderXIB.xib in Resources */,
 				7288E3272AF8AAB000DC4C2F /* HomeHeaderNewXIB.xib in Resources */,
 				72C713FE28C9C7E1006908BC /* Main.storyboard in Resources */,
 				72FE41952A9752DD0017C486 /* Airplane.gif in Resources */,
-				7258FCF22C34104D00C74CFE /* travel-insurance.gif in Resources */,
 				72FE41932A9752DD0017C486 /* Bus.gif in Resources */,
 				72814044291226DF00C51ED3 /* MultiCityAddXIB.xib in Resources */,
 				729A4457292B81B3005509C3 /* FlighFoodXIB.xib in Resources */,
@@ -3729,7 +3745,7 @@
 				CODE_SIGN_ENTITLEMENTS = LeaveCasa/LeaveCasa.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29.9;
+				CURRENT_PROJECT_VERSION = 30;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = G96NGZCMGU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -3755,7 +3771,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leavecasa.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3778,7 +3794,7 @@
 				CODE_SIGN_ENTITLEMENTS = LeaveCasa/LeaveCasa.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29.9;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = G96NGZCMGU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -3803,7 +3819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.20;
+				MARKETING_VERSION = 1.21;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leavecasa.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

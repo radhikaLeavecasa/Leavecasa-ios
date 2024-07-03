@@ -909,20 +909,27 @@
                                     <constraint firstAttribute="width" constant="60" id="pVa-Nl-2c2"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gTS-f2-2hq">
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="1000"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BG_COLOR"/>
                         <constraints>
                             <constraint firstItem="Xuf-Nn-TA5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0Kp-9L-Def"/>
                             <constraint firstItem="DzL-QB-2HT" firstAttribute="top" secondItem="tCa-C6-pL2" secondAttribute="top" id="1AC-hY-umE"/>
+                            <constraint firstItem="gTS-f2-2hq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="9Ld-xO-SGB"/>
                             <constraint firstAttribute="bottom" secondItem="c9p-LZ-pvz" secondAttribute="bottom" id="9Xx-sp-voU"/>
                             <constraint firstItem="Xuf-Nn-TA5" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="9Zv-Fh-9o6"/>
                             <constraint firstItem="c9p-LZ-pvz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="9aZ-i4-hdn"/>
                             <constraint firstItem="9ig-mx-uJZ" firstAttribute="top" secondItem="KRs-VH-6Le" secondAttribute="bottom" constant="10" id="BZK-Ck-1X0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c9p-LZ-pvz" secondAttribute="trailing" id="D02-vU-rSs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xuf-Nn-TA5" secondAttribute="trailing" id="J9i-9H-l7j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gTS-f2-2hq" secondAttribute="trailing" id="KRg-gt-vbS"/>
                             <constraint firstItem="Dxm-WO-Kdb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="M8m-HU-Gao"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DzL-QB-2HT" secondAttribute="trailing" constant="20" id="ORB-sB-pJI"/>
+                            <constraint firstAttribute="bottom" secondItem="gTS-f2-2hq" secondAttribute="bottom" id="QlY-qU-Ybz"/>
+                            <constraint firstItem="gTS-f2-2hq" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ue8-TG-n3K"/>
                             <constraint firstItem="pCK-iu-dcy" firstAttribute="top" secondItem="9ig-mx-uJZ" secondAttribute="bottom" constant="30" id="XIG-Af-5xp"/>
                             <constraint firstItem="9ig-mx-uJZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="acr-mY-klV"/>
                             <constraint firstItem="c9p-LZ-pvz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="czo-Jl-uGa"/>
@@ -949,7 +956,7 @@
                         <outlet property="btnReload" destination="Rjm-X8-Kim" id="5WZ-M7-n2h"/>
                         <outlet property="btnRoundTrip" destination="K9z-Bl-lVO" id="t2H-2D-Ggu"/>
                         <outlet property="collectionView" destination="1hD-w6-cOG" id="90u-5k-xlv"/>
-                        <outlet property="imgVwGif" destination="c9p-LZ-pvz" id="8ZT-Gl-niY"/>
+                        <outlet property="imgVwLoading" destination="gTS-f2-2hq" id="p2u-cX-9TF"/>
                         <outlet property="lblAdults" destination="zrj-U9-xXe" id="EO1-Wd-nhg"/>
                         <outlet property="lblChild" destination="0mO-V1-RrW" id="L8q-Ce-rzt"/>
                         <outlet property="lblInfants" destination="YjP-La-ANc" id="9zd-P2-M1z"/>

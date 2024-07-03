@@ -325,7 +325,7 @@ extension SearchHotelVC {
                     print(self.finalRooms)
                    // LoaderClass.shared.loadAnimation()
                     imgVwLoading.isHidden = false
-                    LoaderClass.shared.setupGIF("visa", imgVW: self.imgVwLoading)
+                    LoaderClass.shared.setupGIF("hotel1", imgVW: self.imgVwLoading)
                     self.viewModel.fatchHotels(cityCodeStr: self.cityCodeStr, txtCheckIn: self.txtCheckIn.text ?? "", txtCheckOut: self.txtCheckOut.text ?? "", finalRooms: self.finalRooms, view: self,numberOfRooms: self.numberOfRooms,numberOfAdults: self.numberOfAdults,ageOfChildren: self.ageOfChildren,cityName:self.txtCity.text ?? "")
                 }
             }

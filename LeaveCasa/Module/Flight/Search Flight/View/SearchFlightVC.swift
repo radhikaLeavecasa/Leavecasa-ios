@@ -14,6 +14,7 @@ import SDWebImage
 
 class SearchFlightVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var imgVwLoading: UIImageView!
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var mainDepartureDateView: UIView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
@@ -37,7 +38,6 @@ class SearchFlightVC: UIViewController {
     @IBOutlet weak var pageControle: AdvancedPageControlView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var imgVwGif: UIImageView!
     //MARK: - Variables
     lazy var fromValue = ""
     lazy var toValue = ""
@@ -317,8 +317,8 @@ class SearchFlightVC: UIViewController {
             LoaderClass.shared.array = self.array
             LoaderClass.shared.params1 = params
             //imgVwGif.isHidden = false
-            LoaderClass.shared.setupGIF("search_flight", imgVW: imgVwGif)
-
+            imgVwLoading.isHidden = false
+            LoaderClass.shared.setupGIF("flight", imgVW: imgVwLoading)
             self.viewModel.searchFlight(param: params, selectedTab: self.selectedTab, array:self.array, sharedParam: sharedParam, view: self,couponData: couponsData ?? [])
         }
     }
@@ -732,6 +732,10 @@ extension SearchFlightVC:ResponseProtocol{
     func onSuccess() {
        // self.showShortDropDown(view: selectedTextFeild, dataSource: self.viewModel.cityName)
         self.setupSearchTextField(self.viewModel.cityName, self.viewModel.cityCode, textField: self.selectedTextFeild)
+    }
+    
+    func onFail(msg: String) {
+        imgVwLoading.isHidden = true
     }
     
     func apiReload() {

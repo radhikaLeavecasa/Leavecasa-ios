@@ -27,6 +27,7 @@ class InsuranceSearchVM: NSObject {
                     }
                 }
             }else{
+                self.delegate?.onFail?(msg: "")
                 LoaderClass.shared.stopAnimation()
                 if msg == CommonError.INTERNET{
                     view.pushNoInterConnection(view: view)

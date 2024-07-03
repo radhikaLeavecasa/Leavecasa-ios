@@ -55,7 +55,7 @@ class SearchFlightViewModel{
     }
     
     func searchFlight(param:[String:Any], selectedTab:Int, array:[FlightStruct], sharedParam:[String:Any], view: UIViewController, couponData: [CouponData], isFareScreen: Bool = false) {
-        LoaderClass.shared.loadAnimation()
+       //  LoaderClass.shared.loadAnimation()
         if isFareScreen {
             LoaderClass.shared.isFareScreen = true
         }
@@ -189,11 +189,9 @@ class SearchFlightViewModel{
                             }
                         }
                     }
-                }else{
-                    LoaderClass.shared.stopAnimation()
-                    view.pushNoInterConnection(view: view,titleMsg: "Alert", msg: msg)
                 }
             }else{
+                self.delegate?.onFail?(msg: "")
                 if msg == CommonError.INTERNET{
                     view.pushNoInterConnection(view: view)
                 }else{

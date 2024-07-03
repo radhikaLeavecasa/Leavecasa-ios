@@ -9,7 +9,7 @@ import UIKit
 
 class VisaViewDetailVC: UIViewController {
     //MARK: - @IBOutlets
-    @IBOutlet weak var imgVwLoading: UIImageView!
+    
     @IBOutlet weak var lblProcessingTime: UILabel!
     @IBOutlet weak var lblTraceId: UILabel!
     @IBOutlet weak var lblStayPeriod: UILabel!

@@ -11,6 +11,7 @@ import SearchTextField
 
 class PackagesVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var imgVwLoading: UIImageView!
     @IBOutlet weak var txtFldDestination: SearchTextField!
     @IBOutlet weak var imgVwPackage: AnimatableImageView!
     //MARK: - Variables
@@ -34,7 +35,7 @@ class PackagesVC: UIViewController {
             self.objSearchViewModel.searchPackageCity(view: self)
         }
         self.objSearchViewModel.delegate = self
-       // self.viewModel.delegate = self
+        self.viewModel.delegate = self
         txtFldDestination.text = cityName1
         viewModel.destination = cityName1
         imgVwPackage.sd_setImage(with: URL(string: imgPackage), placeholderImage: .placeHolder())
@@ -54,9 +55,11 @@ class PackagesVC: UIViewController {
     }
     @IBAction func actionSearch(_ sender: Any) {
         if txtFldDestination.text != "" || selectedCode != "" {
-            LoaderClass.shared.loadAnimation()
+           // LoaderClass.shared.loadAnimation()
             self.param = ["destination": txtFldDestination.text?.components(separatedBy: ",").count ?? 0 > 0 ? txtFldDestination.text!.components(separatedBy: ",")[0] : txtFldDestination.text!]
             viewModel.destination = txtFldDestination.text?.components(separatedBy: ",").count ?? 0 > 0 ? txtFldDestination.text!.components(separatedBy: ",")[0] : txtFldDestination.text!
+            imgVwLoading.isHidden = false
+            LoaderClass.shared.setupGIF("holiday", imgVW: self.imgVwLoading)
             viewModel.searchByDestinationApi(param: param, view: self)
         } else {
             pushNoInterConnection(view: self,titleMsg: "Alert", msg: "Please choose destination from dropdown")
@@ -92,7 +95,9 @@ extension PackagesVC:ResponseProtocol{
     func onSuccess() {
         
     }
-    
+    func onFail(msg: String) {
+        imgVwLoading.isHidden = true
+    }
         
     func apiReload() {
         if citCountryName.count == 0 {

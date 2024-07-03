@@ -12,7 +12,7 @@ import ObjectMapper
 class PackagesVM: NSObject {
     //MARK: - Variables
     var arrPackages = [PackagesDetailModel]()
-    // var delegate : ResponseProtocol?
+    var delegate : ResponseProtocol?
     var destination = String()
     func searchByDestinationApi(param:[String:Any],view:UIViewController) {
         WebService.callApi(api: .searchByDestination, method: .post ,param: param, encoding: JSONEncoding.default,header: true) { status, msg, response in
@@ -33,6 +33,7 @@ class PackagesVM: NSObject {
                                 view.pushView(vc: vc)
                             }
                         } else {
+                            self.delegate?.onFail!(msg: "")
                             view.pushNoInterConnection(view: view,titleMsg: "Oops!", msg: "No Result found for your required search. Please send your enquiry for custom Package.\nOur team will reach you out soon.") {
                                 if let vc = ViewControllerHelper.getViewController(ofType: .RequestCallBackVC, StoryboardName: .Main) as? RequestCallBackVC {
                                     vc.destination = self.destination
@@ -43,6 +44,7 @@ class PackagesVM: NSObject {
                     }
                 }
             } else {
+                self.delegate?.onFail!(msg: "")
                 if msg == CommonError.INTERNET{
                     view.pushNoInterConnection(view: view)
                 }else{

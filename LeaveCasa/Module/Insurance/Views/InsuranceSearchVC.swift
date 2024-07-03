@@ -93,7 +93,7 @@ class InsuranceSearchVC: UIViewController {
                                  WSRequestParams.WS_REQS_PARAM_NO_OF_PAX: txtFldPassenger.text ?? "1",
                                  WSRequestParams.WS_REQS_PARAM_PAX_AGE: arrAge] as [String:AnyObject]
                     imgVwLoading.isHidden = false
-                    LoaderClass.shared.setupGIF("visa", imgVW: self.imgVwLoading)
+                    LoaderClass.shared.setupGIF("travel-insurance", imgVW: self.imgVwLoading)
                    // LoaderClass.shared.loadAnimation()
                     paxCount = Int(txtFldPassenger.text ?? "1") ?? 1
                     viewModel.insuranceApi(param: param, view: self)
@@ -290,7 +290,7 @@ extension InsuranceSearchVC: ResponseProtocol{
         imgVwLoading.isHidden = true
         
         //LoaderClass.shared.setupGIF("travel-insurance", imgVW: self.imgVwLoading)
-//        LoaderClass.shared.stopAnimation()
+        //        LoaderClass.shared.stopAnimation()
         if viewModel.insuranceModel?.responseStatus != 1 {
             self.pushNoInterConnection(view: self,titleMsg: "Alert!", msg: viewModel.insuranceModel?.error?.errorMessage ?? "")
         } else {
@@ -302,5 +302,8 @@ extension InsuranceSearchVC: ResponseProtocol{
                 self.pushView(vc: vc)
             }
         }
+    }
+    func onFail(msg: String) {
+        imgVwLoading.isHidden = true
     }
 }

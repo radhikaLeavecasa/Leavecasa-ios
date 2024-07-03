@@ -82,7 +82,7 @@ class BusSearchViewModel{
     }
     
     func searchBus(param:[String:Any],view:UIViewController,souceName:String,destinationName:String,checkinDate:Date,date:String){
-        LoaderClass.shared.loadAnimation()
+        //LoaderClass.shared.loadAnimation()
         WebService.callApi(api: .busSearch, param: param) { status, msg, responseData in
             print(responseData)
             if status == true{

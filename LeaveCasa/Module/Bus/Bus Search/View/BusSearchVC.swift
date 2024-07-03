@@ -13,6 +13,7 @@ import SDWebImage
 
 class BusSearchVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var imgVwLoading: UIImageView!
     @IBOutlet weak var lblLineTwo: UILabel!
     @IBOutlet weak var txtDate: UITextField!
     @IBOutlet weak var txtFrom: SearchTextField!
@@ -83,6 +84,8 @@ class BusSearchVC: UIViewController {
             let params = [WSRequestParams.WS_REQS_PARAM_JOURNEY_DATE: self.txtDate.text ?? "",
                           WSRequestParams.WS_REQS_PARAM_BUS_FROM: sourceCityCode ,
                           WSRequestParams.WS_REQS_PARAM_BUS_TO: destinationCityCode] as [String : Any]
+            imgVwLoading.isHidden = false
+            LoaderClass.shared.setupGIF("bus1", imgVW: self.imgVwLoading)
             self.viewModel.searchBus(param: params, view: self, souceName: self.txtFrom.text ?? "", destinationName: self.txtDesination.text ?? "", checkinDate: self.journyDate, date:self.txtDate.text ?? "")
         }
     }
@@ -290,6 +293,9 @@ extension BusSearchVC:ResponseProtocol {
         } else {
             self.setupDestinationSearchTextField(self.viewModel.cityName)
         }
+    }
+    func onFail(msg: String) {
+        imgVwLoading.isHidden = true
     }
 }
 extension BusSearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

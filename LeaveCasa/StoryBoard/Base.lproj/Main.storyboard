@@ -6258,6 +6258,9 @@ flights and much more...</string>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3EF-zo-mrs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VEP-Kp-EKP"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -6268,8 +6271,10 @@ flights and much more...</string>
                             <constraint firstAttribute="trailing" secondItem="F3b-Zw-MYV" secondAttribute="trailing" id="K9l-nS-ICz"/>
                             <constraint firstItem="cHa-gN-0TC" firstAttribute="top" secondItem="d0d-OM-1H0" secondAttribute="bottom" id="MtZ-46-1VU"/>
                             <constraint firstAttribute="trailing" secondItem="cHa-gN-0TC" secondAttribute="trailing" id="Nrc-BH-KNg"/>
+                            <constraint firstItem="VEP-Kp-EKP" firstAttribute="trailing" secondItem="3EF-zo-mrs" secondAttribute="trailing" id="Sg9-03-X6y"/>
                             <constraint firstItem="6SX-ZU-L3p" firstAttribute="leading" secondItem="VEP-Kp-EKP" secondAttribute="leading" id="Vgo-tl-DDc"/>
                             <constraint firstItem="VEP-Kp-EKP" firstAttribute="bottom" secondItem="cHa-gN-0TC" secondAttribute="bottom" id="XSO-Wx-UJz"/>
+                            <constraint firstAttribute="bottom" secondItem="3EF-zo-mrs" secondAttribute="bottom" id="Xu0-b9-1QA"/>
                             <constraint firstItem="g7g-D4-1ve" firstAttribute="leading" secondItem="VEP-Kp-EKP" secondAttribute="leading" constant="20" id="dY4-2a-bbU"/>
                             <constraint firstItem="ONn-fv-XHD" firstAttribute="top" secondItem="g7g-D4-1ve" secondAttribute="top" id="gQc-bW-D0p"/>
                             <constraint firstItem="d0d-OM-1H0" firstAttribute="centerX" secondItem="ONn-fv-XHD" secondAttribute="centerX" id="h2U-aK-zc0"/>
@@ -6278,10 +6283,13 @@ flights and much more...</string>
                             <constraint firstItem="6SX-ZU-L3p" firstAttribute="centerY" secondItem="g7g-D4-1ve" secondAttribute="centerY" id="mpS-6f-bqC"/>
                             <constraint firstItem="F3b-Zw-MYV" firstAttribute="leading" secondItem="sy1-BG-tE5" secondAttribute="leading" id="oEH-e5-XDa"/>
                             <constraint firstItem="6SX-ZU-L3p" firstAttribute="top" secondItem="F3b-Zw-MYV" secondAttribute="bottom" id="sTv-Fx-mO6"/>
+                            <constraint firstItem="3EF-zo-mrs" firstAttribute="top" secondItem="sy1-BG-tE5" secondAttribute="top" id="vNk-sD-FYE"/>
                             <constraint firstItem="VEP-Kp-EKP" firstAttribute="trailing" secondItem="ONn-fv-XHD" secondAttribute="trailing" constant="18" id="yw8-dK-HIF"/>
+                            <constraint firstItem="3EF-zo-mrs" firstAttribute="leading" secondItem="VEP-Kp-EKP" secondAttribute="leading" id="zhk-Ee-668"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgVwLoading" destination="3EF-zo-mrs" id="l6g-8u-G1V"/>
                         <outlet property="imgVwPackage" destination="QXF-ZX-cSt" id="37B-PB-LvH"/>
                         <outlet property="txtFldDestination" destination="0U3-JY-aSs" id="7eI-dT-snX"/>
                     </connections>
@@ -9972,13 +9980,13 @@ flights and much more...</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
