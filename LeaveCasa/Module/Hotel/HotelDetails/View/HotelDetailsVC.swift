@@ -9,7 +9,6 @@ import UIKit
 import IBAnimatable
 import AdvancedPageControl
 import SDWebImage
-import ImageViewer_swift
 
 class HotelDetailsVC: UIViewController {
     //MARK: - @IBOutlets
@@ -151,7 +150,6 @@ class HotelDetailsVC: UIViewController {
     @IBAction func actionTaxInfo(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .TaxBifurcationVC, StoryboardName: .Flight) as? TaxBifurcationVC {
             vc.otherChagerOrOT = "Base Price: ₹\(basePrice.rounded())"
-           // "Taxes & Fee: ₹\(String(format: "%.0f", (bottomPrice - basePrice)))"
             vc.tax = "Taxes & Fee: ₹\(String(format: "%.0f", (bottomPrice - basePrice)))"
                 vc.titleStr = ""
             LoaderClass.shared.presentPopover(self, vc, sender: sender, size: CGSize(width: 200, height: 65),arrowDirection: .any)
@@ -245,7 +243,6 @@ class HotelDetailsVC: UIViewController {
         self.lblTitleOverView.textColor = .grayColor()
         self.lblTitleFacilityBottomView.isHidden = false
         self.lblTitleOverviewBottomView.isHidden = true
-        //        self.lblOverView.text = self.hotelDetail?.sFacilities
         self.lblOverView.isHidden = true
         self.overViewTableView.isHidden = true
         self.facilityCollection.isHidden = false
@@ -455,7 +452,6 @@ extension HotelDetailsVC:ResponseProtocol{
         
         if let name = hotelDetail?.sName {
             self.lblHotelName.text = name
-            //self.lblNameHotel.text = "About \(name)"
         }
         
         if let rating = hotelDetail?.iCategory {
@@ -528,20 +524,6 @@ extension HotelDetailsVC:ResponseProtocol{
         }
     }
 }
-
-//extension HotelDetailsVC:HotelDetails{
-//
-//    func getHotelDetails(checkIn: String, checkInDate: String, checkOut: String, finalRooms: [[String : AnyObject]], numberOfRooms: Int, numberOfAdults: Int, ageOfChildren: [Int], selectedIndex: Int, section: Int, paramCheckHotel: [[String : Any]]) {
-//
-//        let param = [WSResponseParams.WS_RESP_PARAM_SEARCH_ID: searchId as AnyObject,
-//                     WSResponseParams.WS_RESP_PARAM_HOTEL_CODE: hotels?.sHotelCode as AnyObject,
-//                     WSResponseParams.WS_RESP_PARAM_LOGID: logId as AnyObject,
-//                     WSRequestParams.WS_REQS_PARAM_CHECKIN: checkIn as AnyObject,
-//                     WSRequestParams.WS_REQS_PARAM_CHECKOUT: checkOut as AnyObject,
-//                     WSRequestParams.WS_REQS_PARAM_ROOMS: finalRooms as AnyObject]
-//        self.viewModel.checkHotelavAilablity(param: param,view: self)
-//    }
-//}
 
 extension HotelDetailsVC: UITableViewDelegate, UITableViewDataSource{
     

@@ -29,7 +29,7 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Live, andDelegate: self)
+        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Test, andDelegate: self)
         
         
         let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.boldFont(size: 14)]
@@ -62,9 +62,8 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
     //MARK: - Custom method
     internal func showPaymentForm(currency : String, amount: Double, name: String, description : String, contact: String, email: String ,isForWallet:Bool = false){
         let options: [String:Any] = [
-            "amount": "\(amount * 100)", //This is in currency subunits. 100 = 100 paise= INR 1.
-            "currency": "INR",//We support more that 92 international currencies.
-            //                    "description": description,
+            "amount": "\(amount * 100)",
+            "currency": "INR",
             "name": name,
             "prefill": [
                 "contact": contact,
@@ -91,7 +90,6 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
         
         let characterIndex = layoutManager.characterIndex(for: tapLocation, in: textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
         
-        // Handle the tap on the specific range
         if characterIndex >= 0 && characterIndex <= 18 {
             if let vc = ViewControllerHelper.getViewController(ofType: .VisaTermsConditionPopVC, StoryboardName: .Main) as? VisaTermsConditionPopVC {
                 vc.modalPresentationStyle = .overFullScreen
@@ -119,15 +117,6 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
         }
         return true
     }
-    
-//    func onSuccess() {
-//        view.pushNoInterConnection(view: self, image: "ic_success", titleMsg: "Visa Application Submitted!",  msg: "Dear Applicant,\nYour Token no.:- \(viewModel.traceId ?? 0)\nCongratulation!\nYour application has been successfully submitted. Track your visa status from My Bookings", completion: {
-//            if let vc = ViewControllerHelper.getViewController(ofType: .TabbarVC, StoryboardName: .Main) as? TabbarVC {
-//                vc.Index = UserDefaults.standard.object(forKey: "isGuestUser") as? Bool == false ? 2 : 1
-//                self.setView(vc: vc, animation: false)
-//            }
-//        })
-//    }
 }
 
 extension FillVisaDetailsVC: UITextFieldDelegate {

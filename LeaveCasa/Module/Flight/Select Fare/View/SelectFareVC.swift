@@ -73,19 +73,19 @@ class SelectFareVC: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         
         var filteredArray = [Flight]()
-
+        
         // Create a set to keep track of unique FlightNumbers
         var uniqueFlightNumbers = Set<Double>()
-
+        
         // Iterate through each element in the array
         for element in dataFlight {
-           
-                // Check if the FlightNumber is unique
-                if !uniqueFlightNumbers.contains(element.sFare.sPublishedFare) {
-                    // Add the element to the filtered array
-                    filteredArray.append(element)
-                    // Add the FlightNumber to the set of unique FlightNumbers
-                    uniqueFlightNumbers.insert(element.sFare.sPublishedFare)
+            
+            // Check if the FlightNumber is unique
+            if !uniqueFlightNumbers.contains(element.sFare.sPublishedFare) {
+                // Add the element to the filtered array
+                filteredArray.append(element)
+                // Add the FlightNumber to the set of unique FlightNumbers
+                uniqueFlightNumbers.insert(element.sFare.sPublishedFare)
             }
         }
         
@@ -99,7 +99,6 @@ class SelectFareVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.selectedIndex = 0
         if GetData.share.isReturnTrip() == true{
             
             DispatchQueue.main.async {
@@ -135,7 +134,6 @@ class SelectFareVC: UIViewController {
             self.returnFlightDetailsView.isHidden = true
         }
         
-        //self.lblPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val:Int(Double(totalPrice) ?? 0)))"
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -185,7 +183,7 @@ class SelectFareVC: UIViewController {
                 vc.conBirfurcation = conBifurcation2
             } else {
                 vc.discount = self.discount
-                vc.basePrice = basePrice //dataFlight[0].sFare.sBaseFare
+                vc.basePrice = basePrice
                 vc.convenientFee = convenientFee
                 vc.taxes = dataFlight[selectedIndex ?? 0].sFare.sPublishedFare - dataFlight[selectedIndex ?? 0].sFare.sBaseFare
                 vc.taxesK3 = taxesK3
@@ -210,7 +208,6 @@ class SelectFareVC: UIViewController {
     func setupFlightData(){
         //MARK: Setup Onword Flight Data
         if GetData.share.isReturnTrip() == true{
-           // if GetData.share.isOnwordBook() == true{
             if self.returnDataFlight.count > 0 {
                 let returnData = self.returnDataFlight[self.selectedIndex ?? 0]
                 
@@ -224,7 +221,6 @@ class SelectFareVC: UIViewController {
                 let returnPrice = returnData.sPrice
                 self.lblReturnPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(returnPrice)))"
             }
-            //}else{
                 let ownowrdData = self.dataFlight[self.selectedIndex ?? 0]
                 
                 self.lblOnwordFlightCode.text = ownowrdData.sSegments.first?.first?.sOriginAirport.sCityCode
@@ -237,8 +233,7 @@ class SelectFareVC: UIViewController {
                 let ownowrdPrice = ownowrdData.sPrice
                 
             self.lblOnwordPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(ownowrdPrice)))"
-         //   self.lblPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(returnBasePrice+returnTaxes+returnConvenientFee)))"
-           // }
+        
         }else{
             let ownowrdData = self.dataFlight[self.selectedIndex ?? 0]
             
@@ -271,9 +266,7 @@ extension SelectFareVC:UITableViewDelegate,UITableViewDataSource{
             cell.airlineRemark = farePointAddition(arr: indexData.sMiniFareRules.first ?? [MiniFareRulesModel()])
         }
         
-        // cell.airlineRemark = self.dataFlight[indexPath.row].sAirlineRemark
         cell.fareData = self.getFare(bus: indexData)
-        //   cell.tableViewHeight.constant = CGFloat(self.getFare(bus: indexData).count*40 + 40 )
         cell.lblPrice.text = "₹\(String(format: "%.0f", indexData.sFare.sPublishedFare))"
         cell.lblfareName.text = (indexData.sFareClassification[CommonParam.TYPE_CP] as? String ?? "").uppercased()
         cell.imgSelect.image = self.selectedIndex == indexPath.row ? .checkMark() : .uncheckMark()
@@ -331,14 +324,6 @@ extension SelectFareVC:UITableViewDelegate,UITableViewDataSource{
             }
         }
         
-        //        if bus.sFare.sTotalSeatCharges == "" {
-        //            fare.append("Free Seats Available")
-        //        }
-        //
-        //        if bus.sFare.sTotalMealCharges == "" {
-        //            fare.append("Free Meals Available")
-        //        }
-        
         if bus.sIsRefundable == true{
             fare.append("Refund Available")
         }else{
@@ -365,11 +350,6 @@ extension SelectFareVC:ResponseProtocol{
                 self.present(vc, animated: true)
             }
         } else {
-            //            if let vc = ViewControllerHelper.getViewController(ofType: .InsurancePopUpVC, StoryboardName: .Main) as? InsurancePopUpVC {
-            //                vc.modalPresentationStyle = .overFullScreen
-            //                vc.modalTransitionStyle = .crossDissolve
-            //                vc.tableCellDelegate = {
-            //                    val in
             if let vc = ViewControllerHelper.getViewController(ofType: .PassangerDetailsVC, StoryboardName: .Flight) as? PassangerDetailsVC{
                 vc.dataFlight1 = self.dataFlight
                 vc.returnDataFlight = self.returnDataFlight
@@ -387,9 +367,8 @@ extension SelectFareVC:ResponseProtocol{
                 vc.tokenId = self.tokenId
                 vc.traceId = self.traceId
                 vc.logId = self.logId
-                //vc.isInsurance = val
                 if GetData.share.isOnwordBook() == true {
-                    vc.basePrice = self.returnBasePrice //dataFlight[0].sFare.sBaseFare
+                    vc.basePrice = self.returnBasePrice
                     vc.convenientFee = self.returnConvenientFee
                     
                     let tax = self.dataFlight[self.selectedIndex ?? 0].sFare.sPublishedFare - self.dataFlight[self.selectedIndex ?? 0].sFare.sBaseFare // return is added into dataflight
@@ -411,10 +390,6 @@ extension SelectFareVC:ResponseProtocol{
                 }
                 self.pushView(vc: vc)
             }
-            //                }
-            //                self.present(vc, animated: true)
-            // }
-            // LoaderClass.shared.stopFlightAnimation(view: self)
         }
     }
     

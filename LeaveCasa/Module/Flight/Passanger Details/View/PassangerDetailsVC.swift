@@ -11,12 +11,6 @@ import SKCountryPicker
 import IBAnimatable
 import SearchTextField
 
-//protocol PassangerDetailsVCDelegate {
-//    func fetchExistingCustomers(_ passangerDetails: PassangerDetails, selectedIndex: Int)
-//}
-//
-//var passangerDetailsVCDelegate: PassangerDetailsVCDelegate?
-
 class PassangerDetailsVC: UIViewController {
     //MARK: - @IBOutlets
     @IBOutlet weak var lblDateTime: UILabel!
@@ -166,7 +160,6 @@ class PassangerDetailsVC: UIViewController {
                 passanger.firstName = Cookies.userInfo()?.name.components(separatedBy: " ")[0] ?? ""
                 passanger.lastName = Cookies.userInfo()?.name.components(separatedBy: " ").count ?? 0 > 1 ? Cookies.userInfo()?.name.components(separatedBy: " ")[1] ?? "" : Cookies.userInfo()?.name.components(separatedBy: " ")[0] ?? ""
                 passanger.title = Cookies.userInfo()?.title ?? ""
-                // passanger.dob = convertDateFormat(date: Cookies.userInfo()?.dob ?? "", getFormat: "MMM dd, yyyy", dateFormat: "yyyy-MM-dd")
                 passanger.address = Cookies.userInfo()?.address ?? ""
                 passanger.city = Cookies.userInfo()?.city ?? ""
                 
@@ -281,9 +274,9 @@ class PassangerDetailsVC: UIViewController {
                                           WSRequestParams.WS_REQS_PARAM_PAX_TYPE:index.paxType,
                                           WSRequestParams.WS_REQS_PARAM_DATE_OF_BIRTH:index.dob,
                                           WSRequestParams.WS_REQS_PARAM_GENDER.capitalized: index.gender == "Male" ? 1 : 2,
-                                          CommonParam.ADDRESS1: "Delhi",//index.address.isEmpty == true ? self.passangerDetails[at].address : index.address,
-                                          WSResponseParams.WS_RESP_PARAM_CITY: "Delhi", //index.city.isEmpty == true ? self.passangerDetails[at].city : index.city,
-                                          WSResponseParams.WS_RESP_PARAM_STATE: "Delhi", //index.state.isEmpty == true ? self.passangerDetails[at].state : index.state,
+                                          CommonParam.ADDRESS1: "Delhi",
+                                          WSResponseParams.WS_RESP_PARAM_CITY: "Delhi",
+                                          WSResponseParams.WS_RESP_PARAM_STATE: "Delhi",
                                           WSResponseParams.WS_RESP_PARAM_COUNTRYCODE_CAP:index.nationality.isEmpty == true ? self.passangerDetails[at].nationality : index.nationality,
                                           WSResponseParams.WS_RESP_PARAM_COUNTRYNAME_CAP:index.country.isEmpty == true ? self.passangerDetails[at].country : index.country,
                                           WSResponseParams.WS_RESP_PARAM_CONTACTNO:index.mobile.isEmpty == true ? self.passangerDetails[at].mobile : index.mobile,
@@ -403,34 +396,15 @@ class PassangerDetailsVC: UIViewController {
                                     vc.returnResultIndex = self.returnResultIndex
                                 }
                                 vc.discount = self.discount
-                                vc.basePrice = self.basePrice //dataFlight[0].sFare.sBaseFare
+                                vc.basePrice = self.basePrice
                                 vc.convenientFee = self.convenientFee
                                 vc.taxes = self.taxes
                                 vc.taxesK3 = self.taxesK3
                                 vc.conBirfurcation = self.conBirfurcation
-                               // vc.passangerDetails = self.passangerDetails
-                                //vc.baggagePrice = self.baggagePrice
-                                //vc.mealPrice = self.mealPrice
-                                
-                                
-                                //vc.selectedIndex = sender.tag
-                                //vc.modalPresentationStyle = .custom
-                                //vc.modalTransitionStyle = .crossDissolve
-                                //vc.baggagePrice = baggagePrice
-                                //vc.mealPrice = mealPrice
                                 vc.baggageDetails = self.ssrData?.ssr?.response?.baggage ?? []
                                 vc.mealData = self.ssrData?.ssr?.response?.mealDynamic ?? []
                                 vc.mealDataNonLCC = self.ssrData?.ssr?.response?.meal ?? []
-//                                vc.meal = self.passangerDetails[sender.tag].lccMealData
-//                                vc.baggage = self.passangerDetails[sender.tag].lccBaggageData
-//                                vc.mealNonLCC = self.passangerDetails[sender.tag].nonLccMealData
-//                                vc.nonLCCBaggage = self.passangerDetails[sender.tag].nonLccBaggageData
-//                                vc.delegate = self
-//                                self.present(vc, animated: true)
-                                
-                                
-                                
-                                
+                              
                                 self.pushView(vc: vc)
                             }
                         }
@@ -440,8 +414,6 @@ class PassangerDetailsVC: UIViewController {
                 
                 //MARK: GET PASSANGER LIST
                 DispatchQueue.background(background: {
-                    //                    let param = [WSRequestParams.WS_REQS_PARAM_PASSENGERS :Passengers]
-                    //                    self.viewModel.savePassangerList(param:param)
                 }, completion:{
                     
                 })
@@ -466,9 +438,9 @@ class PassangerDetailsVC: UIViewController {
                                           WSRequestParams.WS_REQS_PARAM_PAX_TYPE:index.paxType,
                                           WSRequestParams.WS_REQS_PARAM_DATE_OF_BIRTH:index.dob,
                                           WSRequestParams.WS_REQS_PARAM_GENDER.capitalized:index.gender == "Male" ? 1 : 2  ,
-                                          CommonParam.ADDRESS1: "Delhi", //index.address.isEmpty == true ? self.passangerDetails[0].address : index.address,
-                                          WSResponseParams.WS_RESP_PARAM_CITY: "Delhi", //index.city.isEmpty == true ? self.passangerDetails[0].city : index.city,
-                                          WSResponseParams.WS_RESP_PARAM_STATE: "Delhi", //index.state.isEmpty == true ? self.passangerDetails[at].state : index.state,
+                                          CommonParam.ADDRESS1: "Delhi",
+                                          WSResponseParams.WS_RESP_PARAM_CITY: "Delhi",
+                                          WSResponseParams.WS_RESP_PARAM_STATE: "Delhi",
                                           WSResponseParams.WS_RESP_PARAM_COUNTRYCODE_CAP:index.nationality.isEmpty == true ? self.passangerDetails[0].nationality : index.nationality,
                                           WSResponseParams.WS_RESP_PARAM_COUNTRYNAME_CAP:index.country.isEmpty == true ? self.passangerDetails[0].country : index.country,
                                           WSResponseParams.WS_RESP_PARAM_CONTACTNO:index.mobile.isEmpty == true ? self.passangerDetails[0].mobile : index.mobile,
@@ -539,16 +511,12 @@ class PassangerDetailsVC: UIViewController {
                         val in
                         
                         if self.ssrData?.ssr?.response?.seatDynamic?.first?.segmentSeat?.first?.rowSeats?.count ?? 0 == 0 && self.ssrData?.ssr?.response?.baggage?.count ?? 0 == 0 || self.ssrData?.ssr?.response?.mealDynamic?.count == 0 {
-                            //                    if self.ssrData?.ssr?.response?.seatPreference?.count ?? 0 > 0{
-                            //                        LoaderClass.shared.loadAnimation()
-                            //                        self.viewModel.flightBook(param: self.param, view: self, flightData: self.dataFlight, token: self.tokenId, traceID: self.traceId, logID: self.logId, amount: Double(self.ssrData?.fare_quote?.response?.fareQuoteResult?.fare?.publishedFare ?? 0 ),ssrModel:self.ssrData! )
-                            //                    }else{
-                            
+                           
                             if let vc = ViewControllerHelper.getViewController(ofType: .WalletPaymentVC, StoryboardName: .Main) as? WalletPaymentVC {
                                 vc.param = self.param
                                 let price = self.totalPrice.replacingOccurrences(of: "₹", with: "")
                                 vc.amount = Double(price.replacingOccurrences(of: ",", with: "")) ?? 0.0
-                                //vc.amount = Double(self.ssrData?.fare_quote?.response?.fareQuoteResult?.fare?.publishedFare ?? 0 )
+                                
                                 vc.screenFrom = .flight
                                 vc.passengerEmail = self.passangerDetails[0].email
                                 vc.passengerPhone = self.passangerDetails[0].mobile
@@ -565,7 +533,6 @@ class PassangerDetailsVC: UIViewController {
                                 
                                 self.pushView(vc: vc)
                             }
-                            // }
                         }else{
                             if let vc = ViewControllerHelper.getViewController(ofType: .SelectSeatVC, StoryboardName: .Flight) as? SelectSeatVC{
                                 LoaderClass.shared.arrSelectedSeat = []
@@ -587,7 +554,7 @@ class PassangerDetailsVC: UIViewController {
                                 let price = (self.totalPrice.replacingOccurrences(of: "₹", with: ""))
                                 vc.priceData = Double(price.replacingOccurrences(of: ",", with: "")) ?? 0.0
                                 vc.discount = self.discount
-                                vc.basePrice = self.basePrice //dataFlight[0].sFare.sBaseFare
+                                vc.basePrice = self.basePrice
                                 vc.convenientFee = self.convenientFee
                                 vc.taxes = self.taxes
                                 vc.taxesK3 = self.taxesK3
@@ -603,8 +570,6 @@ class PassangerDetailsVC: UIViewController {
                 }
                 //MARK: GET PASSANGER LIST
                 DispatchQueue.background(background: {
-                    //                    let param = [WSRequestParams.WS_REQS_PARAM_PASSENGERS :Passengers]
-                    //                    self.viewModel.savePassangerList(param:param)
                 }, completion:{
                     
                 })
@@ -712,7 +677,6 @@ class PassangerDetailsVC: UIViewController {
                 let loopCount = self.numberOfAdults + self.numberOfInfants + self.numberOfChildren
                 
                 for at in 0..<loopCount {
-                  //  var passanger = PassangerDetails()
                     
                     if at+1 <= self.numberOfAdults {
                         self.passangerDetails[index].paxType = "1"
@@ -723,7 +687,6 @@ class PassangerDetailsVC: UIViewController {
                     else {
                         self.passangerDetails[index].paxType = "3"
                     }
-                   // self.passangerDetails.append(passanger)
                 }
                 self.tblVwPassenges.reloadData()
             }
@@ -743,54 +706,6 @@ class PassangerDetailsVC: UIViewController {
             self.passangerDetails[0].isGST = true
         }
         self.tblVwPassenges.reloadData()
-    }
-    
-    @objc func addOnPress(sender:UIButton) {
-        if self.ssrData?.fare_quote?.response?.fareQuoteResult?.isLCC == true {
-            if self.ssrData?.ssr?.response?.mealDynamic?.first?.count ?? 0 == 0 && self.ssrData?.ssr?.response?.baggage?.first?.count ?? 0 == 0{
-                Alert.showSimple("No Meal and Baggage are included in this flight")
-            }else{
-                self.moveAddOn(sender:sender)
-            }
-        }else{
-            if self.ssrData?.ssr?.response?.meal?.count ?? 0 == 0 && self.ssrData?.ssr?.response?.baggage?.first?.count ?? 0 == 0{
-                Alert.showSimple("No Meal and Baggage are included in this flight")
-            }else{
-                self.moveAddOn(sender:sender)
-            }
-        }
-    }
-    
-    func moveAddOn(sender:UIButton) {
-        
-        if let vc = ViewControllerHelper.getViewController(ofType: .PassangerMealandBaggageVC, StoryboardName: .Flight) as? PassangerMealandBaggageVC {
-            vc.selectedIndex = sender.tag
-            vc.modalPresentationStyle = .custom
-            vc.modalTransitionStyle = .crossDissolve
-            vc.baggagePrice = baggagePrice
-            vc.mealPrice = mealPrice
-            vc.baggageDetails = self.ssrData?.ssr?.response?.baggage ?? []
-            vc.mealData = self.ssrData?.ssr?.response?.mealDynamic ?? []
-            vc.mealDataNonLCC = self.ssrData?.ssr?.response?.meal ?? []
-            vc.ssrData = self.ssrData
-            vc.meal = self.passangerDetails[sender.tag].lccMealData
-            vc.baggage = self.passangerDetails[sender.tag].lccBaggageData
-            vc.mealNonLCC = self.passangerDetails[sender.tag].nonLccMealData
-            vc.nonLCCBaggage = self.passangerDetails[sender.tag].nonLccBaggageData
-            vc.delegate = self
-            self.present(vc, animated: true)
-        }
-    }
-    
-    @objc func baggageOnPress(sender:UIButton){
-        if let vc = ViewControllerHelper.getViewController(ofType: .BaggageDetailsVC, StoryboardName: .Flight) as? BaggageDetailsVC{
-            vc.modalPresentationStyle = .custom
-            vc.modalTransitionStyle = .crossDissolve
-            vc.source = "\(self.dataFlight.sSegments.first?.first?.sOriginAirport.sAirportCode ?? "") - \(self.dataFlight.sSegments.first?.first?.sDestinationAirport.sAirportCode ?? "")"
-            vc.cabin = self.dataFlight.sSegments.first?.first?.sCabinBaggage.count == 0 ? "(Not Included)" : "\(self.dataFlight.sSegments.first?.first?.sCabinBaggage ?? "" == "Included" ? self.dataFlight.sSegments.first?.first?.sCabinBaggage ?? "" : "\(self.dataFlight.sSegments.first?.first?.sCabinBaggage ?? "") (Included)")"
-            vc.checkIn = self.dataFlight.sSegments.first?.first?.sBaggage.count == 0 ? "(Not Included)" : "\(self.dataFlight.sSegments.first?.first?.sBaggage ?? "" == "Included" ? self.dataFlight.sSegments.first?.first?.sBaggage ?? "" : "\(self.dataFlight.sSegments.first?.first?.sBaggage ?? "") (Included)")"
-            self.present(vc, animated: true)
-        }
     }
 }
 
@@ -866,7 +781,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                             
                             cell.lblLayoverTime.text = "Layover Time\n\(haltTime.getDuration())"
                             cell.lblAircraftType.text = "\(dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sFlightNumber ?? "") \(dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sFareClass ?? "")" == "\(dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sFlightNumber ?? "") \(dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sFareClass ?? "")" ? "Same\nAircraft" : "Change\nAircraft"
-                         //   cell.lblAircraftType.text = dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sAirlineName == dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sAirlineName ? "Same\nAircraft" : "Change\nAircraft"
+                        
                         }
                     } else {
                         cell.imgMultipleFlights.isHidden = true
@@ -957,8 +872,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                             }
                             
                             cell.lblLayoverTime.text = "Layover Time\n\(haltTime.getDuration())"
-                           // cell.lblAircraftType.text = dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sAirlineName == dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sAirlineName ? "Same\nAircraft" : "Change\nAircraft"
-                            
+                          
                             cell.lblAircraftType.text = "\(dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sFlightNumber ?? "") \(dataFlight1[0].sSegments[indexPath.section].first?.sAirline.sFareClass ?? "")" == "\(dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sFlightNumber ?? "") \(dataFlight1[0].sSegments[indexPath.section].last?.sAirline.sFareClass ?? "")" ? "Same\nAircraft" : "Change\nAircraft"
 
                         }
@@ -997,14 +911,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                     }
                     return cell
                 }
-                //            else {
-                //                let cell = tableView.dequeueReusableCell(withIdentifier: SecureTripXIB().identifire, for: indexPath) as! SecureTripXIB
-                //
-                //                cell.btnSecure.addTarget(self, action: #selector(handleSecureTap(_:)), for: .touchUpInside)
-                //                cell.btnUnsecure.addTarget(self, action: #selector(handleUnsecureTap(_:)), for: .touchUpInside)
-                //
-                //                return cell
-                //            }
+                
             }
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PassangerDetailXIB", for: indexPath) as! PassangerDetailXIB
@@ -1131,7 +1038,6 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
             
             if indexPath.row == 0 {
                 cell.emailStack.isHidden = false
-                //cell.countryStack.isHidden = true
                 cell.mobileStack.isHidden = false
                 cell.gstMainView.isHidden = false
                 cell.ihaveGstView.isHidden = false
@@ -1139,7 +1045,6 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                 cell.ihaveGstView.isHidden = true
                 cell.gstMainView.isHidden = true
                 cell.emailStack.isHidden = true
-                //cell.countryStack.isHidden = true
                 cell.mobileStack.isHidden = true
             }
             DispatchQueue.main.async {
@@ -1174,9 +1079,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
             cell.btnBaggage.tag = indexPath.row
             cell.btnAddOn.tag = indexPath.row
             cell.btnExistingUser.tag = indexPath.row
-            
-            cell.btnBaggage.addTarget(self, action: #selector(self.baggageOnPress(sender:)), for: .touchUpInside)
-            cell.btnAddOn.addTarget(self, action: #selector(self.addOnPress(sender:)), for: .touchUpInside)
+           
             cell.btnGST.addTarget(self, action: #selector(self.gstOnPress(sender:)), for: .touchUpInside)
             cell.btnExistingUser.addTarget(self, action: #selector(self.existingOnPress(sender:)), for: .touchUpInside)
             cell.btnSaveUser.addTarget(self, action: #selector(self.saveUserOnPress(sender:)), for: .touchUpInside)
@@ -1248,7 +1151,6 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
             if GetData.share.isOnwordBook() == true {
                 LoaderClass.shared.ownwardMobileCode = indexData.countryMobileCode
             }
-            // cell.txtAddress.text = indexData.address
             cell.txtEmail.text = indexData.email
             cell.txtMobile.text = indexData.mobile
             cell.txtGender.text = indexData.gender
@@ -1353,7 +1255,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                 return section != self.dataFlight1[0].sSegments.count ? UITableView.automaticDimension : 0
             }
         } else {
-            return 0//UITableView.automaticDimension
+            return 0
         }
     }
     
@@ -1596,56 +1498,6 @@ extension PassangerDetailsVC:UITextFieldDelegate {
     }
 }
 
-extension PassangerDetailsVC:BaggageAndMealDetails{
-    
-    func baggageAndMealDetails(index: Int, mealCode: String, mealDesecription: String, baggageCode: String, baggageDescription: String, baggage: Any, meal: Any,mealPrice: Double, baggagePrice: Double) {
-        
-        self.baggagePrice = baggagePrice
-        self.mealPrice = mealPrice
-        
-        if self.ssrData?.fare_quote?.response?.fareQuoteResult?.isLCC == true {
-            var price = 0
-            if let meal = meal as? MealDynamic{
-                self.passangerDetails[index].lccMealData = meal
-                price = price + (meal.price ?? 0)
-            }
-            if let baggage = baggage as? Baggage{
-                self.passangerDetails[index].lccBaggageData = baggage
-                price = price + (baggage.price ?? 0)
-            }
-            self.passangerDetails[index].baggageAndMealPrice = Double(price)
-        }else{
-            if let meal = meal as? Meal{
-                self.passangerDetails[index].nonLccMealData = meal
-            }
-            if let baggage = baggage as? BaggageNonLCC{
-                self.passangerDetails[index].nonLccBaggageData = baggage
-            }
-        }
-    }
-    
-    func openDateCalendar() {
-        if let calendar = UIStoryboard.init(name: ViewControllerType.WWCalendarTimeSelector.rawValue, bundle: nil).instantiateInitialViewController() as? WWCalendarTimeSelector {
-            view.endEditing(true)
-            calendar.delegate = self
-          
-            if self.typeOfPassport == "exp" {
-                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].passportExpDate == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].passportExpDate, strFormat: "MMM dd, yyyy")
-            }else if self.typeOfPassport == "issue" {
-                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].passportIssueDate == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].passportIssueDate, strFormat: "MMM dd, yyyy")
-            }else{
-                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].dob == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].dob, strFormat: "MMM dd, yyyy")
-            }
-            calendar.optionStyles.showDateMonth(true)
-            calendar.optionStyles.showMonth(false)
-            calendar.optionStyles.showYear(true)
-            calendar.optionStyles.showTime(false)
-            calendar.optionButtonShowCancel = true
-            self.present(calendar, animated: true, completion: nil)
-        }
-    }
-}
-
 // MARK: - WWCALENDARTIMESELECTOR DELEGATE
 extension PassangerDetailsVC: WWCalendarTimeSelectorProtocol {
     
@@ -1668,6 +1520,26 @@ extension PassangerDetailsVC: WWCalendarTimeSelectorProtocol {
             return false
         } else {
             return true
+        }
+    }
+    func openDateCalendar() {
+        if let calendar = UIStoryboard.init(name: ViewControllerType.WWCalendarTimeSelector.rawValue, bundle: nil).instantiateInitialViewController() as? WWCalendarTimeSelector {
+            view.endEditing(true)
+            calendar.delegate = self
+          
+            if self.typeOfPassport == "exp" {
+                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].passportExpDate == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].passportExpDate, strFormat: "MMM dd, yyyy")
+            }else if self.typeOfPassport == "issue" {
+                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].passportIssueDate == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].passportIssueDate, strFormat: "MMM dd, yyyy")
+            }else{
+                calendar.optionCurrentDate = self.passangerDetails[self.selectedIndex].dob == "" ? Date() : returnDate(self.passangerDetails[self.selectedIndex].dob, strFormat: "MMM dd, yyyy")
+            }
+            calendar.optionStyles.showDateMonth(true)
+            calendar.optionStyles.showMonth(false)
+            calendar.optionStyles.showYear(true)
+            calendar.optionStyles.showTime(false)
+            calendar.optionButtonShowCancel = true
+            self.present(calendar, animated: true, completion: nil)
         }
     }
 }

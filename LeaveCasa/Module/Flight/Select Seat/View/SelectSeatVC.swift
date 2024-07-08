@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import AMPopTip
 import ObjectMapper
 
 class SelectSeatVC: UIViewController {
@@ -16,15 +15,12 @@ class SelectSeatVC: UIViewController {
     @IBOutlet weak var collVwCityCodes: UICollectionView!
     @IBOutlet weak var tblVwMealBaggage: UITableView!
     @IBOutlet weak var collVwHeader: UICollectionView!
-    // @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var btnSkip: UIButton!
-    //  @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var vwBackground: UIView!
     @IBOutlet weak var lblNoMealBaggage: UILabel!
     //MARK: - Variables
     var arr = [SegmentSeat]()
-    //var selectedCityCode = 0
     var arrHeader = ["Seats", "Meals", "Baggages"]
     var arrSeatTypes = [String]()
     var seatType = ""
@@ -35,7 +31,6 @@ class SelectSeatVC: UIViewController {
     var finalSeletedSeatIndex = [Seats]()
     var finalSeletedSeats = [String]()
     
-    let popTip = PopTip()
     var logId = 0
     var tokenId = ""
     var traceId = ""
@@ -63,7 +58,6 @@ class SelectSeatVC: UIViewController {
     //Meal
     var selectedMeal = 0
     var arrSelectedMeal = [[String:Any]]()
-    //var selectedSectionMeal = [Int]()
     var selectedSectionBaggage = [Int]()
     var selectedMealTotalPrice = Int()
     var selectedBaggageTotalPrice = Int()
@@ -121,16 +115,9 @@ class SelectSeatVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         arrSelectedSeat = []
-        // seatSelectionPassengers = []
         finalSeletedSeatIndex = []
         finalSeletedSeats = []
         stopNumber = 0
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        //        let height = self.collectionView.collectionViewLayout.collectionViewContentSize.height
-        //        self.collectionViewHeight.constant = height
     }
     
     //MARK: - Custom methods
@@ -199,11 +186,7 @@ class SelectSeatVC: UIViewController {
         arrSeatTypes.append("WindowAisleBulkheadWing")
     }
     func setupCollectionView() {
-        
-        //self.collVwHeader.ragisterNib(nibName: "SeatHeaderCVC")
-        //  self.collectionView.ragisterNib(nibName: FlightSeatXIB().identifier)
-        //  self.collectionView.register(UINib(nibName: "HCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HCollectionReusableView")
-        
+     
         self.lblPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded())))"
         
         if ssrModel?.ssr?.response?.mealDynamic?.count ?? 0 > 0 {
@@ -235,9 +218,7 @@ class SelectSeatVC: UIViewController {
         let vc = ViewControllerHelper.getViewController(ofType: .WalletPaymentVC, StoryboardName: .Main) as! WalletPaymentVC
         vc.baseAmt = basePrice
         vc.couponAmt = self.discount
-        //            vc.seatAmt =
-        //            vc.bagaggeAmt =
-        //            vc.mealAmt =
+        
         vc.payblePayment = "\(lblPrice.text?.replacingOccurrences(of: "₹", with: "").replacingOccurrences(of: ",", with: "") ?? "")"
         vc.param = self.param
         vc.amount = Double(lblPrice.text?.replacingOccurrences(of: "₹", with: "").replacingOccurrences(of: ",", with: "") ?? "0") ?? 0.0
@@ -353,31 +334,7 @@ class SelectSeatVC: UIViewController {
             }
         }
         
-//        for i in 0..<numberOfSeat {
-//            if selectedBaggageData.count == 0 {
-//                Passengers[i].removeValue(forKey: WSResponseParams.WS_RESP_PARAM_BAGGAGE)
-//            }else{
-//               // Passengers[i][WSResponseParams.WS_RESP_PARAM_BAGGAGE] = selectedBaggageData[i]
-//                Passengers[i].removeValue(forKey: WSResponseParams.WS_RESP_PARAM_BAGGAGE)
-//            }
-//            if self.ssrModel?.fare_quote?.response?.fareQuoteResult?.isLCC == true {
-//                
-//                if selectedMealData.count == 0 {
-//                    Passengers[i].removeValue(forKey: WSResponseParams.WS_RESP_PARAM_MEAL_DYNAMIC)
-//                }else{
-//                    Passengers[i][WSResponseParams.WS_RESP_PARAM_MEAL_DYNAMIC] = selectedMealData[i]
-//                }
-//            }  else {
-//                if selectedMealDataNonLCC.count == 0 {
-//                    Passengers[i].removeValue(forKey: WSResponseParams.WS_RESP_PARAM_MEAL)
-//                }else{
-//                    Passengers[i][WSResponseParams.WS_RESP_PARAM_MEAL] = selectedMealDataNonLCC[i]
-//                }
-//            }
-//        }
-        
         self.param["Passengers"] = Passengers
-        //debugPrint(self.param)
         
         if let vc = ViewControllerHelper.getViewController(ofType: .WalletPaymentVC, StoryboardName: .Main) as? WalletPaymentVC {
             vc.payblePayment = "\(lblPrice.text?.replacingOccurrences(of: "₹", with: "").replacingOccurrences(of: ",", with: "") ?? "")"
@@ -394,20 +351,13 @@ class SelectSeatVC: UIViewController {
             vc.dataFlight = dataFlight
             vc.baseAmt = basePrice
             vc.couponAmt = self.discount
-//            vc.seatAmt =
-//            vc.bagaggeAmt =
-//            vc.mealAmt =
-            
+
             if GetData.share.isOnwordBook() == true {
                 vc.returnResultIndex = returnResultIndex
             }
             vc.publishedFare = basePrice + taxes
-           // self.vwBackground.removeFromSuperview()
             self.pushView(vc: vc)
         }
-        //  }
-        //   }
-        //   }
     }
     func getSeatType(seat:Int) -> String{
         if seat == 1{
@@ -425,22 +375,7 @@ class SelectSeatVC: UIViewController {
 extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if collectionView == collVwHeader {
-            return 1
-        } else { //  if collectionView == collVwCityCodes
-            return 1
-        }
-        //        else {
-        //            arr = []
-        //            for count in (ssrModel?.ssr?.response?.seatDynamic ?? []) {
-        //                for j in count.segmentSeat ?? [] {
-        //                    arr.append(j)
-        //                }
-        //            }
-        //          //  arrMealDynamic[stopNumber].
-        //            return arr[stopNumber].rowSeats?.count ?? 0
-        //            //self.ssrModel?.ssr?.response?.seatDynamic?.first?.segmentSeat?[stopNumber].rowSeats?.count ?? 0
-        //        }
+        1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -449,7 +384,7 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         } else { // if collectionView == collVwCityCodes
             switch selectedHeader {
             case 0:
-                return arr.count //ssrModel?.fare_quote?.response?.seatDynamic?.count ?? 0
+                return arr.count
             case 1:
                 if self.ssrModel?.fare_quote?.response?.fareQuoteResult?.isLCC == true {
                     for _ in 0..<arrMealDynamic.count {
@@ -469,12 +404,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                 return ssrModel?.ssr?.response?.baggage?.count ?? 0
             }
         }
-        /*
-         else {
-         let sectionCount = arr[stopNumber].rowSeats?[section].seats
-         return sectionCount?.count ?? 0
-         }
-         */
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -511,19 +440,8 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                 cell.lblSeatNumber.isHidden = false
                 cell.lblSeatNumber.text = indexData?.code ?? ""
                 cell.imgSeat.image = .busUnSelectSeat()
-                //                if self.arrSelectedSeat.count > 0 {
-                //                    self.arrSelectedSeat[selectedCityCode].forEach { val in
-                //                        if val.code == indexData?.code {
-                //                            cell.imgSeat.image = .flightSelectSeat()
-                //                        }else{
-                //                            cell.imgSeat.image = .busUnSelectSeat()
-                //                        }
-                //                    }
-                //                }
-                //                cell.imgSeat.image = self.arrSelectedSeat[selectedCityCode].contains(indexData?.code ?? "") ? .flightSelectSeat() : .busUnSelectSeat()
             }else{
                 cell.lblSeatNumber.isHidden = false
-                // cell.lblSeatNumber.isHidden = true
                 cell.imgSeat.image = .flightBookSeat()
             }
             
@@ -540,7 +458,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             if indexPath.row <= arrSeatTypes.count-1 {
                 if indexPath.row == arr[stopNumber].rowSeats?[indexPath.section].seats?[0].seatType {
                     seatType = arrSeatTypes[indexPath.row]
-                    // break
                 }
             }
             
@@ -561,10 +478,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         } else {
             return CGSize(width: 130, height: collVwHeader.frame.height)
         }
-        //        else {
-        //            let sectionCount = arr[stopNumber].rowSeats?[indexPath.section].seats
-        //            return self.returnCGSize(collectionView: collectionView, indexPath: indexPath, seatCount: sectionCount?.count ?? 0)
-        //        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -591,23 +504,13 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             } else {
                 self.tblVwMealBaggage.isHidden = false
                 self.lblNoMealBaggage.isHidden = true
-                //                if self.ssrModel?.fare_quote?.response?.fareQuoteResult?.isLCC == true  {
-                //                    if self.ssrModel?.ssr?.response?.baggage?.first?.count ?? 0 == 0 {
-                //                        self.tblVwMealBaggage.isHidden = true
-                //                        self.lblNoMealBaggage.isHidden = false
-                //                        self.lblNoMealBaggage.text = "No Baggage is available in this flight"
-                //                    } else if (self.baggageDetails.first?.count == 1 && self.mealData.first?.first?.price == 0) {
-                //                        self.tblVwMealBaggage.isHidden = true
-                //                        self.lblNoMealBaggage.isHidden = false
-                //                        self.lblNoMealBaggage.text = "No Baggage is available in this flight"
-                //                    }
-                //                }else{
+                
                 if self.ssrModel?.ssr?.response?.baggage?[stopNumber].count ?? 0 == 0{
                     self.tblVwMealBaggage.isHidden = true
                     self.lblNoMealBaggage.isHidden = false
                     self.lblNoMealBaggage.text = "No Baggage is available in this flight"
                 }
-                //  }
+                
                 vwBackground.isHidden = false
                 tblVwMealBaggage.reloadData()
             }
@@ -623,10 +526,8 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             } else if selectedHeader == 1 {
                 selectedMeal = 0
                 selectedMealData = LoaderClass.shared.arrSelectedMealDynamic[stopNumber]
-                //selectedMealDataNonLCC = LoaderClass.shared.arrSelectedMeal[stopNumber]
             }
             
-           // selectedCityCode = indexPath.row
             LoaderClass.shared.seletedSeatIndex = []
             //Seats
             if selectedHeader == 0 {
@@ -643,7 +544,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                         if arrSelectedSeat[indexPath.row].count > 0 {
                             if arrSelectedSeat[indexPath.row][i].code != "" {
                                 finalSeletedSeats[i] = arrSelectedSeat[indexPath.row][i].code
-                                //seletedSeats[i] =
                             }
                         }
                     }
@@ -661,7 +561,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                 arrSelectedSeat = Array(repeating: [Seats](), count: arr.count)
                 print(arrSelectedSeat)
             }
-            //selectedCityCode
             let indexData = arr[stopNumber].rowSeats?[indexPath.section].seats?[indexPath.row]
             
             if indexData?.availablityType == 1 {
@@ -672,7 +571,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
                     self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded())-Int(indexData?.price ?? 0))"
                    
                     cell.imgSeat.image = .busUnSelectSeat()
-                    //for i in 0...numberOfSeat-1{
                     self.seletedSeatIndex.remove(at: index)
                     self.seletedSeats.remove(at: index)
                     self.finalSeletedSeats.remove(at: index)
@@ -682,48 +580,6 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             }
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        if collectionView != collVwHeader {
-//            if kind == UICollectionView.elementKindSectionHeader {
-//                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HCollectionReusableView", for: indexPath) as! HCollectionReusableView
-//                
-//                for i in 0...arrSeatTypes.count {
-//                    if i == arr[stopNumber].rowSeats?[indexPath.section].seats?[0].seatType {
-//                        seatType = arrSeatTypes[i]
-//                        break
-//                    }
-//                }
-//                if seatType.contains("Exit") {
-//                    headerView.lblExit.isHidden = false
-//                    headerView.lblExitTwo.isHidden = false
-//                }
-//                
-//                if (seatType.contains("not set") || seatType.contains("Not Set") || seatType.contains("NoSeat")) && (arr[stopNumber].rowSeats?[indexPath.section].seats?.count == 1) {
-//                    headerView.lblExit.isHidden = true
-//                    headerView.lblExitTwo.isHidden = true
-//                }
-//                return headerView
-//            }
-//        }
-//        return UICollectionReusableView()
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        if collectionView != collVwHeader {
-//            for i in 0...arrSeatTypes.count {
-//                if i == arr[stopNumber].rowSeats?[section].seats?[0].seatType {
-//                    seatType = arrSeatTypes[i]
-//                    break
-//                }
-//            }
-//            if seatType.contains("Exit") {
-//                return CGSize(width: collectionView.frame.width, height: 30)
-//            } else {
-//                return CGSize(width: 0, height: 0)
-//            }
-//        }
-//        return CGSize(width: 0, height: 0)
-//    }
 }
 
 extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionViewCellDelegate {
@@ -741,7 +597,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
         
         self.seatPrice = seatPrice
         
-            //self.priceData = self.priceData+Double(seatPrice)
         self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
         LoaderClass.shared.loadAnimation()
         tblVwSeats.reloadData()
@@ -749,7 +604,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if selectedHeader == 0 {
-            //  if tableView == tblVwSeats {
             arr = []
             for count in (ssrModel?.ssr?.response?.seatDynamic ?? []) {
                 for j in count.segmentSeat ?? [] {
@@ -798,13 +652,9 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
             }
             cell.reloadData(sectionCount, arrSeatSegment: arr, section: indexPath.row, arrSeatTypes: arrSeatTypes, vc: self, missingSeatIndex: missingIndex, numberOfSeat: numberOfSeat, selectedCityCode: stopNumber, totalNumberofSeatsWithMissingChar: totalNumberofSeatsWithMissingChar, indexPath: indexPath)
             
-            // let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HCollectionReusableView", for: indexPath) as! HCollectionReusableView
-            
-            // for i in 0...arrSeatTypes.count {
             if indexPath.row < arrSeatTypes.count {
                 if indexPath.row == arr[stopNumber].rowSeats?[indexPath.row].seats?[0].seatType ?? 0 {
                     seatType = arrSeatTypes[indexPath.row]
-                    // break
                 }
             }
             if seatType.contains("Exit") {
@@ -859,8 +709,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                                 let count2 = LoaderClass.shared.arrSelectedMeal[stopNumber].filter {$0.code == arrMeal2[stopNumber][indexPath.row].code && $0.description == arrMeal2[stopNumber][indexPath.row].description}.count
                                 
                                 count = count2
-                                
-                               // count += 1
                                 cell.vwOuter.borderColor = .lightBlue()
                             } else {
                                 count = 0
@@ -869,12 +717,7 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                         }
                     }
                     cell.lblQuatity.text = "\(count)"
-                    
-                    //if arrMeal[stopNumber][indexPath.row].description == 1 {
                     cell.lblPrice.text = "₹0"
-                    //                    } else {
-                    //                        cell.lblPrice.text = "₹\(arrMealDynamic[stopNumber][indexPath.row].price ?? 0)"
-                    //                    }
                     cell.lblPriceWeight.text = "\(arrMeal2[stopNumber][indexPath.row].description ?? "")"
                 }
             } else {
@@ -954,10 +797,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     selectedMealTotalPrice = selectedMealTotalPrice + bottomPriceMeal
                     
                     self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
-//                    if !selectedSectionMeal.contains(sender.tag) {
-//                        selectedSectionMeal.append(sender.tag)
-//                    }
-                    
                     var price1 = 0
                     self.selectedMealData.append(arrMealDynamic[stopNumber][sender.tag])
                     price1 = price1 + (arrMealDynamic[stopNumber][sender.tag].airlineDescription?.count ?? 0 == 0 ? 0 : arrMealDynamic[stopNumber][sender.tag].price ?? 0)
@@ -971,19 +810,10 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     selectedMeal = selectedMeal + 1
                     let cell = tblVwMealBaggage.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! BaggageTVC
                     cell.vwOuter.borderColor = .lightBlue()
-                    //                    bottomPriceMeal = arrMeal[stopNumber][sender.tag].description?.count ?? 0 == 0  ? 0 : arrMealDynamic[stopNumber][sender.tag].price ?? 0
                     cell.lblQuatity.text = "\(Int(cell.lblQuatity.text ?? "0")! + 1)"
-                    //                    selectedMealTotalPrice = selectedMealTotalPrice + bottomPriceMeal
-                    
-                    //                    self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
-//                    if !selectedSectionMeal.contains(sender.tag) {
-//                        selectedSectionMeal.append(sender.tag)
-//                    }
-                    
+                
                     var price1 = 0
                     self.selectedMealDataNonLCC.append(arrMeal2[stopNumber][sender.tag])
-                    //                    price1 = price1 + (arrMealDynamic[stopNumber][sender.tag].airlineDescription?.count ?? 0 == 0  ? 0 : arrMealDynamic[stopNumber][sender.tag].price ?? 0)
-                    
                     LoaderClass.shared.arrSelectedMeal[stopNumber] = selectedMealDataNonLCC
                 } else {
                     LoaderClass.shared.showSnackBar(message: "Maximum \(LoaderClass.shared.arrSelectedMeal[stopNumber].count) meal can be selected")
@@ -1026,10 +856,7 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     bottomPriceMeal = arrMealDynamic[stopNumber][sender.tag].airlineDescription?.count ?? 0 == 0 ? 0 : arrMealDynamic[stopNumber][sender.tag].price ?? 0
                     selectedMealTotalPrice = selectedMealTotalPrice - bottomPriceMeal
                     self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
-                    
-//                    let index = arrMealDynamic[stopNumber][sender.tag]
-//                    selectedMealData.removeAll { $0.airlineDescription == index.airlineDescription }
-                    
+ 
                     let mealToRemove = arrMealDynamic[stopNumber][sender.tag]
                     let airlineDescription = mealToRemove.airlineDescription
                     
@@ -1039,7 +866,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                         
                         if cell.lblQuatity.text == "0" {
                             cell.vwOuter.borderColor = .clear
-                          //  selectedSectionMeal.removeAll { $0 == sender.tag }
                         }
                     }
                 }
@@ -1048,13 +874,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                 if Int(cell.lblQuatity.text ?? "0")! > 0 && LoaderClass.shared.arrSelectedMeal[stopNumber].count > 0 {
                     selectedMeal = selectedMeal - 1
                     cell.lblQuatity.text = "\(Int(cell.lblQuatity.text ?? "0")! - 1)"
-                    
-                    //  bottomPriceMeal = arrMeal[stopNumber][sender.tag].airlineDescription?.count ?? 0 == 0 ? 0 : arrMeal[stopNumber][sender.tag].price ?? 0
-                    //  selectedMealTotalPrice = selectedMealTotalPrice - bottomPriceMeal
-                    // self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
-                    
-//                    let index = arrMeal[stopNumber][sender.tag]
-//                    selectedMealDataNonLCC.removeAll { $0.code == index.code && $0.description == index.description }
                     
                     let mealToRemove = arrMeal2[stopNumber][sender.tag]
                     let airlineDescription = mealToRemove.description
@@ -1066,13 +885,11 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                         
                         if cell.lblQuatity.text == "0" {
                             cell.vwOuter.borderColor = .clear
-                           // selectedSectionMeal.removeAll { $0 == sender.tag }
                         }
                     }
                 }
             }
         } else {
-          //  if selectedBaggage > 0 {
                 let cell = tblVwMealBaggage.cellForRow(at: IndexPath(row: sender.tag, section: 0)) as! BaggageTVC
             if Int(cell.lblQuatity.text ?? "0")! > 0 && LoaderClass.shared.arrSelectedBaggageDynamic[stopNumber].count > 0 {
                 selectedBaggage = selectedBaggage - 1
@@ -1082,15 +899,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                 self.lblPrice.text = "₹\(Int(priceData+Double(allSeatsPrice)+Double(selectedMealTotalPrice)+Double(selectedBaggageTotalPrice).rounded()))"
                 
                 let baggageToRemove = self.ssrModel?.ssr?.response?.baggage?[stopNumber][sender.tag]
-                //
-                //                selectedBaggageData.removeAll { $0.text == baggageToRemove?.text }
-                
-                //                if selectedSectionBaggage.contains(sender.tag) {
-                //                    if cell.lblQuatity.text == "0" {
-                //                        cell.vwOuter.borderColor = .clear
-                //                        selectedSectionBaggage = selectedSectionBaggage.filter{$0 != sender.tag}
-                //                    }
-                //                }
                 
                 if let indexToRemove = LoaderClass.shared.arrSelectedBaggageDynamic[stopNumber].firstIndex(where: { ($0.text == baggageToRemove?.text) && ($0.weight == baggageToRemove?.weight) }) {
                     LoaderClass.shared.arrSelectedBaggageDynamic[stopNumber].remove(at: indexToRemove)
@@ -1098,7 +906,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     
                     if cell.lblQuatity.text == "0" {
                         cell.vwOuter.borderColor = .clear
-                        //selectedSectionBaggage.removeAll { $0 == sender.tag }
                     }
                 }
             }
@@ -1122,7 +929,7 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
             }
         }
         if allMatch {
-            print("All last elements match the specific value")
+            debugPrint("All last elements match the specific value")
         } else {
             var index = [String]()
             
@@ -1134,8 +941,6 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
             
             let jj = seatIndexSet.subtracting(seatNoSet)
             
-            //}
-            // seatIndex.filter({$0 != arr[stopNumber].rowSeats?.last?.seats?.last?.seatNo})
             missingIndex = []
             for (index1,i) in seatIndex.enumerated() {
                 for item in jj {

@@ -9,10 +9,8 @@ import Foundation
 import ObjectMapper
 
 class MultiCityViewModel{
-    
-    var mealModel = [MealViewModel]()
+    //MARK: - Variables
     var ssrModel : SsrFlightModel?
-    
     var delegate : ResponseProtocol?
     
     func getFareSSR(traceId:String,tokenId:String,logId:String,resultIndex:String,view:UIViewController){
@@ -27,7 +25,6 @@ class MultiCityViewModel{
             if status == true{
                 if let responseValue = response as? [String: Any] {
                     debugPrint(responseValue)
-                    
                     if let ssrModel = Mapper<SsrFlightModel>().map(JSON: responseValue){
                         self.ssrModel = ssrModel
                     }

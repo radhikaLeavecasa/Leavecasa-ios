@@ -110,7 +110,7 @@ class HomeVC: UIViewController {
         }
     }
     @IBAction func actionVisa(_ sender: Any) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .VisaDetailsVC, StoryboardName: .Visa) as? VisaDetailsVC {
+        if let vc = ViewControllerHelper.getViewController(ofType: .AllVisaListingVC, StoryboardName: .Visa) as? AllVisaListingVC {
             self.pushView(vc: vc)
         }
     }

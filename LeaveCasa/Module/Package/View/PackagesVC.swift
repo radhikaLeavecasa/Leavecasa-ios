@@ -17,7 +17,6 @@ class PackagesVC: UIViewController {
     //MARK: - Variables
     var cityName1 = String()
     var imgPackage = String()
-   // lazy var cityName = [String]()
     var objSearchViewModel = SearchViewModel()
     var viewModel = PackagesVM()
     var selectedLineColor : UIColor = UIColor.darkGray
@@ -45,9 +44,6 @@ class PackagesVC: UIViewController {
     //MARK: - Custom methods
     @objc func searchCity(_ sender: UITextField) {
         apiReload()
-//        if self.cityName.count > 0 {
-//            self.cityName.removeAll()
-//        }
     }
     //MARK: - @IBActions
     @IBAction func actionBack(_ sender: Any) {
@@ -55,7 +51,6 @@ class PackagesVC: UIViewController {
     }
     @IBAction func actionSearch(_ sender: Any) {
         if txtFldDestination.text != "" || selectedCode != "" {
-           // LoaderClass.shared.loadAnimation()
             self.param = ["destination": txtFldDestination.text?.components(separatedBy: ",").count ?? 0 > 0 ? txtFldDestination.text!.components(separatedBy: ",")[0] : txtFldDestination.text!]
             viewModel.destination = txtFldDestination.text?.components(separatedBy: ",").count ?? 0 > 0 ? txtFldDestination.text!.components(separatedBy: ",")[0] : txtFldDestination.text!
             imgVwLoading.isHidden = false

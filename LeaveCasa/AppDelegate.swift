@@ -19,16 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.shared.enable = true
         
-        // For iOS 10 display notificaJtion (sent via APNS)
-      
-        //MARK: Set Text Feild Indicater Color
-        
-        //Thread.sleep(forTimeInterval: 0.5)
         UITextField.appearance().tintColor = .theamColor()
         
         //MARK: Firebase Configure
-        
-        // Configure Firebase
         FirebaseApp.configure()
         
         // Register for notifications.
@@ -68,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - NOTIFICATIONS DELEGATE
 extension AppDelegate: UNUserNotificationCenterDelegate, MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        print("Firebase registration token: \(fcmToken ?? "")")
+        debugPrint("Firebase registration token: \(fcmToken ?? "")")
         Cookies.saveDeviceToken(token: fcmToken ?? "")
         Messaging.messaging().token { token, error in
             if let error = error {

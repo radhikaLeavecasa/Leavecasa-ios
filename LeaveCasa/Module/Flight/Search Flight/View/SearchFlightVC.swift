@@ -151,7 +151,6 @@ class SearchFlightVC: UIViewController {
             let width = scrollView.frame.width
             
             let index = Int(round(offSet/width))
-            print(index)
             self.pageControle.setPage(index)
             
         }
@@ -646,7 +645,7 @@ extension SearchFlightVC: UITextFieldDelegate {
             obj.flightClass = last.flightClass
             obj.flightClassIndex = last.flightClassIndex
             
-            self.array.append(obj) // add new city
+            self.array.append(obj)
             self.tableView.reloadData()
         }
     }
@@ -730,7 +729,6 @@ extension SearchFlightVC:UITableViewDelegate,UITableViewDataSource{
 extension SearchFlightVC:ResponseProtocol{
     
     func onSuccess() {
-       // self.showShortDropDown(view: selectedTextFeild, dataSource: self.viewModel.cityName)
         self.setupSearchTextField(self.viewModel.cityName, self.viewModel.cityCode, textField: self.selectedTextFeild)
     }
     
@@ -772,16 +770,14 @@ extension SearchFlightVC:ResponseProtocol{
                 self.txtFrom.theme.cellHeight = 40
                 self.txtFrom.filterStrings(cities)
                 self.txtFrom.itemSelectionHandler = { filteredResults, itemPosition in
-                  //  DispatchQueue.main.async {
-                        textField.resignFirstResponder()
-                        self.array[row].source = self.viewModel.cityName[itemPosition]
-                        self.array[row].sourceCode = self.viewModel.cityCode[itemPosition]
-                        self.txtFrom.text = "\(self.viewModel.cityName[itemPosition]) - \(self.viewModel.cityCode[itemPosition])"
-                        self.fromValue = self.txtFrom.text ?? ""
-                        self.fromSourceCode = self.viewModel.cityCode[itemPosition]
-                        self.txtFrom.resignFirstResponder()
-                        self.tableView.reloadData()
-                  //  }
+                    textField.resignFirstResponder()
+                    self.array[row].source = self.viewModel.cityName[itemPosition]
+                    self.array[row].sourceCode = self.viewModel.cityCode[itemPosition]
+                    self.txtFrom.text = "\(self.viewModel.cityName[itemPosition]) - \(self.viewModel.cityCode[itemPosition])"
+                    self.fromValue = self.txtFrom.text ?? ""
+                    self.fromSourceCode = self.viewModel.cityCode[itemPosition]
+                    self.txtFrom.resignFirstResponder()
+                    self.tableView.reloadData()
                 }
             } else if textField == self.txtToValue {
                 self.txtToValue.theme = SearchTextFieldTheme.lightTheme()
@@ -791,20 +787,18 @@ extension SearchFlightVC:ResponseProtocol{
                 self.txtToValue.theme.cellHeight = 40
                 self.txtToValue.filterStrings(cities)
                 self.txtToValue.itemSelectionHandler = { filteredResults, itemPosition in
-                   // DispatchQueue.main.async {
-                        textField.resignFirstResponder()
-                        self.array[row].destination = self.viewModel.cityName[itemPosition]
-                        self.array[row].destinationCode = self.viewModel.cityCode[itemPosition]
-                        if self.selectedTab == 2 && self.array.count > row + 1 {
-                            self.array[row+1].source = self.viewModel.cityName[itemPosition]
-                            self.array[row+1].sourceCode = self.viewModel.cityCode[itemPosition]
-                        }
-                        self.txtToValue.text = "\(self.viewModel.cityName[itemPosition]) - \(self.viewModel.cityCode[itemPosition])"
-                        self.toValue = self.txtToValue.text ?? ""
-                        self.toSourceCode = self.viewModel.cityCode[itemPosition]
-                        self.txtToValue.resignFirstResponder()
-                        self.tableView.reloadData()
-                    //}
+                    textField.resignFirstResponder()
+                    self.array[row].destination = self.viewModel.cityName[itemPosition]
+                    self.array[row].destinationCode = self.viewModel.cityCode[itemPosition]
+                    if self.selectedTab == 2 && self.array.count > row + 1 {
+                        self.array[row+1].source = self.viewModel.cityName[itemPosition]
+                        self.array[row+1].sourceCode = self.viewModel.cityCode[itemPosition]
+                    }
+                    self.txtToValue.text = "\(self.viewModel.cityName[itemPosition]) - \(self.viewModel.cityCode[itemPosition])"
+                    self.toValue = self.txtToValue.text ?? ""
+                    self.toSourceCode = self.viewModel.cityCode[itemPosition]
+                    self.txtToValue.resignFirstResponder()
+                    self.tableView.reloadData()
                 }
             }else{
                 if textField == cell.txtFrom {
@@ -851,7 +845,6 @@ extension SearchFlightVC: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HotelImagesXIB().identifire, for: indexPath) as! HotelImagesXIB
-       // let dict = self.couponsData?[indexPath.row]
         
         cell.imgHotel.sd_imageIndicator = SDWebImageActivityIndicator.gray
         
@@ -859,12 +852,7 @@ extension SearchFlightVC: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.imgHotel.cornerRadius = 15
         cell.imgShadow.isHidden = true
         return cell
-        
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.frame.size.width, height: (self.collectionView.frame.size.height))

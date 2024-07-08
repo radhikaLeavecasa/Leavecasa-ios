@@ -43,7 +43,7 @@ class FillInsuranceDetailsVC: UIViewController {
         viewModel.getCountryList(view: self)
         self.tblVwInsurance.tableFooterView = UIView()
         self.tblVwInsurance.ragisterNib(nibName: "InsuranceDetailsTVC")
-        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Live, andDelegate: self)
+        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Test, andDelegate: self)
         let price = isDomesticType ? (59*noOfPax) : (118*noOfPax)
         lblTotalAmount.text = "₹\(insuranceAmt+Double(price))"
         

@@ -71,10 +71,8 @@ enum ViewControllerType : String{
     case BoardingDroppingVC
     case SideMenuNavigationController
     case ConfirmBusBookingVC
-    case BusTicketVC
     case BusTicketDetailsVC
     case BusFilterVC
-    case BusOperatorVC
     case BusCancellationPolicyVC
     case HotelTripDetailVC
     
@@ -85,7 +83,6 @@ enum ViewControllerType : String{
     case FlightMultiCityVC
     case FlightFiltersVC
     case FlightReturnTripVC
-    case FlighAddMealsVC
     case FlightBaggageVC
     case FareDetailsVC
     case FareBrakeupVC
@@ -108,6 +105,9 @@ enum ViewControllerType : String{
     case FillVisaDetailsVC
     case VisaTermsConditionPopVC
     case VisaViewDetailVC
+    case AllVisaListingVC
+    case SelectVisaVC
+    case PaxPopUpVC
 }
 
 class ViewControllerHelper: NSObject {

@@ -12,7 +12,7 @@ struct RazorpayKeys {
     static let Live = "rzp_live_ySXcuStrpX1gVF"
 } 
 
-let baseUrl = "https://leavecasa.com/api" //"https://demo.leavecasa.com/api" //
+let baseUrl = "https://demo.leavecasa.com/api" //"https://leavecasa.com/api" //
 
 extension Api {
     func baseURl() -> String {
@@ -96,6 +96,7 @@ enum Api: Equatable {
     case getVisaCountries
     case getCountryDetail(String)
     case visaApplication
+    case allNewVisaList
     
     //MARK: Check New Version
     case newVersion(String)
@@ -108,6 +109,8 @@ enum Api: Equatable {
     
     func rawValued() -> String {
         switch self {
+        case .allNewVisaList:
+            return "/visa/getDetails/all"
         case let .getCountryDetail(country):
             return "/visa/getDetails/\(country)"
         case .cancelInsurance:

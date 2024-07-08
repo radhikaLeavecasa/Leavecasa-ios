@@ -1826,7 +1826,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBF-SI-KkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586.9565217391305" y="64.955357142857139"/>
+            <point key="canvasLocation" x="2252" y="31"/>
         </scene>
         <!--Hotel RoomsVC-->
         <scene sceneID="Ive-Xb-luA">
@@ -1917,7 +1917,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maN-pL-MrU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3419" y="65"/>
+            <point key="canvasLocation" x="2925" y="30"/>
         </scene>
         <!--Hotel More DetailsVC-->
         <scene sceneID="E14-Gq-UBi">
@@ -2161,7 +2161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pv-SV-IVP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4166.666666666667" y="64.955357142857139"/>
+            <point key="canvasLocation" x="3593" y="31"/>
         </scene>
         <!--CouponVC-->
         <scene sceneID="mYE-sb-SI4">
@@ -2357,7 +2357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pya-a3-yWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5633" y="31"/>
+            <point key="canvasLocation" x="4948" y="29"/>
         </scene>
         <!--Moreinfo Pop UpVC-->
         <scene sceneID="lUp-qi-5TO">
@@ -2575,7 +2575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2C3-hn-k1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="772"/>
+            <point key="canvasLocation" x="2251" y="984"/>
         </scene>
         <!--Search HotelVC-->
         <scene sceneID="01y-Id-0oi">
@@ -5179,7 +5179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuk-UB-I0x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4932" y="211"/>
+            <point key="canvasLocation" x="4281" y="265"/>
         </scene>
         <!--Hotel Cancellation PolicyVC-->
         <scene sceneID="vbN-HP-D3Z">
@@ -5260,7 +5260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jst-si-XjE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3419" y="761"/>
+            <point key="canvasLocation" x="2925" y="984"/>
         </scene>
         <!--Select Guests Pop UpVC-->
         <scene sceneID="C0F-ET-QN3">
@@ -5892,7 +5892,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBm-IX-zWN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4127.536231884058" y="760.71428571428567"/>
+            <point key="canvasLocation" x="3593" y="984"/>
         </scene>
     </scenes>
     <designables>

@@ -7,7 +7,6 @@
 
 import UIKit
 import IBAnimatable
-import AMPopTip
 
 protocol FlightBookingDelegate {
     func applyCoupon(discount: Double, couponCode: String, couponId: Int)
@@ -51,7 +50,6 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
     var taxk3 = Double()
     var taxK3Return = Double()
     var selectedTab = 0
-    var popTip = PopTip()
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +65,11 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
             if markup.amountBy == Strings.PERCENT {
                 let price = (dataFlight[0].sPrice * markup.amount)/100
                 conBifurcation = (price * 18)/100
-                convenientFee = 236//(price+conBifurcation).rounded()
+                convenientFee = 236
             } else {
                 let markup1 = (markup.amount)
                 conBifurcation = (markup.amount * 18)/100
-                convenientFee = 236 //(markup1+conBifurcation).rounded()
+                convenientFee = 236
             }
             var markup1 = markups.filter({$0.airline == returnDataFlight[0].sSegments[0].first?.sAirline.sAirlineCode}).first ?? Markup()
             if markup1.amountBy == "" {
@@ -80,11 +78,11 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
             if markup1.amountBy == Strings.PERCENT {
                 let price1 = (returnDataFlight[0].sPrice * markup1.amount)/100
                 conBifurcation2 = (price1 * 18)/100
-                convenientFee2 = 236//(price1+conBifurcation2).rounded()
+                convenientFee2 = 236
             } else {
                 let markup2 = (markup1.amount)
                 conBifurcation2 = (markup1.amount * 18)/100
-                convenientFee2 = 236//(markup2+conBifurcation2).rounded()
+                convenientFee2 = 236
             }
             let finalPrice = (dataFlight[0].sFare.sBaseFare+convenientFee+returnDataFlight[0].sFare.sBaseFare+convenientFee2+(dataFlight[0].sFare.sPublishedFare - dataFlight[0].sFare.sBaseFare)+(returnDataFlight[0].sFare.sPublishedFare - returnDataFlight[0].sFare.sBaseFare)-self.discount).rounded()
             self.lblPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(finalPrice)))"
@@ -96,11 +94,11 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
             if markup.amountBy == Strings.PERCENT {
                 let price = (dataFlight[0].sPrice * markup.amount)/100
                 conBifurcation = (price * 18)/100
-                convenientFee = selectedTab == 1 ? 472 : 236//(price+conBifurcation).rounded()
+                convenientFee = selectedTab == 1 ? 472 : 236
             } else {
                 let markup1 = (markup.amount)
                 conBifurcation = (markup.amount * 18)/100
-                convenientFee = selectedTab == 1 ? 472 : 236//(markup1+conBifurcation).rounded()
+                convenientFee = selectedTab == 1 ? 472 : 236
             }
             let numberFormatter = NumberFormatter()
             numberFormatter.numberStyle = .decimal
@@ -115,16 +113,13 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.ragisterNib(nibName: FareFlightXIB().identifire)
-        //self.tableView.ragisterNib(nibName: SecureTripXIB().identifire)
         self.tableView.ragisterNib(nibName: FareFlightHeaderXIB().identifire)
     }
     //MARK: - @IBActions
     @IBAction func backOnPress(_ sender: UIButton) {
         self.popView()
     }
-//    var isDomasticRountTrip = false
-//    var dataFlight1 = [Flight]()
-//    var isMultiCity = false
+
     @IBAction func continuePressed(_ sender: UIButton) {
         if let vc = ViewControllerHelper.getViewController(ofType: .SelectFareVC, StoryboardName: .Flight) as? SelectFareVC {
             vc.couponData = couponData
@@ -203,15 +198,15 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
             
             if isDomasticRountTrip {
                 vc.basePrice = dataFlight[0].sFare.sBaseFare + returnDataFlight[0].sFare.sBaseFare
-                vc.convenientFee = 472//convenientFee + convenientFee2
+                vc.convenientFee = 472
                 vc.taxes = (dataFlight[0].sFare.sPublishedFare - dataFlight[0].sFare.sBaseFare) + (returnDataFlight[0].sFare.sPublishedFare - returnDataFlight[0].sFare.sBaseFare)
-                vc.taxesK3 = taxK3Return //dataFlight[0].sFare.sYQTax + returnDataFlight[0].sFare.sYQTax
+                vc.taxesK3 = taxK3Return
                 vc.conBirfurcation = conBifurcation + conBifurcation2
             } else {
                 vc.basePrice = dataFlight[0].sFare.sBaseFare
-                vc.convenientFee = selectedTab == 1 ? 472 : 236//convenientFee
+                vc.convenientFee = selectedTab == 1 ? 472 : 236
                 vc.taxes = dataFlight[0].sFare.sPublishedFare - dataFlight[0].sFare.sBaseFare
-                vc.taxesK3 = taxk3 //dataFlight[0].sFare.sYQTax
+                vc.taxesK3 = taxk3
                 vc.conBirfurcation = conBifurcation
             }
             self.present(vc, animated: true)
@@ -235,7 +230,6 @@ class FareDetailsVC: UIViewController, FlightBookingDelegate {
         vc.couponPrize = "\(Int(discount))"
         
         self.present(vc, animated: true)
-        // self.setupPriceDetails(priceDetails: self.hotleRate ?? HotelRate())
     }
     
     //...... Will be used in Future......
@@ -281,9 +275,7 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
                 }
             } else {
                 if section != dataFlight[0].sSegments.count {
-                   // for i in 0..<dataFlight[0].sSegments.count {
-                        ret = dataFlight[0].sSegments[section].count
-                  //  }
+                    ret = dataFlight[0].sSegments[section].count
                 }
                 else {
                     ret = 1
@@ -300,10 +292,7 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
                 
                 if dataFlight[0].sSegments[indexPath.section].count > 1 {
                     cell.btnFlight.tag = indexPath.row
-                  //  cell.btnFlight.accessibilityLabel = "\(indexPath.row)"
                     cell.btnFlight.addTarget(self, action: #selector(actionFlightPopOver(_ :)), for: .touchUpInside)
-                   // cell.lblAircraftType.text = dataFlight[0].sSegments[indexPath.section].first?.sAirline.sAirlineName == dataFlight[1].sSegments[indexPath.section].first?.sAirline.sAirlineName ? "Same\nAircraft" : "Change\nAircraft"
-                    
                     cell.lblAircraftType.text =  "\(dataFlight[0].sSegments[indexPath.section].first?.sAirline.sFlightNumber ?? "") \(dataFlight[0].sSegments[indexPath.section].first?.sAirline.sFareClass ?? "")" == "\(dataFlight[0].sSegments[indexPath.section].last?.sAirline.sFlightNumber ?? "") \(dataFlight[0].sSegments[indexPath.section].last?.sAirline.sFareClass ?? "")" ? "Same\nAircraft" : "Change\nAircraft"
                     
                     if indexPath.row == dataFlight[0].sSegments[indexPath.section].count - 1 {
@@ -397,7 +386,6 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
             if indexPath.section != self.dataFlight[0].sSegments.count {
                 let cell = tableView.dequeueReusableCell(withIdentifier: FareFlightXIB().identifire, for: indexPath) as! FareFlightXIB
                 cell.btnFlight.tag = indexPath.row
-              //  cell.btnFlight.accessibilityLabel = "\(indexPath.row)"
                 cell.btnFlight.addTarget(self, action: #selector(actionFlightPopOver(_ :)), for: .touchUpInside)
                 if dataFlight[0].sSegments[indexPath.section].count > 1 {
                     if indexPath.row == dataFlight[0].sSegments[indexPath.section].count - 1 {
@@ -418,7 +406,7 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
                         }
                         
                         cell.lblLayoverTime.text = "Layover Time\n\(haltTime.getDuration())"
-                      //  cell.lblAircraftType.text = dataFlight[0].sSegments[indexPath.section].first?.sAirline.sAirlineName == dataFlight[0].sSegments[indexPath.section].last?.sAirline.sAirlineName ? "Same\nAircraft" : "Change\nAircraft"
+                     
                         cell.lblAircraftType.text = "\(dataFlight[0].sSegments[indexPath.section].first?.sAirline.sFlightNumber ?? "") \(dataFlight[0].sSegments[indexPath.section].first?.sAirline.sFareClass ?? "")" == "\(dataFlight[0].sSegments[indexPath.section].last?.sAirline.sFlightNumber ?? "") \(dataFlight[0].sSegments[indexPath.section].last?.sAirline.sFareClass ?? "")" ? "Same\nAircraft" : "Change\nAircraft"
 
                     }
@@ -456,14 +444,6 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
                 }
                 return cell
             }
-            //            else {
-            //                let cell = tableView.dequeueReusableCell(withIdentifier: SecureTripXIB().identifire, for: indexPath) as! SecureTripXIB
-            //
-            //                cell.btnSecure.addTarget(self, action: #selector(handleSecureTap(_:)), for: .touchUpInside)
-            //                cell.btnUnsecure.addTarget(self, action: #selector(handleUnsecureTap(_:)), for: .touchUpInside)
-            //
-            //                return cell
-            //            }
         }
         return UITableViewCell()
     }
@@ -539,7 +519,5 @@ extension FareDetailsVC: UITableViewDelegate, UITableViewDataSource {
             vc.view.backgroundColor = .lightGray
             LoaderClass.shared.presentPopover(self, vc, sender: sender, size: CGSize(width: 400, height: 45),arrowDirection: .any)
         }
-        
-
     }
 }

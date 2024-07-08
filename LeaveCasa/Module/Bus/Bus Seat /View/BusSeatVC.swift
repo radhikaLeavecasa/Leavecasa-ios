@@ -7,7 +7,6 @@
 
 import UIKit
 import IBAnimatable
-import AMPopTip
 
 class BusSeatVC: UIViewController, TVCDelegate {
     
@@ -34,7 +33,6 @@ class BusSeatVC: UIViewController, TVCDelegate {
     var seatNumer = Int()
     var viewModel = BusSeatViewModel()
     var bus = Bus()
-    let popTip = PopTip()
     lazy var busDropping = BusBoarding()
     lazy var busBoarding = BusBoarding()
     lazy var selectedSeats = [BusSeat]()
@@ -232,7 +230,6 @@ extension BusSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
             }
         }
         
-        //self.lblGstText.text = "(+ ₹\(String(format: "%.2f", markUpPrice)) incl. of GST & Taxes)"
         self.lblGstText.text = "(+ ₹75 Convenience fee + 18% GST)"
         self.totalPrice = (Double(calculate) ?? 0.0) + (Double(calculateUpper) ?? 0.0) + 88.5
         self.lblTotalPrice.text = "₹ \(String(format: "%.2f", (Double(calculate) ?? 0.0) + (Double(calculateUpper) ?? 0.0)))"

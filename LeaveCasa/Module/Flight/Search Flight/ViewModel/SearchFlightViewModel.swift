@@ -55,7 +55,6 @@ class SearchFlightViewModel{
     }
     
     func searchFlight(param:[String:Any], selectedTab:Int, array:[FlightStruct], sharedParam:[String:Any], view: UIViewController, couponData: [CouponData], isFareScreen: Bool = false) {
-       //  LoaderClass.shared.loadAnimation()
         if isFareScreen {
             LoaderClass.shared.isFareScreen = true
         }
@@ -98,20 +97,12 @@ class SearchFlightViewModel{
                                     allFlights.append(results)
                                 }
                             }
-                            
-//                            if let item = responseValue[WSResponseParams.WS_RESP_PARAM_LOGID] as? Int {
-//                                logId = item
-//                            }
-//                            if let item = responseValue[WSResponseParams.WS_RESP_PARAM_TOKEN_ID] as? String {
-//                                tokenId = item
-//                            }
                             if let item = responseDict[WSResponseParams.WS_RESP_PARAM_TRACE_ID] as? String {
                                 traceId = item
                             }
                             
                         }
                         LoaderClass.shared.stopAnimation()
-                       // view.webView.removeFromSuperview()
                         if selectedTab == 1 && allFlights.count == 1 {
                             if let vc = ViewControllerHelper.getViewController(ofType: .FlightReturnTripVC, StoryboardName: .Flight) as? FlightReturnTripVC {
                                 vc.tokenId = tokenId
