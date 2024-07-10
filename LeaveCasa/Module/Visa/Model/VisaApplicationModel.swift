@@ -57,9 +57,10 @@ struct VisaApplicationModel: Mappable {
 }
 
 struct AmountInfo: Mappable {
-    var amount: Int?
+    var amount: String?
     var currency: String?
     var leavecasaPrice: Int?
+    var gst: Int?
     
     init?(map: Map) {}
     
@@ -67,6 +68,7 @@ struct AmountInfo: Mappable {
         amount <- map["amount"]
         currency <- map["currency"]
         leavecasaPrice <- map["leavecasa_price"]
+        gst <- map["gst"]
     }
 }
 

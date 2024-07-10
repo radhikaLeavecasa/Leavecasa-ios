@@ -421,7 +421,8 @@ extension TripsVC: UITableViewDelegate, UITableViewDataSource {
                     cell.lblTraceId.text = "Trace ID:- \(arrVisa?[indexPath.row].traceId ?? 0)"
                     cell.lblValidity.text = "\(arrVisa?[indexPath.row].visaType ?? "") Visa | \(arrVisa?[indexPath.row].validity ?? "") Validity | \(arrVisa?[indexPath.row].stayPeriod ?? "") Stay period"
                     cell.btnViewDetails.addTarget(self, action: #selector(insuranceDetail), for: .touchUpInside)
-                    cell.lblPrice.text = "\(arrVisa?[indexPath.row].amountInfo?.currency ?? "") \(Int((arrVisa?[indexPath.row].amountInfo?.amount ?? 0) + (arrVisa?[indexPath.row].amountInfo?.leavecasaPrice ?? 0)))"
+                    let amt = (Int(arrVisa?[indexPath.row].amountInfo?.amount ?? "0") ?? 0)
+                    cell.lblPrice.text = "\(arrVisa?[indexPath.row].amountInfo?.currency ?? "") \(Int(amt + (arrVisa?[indexPath.row].amountInfo?.leavecasaPrice ?? 0) + (arrVisa?[indexPath.row].amountInfo?.gst ?? 0)))"
                     cell.btnViewDetails.tag = indexPath.row
                     cell.btnViewDetails.addTarget(self, action: #selector(viewVisa(_:)), for: .touchUpInside)
                     return cell

@@ -172,11 +172,12 @@ extension DiscoverTopPlacesVC: UITableViewDelegate, UITableViewDataSource {
                     self.pushView(vc: vc, title: "withCity")
                 }
             }
-        } else {
-            if btnOptions[0].isSelected {
-                
-            } else {
-                
+        } else if selectedSection == 3 {
+            if let vc = ViewControllerHelper.getViewController(ofType: .SearchHotelVC, StoryboardName: .Hotels) as? SearchHotelVC{
+                vc.couponsData = couponData?.filter({$0.category == "hotel"})
+                vc.previouslyAddedCity = (btnOptions[0].isSelected == true ? arrDomestic?[indexPath.row].cityName : arrInternational?[indexPath.row].cityName) ?? ""
+                vc.cityCodeStr = (btnOptions[0].isSelected == true ? arrDomestic?[indexPath.row].code : arrInternational?[indexPath.row].code) ?? ""
+                self.pushView(vc: vc, title: "withCity")
             }
         }
     }

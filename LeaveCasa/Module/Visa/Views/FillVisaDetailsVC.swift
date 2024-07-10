@@ -29,7 +29,7 @@ class FillVisaDetailsVC: UIViewController, RazorpayProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Test, andDelegate: self)
+        self.razorpay = RazorpayCheckout.initWithKey(RazorpayKeys.Live, andDelegate: self)
         
         
         let yourAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont.boldFont(size: 14)]

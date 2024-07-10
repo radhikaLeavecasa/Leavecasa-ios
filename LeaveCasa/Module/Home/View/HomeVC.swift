@@ -259,7 +259,7 @@ extension HomeVC: UITableViewDelegate,UITableViewDataSource {
         } else {
             vc.arrDomestic = self.viewModel.arrDomestic
             vc.arrInternational = self.viewModel.arrInternational
-            vc.selectedTag = selectedTag == 13 ? 0 : 1
+            vc.selectedTag = selectedTagTwo == 13 ? 0 : 1
         }
         self.navigationController?.pushViewController(vc, animated: true)
     }

@@ -24,6 +24,9 @@ class GuestLoginVC: UIViewController {
     //MARK: - Lifecycle Memthods
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let interactivePopGestureRecognizer = self.navigationController?.interactivePopGestureRecognizer {
+                interactivePopGestureRecognizer.delegate = self
+            }
         self.objGuestLoginVM.delegate = self
         attributedString = NSMutableAttributedString(string: "By logging in, I agree to LeaveCasa Terms & Conditions, Cancellation Policy and Privacy Policy.")
         attributedText()
@@ -97,6 +100,12 @@ class GuestLoginVC: UIViewController {
                 }
             }
         }
+    }
+}
+
+extension GuestLoginVC: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return false
     }
 }
 

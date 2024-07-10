@@ -26,7 +26,8 @@ class VisaViewDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
-        lblPrice.text = "\(visaDetail?.amountInfo?.currency ?? "") \(Int((visaDetail?.amountInfo?.amount ?? 0) + (visaDetail?.amountInfo?.leavecasaPrice ?? 0)))"
+        let amt = Int(visaDetail?.amountInfo?.amount ?? "0") ?? 0
+        lblPrice.text = "\(visaDetail?.amountInfo?.currency ?? "") \(Int(amt + (visaDetail?.amountInfo?.leavecasaPrice ?? 0) + (visaDetail?.amountInfo?.gst ?? 0)))"
         lblCountry.text = visaDetail?.country
         lblVisaType.text = visaDetail?.visaType
         lblPaxCountry.text = "\(visaDetail?.pax ?? 0) pax"
@@ -49,10 +50,10 @@ class VisaViewDetailVC: UIViewController {
             self.pushView(vc: vc,title: AlertMessages.INVOICE)
         }
     }
-    
 }
 
 extension VisaViewDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         visaDetail?.stats?.count ?? 0
     }
@@ -77,6 +78,6 @@ extension VisaViewDetailVC: UICollectionViewDelegate, UICollectionViewDataSource
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collVwProfilePics.frame.size.height, height: collVwProfilePics.frame.size.height)
+        CGSize(width: 130, height: collVwProfilePics.frame.size.height)
     }
 }
