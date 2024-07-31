@@ -103,6 +103,7 @@ class FlightDomasticListVC: UIViewController {
         self.onwordFlightFlight.dataSource = self
         self.onwordFlightFlight.tableFooterView = UIView()
         self.onwordFlightFlight.ragisterNib(nibName: ReturnTripFlightXIB().identifire)
+        self.onwordFlightFlight.ragisterNib(nibName: NoDataFoundXIB().identifire)
     }
     
     func setupFlightData() {
@@ -306,14 +307,7 @@ extension FlightDomasticListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.flights.first?[indexPath.section].sSegments.count ?? 0 == 0 || self.flights.last?[indexPath.section].sSegments.count ?? 0 == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: NoDataFoundXIB().identifire, for: indexPath) as! NoDataFoundXIB
-            cell.img.image = .noFlight()
-            cell.lblMsg.text = AlertMessages.NO_FLIGHT_FOUND
-            cell.lblTitleMsg.text = ""
-            cell.lblSubTitleMsg.text = ""
-            return cell
-        } else {
+        if self.flights.last?.count ?? 0 > indexPath.section || self.flights.first?.count ?? 0 > indexPath.section {
             let cell = tableView.dequeueReusableCell(withIdentifier: ReturnTripFlightXIB().identifire, for: indexPath) as! ReturnTripFlightXIB
             if tableView == self.onwordFlightFlight{
                 cell.imgCheck.image = self.selectedOnwordIndex == indexPath.section ? .checkMark() : .uncheckMark()
@@ -327,7 +321,31 @@ extension FlightDomasticListVC: UITableViewDelegate, UITableViewDataSource {
                 }
             }
             return cell
+        } else {
+          //  if self.flights.first?[indexPath.section].sSegments.count ?? 0 == 0 || self.flights.last?[indexPath.section].sSegments.count ?? 0 == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: NoDataFoundXIB().identifire, for: indexPath) as! NoDataFoundXIB
+                cell.img.image = .noFlight()
+                cell.lblMsg.text = AlertMessages.NO_FLIGHT_FOUND
+                cell.lblTitleMsg.text = ""
+                cell.lblSubTitleMsg.text = ""
+                return cell
+            //}
         }
+//        else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: ReturnTripFlightXIB().identifire, for: indexPath) as! ReturnTripFlightXIB
+//            if tableView == self.onwordFlightFlight{
+//                cell.imgCheck.image = self.selectedOnwordIndex == indexPath.section ? .checkMark() : .uncheckMark()
+//                if let flight = self.flights.first?[indexPath.section] {
+//                    cell.setUp(indexPath: indexPath, flight: flight)
+//                }
+//            } else {
+//                cell.imgCheck.image = self.selectedReturnIndex == indexPath.section ? .checkMark() : .uncheckMark()
+//                if let flight = self.flights.last?[indexPath.section] {
+//                    cell.setUp(indexPath: indexPath, flight: flight)
+//                }
+//            }
+//            return cell
+//        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -451,6 +469,28 @@ extension FlightDomasticListVC: isFilter, ResponseProtocol {
             self.flights[1] = self.flights[1].sorted{(($0.sSegments.first?.first?.sOriginDeptTime ?? "") > ($1.sSegments.first?.first?.sOriginDeptTime ?? ""))}
         }
         
+        if self.airlineCode?.count ?? 0 > 0 {
+            var flightsData = [Flight]()
+            for code in self.airlineCode ?? [] {
+                if self.flights.count > 0 {
+                    flightsData.append(contentsOf: self.flightsFilter[0].filter({ $0.sAirlineCode == code }))
+                }
+            }
+            if flightsData.count > 0 {
+                self.flights[0] = flightsData
+            }
+        }
+        
+        if self.airlineCode2?.count ?? 0 > 0 {
+            var flightsData2 = [Flight]()
+            for code in self.airlineCode2 ?? [] {
+                flightsData2.append(contentsOf: self.flightsFilter[1].filter({ $0.sAirlineCode == code }))
+            }
+            if flightsData2.count > 0 {
+                self.flights[1] = flightsData2
+            }
+        }
+        
         if isRefund == "1" {
             self.flights[0] = self.flights[0].filter{$0.sIsRefundable == true}
         } else if isRefund == "0" {
@@ -463,27 +503,23 @@ extension FlightDomasticListVC: isFilter, ResponseProtocol {
             self.flights[1] = self.flights[1].filter{$0.sIsRefundable == false}
         }
         
-        if self.airlineCode?.count ?? 0 > 0 {
-            var flightsData = [Flight]()
-            for code in self.airlineCode ?? [] {
-                if self.flights.count > 0 {
-                    flightsData.append(contentsOf: self.flights[0].filter({ $0.sAirlineCode == code }))
-                }
-            }
-            if flightsData.count > 0 {
-                self.flights[0] = flightsData
-            }
+        if oneStop == true && nonStop == true {
+            self.flights[0] = self.flights[0].filter({$0.sSegments.first?.count == 1 || $0.sSegments.first?.count == 2})
+        } else if nonStop == true {
+            self.flights[0] = self.flights[0].filter({$0.sSegments.first?.count == 1})
+        } else if oneStop == true {
+            self.flights[0] = self.flights[0].filter({$0.sSegments.first?.count == 2})
         }
         
-        if self.airlineCode2?.count ?? 0 > 0 {
-            var flightsData2 = [Flight]()
-            for code in self.airlineCode2 ?? [] {
-                flightsData2.append(contentsOf: self.flights[1].filter({ $0.sAirlineCode == code }))
-            }
-            if flightsData2.count > 0 {
-                self.flights[1] = flightsData2
-            }
+        
+        if oneStop2 == true && nonStop2 == true {
+            self.flights[1] = self.flights[1].filter({$0.sSegments.first?.count == 1 || $0.sSegments.first?.count == 2})
+        } else if nonStop2 == true {
+            self.flights[1] = self.flights[1].filter({$0.sSegments.first?.count == 1})
+        } else if oneStop2 == true {
+            self.flights[1] = self.flights[1].filter({$0.sSegments.first?.count == 2})
         }
+        
         
         if self.flights.first?.count == 0 {
             self.flights[1] = []

@@ -64,6 +64,21 @@
                   endingLineNumber = "258"
                   offsetFromSymbolStart = "1204">
                </Location>
+               <Location
+                  uuid = "939ED66E-CF91-4B62-AD9F-A90DEFFEB0C1 - a897e980ed6939f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in LeaveCasa.SearchViewModel.satchCity(city: Swift.String, view: __C.UIViewController) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Hotel/SearchHotel/Model/SearchViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "1180">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -174,6 +189,21 @@
                   startingLineNumber = "96"
                   endingLineNumber = "96"
                   offsetFromSymbolStart = "6764">
+               </Location>
+               <Location
+                  uuid = "31E57DE9-FCDC-4B0E-987B-E7D24B2A98DD - 47897b9e7a6dd4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.InsuranceSearchVC.actionSubmit(Any) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Insurance/Views/InsuranceSearchVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "6560">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -399,6 +429,21 @@
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "844">
                </Location>
+               <Location
+                  uuid = "6C27D50D-592D-44DC-8644-58B53501E5C2 - bbe4f82510ee1090"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.VisaViewDetailVC.viewDidLoad() -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Visa/Views/VisaViewDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "828">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -591,6 +636,21 @@
                   endingLineNumber = "160"
                   offsetFromSymbolStart = "524">
                </Location>
+               <Location
+                  uuid = "06639750-747B-4AFB-8EF7-8B678BEC25E9 - 12f41a6a221a5725"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeaveCasa.DiscoverTopPlacesVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LeaveCasa"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/acme/Desktop/LeaveCasa/LeaveCasa/Module/Home/View/DiscoverTopPlacesVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "504">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -607,6 +667,102 @@
             startingLineNumber = "176"
             endingLineNumber = "176"
             landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D358B2C6-5C93-41B3-93AB-4D21AA5F057A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Filters/View/FlightFiltersVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "694CFB7E-D3D7-46CE-907A-E95CF40B6C21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Filters/View/FlightFiltersVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "273AA1FF-6E30-448F-A18A-E2CD05377477"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Filters/View/FlightFiltersVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "313"
+            endingLineNumber = "313"
+            landmarkName = "applyOnPress(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56847CA2-ADFF-466B-91B8-C79260DD3D1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Domastic List/View/FlightDomasticListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "filterFlight(nonStop:nonStop2:oneStop:oneStop2:isCheapestFirst:isCheapestFirst2:airlineCode:airlineCode2:isRefund:isRefund2:returnNonStop:returnNonStop2:returnOneStop:returnOneStop2:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73E5AAF9-52A9-437C-8873-8F8DD7DEDC38"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Domastic List/View/FlightDomasticListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
+            landmarkName = "filterFlight(nonStop:nonStop2:oneStop:oneStop2:isCheapestFirst:isCheapestFirst2:airlineCode:airlineCode2:isRefund:isRefund2:returnNonStop:returnNonStop2:returnOneStop:returnOneStop2:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7F261A0-E869-46EC-952D-D9920899E218"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeaveCasa/Module/Flight/Flight Domastic List/View/FlightDomasticListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
+            landmarkName = "filterFlight(nonStop:nonStop2:oneStop:oneStop2:isCheapestFirst:isCheapestFirst2:airlineCode:airlineCode2:isRefund:isRefund2:returnNonStop:returnNonStop2:returnOneStop:returnOneStop2:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
