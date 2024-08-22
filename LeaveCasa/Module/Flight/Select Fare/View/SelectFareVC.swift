@@ -283,13 +283,12 @@ extension SelectFareVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
         let tax = dataFlight[indexPath.row].sFare.sPublishedFare - dataFlight[indexPath.row].sFare.sBaseFare
-        
+        LoaderClass.shared.fareRule = (dataFlight[indexPath.row].sFareClassification[CommonParam.TYPE_CP] as? String ?? "").uppercased()
         self.totalPrice = "\((dataFlight[indexPath.row].sFare.sBaseFare+tax+convenientFee-discount).rounded())"
         basePrice = dataFlight[indexPath.row].sFare.sBaseFare
         self.lblPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int((dataFlight[indexPath.row].sFare.sBaseFare+tax+convenientFee-discount).rounded())))"
         if GetData.share.isOnwordBook() == true {
             self.lblReturnPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(dataFlight[indexPath.row].sFare.sPublishedFare.rounded())))"
-
         } else {
             self.lblOnwordPrice.text = "₹\(LoaderClass.shared.commaSeparatedPrice(val: Int(dataFlight[indexPath.row].sFare.sPublishedFare.rounded())))"
         }

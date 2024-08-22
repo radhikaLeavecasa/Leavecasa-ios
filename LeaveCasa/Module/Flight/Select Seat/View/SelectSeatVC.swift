@@ -111,6 +111,7 @@ class SelectSeatVC: UIViewController {
         attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: 2, range:
                                         NSRange.init(location: 0, length: attributedString.length));
         btnSkip.setAttributedTitle(attributedString, for: .normal)
+        //btnSkip.isHidden = LoaderClass.shared.fareRule == "SUPER6E"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -275,10 +276,10 @@ class SelectSeatVC: UIViewController {
                 if LoaderClass.shared.arrSelectedSeat[i].count > 0 {
                     arr.append(LoaderClass.shared.arrSelectedSeat[i][j])
                 }
-            
-            let convertedArray = arr.map { seat in
-                return (airlineCode: seat.airlineCode, flightNumber: seat.flightNumber, craftType: seat.craftType, origin: seat.origin, destination: seat.destination, availablityType: seat.availablityType, description: seat.description, code: seat.code, rowNo: seat.rowNo, seatNo: seat.seatNo, seatType: seat.seatType, seatWayType: seat.seatWayType, compartment: seat.compartment, deck: seat.deck, currency: seat.currency, price: seat.price)
-            }
+                
+                let convertedArray = arr.map { seat in
+                    return (airlineCode: seat.airlineCode, flightNumber: seat.flightNumber, craftType: seat.craftType, origin: seat.origin, destination: seat.destination, availablityType: seat.availablityType, description: seat.description, code: seat.code, rowNo: seat.rowNo, seatNo: seat.seatNo, seatType: seat.seatType, seatWayType: seat.seatWayType, compartment: seat.compartment, deck: seat.deck, currency: seat.currency, price: seat.price)
+                }
                 Passengers[j][WSResponseParams.WS_RESP_PARAM_SEAT_DYNAMIC] = convertedArray
             }
         }
@@ -301,7 +302,6 @@ class SelectSeatVC: UIViewController {
                 }
             }
         } else {
-            
             for (i,_) in LoaderClass.shared.arrSelectedMeal.enumerated() {
                 for j in 0..<LoaderClass.shared.arrSelectedMeal[i].count {
                     
@@ -326,16 +326,17 @@ class SelectSeatVC: UIViewController {
                 if LoaderClass.shared.arrSelectedBaggageDynamic[i].count > 0 {
                     arrBaggage.append(LoaderClass.shared.arrSelectedBaggageDynamic[i][j])
                 }
-            
-            let convertedArray = arrBaggage.map { baggage in
-                return (airlineCode: baggage.airlineCode, flightNumber: baggage.flightNumber, wayType: baggage.wayType, code: baggage.code, text: baggage.text, description: baggage.description, weight: baggage.weight, currency: baggage.currency, price: baggage.price, origin: baggage.origin, destination: baggage.destination)
-            }
+                
+                let convertedArray = arrBaggage.map { baggage in
+                    return (airlineCode: baggage.airlineCode, flightNumber: baggage.flightNumber, wayType: baggage.wayType, code: baggage.code, text: baggage.text, description: baggage.description, weight: baggage.weight, currency: baggage.currency, price: baggage.price, origin: baggage.origin, destination: baggage.destination)
+                }
                 Passengers[j][WSResponseParams.WS_RESP_PARAM_BAGGAGE] = convertedArray
             }
         }
         
         self.param["Passengers"] = Passengers
         
+        // if isValidateFareRule() {
         if let vc = ViewControllerHelper.getViewController(ofType: .WalletPaymentVC, StoryboardName: .Main) as? WalletPaymentVC {
             vc.payblePayment = "\(lblPrice.text?.replacingOccurrences(of: "₹", with: "").replacingOccurrences(of: ",", with: "") ?? "")"
             vc.param = self.param
@@ -351,12 +352,13 @@ class SelectSeatVC: UIViewController {
             vc.dataFlight = dataFlight
             vc.baseAmt = basePrice
             vc.couponAmt = self.discount
-
+            
             if GetData.share.isOnwordBook() == true {
                 vc.returnResultIndex = returnResultIndex
             }
             vc.publishedFare = basePrice + taxes
             self.pushView(vc: vc)
+            //  }
         }
     }
     func getSeatType(seat:Int) -> String{
@@ -368,6 +370,68 @@ class SelectSeatVC: UIViewController {
             return "Middle"
         }else{
             return ""
+        }
+    }
+    func isValidateFareRule() -> Bool {
+        // Check if fare rule is SUPER6E
+        guard LoaderClass.shared.fareRule == "SUPER6E" else {
+            return true
+        }
+        
+        // Perform all checks and collect validation results
+        let seatValidation = validateSeats()
+        let mealValidation = validateMeals()
+        
+        // Return false if any of the validations failed
+        if !seatValidation || !mealValidation {
+            return false
+        }
+        
+        return true
+    }
+
+    private func validateSeats() -> Bool {
+        if LoaderClass.shared.arrSelectedSeat.count != 0 {
+            for (_, seat) in LoaderClass.shared.arrSelectedSeat.enumerated() {
+                if seat.count < numberOfSeat {
+                    pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+                    return false
+                }
+            }
+            return true
+        } else {
+            pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+            return false
+        }
+    }
+
+    private func validateMeals() -> Bool {
+        if let isLCC = self.ssrModel?.fare_quote?.response?.fareQuoteResult?.isLCC, isLCC {
+            if LoaderClass.shared.arrSelectedMealDynamic.count != 0 {
+                for (_, meal) in LoaderClass.shared.arrSelectedMealDynamic.enumerated() {
+                    if meal.count < numberOfSeat {
+                        pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+                        return false
+                    }
+                }
+                return true
+            } else {
+                pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+                return false
+            }
+        } else {
+            if LoaderClass.shared.arrSelectedMeal.count != 0 {
+                for (_, meal) in LoaderClass.shared.arrSelectedMeal.enumerated() {
+                    if meal.count < numberOfSeat {
+                        pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+                        return false
+                    }
+                }
+                return true
+            }  else {
+                pushNoInterConnection(view: self, titleMsg: "Alert", msg: "Seat and meal selection is mandatory in SUPER6E flights")
+                return false
+            }
         }
     }
 }

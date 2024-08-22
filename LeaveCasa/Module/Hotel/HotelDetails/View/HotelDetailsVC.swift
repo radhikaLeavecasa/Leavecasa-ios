@@ -248,7 +248,6 @@ class HotelDetailsVC: UIViewController {
         self.facilityCollection.isHidden = false
         self.selectedtab = 1
         self.facilitiesData = self.hotelDetail?.sFacilities.components(separatedBy: ";") ?? []
-        
         self.overViewTableView.reloadData()
         self.facilityCollection.reloadData()
     }

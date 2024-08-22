@@ -113,7 +113,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_location" translatesAutoresizingMaskIntoConstraints="NO" id="meP-hQ-MWb">
-                                <rect key="frame" x="20" y="131.5" width="20" height="20"/>
+                                <rect key="frame" x="20" y="133" width="20" height="20"/>
                                 <color key="tintColor" red="0.078431372550000003" green="0.53725490200000003" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0yt-5V-Tb2"/>
@@ -121,17 +121,17 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QII-wl-GdJ">
-                                <rect key="frame" x="331" y="134" width="63" height="15"/>
+                                <rect key="frame" x="339" y="134" width="55" height="17.5"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="15"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xjX-PU-TG3">
-                                <rect key="frame" x="0.0" y="154" width="414" height="638"/>
+                                <rect key="frame" x="0.0" y="156.5" width="414" height="635.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chandigarh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPh-kz-Na0">
-                                <rect key="frame" x="45" y="133" width="97" height="17"/>
+                                <rect key="frame" x="45" y="133" width="88.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                 <color key="textColor" name="LIGHT_BLUE"/>
                                 <nil key="highlightedColor"/>
@@ -149,16 +149,16 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXz-74-SGr" customClass="AnimatableView" customModule="IBAnimatable">
-                                <rect key="frame" x="10" y="802" width="70.5" height="55"/>
+                                <rect key="frame" x="10" y="802" width="65.5" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo2-06-wVr">
-                                        <rect key="frame" x="8" y="21" width="40.5" height="13"/>
+                                        <rect key="frame" x="8" y="20" width="35.5" height="15.5"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bottom_filters" translatesAutoresizingMaskIntoConstraints="NO" id="dmC-RX-v8b">
-                                        <rect key="frame" x="53.5" y="21.5" width="12" height="12"/>
+                                        <rect key="frame" x="48.5" y="21.5" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="JRn-mm-I5c"/>
                                             <constraint firstAttribute="height" constant="12" id="JZh-5M-u7k"/>
@@ -180,7 +180,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-ij-agu">
-                                <rect key="frame" x="80.5" y="802" width="323.5" height="55"/>
+                                <rect key="frame" x="75.5" y="802" width="328.5" height="55"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Or7-am-lZf"/>
@@ -213,7 +213,7 @@
                                                     <rect key="frame" x="5" y="8" width="159" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-lR-daG">
-                                                            <rect key="frame" x="8" y="13.5" width="143" height="13"/>
+                                                            <rect key="frame" x="8" y="12.5" width="143" height="15.5"/>
                                                             <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -330,7 +330,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYR-RU-fw1">
-                                        <rect key="frame" x="62" y="14" width="212" height="22"/>
+                                        <rect key="frame" x="62" y="12" width="212" height="26"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="22"/>
                                         <color key="textColor" red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -342,7 +342,7 @@
                                         <rect key="frame" x="289" y="5" width="100" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFh-QL-NJy">
-                                                <rect key="frame" x="27.5" y="13" width="45.5" height="14"/>
+                                                <rect key="frame" x="28" y="12" width="44" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -401,13 +401,13 @@
                                 <rect key="frame" x="0.0" y="98" width="414" height="1368"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSg-KE-hla">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1191"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1206"/>
                                         <subviews>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-m0-cKV" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="30" width="374" height="109"/>
+                                                <rect key="frame" x="20" y="30" width="374" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dda-l1-NLR">
-                                                        <rect key="frame" x="12" y="17" width="42.5" height="17"/>
+                                                        <rect key="frame" x="12" y="17" width="39" height="20"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -416,7 +416,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(per night)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8n-3F-egU">
-                                                        <rect key="frame" x="59.5" y="17" width="89.5" height="17"/>
+                                                        <rect key="frame" x="56" y="17" width="76.5" height="20"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -425,7 +425,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFp-AG-fFj" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
-                                                        <rect key="frame" x="12" y="44" width="342" height="50"/>
+                                                        <rect key="frame" x="12" y="47" width="342" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="tintColor" name="GRAY_COLOR"/>
                                                         <constraints>
@@ -486,7 +486,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Star Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epu-sM-DBe">
-                                                <rect key="frame" x="24" y="155" width="370" height="17"/>
+                                                <rect key="frame" x="24" y="158" width="370" height="20"/>
                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -495,7 +495,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KYe-bt-roY">
-                                                <rect key="frame" x="24" y="184" width="366" height="70"/>
+                                                <rect key="frame" x="24" y="190" width="366" height="70"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwN-LG-z20" customClass="AnimatableView" customModule="IBAnimatable">
                                                         <rect key="frame" x="0.0" y="0.0" width="108.5" height="70"/>
@@ -508,7 +508,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ku-cK-gv3">
-                                                                <rect key="frame" x="33.5" y="25" width="12" height="20"/>
+                                                                <rect key="frame" x="33.5" y="23.5" width="11.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="20"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -561,7 +561,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-ll-4R9">
-                                                                <rect key="frame" x="33.5" y="25" width="12.5" height="20"/>
+                                                                <rect key="frame" x="34" y="23.5" width="11.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="20"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -614,7 +614,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E83-9B-UqU">
-                                                                <rect key="frame" x="33" y="25" width="12" height="20"/>
+                                                                <rect key="frame" x="33.5" y="23.5" width="11.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="20"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -662,17 +662,17 @@
                                                 </constraints>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGY-ao-2Ph">
-                                                <rect key="frame" x="20" y="274" width="374" height="1"/>
+                                                <rect key="frame" x="20" y="280" width="374" height="1"/>
                                                 <color key="backgroundColor" name="GRAY_COLOR"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Hil-Zb-jAB"/>
                                                 </constraints>
                                             </view>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szu-58-Fy3" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="580" width="374" height="521"/>
+                                                <rect key="frame" x="20" y="589" width="374" height="527"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7v-E7-78o">
-                                                        <rect key="frame" x="15" y="14" width="344" height="17"/>
+                                                        <rect key="frame" x="15" y="14" width="344" height="20"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -681,7 +681,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-jX-TGQ">
-                                                        <rect key="frame" x="14" y="45" width="346" height="200"/>
+                                                        <rect key="frame" x="14" y="48" width="346" height="200"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="EDO-Rn-lkZ"/>
@@ -695,14 +695,14 @@
                                                         <cells/>
                                                     </collectionView>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77V-sh-PjL">
-                                                        <rect key="frame" x="14" y="255" width="346" height="1"/>
+                                                        <rect key="frame" x="14" y="258" width="346" height="1"/>
                                                         <color key="backgroundColor" name="GRAY_COLOR"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="2Uv-zB-wql"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amenities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA1-gK-T2v">
-                                                        <rect key="frame" x="15" y="270" width="344" height="17"/>
+                                                        <rect key="frame" x="15" y="273" width="344" height="20"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -711,7 +711,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="b75-wg-zCm">
-                                                        <rect key="frame" x="14" y="301" width="346" height="200"/>
+                                                        <rect key="frame" x="14" y="307" width="346" height="200"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="200" id="7Bi-48-ZpO"/>
@@ -763,7 +763,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ls8-Yj-lDs" customClass="AnimatableButton" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="1121" width="374" height="50"/>
+                                                <rect key="frame" x="20" y="1136" width="374" height="50"/>
                                                 <color key="backgroundColor" name="LIGHT_BLUE"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gyD-IG-jvh"/>
@@ -782,7 +782,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-e4-LmT" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="295" width="374" height="100"/>
+                                                <rect key="frame" x="20" y="301" width="374" height="100"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PGG-1t-3CZ" customClass="AnimatableStackView" customModule="IBAnimatable">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
@@ -791,7 +791,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refundable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-PY-2I9">
-                                                                        <rect key="frame" x="15" y="17.5" width="82" height="15"/>
+                                                                        <rect key="frame" x="15" y="16.5" width="77" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -825,7 +825,7 @@
                                                                 <rect key="frame" x="0.0" y="50" width="374" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-Refundable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbi-kY-phW">
-                                                                        <rect key="frame" x="15" y="17.5" width="117.5" height="15"/>
+                                                                        <rect key="frame" x="15" y="16.5" width="110.5" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -878,10 +878,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3U-yH-3nd" customClass="AnimatableView" customModule="IBAnimatable">
-                                                <rect key="frame" x="20" y="415" width="374" height="145"/>
+                                                <rect key="frame" x="20" y="421" width="374" height="148"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMb-PI-w1m">
-                                                        <rect key="frame" x="15" y="14" width="344" height="17"/>
+                                                        <rect key="frame" x="15" y="14" width="344" height="20"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -890,13 +890,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="51M-b3-Mpp" customClass="AnimatableStackView" customModule="IBAnimatable">
-                                                        <rect key="frame" x="0.0" y="45" width="374" height="100"/>
+                                                        <rect key="frame" x="0.0" y="48" width="374" height="100"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzJ-P7-KU4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast included" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g1-Zh-B9f">
-                                                                        <rect key="frame" x="15" y="17.5" width="299" height="15"/>
+                                                                        <rect key="frame" x="15" y="16.5" width="299" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -931,7 +931,7 @@
                                                                 <rect key="frame" x="0.0" y="50" width="374" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Without breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANW-J2-y9Q">
-                                                                        <rect key="frame" x="15" y="17.5" width="299" height="15"/>
+                                                                        <rect key="frame" x="15" y="16.5" width="299" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -1245,7 +1245,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-Refundable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyW-ys-dAj">
-                                                                        <rect key="frame" x="25" y="-7" width="239" height="14"/>
+                                                                        <rect key="frame" x="25" y="-8" width="239" height="16.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="GRADIENT_RED"/>
                                                                         <nil key="highlightedColor"/>
@@ -1270,7 +1270,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Included Breakfast " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfk-35-vBN">
-                                                                        <rect key="frame" x="25" y="-7" width="239" height="14"/>
+                                                                        <rect key="frame" x="25" y="-8" width="239" height="16.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                         <color key="textColor" name="BLUE_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -1337,13 +1337,13 @@
                                                 <rect key="frame" x="10" y="185" width="394" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel Dates and Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqE-2l-7jq">
-                                                        <rect key="frame" x="10" y="0.0" width="374" height="14"/>
+                                                        <rect key="frame" x="10" y="0.0" width="374" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
                                                         <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dW1-a7-kEn" customClass="AnimatableView" customModule="IBAnimatable">
-                                                        <rect key="frame" x="10" y="24" width="181" height="40"/>
+                                                        <rect key="frame" x="10" y="26.5" width="181" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_gray_calender" translatesAutoresizingMaskIntoConstraints="NO" id="1io-x8-CvZ">
                                                                 <rect key="frame" x="6" y="9" width="20" height="22"/>
@@ -1353,13 +1353,13 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check-In &amp; Check-Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3h-lr-Amp">
-                                                                <rect key="frame" x="33" y="8" width="138" height="10"/>
+                                                                <rect key="frame" x="33" y="8" width="138" height="12"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="10"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVv-sB-Gei">
-                                                                <rect key="frame" x="33" y="21" width="138" height="0.0"/>
+                                                                <rect key="frame" x="33" y="23" width="138" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
                                                                 <color key="textColor" name="BLUE_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -1399,7 +1399,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XWk-3V-2xf" customClass="AnimatableView" customModule="IBAnimatable">
-                                                        <rect key="frame" x="203" y="24" width="181" height="40"/>
+                                                        <rect key="frame" x="203" y="26.5" width="181" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_gray_calender" translatesAutoresizingMaskIntoConstraints="NO" id="BKV-3d-sue">
                                                                 <rect key="frame" x="6" y="9" width="20" height="22"/>
@@ -1408,13 +1408,13 @@
                                                                     <constraint firstAttribute="height" constant="22" id="LRD-Ha-Zto"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guests &amp; Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-sg-bG8">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Guests &amp; Rooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuO-sg-bG8">
                                                                 <rect key="frame" x="33" y="8" width="138" height="10"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="10"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Guests/1 Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6O-ux-AWP">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2 Guests/1 Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6O-ux-AWP">
                                                                 <rect key="frame" x="33" y="23" width="138" height="11"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="11"/>
                                                                 <color key="textColor" name="BLUE_COLOR"/>
@@ -1689,13 +1689,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="₹ 7000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaL-3K-C9B">
-                                        <rect key="frame" x="20" y="8" width="71.5" height="20"/>
+                                        <rect key="frame" x="20" y="8" width="60.5" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPd-NC-QXL">
-                                        <rect key="frame" x="20" y="30" width="150" height="0.0"/>
+                                        <rect key="frame" x="20" y="33.5" width="150" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="HSb-kB-wB2"/>
                                         </constraints>
@@ -1704,14 +1704,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_tax" translatesAutoresizingMaskIntoConstraints="NO" id="jFr-le-F9H">
-                                        <rect key="frame" x="96.5" y="9" width="18" height="18"/>
+                                        <rect key="frame" x="85.5" y="11" width="18" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="DGu-Y1-MsU"/>
                                             <constraint firstAttribute="height" constant="18" id="fjq-TG-FLj"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfN-aG-pZe">
-                                        <rect key="frame" x="96.5" y="9" width="18" height="18"/>
+                                        <rect key="frame" x="85.5" y="11" width="18" height="18"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
                                             <action selector="actionTaxInfo:" destination="QPr-QA-upv" eventType="touchUpInside" id="5fR-b2-KoV"/>
@@ -1752,7 +1752,7 @@
                                 <rect key="frame" x="0.0" y="862" width="414" height="0.0"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Not Avalbel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-yI-px0">
-                                        <rect key="frame" x="20" y="-36" width="374" height="16"/>
+                                        <rect key="frame" x="20" y="-39" width="374" height="19"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                         <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                         <nil key="highlightedColor"/>
@@ -1852,7 +1852,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select  Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-jy-cwC">
-                                        <rect key="frame" x="62" y="14" width="342" height="22"/>
+                                        <rect key="frame" x="62" y="12" width="342" height="26"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="22"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1944,7 +1944,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Infomation for Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFs-Ao-Ff0">
-                                        <rect key="frame" x="62" y="14" width="342" height="22"/>
+                                        <rect key="frame" x="62" y="12" width="342" height="26"/>
                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="22"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1970,10 +1970,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="798"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-0E-Q19">
-                                                <rect key="frame" x="8" y="8" width="398" height="146"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="147"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Breakup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-nn-vzn">
-                                                        <rect key="frame" x="8" y="8" width="382" height="18"/>
+                                                        <rect key="frame" x="8" y="8" width="382" height="19"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                                         <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                         <nil key="highlightedColor"/>
@@ -1982,7 +1982,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WhZ-Zy-mxv">
-                                                        <rect key="frame" x="8" y="34" width="382" height="104"/>
+                                                        <rect key="frame" x="8" y="35" width="382" height="104"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="104" id="Tur-9O-Y2M"/>
@@ -1996,14 +1996,14 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QBd-Ih-4oG">
-                                                                            <rect key="frame" x="20" y="14" width="33" height="16"/>
+                                                                            <rect key="frame" x="20" y="13" width="30" height="19"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                             <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B7W-pz-noh">
-                                                                            <rect key="frame" x="317.5" y="14" width="44.5" height="16"/>
+                                                                            <rect key="frame" x="321" y="13" width="41" height="19"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                             <color key="textColor" name="TEXT_BLACK_COLOR"/>
@@ -2035,10 +2035,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gZ-9C-MxD">
-                                                <rect key="frame" x="8" y="162" width="398" height="66"/>
+                                                <rect key="frame" x="8" y="163" width="398" height="66"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Amenities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-0I-LP2">
-                                                        <rect key="frame" x="8" y="8" width="129.5" height="16"/>
+                                                        <rect key="frame" x="8" y="8" width="118" height="19"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                                         <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                         <nil key="highlightedColor"/>
@@ -2047,13 +2047,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No data found!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhB-BJ-W9t">
-                                                        <rect key="frame" x="8" y="32" width="382" height="16"/>
+                                                        <rect key="frame" x="8" y="35" width="382" height="19"/>
                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                         <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-t5-G0H">
-                                                        <rect key="frame" x="8" y="32" width="382" height="26"/>
+                                                        <rect key="frame" x="8" y="35" width="382" height="23"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Zvh-DK-aEv"/>
@@ -2082,7 +2082,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tns-EL-1a3">
-                                                <rect key="frame" x="8" y="236" width="398" height="46"/>
+                                                <rect key="frame" x="8" y="237" width="398" height="46"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cancellation Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fx5-Nl-tgT">
                                                         <rect key="frame" x="8" y="8" width="382" height="22"/>
@@ -2457,7 +2457,7 @@
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQx-9X-Fnm">
-                                                                                <rect key="frame" x="15" y="10" width="39" height="19"/>
+                                                                                <rect key="frame" x="15" y="10" width="37" height="19"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -2490,7 +2490,7 @@
                                                             </prototypes>
                                                         </tableView>
                                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-A9-36G">
-                                                            <rect key="frame" x="15" y="186.5" width="324" height="17"/>
+                                                            <rect key="frame" x="15" y="185" width="324" height="20"/>
                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -2608,13 +2608,13 @@
                                 <color key="backgroundColor" red="0.90222889179999999" green="0.93534642459999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOTEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRe-fK-gJM">
-                                <rect key="frame" x="334" y="132.5" width="55" height="16"/>
+                                <rect key="frame" x="335.5" y="132.5" width="52" height="19"/>
                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                 <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eew-rp-zjR">
-                                <rect key="frame" x="0.0" y="158.5" width="414" height="807.5"/>
+                                <rect key="frame" x="0.0" y="161.5" width="414" height="804.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-LH-Fj0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
@@ -2645,7 +2645,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtU-uN-CT3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="16"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                 <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                 <nil key="highlightedColor"/>
@@ -2682,7 +2682,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="09/8/22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-4z-J25">
-                                                                        <rect key="frame" x="0.0" y="36.5" width="120" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="33.5" width="120" height="20.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="120" id="2yS-Cd-jMj"/>
                                                                         </constraints>
@@ -2691,7 +2691,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejx-q4-8ek">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="31.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="28.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -2700,7 +2700,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender" translatesAutoresizingMaskIntoConstraints="NO" id="dIf-7F-VM3">
-                                                                        <rect key="frame" x="105" y="36.5" width="15" height="17.5"/>
+                                                                        <rect key="frame" x="105" y="33.5" width="15" height="20.5"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2730,7 +2730,7 @@
                                                                         </constraints>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="09/8/22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfi-fo-y5s">
-                                                                        <rect key="frame" x="0.0" y="36.5" width="120" height="17.5"/>
+                                                                        <rect key="frame" x="0.0" y="33.5" width="120" height="20.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="120" id="oT2-gO-oJP"/>
                                                                         </constraints>
@@ -2739,7 +2739,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiE-Dy-nzb">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="31.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="28.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="16"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -2748,7 +2748,7 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calender" translatesAutoresizingMaskIntoConstraints="NO" id="VPN-47-Yso">
-                                                                        <rect key="frame" x="105" y="36.5" width="15" height="17.5"/>
+                                                                        <rect key="frame" x="105" y="33.5" width="15" height="20.5"/>
                                                                     </imageView>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2779,7 +2779,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="114" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOMS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toV-Gn-jio">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -2788,10 +2788,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iza-bg-cld">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="114" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="114" height="42"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bv-wy-GyN">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="28"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="-">
@@ -2802,13 +2802,13 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5a-Kx-1y2">
-                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="40"/>
+                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDo-cP-TtL">
-                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="22"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="+">
@@ -2846,7 +2846,7 @@
                                                                 <rect key="frame" x="130" y="0.0" width="114" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADULTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDC-K7-dwt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -2855,10 +2855,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-dk-HIH">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="114" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="114" height="42"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e6-kF-Bhw">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="28"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="-">
@@ -2869,13 +2869,13 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEe-Hz-iFU">
-                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="40"/>
+                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-yo-Pzk">
-                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="22"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="+">
@@ -2913,7 +2913,7 @@
                                                                 <rect key="frame" x="260" y="0.0" width="114" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KIDS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZT-9E-RlS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="19.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
@@ -2922,10 +2922,10 @@
                                                                         </userDefinedRuntimeAttributes>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iTT-8e-g3G">
-                                                                        <rect key="frame" x="0.0" y="19.5" width="114" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="17.5" width="114" height="42"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frb-Yq-QZw">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="28"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="-">
@@ -2936,13 +2936,13 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NpE-qf-Klx">
-                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="40"/>
+                                                                                <rect key="frame" x="40.5" y="0.0" width="33" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfq-pW-0q6">
-                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="40"/>
+                                                                                <rect key="frame" x="81.5" y="0.0" width="32.5" height="42"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="22"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="+">
@@ -2988,16 +2988,16 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="179" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHILD AGE BELOW 6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-Qx-iCu">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="15"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-6f-pzJ">
-                                                                        <rect key="frame" x="20" y="19.5" width="139" height="40"/>
+                                                                        <rect key="frame" x="20" y="14.5" width="139" height="45"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-Ag-nGg">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="28"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="-">
@@ -3008,13 +3008,13 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snQ-wr-RqQ">
-                                                                                <rect key="frame" x="49" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="49" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tj-xW-dqZ">
-                                                                                <rect key="frame" x="98" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="98" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="22"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="+">
@@ -3051,16 +3051,16 @@
                                                                 <rect key="frame" x="195" y="0.0" width="179" height="60"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHILD AGE 6 TO 12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Btp-uc-wwW">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="15"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="179" height="17.5"/>
                                                                         <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                         <color key="textColor" name="GARK_GRAY_COLOR"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Un5-ta-EFn">
-                                                                        <rect key="frame" x="20" y="19.5" width="139" height="40"/>
+                                                                        <rect key="frame" x="20" y="14.5" width="139" height="45"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcy-8C-tNq">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="28"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="-">
@@ -3071,13 +3071,13 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbx-KA-Q7R">
-                                                                                <rect key="frame" x="49" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="49" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="17"/>
                                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtB-ST-jb5">
-                                                                                <rect key="frame" x="98" y="0.0" width="41" height="40"/>
+                                                                                <rect key="frame" x="98" y="0.0" width="41" height="45"/>
                                                                                 <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="22"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="+">
@@ -3131,7 +3131,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="na6-Dd-X8G">
-                                                                    <rect key="frame" x="15" y="4" width="112" height="27"/>
+                                                                    <rect key="frame" x="15" y="2.5" width="106" height="30"/>
                                                                     <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                     <state key="normal" title="  +  Add Room  ">
@@ -3163,7 +3163,7 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROOM 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13z-qV-oia">
-                                                                                            <rect key="frame" x="20" y="12.5" width="67" height="15"/>
+                                                                                            <rect key="frame" x="20" y="11.5" width="67" height="17.5"/>
                                                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="15"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
@@ -3196,13 +3196,13 @@
                                                                                     <rect key="frame" x="0.0" y="40.5" width="374" height="72.5"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Children (Below 12 years) " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkU-kx-byv">
-                                                                                            <rect key="frame" x="20" y="62" width="203.5" height="16"/>
+                                                                                            <rect key="frame" x="20" y="65" width="186.5" height="19"/>
                                                                                             <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                                                                             <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-I3-JkG">
-                                                                                            <rect key="frame" x="264" y="13" width="100" height="30"/>
+                                                                                            <rect key="frame" x="264" y="14.5" width="100" height="30"/>
                                                                                             <subviews>
                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7R-Rz-2KU">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="30"/>
@@ -3231,7 +3231,7 @@
                                                                                             </constraints>
                                                                                         </stackView>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K2A-gw-01x">
-                                                                                            <rect key="frame" x="264" y="55" width="100" height="30"/>
+                                                                                            <rect key="frame" x="264" y="59.5" width="100" height="30"/>
                                                                                             <subviews>
                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryY-Pf-orA">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="30"/>
@@ -3260,7 +3260,7 @@
                                                                                             </constraints>
                                                                                         </stackView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adults" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbD-IU-Rs4">
-                                                                                            <rect key="frame" x="20" y="20" width="51.5" height="16"/>
+                                                                                            <rect key="frame" x="20" y="20" width="45.5" height="19"/>
                                                                                             <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="16"/>
                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -3290,7 +3290,7 @@
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="47.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child 1 Age (years)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBo-5H-Lxm">
-                                                                                                            <rect key="frame" x="20" y="17" width="125" height="14"/>
+                                                                                                            <rect key="frame" x="20" y="15.5" width="117.5" height="16.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -3338,7 +3338,7 @@
                                                                                                     <rect key="frame" x="0.0" y="47.5" width="374" height="47.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child 2 Age (years)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-Yq-zem">
-                                                                                                            <rect key="frame" x="20" y="17" width="128" height="14"/>
+                                                                                                            <rect key="frame" x="20" y="15.5" width="117.5" height="16.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Metropolis-Regular" family="Metropolis" pointSize="14"/>
                                                                                                             <color key="textColor" name="TEXT_BLACK_COLOR"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -3699,7 +3699,7 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guests &amp; Rooms" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leI-vz-FbD">
                                                                 <rect key="frame" x="120" y="13" width="112" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Metropolis-Bold" family="Metropolis" pointSize="14"/>
-                                                                <color key="textColor" name="BLUE_COLOR"/>
+                                                                <color key="textColor" name="CUSTOM_PINK"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>

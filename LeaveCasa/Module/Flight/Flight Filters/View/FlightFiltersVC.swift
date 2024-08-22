@@ -23,6 +23,10 @@ protocol isFilter {
 class FlightFiltersVC: UIViewController {
     
     //MARK: - @IBOutlets
+    @IBOutlet weak var btnNonRefundable2: UIButton!
+    @IBOutlet weak var btnRefundable2: UIButton!
+    @IBOutlet weak var btnNonRefundable: UIButton!
+    @IBOutlet weak var btnRefundable: UIButton!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnApply: AnimatableButton!
@@ -198,27 +202,63 @@ class FlightFiltersVC: UIViewController {
     }
     
     @IBAction func refundOnPress(_ sender: UIButton) {
-        self.imgRefund.image = .checkMark()
-        self.imgNonRefund.image = .uncheckMark()
-        self.isRefund = "1"
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.imgRefund.image = .uncheckMark()
+            self.imgNonRefund.image = .uncheckMark()
+            self.isRefund = ""
+        } else {
+            sender.isSelected = true
+            self.imgRefund.image = .checkMark()
+            self.imgNonRefund.image = .uncheckMark()
+            self.isRefund = "1"
+            self.btnNonRefundable.isSelected = false
+        }
     }
     
     @IBAction func refundOnPress2(_ sender: UIButton) {
-        self.imgRefund2.image = .checkMark()
-        self.imgNonRefund2.image = .uncheckMark()
-        self.isRefund2 = "1"
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.imgRefund2.image = .uncheckMark()
+            self.imgNonRefund2.image = .uncheckMark()
+            self.isRefund2 = ""
+        } else {
+            sender.isSelected = true
+            self.imgRefund2.image = .checkMark()
+            self.imgNonRefund2.image = .uncheckMark()
+            self.isRefund2 = "1"
+            self.btnNonRefundable.isSelected = false
+        }
     }
     
     @IBAction func nonRefundOnPress(_ sender: UIButton) {
-        self.imgNonRefund.image = .checkMark()
-        self.imgRefund.image = .uncheckMark()
-        self.isRefund = "0"
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.imgNonRefund.image = .uncheckMark()
+            self.imgRefund.image = .uncheckMark()
+            self.isRefund = ""
+        } else {
+            sender.isSelected = true
+            self.imgNonRefund.image = .checkMark()
+            self.imgRefund.image = .uncheckMark()
+            self.isRefund = "0"
+            self.btnRefundable.isSelected = false
+        }
     }
     
     @IBAction func nonRefundOnPress2(_ sender: UIButton) {
-        self.imgNonRefund2.image = .checkMark()
-        self.imgRefund2.image = .uncheckMark()
-        self.isRefund2 = "0"
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.imgNonRefund2.image = .uncheckMark()
+            self.imgRefund2.image = .uncheckMark()
+            self.isRefund2 = ""
+        } else {
+            sender.isSelected = true
+            self.imgNonRefund2.image = .checkMark()
+            self.imgRefund2.image = .uncheckMark()
+            self.isRefund2 = "0"
+            self.btnRefundable2.isSelected = false
+        }
     }
     
     @IBAction func backOnPress(_ sender: UIButton) {
@@ -231,63 +271,144 @@ class FlightFiltersVC: UIViewController {
     }
     
     @IBAction func priceChepestOnPress(_ sender: UIButton) {
-        self.sortFunctionSetup(view: self.chepestPriceView, sender: sender)
-        self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
-        self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
-        self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
-        self.isCheapest = .isCheapest
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest = .isNoSort
+            self.unsortFunctionSetup(view: self.chepestPriceView, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup(view: self.chepestPriceView, sender: sender)
+            self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
+            self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
+            self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
+            self.isCheapest = .isCheapest
+            self.btnDurationSort.isSelected = false
+            self.btnEarlyDeparture.isSelected = false
+            self.btnLateDepartureOnPress.isSelected = false
+        }
     }
     @IBAction func priceChepestOnPress2(_ sender: UIButton) {
-        self.sortFunctionSetup2(view: self.chepestPriceView2, sender: sender)
-        self.unsortFunctionSetup2(view: self.durationSortView2, sender: self.btnDurationSort2)
-        self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
-        self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
-        self.isCheapest2 = .isCheapest
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest2 = .isNoSort
+            self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup2(view: self.chepestPriceView2, sender: sender)
+            self.unsortFunctionSetup2(view: self.durationSortView2, sender: self.btnDurationSort2)
+            self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
+            self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
+            self.isCheapest2 = .isCheapest
+            self.btnDurationSort2.isSelected = false
+            self.btnEarlyDeparture2.isSelected = false
+            self.btnLateDepartureOnPress2.isSelected = false
+        }
     }
     
     @IBAction func durationSortOnPress(_ sender: UIButton) {
-        self.sortFunctionSetup(view: self.durationSortView, sender: sender)
-        self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
-        self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
-        self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
-        self.isCheapest = .isDurationSort
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest = .isNoSort
+            self.unsortFunctionSetup(view: self.durationSortView, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup(view: self.durationSortView, sender: sender)
+            self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
+            self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
+            self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
+            self.isCheapest = .isDurationSort
+            self.btnPriceChepest.isSelected = false
+            self.btnEarlyDeparture.isSelected = false
+            self.btnLateDepartureOnPress.isSelected = false
+        }
     }
     @IBAction func durationSortOnPress2(_ sender: UIButton) {
-        self.sortFunctionSetup2(view: self.durationSortView2, sender: sender)
-        self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
-        self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
-        self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
-        self.isCheapest2 = .isDurationSort
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest2 = .isNoSort
+            self.unsortFunctionSetup2(view: self.durationSortView2, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup2(view: self.durationSortView2, sender: sender)
+            self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
+            self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
+            self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
+            self.isCheapest2 = .isDurationSort
+            self.btnPriceChepest2.isSelected = false
+            self.btnEarlyDeparture2.isSelected = false
+            self.btnLateDepartureOnPress2.isSelected = false
+        }
+        
     }
     
     @IBAction func lateDepartureOnPress(_ sender: UIButton) {
-        self.sortFunctionSetup(view: self.lateDepartureView, sender: sender)
-        self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
-        self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
-        self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
-        self.isCheapest = .isEarlyDeparture
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest = .isNoSort
+            self.unsortFunctionSetup(view: self.lateDepartureView, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup(view: self.lateDepartureView, sender: sender)
+            self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
+            self.unsortFunctionSetup(view: self.earlyDepartureView, sender: self.btnEarlyDeparture)
+            self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
+            self.isCheapest = .isLateDeparture
+            self.btnPriceChepest.isSelected = false
+            self.btnEarlyDeparture.isSelected = false
+            self.btnDurationSort.isSelected = false
+        }
     }
     @IBAction func lateDepartureOnPress2(_ sender: UIButton) {
-        self.sortFunctionSetup2(view: self.lateDepartureView2, sender: sender)
-        self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
-        self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
-        self.unsortFunctionSetup2(view: self.durationSortView2, sender: self.btnDurationSort2)
-        self.isCheapest = .isEarlyDeparture
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest2 = .isNoSort
+            self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup2(view: self.lateDepartureView2, sender: sender)
+            self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
+            self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: self.btnEarlyDeparture2)
+            self.unsortFunctionSetup2(view: self.durationSortView2, sender: self.btnDurationSort2)
+            self.isCheapest2 = .isLateDeparture
+            self.btnPriceChepest2.isSelected = false
+            self.btnEarlyDeparture2.isSelected = false
+            self.btnDurationSort2.isSelected = false
+        }
     }
     
     @IBAction func earlyDepartureOnPress(_ sender: UIButton) {
-        self.sortFunctionSetup(view: self.earlyDepartureView, sender: sender)
-        self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
-        self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
-        self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
-        self.isCheapest = .isLateDeparture
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest = .isNoSort
+            self.unsortFunctionSetup(view: self.earlyDepartureView, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup(view: self.earlyDepartureView, sender: sender)
+            self.unsortFunctionSetup(view: self.chepestPriceView, sender: self.btnPriceChepest)
+            self.unsortFunctionSetup(view: self.lateDepartureView, sender: self.btnLateDepartureOnPress)
+            self.unsortFunctionSetup(view: self.durationSortView, sender: self.btnDurationSort)
+            self.isCheapest = .isEarlyDeparture
+            self.btnPriceChepest.isSelected = false
+            self.btnLateDepartureOnPress.isSelected = false
+            self.btnDurationSort.isSelected = false
+        }
     }
     @IBAction func earlyDepartureOnPress2(_ sender: UIButton) {
-        self.sortFunctionSetup(view: self.earlyDepartureView2, sender: sender)
-        self.unsortFunctionSetup(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
-        self.unsortFunctionSetup(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
-        self.unsortFunctionSetup(view: self.durationSortView2, sender: self.btnDurationSort2)
-        self.isCheapest2 = .isLateDeparture
+        if sender.isSelected == true {
+            sender.isSelected = false
+            self.isCheapest2 = .isNoSort
+            self.unsortFunctionSetup2(view: self.earlyDepartureView2, sender: sender)
+        } else {
+            sender.isSelected = true
+            self.sortFunctionSetup2(view: self.earlyDepartureView2, sender: sender)
+            self.unsortFunctionSetup2(view: self.chepestPriceView2, sender: self.btnPriceChepest2)
+            self.unsortFunctionSetup2(view: self.lateDepartureView2, sender: self.btnLateDepartureOnPress2)
+            self.unsortFunctionSetup2(view: self.durationSortView2, sender: self.btnDurationSort2)
+            self.isCheapest2 = .isEarlyDeparture
+            self.btnPriceChepest2.isSelected = false
+            self.btnLateDepartureOnPress2.isSelected = false
+            self.btnDurationSort2.isSelected = false
+        }
     }
     
     @IBAction func oneStopOnPress(_ sender: UIButton) {
@@ -607,6 +728,5 @@ extension FlightFiltersVC {
         default:
             break
         }
-        
     }
 }

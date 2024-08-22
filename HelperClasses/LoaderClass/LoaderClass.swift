@@ -37,6 +37,7 @@ class LoaderClass: UIViewController, NVActivityIndicatorViewable,UIPopoverPresen
     var numberOfInfants = 0
     var ownwardMobileCode = String()
     var isFirstTime = true
+    var fareRule = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()

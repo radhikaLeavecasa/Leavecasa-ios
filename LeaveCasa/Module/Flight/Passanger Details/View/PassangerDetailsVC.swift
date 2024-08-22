@@ -13,6 +13,7 @@ import SearchTextField
 
 class PassangerDetailsVC: UIViewController {
     //MARK: - @IBOutlets
+    @IBOutlet weak var lblPassengerCount: UILabel!
     @IBOutlet weak var lblDateTime: UILabel!
     @IBOutlet weak var lblSourceDestination: UILabel!
     @IBOutlet weak var cnstTblVwPassTop: NSLayoutConstraint!
@@ -79,6 +80,7 @@ class PassangerDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        lblPassengerCount.text = "\(numberOfAdults) Adult, \(numberOfChildren) Child, \(numberOfInfants) Infant"
         lblSourceDestination.text = LoaderClass.shared.sourceSestination
         tblVwPassenges.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         tblVwFairDetail.addObserver(self, forKeyPath: "contentSize", options: .new, context: UnsafeMutableRawPointer(bitPattern: 1))
@@ -530,7 +532,7 @@ class PassangerDetailsVC: UIViewController {
                                 vc.logId = self.logId
                                 vc.token = self.tokenId
                                 vc.publishedFare = self.basePrice + self.taxes
-                                
+                                vc.ssrModel = self.ssrData
                                 self.pushView(vc: vc)
                             }
                         }else{
@@ -898,7 +900,7 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
                         
                         
                         cell.lblTitleCode.text = "\(firstIndex.sAirline.sAirlineCode) - \(firstIndex.sAirline.sFlightNumber) \(firstIndex.sAirline.sFareClass)"
-                        lblDateTime.text = "\(firstIndex.sOriginDeptTime.convertDateWithString("dd MMM",oldFormat: "yyyy-MM-dd'T'HH:mm:ss")) | \(firstIndex.sOriginDeptTime.convertStoredDate())"
+                        lblDateTime.text = "\(dataFlight1[0].sSegments[indexPath.section][0].sOriginDeptTime.convertDateWithString("dd MMM",oldFormat: "yyyy-MM-dd'T'HH:mm:ss")) | \(dataFlight1[0].sSegments[indexPath.section][0].sOriginDeptTime.convertStoredDate())"
 
                         cell.lblToFlightCode.text = firstIndex.sDestinationArrvTime.convertDateWithString("EEE,dd MMM yy",oldFormat: "yyyy-MM-dd'T'HH:mm:ss")
                         cell.lblFlightFromCode.text = firstIndex.sOriginDeptTime.convertDateWithString("EEE,dd MMM yy",oldFormat: "yyyy-MM-dd'T'HH:mm:ss")

@@ -545,19 +545,32 @@ extension SearchFlightVC: WWCalendarTimeSelectorProtocol {
     }
     
     func WWCalendarTimeSelectorShouldSelectDate(_ selector: WWCalendarTimeSelector, date: Date) -> Bool {
-        if date < Date() {
+        
+        let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd" // Change this to your desired format
+
+            // Convert the date to a string using the defined format
+            let formattedDate = dateFormatter.string(from: date)
+            print("Formatted Date: \(formattedDate)")
+
+            // For example, you can use a comparison to determine if the date should be selected
+//            let currentDate = Date()
+//            let currentFormattedDate = dateFormatter.string(from: currentDate)
+
+           
+        
+        if formattedDate < Date().convertStoredDate() {
             return false
         } else if !isFromCheckin {
-            if date < checkinDate {
-                return false
-            } else {
+            if formattedDate >= checkinDate.convertStoredDate() {
                 return true
+            } else {
+                return false
             }
-        }else {
+        } else {
             return true
         }
     }
-    
 }
 
 extension SearchFlightVC: UITextFieldDelegate {
