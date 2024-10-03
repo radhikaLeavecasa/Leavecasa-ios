@@ -7,13 +7,13 @@
 
 import UIKit
 
-extension UIFont{
-    
-    class func boldFont(size:CGFloat) -> UIFont{
-        return UIFont(name: "Metropolis-Bold", size: size) ?? UIFont()
+    extension UIFont{
+        
+        class func boldFont(size:CGFloat) -> UIFont{
+            return UIFont(name: "Metropolis-Bold", size: size) ?? UIFont()
+        }
+        
+        class func regularFont(size:CGFloat) -> UIFont{
+            return UIFont(name: "Metropolis-Regular", size: size) ?? UIFont()
+        }
     }
-    
-    class func regularFont(size:CGFloat) -> UIFont{
-        return UIFont(name: "Metropolis-Regular", size: size) ?? UIFont()
-    }
-}

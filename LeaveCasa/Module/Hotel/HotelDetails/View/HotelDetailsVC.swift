@@ -257,7 +257,7 @@ class HotelDetailsVC: UIViewController {
     }
     
     @IBAction func selectRoomOnPress(_ sender: UIButton) {
-        if let vc = ViewControllerHelper.getViewController(ofType: .HotelRoomsVC, StoryboardName: .Hotels) as? HotelRoomsVC{
+        if let vc = ViewControllerHelper.getViewController(ofType: .HotelRoomsVC, StoryboardName: .Hotels) as? HotelRoomsVC {
             vc.hotelDetail = self.hotelDetail
             vc.markups = self.markups
             vc.hotels = self.hotels

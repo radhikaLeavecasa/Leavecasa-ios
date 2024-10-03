@@ -1171,10 +1171,13 @@ extension PassangerDetailsVC: UITableViewDelegate, UITableViewDataSource {
             
             if indexPath.row+1 <= self.numberOfAdults{
                 cell.lblAdultIndexCount.text = "(Adult \(indexPath.row+1)/\(self.numberOfAdults))"
+                self.passangerDetails[indexPath.row].paxAge = "Adult"
             }else if indexPath.row+1 > self.numberOfAdults && indexPath.row+1 <= (self.numberOfAdults + self.numberOfChildren){
                 cell.lblAdultIndexCount.text = "(Child \(indexPath.row-numberOfAdults+1)/\(self.numberOfChildren))"
+                self.passangerDetails[indexPath.row].paxAge = "Child"
             }else{
                 cell.lblAdultIndexCount.text = "(Infant \(indexPath.row-numberOfAdults-numberOfChildren+1)/\(self.numberOfInfants))"
+                self.passangerDetails[indexPath.row].paxAge = "Infant"
             }
             
             if indexData.isGST == true{

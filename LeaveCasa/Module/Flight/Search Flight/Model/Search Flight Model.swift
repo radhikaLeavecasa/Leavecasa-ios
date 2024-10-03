@@ -62,6 +62,7 @@ struct PassangerDetails{
     var ffAirline = ""
     var ffNumber = ""
     var nationality = ""
+    var paxAge = ""
 }
 
 struct BusPassangerDetails{

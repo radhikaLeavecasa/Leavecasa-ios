@@ -95,6 +95,8 @@ class SelectSeatVC: UIViewController {
     var priceData = Double()
     var allSeatsPrice = Int()
     
+    var increasedExit = 1
+    
     //MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -649,6 +651,7 @@ extension SelectSeatVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionViewCellDelegate {
 
     func collectionViewCellDidClick(_ seatPrice: Double, cell1: UICollectionViewCell, indexPath: IndexPath, isDeselected: Bool) {
+        increasedExit = 1
         allSeatsPrice = 0
         for (i,_) in LoaderClass.shared.arrSelectedSeat.enumerated() {
             for j in 0..<LoaderClass.shared.arrSelectedSeat[i].count {
@@ -721,7 +724,10 @@ extension SelectSeatVC: UITableViewDelegate, UITableViewDataSource, CollectionVi
                     seatType = arrSeatTypes[indexPath.row]
                 }
             }
+            
             if seatType.contains("Exit") {
+                tblVwSeatHeight.constant = CGFloat(((arr[stopNumber].rowSeats?.count ?? 0)*65)+((increasedExit/2)*20))
+                increasedExit += increasedExit
             }
             
             if seatType.contains("not set") || seatType.contains("Not Set") || seatType.contains("NoSeat") && (arr[stopNumber].rowSeats?[indexPath.section].seats?.count == 1) {
